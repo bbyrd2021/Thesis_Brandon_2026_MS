@@ -32,10 +32,22 @@ All reported detector comparisons use frame-level mean average precision at IoU 
 
 Figure~\ref{fig:frame-map} shows how a scored box contributes to this metric. For each class, the evaluator processes detections in descending score order within a frame and matches each detection to an available ground-truth box of that class when IoU is at least 0.5. Each ground-truth box can be matched once. Unmatched detections, including duplicate detections after a ground-truth box has been consumed, count as false positives. The evaluator then ranks detections across the selected frames to obtain a precision--recall curve. It integrates the interpolated precision envelope at changes in recall and averages AP over the classes in the reported group. This follows the detection-evaluation principles of PASCAL VOC \cite{voc}; the actual implementation is the ROAD baseline evaluator \cite{road}.
 
+For boxes \(B\) and \(G\), the matching criterion uses
+\begin{equation}\label{eq:iou}
+ \operatorname{IoU}(B,G)=\frac{|B\cap G|}{|B\cup G|}\geq 0.5.
+\end{equation}
+Let \(R_k\) and \(P_k\) be recall and precision after the first \(k\) ranked detections, and let \(\widehat P_k=\max_{j\geq k}P_j\) be the interpolated precision envelope. With \(R_0=0\), the reported group metric is
+\begin{equation}\label{eq:ap-map}
+ \operatorname{AP}(c)=\sum_{k=1}^{n_c}(R_k-R_{k-1})\widehat P_k,
+ \qquad
+ \operatorname{mAP}(\mathcal C)=\frac{1}{|\mathcal C|}\sum_{c\in\mathcal C}\operatorname{AP}(c).
+\end{equation}
+Here \(n_c\) is the number of ranked detections for class \(c\), and \(\mathcal C\) is the reported class group. Multiplication by 100 expresses AP and mAP as percentages. The fixed tail and deeper-tail groups contain 47 and 28 triplet classes, respectively.
+
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/frame-map.pdf}
-\caption[Frame-level average-precision evaluation.]{Frame-level average-precision evaluation. Scores and curves are schematic; matching is class-specific and restricted to the same frame.}
+\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/frame-map.png}
+\caption[Frame-level average-precision evaluation.]{Frame-level average-precision evaluation. The slide example ranks five detections for a class with three ground-truth instances; green and red denote true and false positives. The precision envelope is schematic.}
 \label{fig:frame-map}
 \end{figure}
 
@@ -49,21 +61,12 @@ The starting point is 3D-RetinaNet, which processes eight-frame clips through an
 
 Two evaluations are distinguished. The earlier baseline validation produced 17.76\% agent and 9.17\% triplet f-mAP. The Stage 0 row in this thesis\textquotesingle{}s shared-frame comparison is 16.67\% agent and 7.54\% triplet f-mAP. The difference reflects evaluation conditions, including frame selection and candidate filtering; the numbers are not interchangeable.
 
-Figure~\ref{fig:2} gives the Stage 0 data flow. The trained baseline predicts its own boxes and event scores; later hybrid stages reuse its frozen backbone or detections.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/stage0-baseline.pdf}
-\caption{Stage 0 joint detection and classification baseline.}
-\label{fig:2}
-\end{figure}
-
 Figure~\ref{fig:3} details the ResNet50-I3D feature pyramid and detection subnets in the replicated 3D-RetinaNet. RetinaNet introduced focal loss for dense one-stage detection \cite{focal-loss}; ROAD adapts this architecture to video road-event detection \cite{road}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/retinanet3d.pdf}
-\caption{Replicated 3D-RetinaNet with a ResNet50-I3D backbone and feature pyramid.}
+\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/retinanet3d.png}
+\caption[Replicated 3D-RetinaNet and the unused ego-action branch.]{Replicated 3D-RetinaNet with a ResNet50-I3D backbone and feature pyramid. The faded ego-action branch is unused in this thesis.}
 \label{fig:3}
 \end{figure}
 
@@ -71,22 +74,32 @@ Figure~\ref{fig:3} details the ResNet50-I3D feature pyramid and detection subnet
 
 YOLOv8x \cite{yolov8}, fine-tuned on ROAD-Waymo agent classes with a 1280-pixel input setting, supplies candidate boxes, confidence, and hard agent identity. The project training configuration follows the ECCV 2024 Track-1 recipe with documented implementation choices; the selected checkpoint is the recorded epoch-1 model. Candidate generation uses confidence 0.001, NMS IoU 0.7, and at most 300 detections per frame.
 
-Figure~\ref{fig:4} details the YOLOv8x detector used for agent localization. The 1280 \(\times\) 1920 annotation identifies source-frame dimensions; the implementation applies Ultralytics resizing and letterboxing with imgsz = 1280. The 50-epoch setting describes the configured training recipe, while the reported comparison uses the selected epoch-1 checkpoint.
+Figure~\ref{fig:4} details the YOLOv8x detector used for agent localization. The 1280 \(\times\) 1920 annotation identifies source-frame dimensions; the implementation applies Ultralytics resizing and letterboxing with imgsz = 1280. The reported comparison uses the selected epoch-1 checkpoint from the configured 50-epoch training recipe.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/yolov8x.pdf}
+\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/yolov8x.png}
 \caption{YOLOv8x agent-detector architecture.}
 \label{fig:4}
 \end{figure}
 
 For each YOLO box, Stage 1 finds the baseline detection with highest IoU on the same frame. If IoU is at least 0.5, the action, location, duplex, and triplet scores are copied from that detection. Otherwise, those scores remain zero. Matching is performed independently per YOLO box and does not impose a one-to-one assignment. YOLO supplies the emitted agentness and agent-class detections. No new score-transfer module is trained. Transferred event scores are emitted directly, without multiplication by YOLO confidence.
 
+Writing \(D_j\) for the baseline boxes and \(r_{jk}\) for their event scores makes the transfer rule explicit:
+\begin{equation}\label{eq:score-transfer}
+ j^*=\arg\max_j\operatorname{IoU}(B_i,D_j),\qquad
+ s_{ik}=\begin{cases}
+ r_{j^*k}, & \operatorname{IoU}(B_i,D_{j^*})\geq0.5,\\
+ 0, & \text{otherwise}.
+ \end{cases}
+\end{equation}
+The zero case also applies when there are no baseline detections on that frame; \(k\) indexes action, location, duplex, or triplet labels.
+
 Across the 36,717 shared frames, approximately 40.6\% of 6,163,968 YOLO candidates find a qualifying baseline match. This is the proportion of candidates that receive transferred event scores; it is not ground-truth recall or classification accuracy. Figure~\ref{fig:score-transfer-limit} illustrates why: an unmatched YOLO box has no baseline event-score source, so its transferred action, location, duplex, and triplet values remain zero. A correctly localized object can consequently lack useful event predictions. The next stage addresses this dependence by extracting a feature at every candidate box.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/score-transfer-limit.pdf}
+\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/score-transfer-limit.png}
 \caption[The event-score coverage limitation of overlap transfer.]{The event-score coverage limitation of overlap transfer. The boxes illustrate matched and unmatched candidates; their counts do not represent the measured match rate.}
 \label{fig:score-transfer-limit}
 \end{figure}
@@ -95,7 +108,7 @@ Figure~\ref{fig:5} summarizes the score-transfer path: overlap matching determin
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/stage1-transfer.pdf}
+\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/stage1-transfer.png}
 \caption{Stage 1 detector replacement and overlap-based score transfer.}
 \label{fig:5}
 \end{figure}
@@ -106,7 +119,7 @@ Stage 2 replaces overlap-based score transfer with feature extraction at each YO
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/stage2-roialign.pdf}
+\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/stage2-roialign.png}
 \caption[Stage 2 direct region-feature classification.]{Stage 2 direct region-feature classification.}
 \label{fig:stage2-roialign}
 \end{figure}
@@ -117,14 +130,35 @@ Figure~\ref{fig:roi-align} expands this operation. The implementation rescales b
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/roi-align.pdf}
-\caption[RoIAlign extraction at a proposed box.]{RoIAlign extraction at a proposed box.}
+\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/roi-align.png}
+\caption[RoIAlign extraction at a proposed box.]{RoIAlign extraction at a proposed box, followed by the trained RoI Linear Scoring Head.}
 \label{fig:roi-align}
 \end{figure}
 
 A linear layer maps each vector to 184 logits. Training uses ground-truth boxes with multi-hot targets, random background boxes, and an additional set of YOLO background candidates. Background targets are zero across the output vector. The reported configuration uses focal classification loss with class-dependent alpha weights and focusing parameter \(\gamma = 2\) \cite{focal-loss}. The optional logical-penalty coefficient is zero in this configuration.
 
+For the frozen target-frame feature map \(F_t\) and proposed box \(B_i\), the learned readout is
+\begin{equation}\label{eq:roi-head}
+ x_i=\operatorname{RoIAlign}(F_t,B_i)\in\mathbb R^{256},\qquad
+ \ell_i=W_{\mathrm{lin}}x_i+b_{\mathrm{lin}},\qquad p_i=\sigma(\ell_i).
+\end{equation}
+Here \(\sigma\) is the elementwise sigmoid and \(\ell_i\in\mathbb R^{184}\). For a batch of \(N\) examples and \(K\) trained output labels, the class-weighted focal objective is
+\begin{align}
+ p^{\star}_{ik}&=y_{ik}p_{ik}+(1-y_{ik})(1-p_{ik}),\nonumber\\
+ \alpha^{\star}_{ik}&=y_{ik}\alpha_k+(1-y_{ik})(1-\alpha_k),\nonumber\\
+ \mathcal L_{\mathrm{focal}}&=-\frac{1}{NK}\sum_{i=1}^{N}\sum_{k=1}^{K}
+ \alpha^{\star}_{ik}(1-p^{\star}_{ik})^{2}\log p^{\star}_{ik}.
+ \label{eq:focal}
+\end{align}
+The fixed \(\alpha_k\) values provide class weighting. The 184-output classifier uses \(K=184\); composition-only heads use their 135 composition targets.
+
 During evaluation, the head’s action, location, and composition sigmoids are multiplied by YOLO confidence. For a candidate with confidence q and raw class score p, the emitted score is qp. This gate affects detection ranking; it should not be interpreted as proof of calibrated probability. YOLO remains responsible for the emitted agentness and hard agent class. The Stage 1-to-2 transition changes feature access, the trained classifier, and confidence gating; it is not a feature-access-only ablation.
+
+For these learned heads and the later crop/contextual models, score assembly is
+\begin{equation}\label{eq:score-assembly}
+ s_{ik}=q_i p_{ik},\qquad k\in\{\text{action, location, duplex, triplet labels}\}.
+\end{equation}
+The detector confidence \(q_i\) is applied once, after any composition MLP or expert blend. Equation~\ref{eq:score-transfer} is the earlier transfer exception.
 
 \section{Stacked Composition Learning}
 
@@ -143,14 +177,21 @@ Figure~\ref{fig:out-of-fold} details the training-only procedure, following the 
 \label{fig:out-of-fold}
 \end{figure}
 
-Figure~\ref{fig:composition-detail} distinguishes learning a composition from replacing the entire prediction vector. The MLP receives 49 ungated scores---agentness plus agent, action, and location---together with 256 regional features. Its 135 outputs replace only the 49 duplex and 86 triplet entries. The feature input supplies visual evidence when primitive scores alone are ambiguous; retaining the remaining outputs makes the Stage 2-to-3 comparison specific to composition learning.
+Figure~\ref{fig:composition-detail} follows one candidate from primitive and visual evidence to learned composition scores. The MLP receives 49 ungated scores---agentness plus agent, action, and location---together with 256 regional features. Its 135 outputs replace only the 49 duplex and 86 triplet entries. The feature input supplies visual evidence when primitive scores alone are ambiguous; retaining the remaining outputs makes the Stage 2-to-3 comparison specific to composition learning.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/composition-detail.pdf}
-\caption[Composition learning and selective output replacement.]{Composition learning and selective output replacement.}
+\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/composition-detail.png}
+\caption[Composition MLP from primitive and visual evidence.]{Composition MLP: primitive and visual evidence for one box produces duplex and triplet scores. Car-Stop and Car-Stop-VehLane are illustrative labels, not measured predictions.}
 \label{fig:composition-detail}
 \end{figure}
+
+Let \(a_i\in[0,1]^{49}\) collect the ungated primitive scores and let \([\cdot,\cdot]\) denote concatenation. The diagram corresponds to
+\begin{equation}\label{eq:composition-mlp}
+ h_i=\operatorname{ReLU}(W_1[a_i,x_i]+b_1),\qquad
+ p_i^{\mathrm{comp}}=\sigma(W_2h_i+b_2).
+\end{equation}
+For Stage 3, \(W_1\in\mathbb R^{512\times305}\) and \(W_2\in\mathbb R^{135\times512}\). The 305 inputs are \(49+256\); the 135 outputs are \(49+86\). These are learned scores over the valid composition vocabulary, rather than products of the primitive probabilities.
 
 The output vocabulary includes only the valid benchmark compositions. A nonexistent tuple has no dedicated output column. This vocabulary restriction does not guarantee agreement between independently scored primitives and compositions; cross-head consistency is a separate property.
 
@@ -158,7 +199,7 @@ Figure~\ref{fig:6} summarizes the completed Stage 3 architecture. Its compositio
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/stage3-composition.pdf}
+\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/stage3-composition.png}
 \caption{Completed Stage 3 learned-composition architecture.}
 \label{fig:6}
 \end{figure}
@@ -190,8 +231,8 @@ Figure~\ref{fig:7} distinguishes the pretrained video--text alignment path from 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/internvideo2-towers.pdf}
-\caption{Frozen InternVideo2\_CLIP\_S towers and the Stage 4 feature tap.}
+\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/internvideo2-towers.png}
+\caption[Frozen video/text towers and the crop-feature tap.]{Frozen InternVideo2\_CLIP\_S towers and the crop-feature tap. The original pooled alignment path is bypassed; the full 184-phrase matrix supplies the semantic bank.}
 \label{fig:7}
 \end{figure}
 
@@ -231,7 +272,7 @@ Figure~\ref{fig:8} summarizes the Stage 4 path, from frozen crop features and cl
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/stage4-semantic.pdf}
+\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/stage4-semantic.png}
 \caption{Stage 4 semantic crop classifier.}
 \label{fig:8}
 \end{figure}
@@ -242,9 +283,30 @@ Figure~\ref{fig:8} summarizes the Stage 4 path, from frozen crop features and cl
 
 Stage 5, the Semantic Crop Classifier with Composition MLP, uses an unconstrained linear head on the same frozen crop descriptors. The composition MLP receives 49 raw primitive sigmoids and the 1024-dimensional crop feature, giving 1073 inputs. A 512-unit ReLU hidden layer maps these inputs to 135 duplex and triplet logits. This architecture contains no explicit phrase-score input. Its membership in the semantic-crop family identifies the pretrained representation, not a phrase classifier in its composition path.
 
-Stage 6 adds the 135 phrase-composition sigmoids to the Stage 5 inputs, increasing the input dimension to 1208. It retains the same 512-unit hidden layer and 135-output composition head. The flat head supplies action and location scores in both stages. The distinction between Stage 5 and Stage 6 is therefore the additional phrase-composition evidence available to the MLP. Both use video-grouped two-fold out-of-fold head predictions during composition training, and full-training-data heads during evaluation. Composition inputs remain ungated; YOLO confidence is applied once when emitting event detections.
+Stage 6 adds the 135 phrase-composition sigmoids to the Stage 5 inputs, increasing the input dimension to 1208. It retains the same 512-unit hidden layer and 135-output composition head. The flat head supplies action and location scores in both stages. The distinction between Stage 5 and Stage 6 is therefore the additional phrase-composition evidence available to the MLP.
 
-The crop-head study includes three seeds, fixed cached features, identical batch-order generators across classifier variants, and the same ten-epoch Adam configuration described above. A shuffled-phrase control permutes the phrase-to-label assignment while retaining the same phrase vectors. This is a control on their assignment, not a new encoder or a zero-shot experiment.
+Writing \(x_i^{\mathrm{crop}}\in\mathbb R^{1024}\) for the crop feature and \(r_i^{\mathrm{phrase}}\in[0,1]^{135}\) for phrase-composition sigmoids, their inputs are
+\begin{align}
+ u_i^{(5)}&=[a_i,x_i^{\mathrm{crop}}]\in\mathbb R^{1073},\nonumber\\
+ u_i^{(6)}&=[a_i,x_i^{\mathrm{crop}},r_i^{\mathrm{phrase}}]\in\mathbb R^{1208}.
+ \label{eq:crop-composition-inputs}
+\end{align}
+Each stage applies its separately trained version of Equation~\ref{eq:composition-mlp}, with a 512-unit hidden layer and 135 outputs.
+
+Both use video-grouped two-fold out-of-fold head predictions during composition training, and full-training-data heads during evaluation. Composition inputs remain ungated; YOLO confidence is applied once when emitting event detections.
+
+The crop-head study includes three seeds, fixed cached features, identical batch-order generators across classifier variants, and the same ten-epoch Adam configuration described above.
+
+Figure~\ref{fig:stage5-composition} shows the crop-plus-primitive path; Figure~\ref{fig:semantic-composition} adds the phrase branch.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/stage5-composition.png}
+\caption[Stage 5 semantic crop classification with Composition MLP.]{Stage 5 semantic crop classification with Composition MLP. The linear head supplies primitive evidence and action/location outputs; crop features also enter the MLP. The illustrated ROAD-Waymo actor window is not a measured detection \cite{road-waymo}.}
+\label{fig:stage5-composition}
+\end{figure}
+
+A shuffled-phrase control permutes the phrase-to-label assignment while retaining the same phrase vectors. This is a control on their assignment, not a new encoder or a zero-shot experiment.
 
 \begin{figure}[htbp]
 \centering
@@ -260,25 +322,54 @@ The contextual model combines a crop descriptor with actor-region features, enti
 A full eight-frame clip passes through the same frozen visual encoder used for crops. For the original encoder, the keyframe supplies a \(16\times16\) spatial grid of 1024-dimensional tokens. A \(7\times7\) RoIAlign operation followed by spatial averaging gives one actor-region descriptor. Pooling the full grid to \(4\times4\) supplies 16 scene tokens. These tokens preserve coarse spatial context outside the candidate crop. The candidate's normalized coordinates and derived center, width, and height form the geometry vector \((x_1,y_1,x_2,y_2,c_x,c_y,w,h)\).
 
 A residual crop adapter and projection produce \(c\in\mathbb{R}^{512}\). Independent projections map the actor-region descriptor and scene tokens to the same width, giving \(r\) and \(S\). A learned MLP maps geometry to \(g\in\mathbb{R}^{512}\). The mean-pool variant averages the projected scene tokens. The scene-attention variant instead uses the actor-conditioned query \(c+g\), with scene tokens as keys and values:
-\begin{equation}
+\begin{equation}\label{eq:scene-attention}
  s=\operatorname{MHA}(c+g,S,S).
 \end{equation}
 Eight attention heads select scene evidence relevant to the candidate. A fusion MLP maps the concatenation \([c,r,s,g]\), of dimension 2048, to 512 dimensions. A residual crop connection and layer normalization produce the pre-language visual representation
-\begin{equation}
+\begin{equation}\label{eq:visual-fusion}
  v=\operatorname{LN}\big(c+\operatorname{MLP}([c,r,s,g])\big).
 \end{equation}
 Geometry enters the downstream head; it is not inserted into the frozen encoder as pixels or additional pretrained tokens.
 
+For comparison, mean pooling uses \(s=\frac{1}{16}\sum_{m=1}^{16}S_m\). In the attention variant, each of the eight heads computes
+\begin{equation}\label{eq:attention}
+ \operatorname{Attn}(Q,K,V)=\operatorname{softmax}\!\left(\frac{QK^{\mathsf T}}{\sqrt{d_h}}\right)V,
+ \qquad d_h=512/8=64.
+\end{equation}
+For scene attention, \(Q=(c+g)W_Q\), \(K=SW_K\), and \(V=SW_V\) within each head. Concatenating the head outputs and applying the output projection gives \(s\). The softmax runs over the scene-token positions. Figures~\ref{fig:contextual-mean-pool} and~\ref{fig:contextual-scene-attention} show the two scene-summary choices with the same crop residual and language-fusion path.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/contextual-mean-pool.png}
+\caption[Context fusion with mean-pooled scene tokens.]{Context fusion with mean-pooled scene tokens and language cross-attention. Crop, actor-region, scene, and box-position evidence feed the visual fusion MLP. The crop-only skip preserves the projected crop representation.}
+\label{fig:contextual-mean-pool}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/contextual-scene-attention.png}
+\caption[Context fusion with scene attention.]{Context fusion with scene attention. The query is crop plus position; projected scene tokens supply keys and values. Language cross-attention is a separate operation after visual fusion.}
+\label{fig:contextual-scene-attention}
+\end{figure}
+
 \section{Language Fusion and Contrastive Supervision}
 
 Let \(P\) denote the frozen ordered phrase bank. A trainable residual text adapter produces \(T=P+\operatorname{MLP}(\operatorname{LN}(P))\) for the original 512-dimensional bank. Language cross-attention uses \(v\) as query and \(T\) as keys and values. Its output is scaled by a learned sigmoid gate, added to \(v\), and normalized to obtain the joint representation \(j\). Separately, normalized \(v\) and each row of \(T\) produce 184 cosine-similarity scores, denoted \(u\). The final classifier is
-\begin{equation}
+\begin{equation}\label{eq:context-classifier}
  \ell=\operatorname{MLP}_{1208\rightarrow512\rightarrow184}([j,c,u]).
 \end{equation}
 The direct crop input remains present alongside joint and phrase evidence. Both the classification-only and contrastive variants contain language attention and phrase scores. Classification-only means that the auxiliary contrastive coefficient is zero, not that language is absent.
 
+The joint feature and phrase-similarity branch can be written as
+\begin{align}
+ j&=\operatorname{LN}\!\left(v+\sigma(\beta)\operatorname{MHA}(v,T,T)\right),\nonumber\\
+ u_k&=\frac{v^{\mathsf T}T_k}{\|v\|_2\|T_k\|_2},\qquad k=1,\ldots,184.
+ \label{eq:language-fusion}
+\end{align}
+The learned scalar \(\beta\) gates the language residual. Equation~\ref{eq:attention} also describes each language-attention head, now with projected visual RoI queries and adapted phrase keys and values. The diagrams summarize this readout as a classifier; its explicit inputs remain \([j,c,u]\).
+
 The corrected contrastive objective aligns the pre-language visual representation with adapted phrases across all 184 labels. For row \(i\), let \(Y_i\) be its positive-label set and let \(I_+\) contain rows with at least one positive label. With temperature \(\theta=0.07\), the auxiliary loss is
-\begin{equation}
+\begin{equation}\label{eq:contrastive}
  \mathcal{L}_{\mathrm{con}}=-\frac{1}{|I_+|}\sum_{i\in I_+}
  \frac{1}{|Y_i|}\sum_{k\in Y_i}
  \log\frac{\exp(\cos(v_i,T_k)/\theta)}
@@ -298,22 +389,60 @@ An earlier auxiliary used only 86 triplet prototypes from the original frozen ba
 \section{Dynamic Class Balancing}
 
 Dynamic class balancing (DCB), motivated by FRCB \cite{frcb}, replaces the statically weighted focal classification loss with a difficulty-weighted binary cross-entropy. For predicted probability \(p_{ik}=\operatorname{sigmoid}(\ell_{ik})\) and binary target \(y_{ik}\), the local implementation uses
-\begin{equation}
+\begin{equation}\label{eq:dcb}
  B_{ik}=0.5+y_{ik}(1-p_{ik})+h_k,\qquad
  \mathcal{L}_{\mathrm{DCB}}=\frac{1}{184N}\sum_{i,k}B_{ik}\operatorname{BCE}(\ell_{ik},y_{ik}).
 \end{equation}
 Here \(h_k\) is the mean positive-label residual for class \(k\), accumulated over prior batches in the run. It is zero until a positive example has been observed. The weights are detached from the computation graph, and the running residual sums and positive counts update after forming the current loss. History persists across epochs and is saved in checkpoints. Negative entries also receive the historical class term.
+
+For batch index \(b\), the historical term excludes the current batch:
+\begin{equation}\label{eq:dcb-history}
+ h_k^{(b)}=\begin{cases}
+ \displaystyle\frac{\sum_{a<b}\sum_{i\in\mathcal B_a}y_{ik}(1-p_{ik})}
+ {\sum_{a<b}\sum_{i\in\mathcal B_a}y_{ik}}, & \displaystyle\sum_{a<b}\sum_{i\in\mathcal B_a}y_{ik}>0,\\[6pt]
+ 0, & \text{otherwise}.
+ \end{cases}
+\end{equation}
+Predictions in this history are those observed when each earlier batch was processed. This is a running positive-label residual, not an error rate recomputed over the current validation set.
 
 DCB replaces both the focal modulator and its class-alpha weighting; these factors are not multiplied into the DCB objective. The comparison is therefore dynamic DCB versus an already class-weighted focal baseline. The implementation averages over box--class entries, whereas the published equation sums over classes and averages over boxes. The history, zero-positive guard, and reduction are explicit local choices. This is an FRCB-inspired loss experiment within the contextual head, not reproduction of FRCB's full architecture. DCB changes training only and adds no label-dependent inference operation.
 
 \section{AP-Selected Expert Blending}
 
 The Contextual Semantic Expert Blend (CSEB) combines two separately trained scene-attention heads. The classification expert uses classification loss alone. The contrastive expert uses the same classification loss plus the all-184 auxiliary. Both include language fusion and predict all label groups. After training, both experts are frozen. Their composition probabilities are combined as
-\begin{equation}
+\begin{equation}\label{eq:blend}
  p_{\mathrm{blend},k}=(1-w)p_{\mathrm{cls},k}+wp_{\mathrm{con},k},
  \qquad k\in\{\text{duplex and triplet labels}\}.
 \end{equation}
 A single scalar per seed is selected from \(\{0,0.125,\ldots,1\}\) by maximizing triplet crop AP on 45 reserved training videos. Ties select the smaller contrastive weight. The weight stays fixed during inference. This is probability mixing, not a learned sample-dependent gate or logit averaging. The 49 primitive and agentness scores come from the classification expert before final assembly. Emitted agentness and agent identity still come from YOLO, and event probabilities are multiplied by YOLO confidence once.
+
+Equivalently, the selection rule is
+\begin{equation}\label{eq:blend-selection}
+ w^*=\min\!\left(\arg\max_{w\in\{0,0.125,\ldots,1\}}
+ \operatorname{mAP}^{\mathrm{crop}}_{\mathrm{triplet},\,45\ \mathrm{videos}}(w)\right).
+\end{equation}
+This internal crop metric selects the blend and is distinct from the detector metric in Equation~\ref{eq:ap-map}. Figure~\ref{fig:expert-blend-example} illustrates the arithmetic for one synthetic composition score; Figures~\ref{fig:focal-expert-blend} and~\ref{fig:dcb-expert-blend} show the focal and DCB expert pairs.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/expert-blend-example.png}
+\caption[Illustrative expert probability blend.]{Illustrative expert probability blend from the defense slideshow. Expert A is the classification expert and Expert B adds contrastive supervision. With weight 0.75, the synthetic score is 0.25(0.20)+0.75(0.80)=0.65. Primitive scores remain with A.}
+\label{fig:expert-blend-example}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/focal-expert-blend.png}
+\caption[Contextual expert blend with focal training.]{Contextual expert blend with focal training. Both experts use scene and language attention; the contrastive expert additionally uses all-184 alignment. Only composition probabilities are blended.}
+\label{fig:focal-expert-blend}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/dcb-expert-blend.png}
+\caption[Contextual expert blend with DCB training.]{Contextual expert blend with DCB training and the original encoders. DCB replaces focal classification in both experts. The contrastive auxiliary and inference topology are retained.}
+\label{fig:dcb-expert-blend}
+\end{figure}
 
 \section{Encoder Scaling and Training Partitions}
 
