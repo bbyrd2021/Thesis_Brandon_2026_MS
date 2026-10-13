@@ -1,104 +1,23 @@
-\chapter{Proposed Work and Conclusion}
+\chapter{Conclusion and Future Work}
 
-The completed stages establish the motivation for the proposed study: learned composition raises overall triplet f-mAP from 7.54\% in Stage 0 to 9.73\% in Stage 3, while mean AP over the 47 tail classes remains 4.53\%. Stage 4 will test whether semantic structure in class descriptions helps address this remaining gap. Following the completed detector and composition pipeline, the proposed study introduces InternVideo2 crop representations and a phrase-based classifier, then uses controlled ablations to examine gains, regressions, and limits.
+This thesis investigated long-tail compositional road-event detection using a decoupled detector and event classifier. The completed study extends from a replicated joint detector through direct regional classification, learned composition, semantic crop classification, and contextual expert blending. The results show that improved agent localization alone does not resolve event recognition: early score transfer improves agent detection while reducing triplet mAP. Direct feature access and learned composition provide a stronger basis for subsequent semantic and contextual models.
 
-The main hypothesis is that related class descriptions can constrain classifier directions in a way that helps categories with few training instances. An alternative explanation for any improvement is that the crop representation itself is better suited to the task. Other possibilities include differences in classifier capacity, normalization, score scale, class biases, or crop context. These explanations must be separated before attributing a result to semantics.
+\section{Principal Findings}
 
-\section{Contextual Crop Representation}
+Learned composition improves the controlled Stage 2-to-3 comparison from 6.65\% to 9.73\% triplet mAP while keeping candidate boxes and primitive outputs fixed. Semantic crop classification reaches 5.77\% tail mAP, but its 9.07\% overall triplet result remains below Stage 3. Adding phrase-composition evidence to the crop composition MLP changes triplet mAP only from 11.23\% to 11.28\%, with a deeper-tail regression. These findings motivate evaluating overall, common, and rare-class behavior separately.
 
-For each candidate box on target frame t, the proposed extraction path uses eight real frames, \(t-3\) through \(t+4\), with indices clamped at video boundaries. The same spatial region is sampled across the clip; it is not a tracked tube. Default context padding doubles box width and height around the center, subject to image bounds and a minimum crop size. Crops are resized to 224 \(\times\) 224 before encoding.
+The contextual family combines crop features, actor-region evidence, the wider scene, box geometry, and phrase representations. Original-encoder language controls favor the real phrase bank on tail means, while their small sample and geometry differences limit a purely semantic interpretation. Classification-only contextual heads already use language; the additional contrastive objective makes small, mixed changes. Its value in the final model includes complementarity with a separately trained classification expert.
 
-Figure~\ref{fig:box-crop} shows how one detection defines the clip supplied to the encoder. The same padded rectangle is reused across all eight frames, preserving a consistent spatial window while the scene changes within it. Doubling both width and height yields four times the unpadded area before boundary clipping. Nearby road structure and other agents may therefore enter the representation; crop-padding controls will test whether this context helps or distracts from the target event.
+The final Contextual Semantic Expert Blend achieves \(15.75\pm0.27\)\% triplet mAP and \(9.00\pm0.64\)\% tail mAP across three seeds, where the uncertainty term is sample standard deviation. Relative to the original-encoder DCB blend, the mean increases are 2.32 percentage points overall and 2.77 points on the tail. Approximately 65\% of the overall improvement comes arithmetically from the 47 tail classes, and common-class performance also improves. This result supports the final system under the fixed validation protocol; it does not isolate encoder size, language, or loss as the sole cause.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/box-crop.pdf}
-\caption[Contextual crop construction for one detection.]{Contextual crop construction for one detection. A fixed padded window is sampled from frames \(t-3\) through \(t+4\), resized, and encoded; this is not a tracked object tube.}
-\label{fig:box-crop}
-\end{figure}
+\section{Limitations}
 
-The selected model is OpenGVLab/InternVideo2\_CLIP\_S \cite{internvideo2-clip-s}. A frozen visual tower processes each crop clip. The implementation reads last-block tokens for the target frame and averages its spatial tokens to obtain one 1024-dimensional descriptor. The keyframe is the frame associated with the box and label being evaluated. Away from a boundary, it is the fourth input frame. Because the clip includes frames after t, this is contextual frame detection rather than causal anticipation.
+The evaluation population is a shared subset of ROAD-Waymo validation used during development. Checkpoint selection and blend fitting use held-out training videos, but subsequent research decisions were informed by validation results. Three repeated seeds measure optimization sensitivity on this fixed population and do not establish environmental generalization. Published comparisons differ in candidates, filtering, training, and repetition counts, so higher reported mAP does not constitute a matched state-of-the-art test.
 
-The descriptor is an internal visual representation, not simply the model’s final global video--text embedding. A learned projection is therefore part of the proposed classifier. The paired text tower supplies the semantic class directions, while the projection learns how the chosen visual representation connects to them.
+The scaling comparison changes both pretrained towers, the text projection, and cache precision. Language-bank controls reported here concern the original-encoder focal scene-attention head. They cannot establish the same effect in the scaled DCB blend. The fixed class vocabulary does not test unseen combinations, and valid composition columns do not guarantee agreement with independently scored primitives. The study also does not establish end-to-end real-time performance or driving safety.
 
-Figure~\ref{fig:7} distinguishes the pretrained video--text alignment path from the keyframe-token feature tap used in the proposed study \cite{internvideo2}, \cite{internvideo2-clip-s}. The schematic shows patch tokens; the separate class token is omitted. The 1024-dimensional crop descriptor is taken before the released model’s pooled 512-dimensional alignment output.
+\section{Future Work}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/internvideo2-towers.pdf}
-\caption{Frozen InternVideo2\_CLIP\_S towers and the proposed Stage 4 feature tap.}
-\label{fig:7}
-\end{figure}
+Matched language-bank controls in the scaled CSEB, followed by separate visual- and text-checkpoint comparisons, would narrow the attribution of the final gains. These comparisons should hold cache precision and head interfaces fixed. Additional seeds and an independent evaluation population would strengthen reproducibility and generalization claims.
 
-\section{Phrase-Based Classification}
-
-The proposed semantic reference uses explicit event descriptions rather than arbitrary class identifiers. Table~\ref{tab:phrase-examples} gives three entries from the implementation\textquotesingle{}s phrase dictionary. The composition phrase retains the meanings of its parts, while the full set of 184 descriptions remains in benchmark class order. The frozen text encoder will process the dictionary once; the supervised experiment will learn how crop features map to those fixed directions \cite{clip,internvideo2}.
-
-\begin{table}[htbp]
-\centering
-\caption{Examples of fixed class descriptions.}
-\label{tab:phrase-examples}
-\begin{singlespace}
-\begin{tabularx}{\textwidth}{@{}lX@{}}
-\toprule
-\textbf{Benchmark label} & \textbf{Description} \\
-\midrule
-Car & a car \\
-Car-Stop & a car stopped \\
-Car-Stop-VehLane & a car stopped in the ego vehicle's lane \\
-\bottomrule
-\end{tabularx}
-\end{singlespace}
-\end{table}
-
-
-A fixed phrase is assigned to each of the 184 benchmark labels, including separate descriptions for duplexes and triplets. The text encoder embeds these phrases once. Let P be the matrix of normalized phrase vectors, with one row per class. For a crop descriptor x, the classifier computes
-
-\begin{equation}\label{eq:phrase-classifier} z = \operatorname{normalize}(Wx+a),\qquad \ell = \exp(\tau)Pz+b. \end{equation}
-
-Here W and a define the learned visual projection, \(\tau\) is a learned scalar that controls the positive logit scale, and b contains per-class biases. For the selected implementation, x has 1024 dimensions and the phrase space has 512 dimensions. The phrase matrix and both encoders remain frozen during head training. Sigmoid outputs are trained using the same focal classification-loss formulation as the completed head experiments. The initial proposed configuration follows the current implementation defaults: Adam with learning rate 0.001, ten epochs, and batch size 16,384. Training targets come only from training-split ground-truth boxes and background examples. These are starting settings for the planned study, not a report of completed Stage 4 experiments.
-
-The contrastive image--text learning occurs during the encoder’s pretraining \cite{clip}, \cite{internvideo2}. Stage 4 uses the resulting fixed phrase embeddings to guide a supervised classifier trained on ROAD-Waymo labels. The proposed experiment tests whether this semantic structure improves recognition of rare compositions.
-
-YOLO will continue to supply boxes, confidence, and emitted agent identity. Action, location, and composition scores will follow the same emission and confidence-gating convention as the completed hybrid. This keeps the semantic study tied to a fixed detection platform.
-
-Figure~\ref{fig:8} summarizes the proposed Stage 4 path, from frozen crop features and class phrases to supervised road-event scores.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/stage4-semantic.pdf}
-\caption{Proposed Stage 4 semantic classifier.}
-\label{fig:8}
-\end{figure}
-
-\section{Controlled Comparisons and Evaluation}
-
-Controlled ablations will assess the contribution of semantic structure while holding visual inputs, training examples, candidate boxes, evaluation frames, label ordering, and metric code fixed.
-
-The existing implementation supports an unconstrained linear classifier on the same crop features as the primary matched control. Additional ablations may examine phrase construction, normalization, classifier capacity, score scale, or biases to distinguish semantic relationships from other sources of improvement. Representation comparisons will hold classifier conditions fixed, while crop context will be varied separately. Conclusions will be limited to the effects supported by these comparisons.
-
-Phrase construction will be documented and tied to benchmark labels, with the vocabulary, embedding source, and class ordering retained in the experiment record. Descriptions will not be selected from class-level validation errors. The primary endpoint, comparisons, phrases, training settings, and checkpoint-selection rule will be fixed before interpreting Stage 4 validation AP. The default comparison uses the prespecified final-epoch checkpoint. Any tuning will use a video-grouped split within the training set; validation will retain its disclosed role as a development benchmark.
-
-The principal rare-event measure will be mean AP over the 47 triplet classes with \(z < 0\). The nested set of 28 classes with \(z < -0.5\) will provide a deeper-tail view. The complementary 39 classes will show common-class trade-offs. All six output groups and overall triplet f-mAP will also be reported under the fixed shared-frame protocol.
-
-Per-class AP changes will distinguish broad improvement from gains concentrated in a few classes. Repeated training runs with explicitly recorded seeds will assess sensitivity to optimization. The number of repetitions will be finalized with the advisor and reported with the results; the current seed-0 scripts must be extended before those runs are treated as independent repetitions. For matched runs, paired differences in the 47-class tail mean AP will be reported alongside overall and common-class changes.
-
-The assessment will consider whether tail gains persist across runs, whether common-class regressions accompany them, and whether the relevant ablations support a semantic explanation. Mean and variation across repeated runs describe optimization sensitivity; they do not by themselves establish uncertainty across independently sampled driving environments. A negative or mixed result remains informative if it identifies which assumptions fail.
-
-\section{Feasibility, Limitations, and Schedule}
-
-The platform already provides detector predictions, outputs from frozen visual encoders, classifier training, and a common evaluator. Keeping the encoders frozen allows the proposed experiments to focus on learning and comparing classifiers over fixed visual representations. Feasibility depends on obtaining the required crop descriptors, maintaining consistent box-to-feature alignment, and allowing sufficient time for repeated runs and analysis. A small feature-extraction pilot will measure throughput and peak memory before processing the full study population. Experiment records will identify the encoder, extraction settings, and random seed used for each comparison.
-
-Before new comparisons, the evaluation population and frozen encoder outputs will be checked for consistency. Each representation will be identified by its encoder and extraction settings, and trained classifiers will be linked to the feature source and training examples used. An ordered list of frames and candidate boxes will define the comparison population. Missing descriptors or mismatched box-to-feature associations will be resolved before evaluation. If a revised shared subset is necessary, its exclusions will be documented and every compared model reevaluated on that subset.
-
-The study remains limited to ROAD-Waymo validation, a fixed composition vocabulary, and contextual frame-level detection. It does not demonstrate deployment safety, generalization to unseen compositions, or the adequacy of the encoder for all road-event tasks. If semantic classification does not improve rare events, the thesis will report the controlled result and analyze whether the limitation concerns visual evidence, the semantic representation, or their connection.
-
-The proposal presentation is scheduled for September 10, 2026. The working experiment window runs from September 11, 2026 through September 25, 2026, followed by integration of the experimental analysis into a complete thesis draft targeted for October 1, 2026. These are working targets, subject to advisor feedback and resource availability.
-
-The desired final-defense window is October 14, 2026 through October 16, 2026, subject to committee scheduling. The Graduate College lists October 23, 2026 as the Fall 2026 final thesis-defense deadline and November 3, 2026 as the submission-document deadline. The latter is the deadline for the Major Professor to send the required submission documents to the Graduate College; it is not a promise that review or approval will be complete that day. The proposed internal schedule leaves time for revisions before submission.
-
-\section{Expected Contributions}
-
-The completed work provides a replicated baseline with an explicit protocol distinction, a decoupled detector--classifier platform, and a controlled demonstration of learned composition. Stage 3 increases triplet f-mAP from 7.54\% to 9.73\% relative to Stage 0, while the Stage 2-to-3 comparison isolates changes to composition outputs.
-
-The proposed contribution is an evidence-based assessment of semantic classification for rare compositions. The resulting thesis will connect overall performance, training-count-defined tail behavior, controlled ablations, and class-level trade-offs. Its value will rest on what the experiments establish about the approach, including limitations, rather than on an assumed positive outcome.
+Per-class analysis should identify persistent rare-composition errors and distinguish recognition failures from missing or inaccurate boxes. Causal temporal windows, cross-domain evaluation, and full-pipeline latency measurements are needed before online use. Structured output constraints could test consistency separately from AP.

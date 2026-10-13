@@ -1,0 +1,32 @@
+[
+  {
+    "source": "/Users/brandonbyrd/code/wiki/artifacts/diagram-crop-arrow-20261011/stage6.png",
+    "target": "Fig/semantic-composition.png",
+    "sha256": "e67d94c94806c61f4d388a7fe02f5cf6bd5327468497f34bec285616a10a8587"
+  },
+  {
+    "source": "/Users/brandonbyrd/code/wiki/artifacts/diagram-crop-arrow-20261011/stage6.drawio",
+    "target": "figure-sources/semantic-composition.drawio",
+    "sha256": "7429b8f3da6a2fb8b82be1eed8624b16191c75350c013cf2cb58b78b1eb94632"
+  },
+  {
+    "source": "/Users/brandonbyrd/code/wiki/artifacts/scene-attention-fire-20261012/scene-attention-contrastive.png",
+    "target": "Fig/contextual-attention.png",
+    "sha256": "99199ed1ad57023873de69be6957d3feb71338a516271b9cb07611b3eca42f07"
+  },
+  {
+    "source": "/Users/brandonbyrd/code/wiki/artifacts/scene-attention-fire-20261012/scene-attention-contrastive.drawio",
+    "target": "figure-sources/contextual-attention.drawio",
+    "sha256": "93072a08a01ea119ad0bd9ba3e12862bdf15d804cdb1a3fb2015e80c79a9a720"
+  },
+  {
+    "source": "/Users/brandonbyrd/code/wiki/artifacts/encoder-name-short-20261012/scaled-dcb-blend.png",
+    "target": "Fig/scaled-expert-blend.png",
+    "sha256": "94825a93193cabdbe5358a640e1ae560a336c0da5e60526242129944dd815d72"
+  },
+  {
+    "source": "/Users/brandonbyrd/code/wiki/artifacts/encoder-name-short-20261012/scaled-dcb-blend.drawio",
+    "target": "figure-sources/scaled-expert-blend.drawio",
+    "sha256": "9ee7deec5e869bec8b8cfaf3ab0df27b83ca16a49b254041f26a43d7059c2977"
+  }
+]

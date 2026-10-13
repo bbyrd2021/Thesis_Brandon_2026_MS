@@ -1,6 +1,6 @@
 \chapter{Methodology}
 
-We developed the ROAD-Waymo pipeline through controlled changes to a replicated joint detector. Detector replacement and score transfer are followed by direct region-feature classification and learned composition. This chapter defines these completed methods and their shared evaluation protocol. The resulting rare-composition gap motivates the semantic-classifier study in Chapter 5.
+We developed the ROAD-Waymo pipeline through controlled changes to a replicated joint detector. Detector replacement and score transfer are followed by direct region-feature classification and learned composition. This chapter defines the evaluation protocol and the completed methods, including semantic crop classification, contextual fusion, dynamic class balancing, and the scaled expert blend.
 
 The completed stages share the benchmark label layout and evaluator. Changes in boxes, representation, classifier, and composition are described explicitly so that improvements are attributed only to the intervention supported by a comparison.
 
@@ -28,7 +28,7 @@ Total & 184 & Six output groups \\
 \end{singlespace}
 \end{table}
 
-All completed-stage comparisons use frame-level mean average precision at IoU 0.5 through the baseline repository’s evaluator. Predictions are ranked by class and matched to ground truth on each frame. AP summarizes the precision--recall curve; mAP averages class APs. The reported comparison is restricted to 36,717 validation frames shared by the detection sources and required feature records.
+All reported detector comparisons use frame-level mean average precision at IoU 0.5 through the baseline repository’s evaluator. Predictions are ranked by class and matched to ground truth on each frame. AP summarizes the precision--recall curve; mAP averages class APs. The reported comparison is restricted to 36,717 validation frames shared by the detection sources and required feature records.
 
 Figure~\ref{fig:frame-map} shows how a scored box contributes to this metric. For each class, the evaluator processes detections in descending score order within a frame and matches each detection to an available ground-truth box of that class when IoU is at least 0.5. Each ground-truth box can be matched once. Unmatched detections, including duplicate detections after a ground-truth box has been consumed, count as false positives. The evaluator then ranks detections across the selected frames to obtain a precision--recall curve. It integrates the interpolated precision envelope at changes in recall and averages AP over the classes in the reported group. This follows the detection-evaluation principles of PASCAL VOC \cite{voc}; the actual implementation is the ROAD baseline evaluator \cite{road}.
 
@@ -39,7 +39,7 @@ Figure~\ref{fig:frame-map} shows how a scored box contributes to this metric. Fo
 \label{fig:frame-map}
 \end{figure}
 
-“Full-candidate” denotes a broad low-threshold candidate pool, capped at 300 per frame, rather than exhaustive boxes or every annotated validation frame. Stage 0 uses its own candidates. Stages 1--3 share YOLO candidates. The original baseline validation path filters scores per class and per frame; the comparison path assembles predictions from saved dumps, including temporally averaged agentness for baseline candidate selection. Thus, using the same metric code alone does not make different filtering protocols equivalent.
+“Full-candidate” denotes a broad low-threshold candidate pool, capped at 300 per frame, rather than exhaustive boxes or every annotated validation frame. Stage 0 uses its own candidates. Stages 1--6 and the contextual models use the fixed YOLO candidate source. The original baseline validation path filters scores per class and per frame; the comparison path assembles predictions from saved dumps, including temporally averaged agentness for baseline candidate selection. Thus, using the same metric code alone does not make different filtering protocols equivalent.
 
 The primary metric is f-mAP, not tube-level video-mAP. No test-server result is claimed. Training labels define tail membership, while validation predictions determine AP. The same tail class lists are used for every compared model.
 
@@ -47,7 +47,7 @@ The primary metric is f-mAP, not tube-level video-mAP. No test-server result is 
 
 The starting point is 3D-RetinaNet, which processes eight-frame clips through an I3D backbone and feature pyramid before predicting box offsets and class scores \cite{road}. Localization and classification share a learned representation. The replicated checkpoint provides both the baseline detections and the frozen visual backbone used in the early hybrid stages.
 
-Two evaluations are distinguished. The earlier baseline validation produced 17.76\% agent and 9.17\% triplet f-mAP. The Stage 0 row in this proposal’s shared-frame comparison is 16.67\% agent and 7.54\% triplet f-mAP. The difference reflects evaluation conditions, including frame selection and candidate filtering; the numbers are not interchangeable.
+Two evaluations are distinguished. The earlier baseline validation produced 17.76\% agent and 9.17\% triplet f-mAP. The Stage 0 row in this thesis\textquotesingle{}s shared-frame comparison is 16.67\% agent and 7.54\% triplet f-mAP. The difference reflects evaluation conditions, including frame selection and candidate filtering; the numbers are not interchangeable.
 
 Figure~\ref{fig:2} gives the Stage 0 data flow. The trained baseline predicts its own boxes and event scores; later hybrid stages reuse its frozen backbone or detections.
 
@@ -167,4 +167,169 @@ Figure~\ref{fig:6} summarizes the completed Stage 3 architecture. Its compositio
 
 The source implementation fixes the 184-column ordering across frozen feature outputs, prediction heads, and evaluation. YOLO boxes are normalized coordinates; baseline boxes stored in an 840 \(\times\) 600 convention are converted before overlap calculations. These conventions are necessary for meaningful box matching and score assembly.
 
-Valid compositions are derived from benchmark label names and the verified constraints file. The legacy duplex\_childs and triplet\_childs arrays are not used as authoritative mappings. Experiment records will retain the exact class order, candidate and feature identities, seeds, and evaluation manifests.
+Valid compositions are derived from benchmark label names and the verified constraints file. The legacy duplex\_childs and triplet\_childs arrays are not used as authoritative mappings. Experiment records retain the exact class order, candidate and feature identities, seeds, and evaluation manifests.
+
+\section{Contextual Crop Representation}
+
+For each candidate box on target frame t, the extraction path uses eight real frames, \(t-3\) through \(t+4\), with indices clamped at video boundaries. The same spatial region is sampled across the clip; it is not a tracked tube. Default context padding doubles box width and height around the center, subject to image bounds and a minimum crop size. Crops are resized to 224 \(\times\) 224 before encoding.
+
+Figure~\ref{fig:box-crop} shows how one detection defines the clip supplied to the encoder. The same padded rectangle is reused across all eight frames, preserving a consistent spatial window while the scene changes within it. Doubling both width and height yields four times the unpadded area before boundary clipping. Nearby road structure and other agents may therefore enter the representation; this added context is part of the crop representation and must be distinguished from the entire-frame context introduced below.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth,height=0.60\textheight,keepaspectratio]{Fig/box-crop.pdf}
+\caption[Contextual crop construction for one detection.]{Contextual crop construction for one detection. A fixed padded window is sampled from frames \(t-3\) through \(t+4\), resized, and encoded; this is not a tracked object tube.}
+\label{fig:box-crop}
+\end{figure}
+
+The selected model is OpenGVLab/InternVideo2\_CLIP\_S \cite{internvideo2-clip-s}. A frozen visual tower processes each crop clip. The implementation reads last-block tokens for the target frame and averages its spatial tokens to obtain one 1024-dimensional descriptor. The keyframe is the frame associated with the box and label being evaluated. Away from a boundary, it is the fourth input frame. Because the clip includes frames after t, this is contextual frame detection rather than causal anticipation.
+
+The descriptor is an internal visual representation, not simply the model’s final global video--text embedding. A learned projection is therefore part of the classifier. The paired text tower supplies the semantic class directions, while the projection learns how the chosen visual representation connects to them.
+
+Figure~\ref{fig:7} distinguishes the pretrained video--text alignment path from the keyframe-token feature tap used in the crop study \cite{internvideo2}, \cite{internvideo2-clip-s}. The schematic shows patch tokens; the separate class token is omitted. The 1024-dimensional crop descriptor is taken before the released model’s pooled 512-dimensional alignment output.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/internvideo2-towers.pdf}
+\caption{Frozen InternVideo2\_CLIP\_S towers and the Stage 4 feature tap.}
+\label{fig:7}
+\end{figure}
+
+\section{Phrase-Based Classification}
+
+The semantic reference uses explicit event descriptions rather than arbitrary class identifiers. Table~\ref{tab:phrase-examples} gives three entries from the implementation\textquotesingle{}s phrase dictionary. The composition phrase retains the meanings of its parts, while the full set of 184 descriptions remains in benchmark class order. The frozen text encoder processes the dictionary once; the supervised experiment learns how crop features map to those fixed directions \cite{clip,internvideo2}.
+
+\begin{table}[htbp]
+\centering
+\caption{Examples of fixed class descriptions.}
+\label{tab:phrase-examples}
+\begin{singlespace}
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+\textbf{Benchmark label} & \textbf{Description} \\
+\midrule
+Car & a car \\
+Car-Stop & a car stopped \\
+Car-Stop-VehLane & a car stopped in the ego vehicle's lane \\
+\bottomrule
+\end{tabularx}
+\end{singlespace}
+\end{table}
+
+
+A fixed phrase is assigned to each of the 184 benchmark labels, including separate descriptions for duplexes and triplets. The text encoder embeds these phrases once. Let P be the matrix of normalized phrase vectors, with one row per class. For a crop descriptor x, the classifier computes
+
+\begin{equation}\label{eq:phrase-classifier} z = \operatorname{normalize}(Wx+a),\qquad \ell = \exp(\tau)Pz+b. \end{equation}
+
+Here W and a define the learned visual projection, \(\tau\) is a learned scalar that controls the positive logit scale, and b contains per-class biases. For the selected implementation, x has 1024 dimensions and the phrase space has 512 dimensions. The phrase matrix and both encoders remain frozen during head training. Sigmoid outputs are trained using the same focal classification-loss formulation as the completed head experiments. The repeated crop-head study uses Adam with learning rate 0.001, ten epochs, and batch size 16,384. Training targets come only from training-split ground-truth boxes and background examples. The study trains seeds 0, 1, and 2 using the final-epoch checkpoints. Separate video-grouped out-of-fold heads supply inputs to the composition models.
+
+The contrastive image--text learning occurs during the encoder’s pretraining \cite{clip}, \cite{internvideo2}. Stage 4 uses the resulting fixed phrase embeddings to guide a supervised classifier trained on ROAD-Waymo labels. This experiment tests whether this semantic structure improves recognition of rare compositions.
+
+YOLO continues to supply boxes, confidence, and emitted agent identity. Action, location, and composition scores follow the same emission and confidence-gating convention as the completed hybrid. This keeps the semantic study tied to a fixed detection platform.
+
+Figure~\ref{fig:8} summarizes the Stage 4 path, from frozen crop features and class phrases to supervised road-event scores.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/stage4-semantic.pdf}
+\caption{Stage 4 semantic crop classifier.}
+\label{fig:8}
+\end{figure}
+
+
+
+\section{Semantic Crop Composition Models}
+
+Stage 5, the Semantic Crop Classifier with Composition MLP, uses an unconstrained linear head on the same frozen crop descriptors. The composition MLP receives 49 raw primitive sigmoids and the 1024-dimensional crop feature, giving 1073 inputs. A 512-unit ReLU hidden layer maps these inputs to 135 duplex and triplet logits. This architecture contains no explicit phrase-score input. Its membership in the semantic-crop family identifies the pretrained representation, not a phrase classifier in its composition path.
+
+Stage 6 adds the 135 phrase-composition sigmoids to the Stage 5 inputs, increasing the input dimension to 1208. It retains the same 512-unit hidden layer and 135-output composition head. The flat head supplies action and location scores in both stages. The distinction between Stage 5 and Stage 6 is therefore the additional phrase-composition evidence available to the MLP. Both use video-grouped two-fold out-of-fold head predictions during composition training, and full-training-data heads during evaluation. Composition inputs remain ungated; YOLO confidence is applied once when emitting event detections.
+
+The crop-head study includes three seeds, fixed cached features, identical batch-order generators across classifier variants, and the same ten-epoch Adam configuration described above. A shuffled-phrase control permutes the phrase-to-label assignment while retaining the same phrase vectors. This is a control on their assignment, not a new encoder or a zero-shot experiment.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/semantic-composition.png}
+\caption[Semantic crop classification with phrase fusion and composition.]{Stage 6 semantic crop classification with phrase fusion and composition. Stage 5 omits the phrase-composition input. Frozen encoders provide cached features. The ROAD-Waymo imagery illustrates candidate-centered processing \cite{road-waymo}.}
+\label{fig:semantic-composition}
+\end{figure}
+
+\section{Context Fusion and Scene Attention}
+
+The contextual model combines a crop descriptor with actor-region features, entire-frame scene tokens, and box geometry. Its readout directly predicts 184 logits. It is a separate architecture from the Stage 5/6 composition MLP, rather than an additional composition layer appended to those models.
+
+A full eight-frame clip passes through the same frozen visual encoder used for crops. For the original encoder, the keyframe supplies a \(16\times16\) spatial grid of 1024-dimensional tokens. A \(7\times7\) RoIAlign operation followed by spatial averaging gives one actor-region descriptor. Pooling the full grid to \(4\times4\) supplies 16 scene tokens. These tokens preserve coarse spatial context outside the candidate crop. The candidate's normalized coordinates and derived center, width, and height form the geometry vector \((x_1,y_1,x_2,y_2,c_x,c_y,w,h)\).
+
+A residual crop adapter and projection produce \(c\in\mathbb{R}^{512}\). Independent projections map the actor-region descriptor and scene tokens to the same width, giving \(r\) and \(S\). A learned MLP maps geometry to \(g\in\mathbb{R}^{512}\). The mean-pool variant averages the projected scene tokens. The scene-attention variant instead uses the actor-conditioned query \(c+g\), with scene tokens as keys and values:
+\begin{equation}
+ s=\operatorname{MHA}(c+g,S,S).
+\end{equation}
+Eight attention heads select scene evidence relevant to the candidate. A fusion MLP maps the concatenation \([c,r,s,g]\), of dimension 2048, to 512 dimensions. A residual crop connection and layer normalization produce the pre-language visual representation
+\begin{equation}
+ v=\operatorname{LN}\big(c+\operatorname{MLP}([c,r,s,g])\big).
+\end{equation}
+Geometry enters the downstream head; it is not inserted into the frozen encoder as pixels or additional pretrained tokens.
+
+\section{Language Fusion and Contrastive Supervision}
+
+Let \(P\) denote the frozen ordered phrase bank. A trainable residual text adapter produces \(T=P+\operatorname{MLP}(\operatorname{LN}(P))\) for the original 512-dimensional bank. Language cross-attention uses \(v\) as query and \(T\) as keys and values. Its output is scaled by a learned sigmoid gate, added to \(v\), and normalized to obtain the joint representation \(j\). Separately, normalized \(v\) and each row of \(T\) produce 184 cosine-similarity scores, denoted \(u\). The final classifier is
+\begin{equation}
+ \ell=\operatorname{MLP}_{1208\rightarrow512\rightarrow184}([j,c,u]).
+\end{equation}
+The direct crop input remains present alongside joint and phrase evidence. Both the classification-only and contrastive variants contain language attention and phrase scores. Classification-only means that the auxiliary contrastive coefficient is zero, not that language is absent.
+
+The corrected contrastive objective aligns the pre-language visual representation with adapted phrases across all 184 labels. For row \(i\), let \(Y_i\) be its positive-label set and let \(I_+\) contain rows with at least one positive label. With temperature \(\theta=0.07\), the auxiliary loss is
+\begin{equation}
+ \mathcal{L}_{\mathrm{con}}=-\frac{1}{|I_+|}\sum_{i\in I_+}
+ \frac{1}{|Y_i|}\sum_{k\in Y_i}
+ \log\frac{\exp(\cos(v_i,T_k)/\theta)}
+ {\sum_{m=1}^{184}\exp(\cos(v_i,T_m)/\theta)}.
+\end{equation}
+All-zero background rows are excluded from this auxiliary, but remain in classification training. The full objective is \(\mathcal{L}_{\mathrm{cls}}+0.001\mathcal{L}_{\mathrm{con}}\). The auxiliary updates both visual and text adapters; frozen encoder outputs and the original phrase bank remain fixed. It acts before language attention and does not compare classifier logits with phrases. At inference the complete phrase bank is available without ground-truth labels.
+
+An earlier auxiliary used only 86 triplet prototypes from the original frozen bank. The corrected recipe changes both label scope and gradient flow into the text adapter. Comparisons between these recipes therefore do not isolate label scope alone. The main contrastive contextual results in this thesis use the corrected all-184 recipe.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/contextual-attention.png}
+\caption[Contextual scene attention with language fusion.]{Contextual scene attention with language fusion and all-184 contrastive supervision. The contrastive branch aligns the pre-language visual representation with adapted phrases during training. ROAD-Waymo imagery is illustrative \cite{road-waymo}.}
+\label{fig:contextual-attention}
+\end{figure}
+
+\section{Dynamic Class Balancing}
+
+Dynamic class balancing (DCB), motivated by FRCB \cite{frcb}, replaces the statically weighted focal classification loss with a difficulty-weighted binary cross-entropy. For predicted probability \(p_{ik}=\operatorname{sigmoid}(\ell_{ik})\) and binary target \(y_{ik}\), the local implementation uses
+\begin{equation}
+ B_{ik}=0.5+y_{ik}(1-p_{ik})+h_k,\qquad
+ \mathcal{L}_{\mathrm{DCB}}=\frac{1}{184N}\sum_{i,k}B_{ik}\operatorname{BCE}(\ell_{ik},y_{ik}).
+\end{equation}
+Here \(h_k\) is the mean positive-label residual for class \(k\), accumulated over prior batches in the run. It is zero until a positive example has been observed. The weights are detached from the computation graph, and the running residual sums and positive counts update after forming the current loss. History persists across epochs and is saved in checkpoints. Negative entries also receive the historical class term.
+
+DCB replaces both the focal modulator and its class-alpha weighting; these factors are not multiplied into the DCB objective. The comparison is therefore dynamic DCB versus an already class-weighted focal baseline. The implementation averages over box--class entries, whereas the published equation sums over classes and averages over boxes. The history, zero-positive guard, and reduction are explicit local choices. This is an FRCB-inspired loss experiment within the contextual head, not reproduction of FRCB's full architecture. DCB changes training only and adds no label-dependent inference operation.
+
+\section{AP-Selected Expert Blending}
+
+The Contextual Semantic Expert Blend (CSEB) combines two separately trained scene-attention heads. The classification expert uses classification loss alone. The contrastive expert uses the same classification loss plus the all-184 auxiliary. Both include language fusion and predict all label groups. After training, both experts are frozen. Their composition probabilities are combined as
+\begin{equation}
+ p_{\mathrm{blend},k}=(1-w)p_{\mathrm{cls},k}+wp_{\mathrm{con},k},
+ \qquad k\in\{\text{duplex and triplet labels}\}.
+\end{equation}
+A single scalar per seed is selected from \(\{0,0.125,\ldots,1\}\) by maximizing triplet crop AP on 45 reserved training videos. Ties select the smaller contrastive weight. The weight stays fixed during inference. This is probability mixing, not a learned sample-dependent gate or logit averaging. The 49 primitive and agentness scores come from the classification expert before final assembly. Emitted agentness and agent identity still come from YOLO, and event probabilities are multiplied by YOLO confidence once.
+
+\section{Encoder Scaling and Training Partitions}
+
+The final CSEB uses the released InternVideo2-CLIP-1B system. The visual checkpoint has 40 blocks of width 1408, compared with 24 blocks of width 1024 in the original InternVideo2\_CLIP\_S release. The original release name does not imply a conventional small visual transformer. The scaled system also changes the pretrained text checkpoint to the publisher's paired InternVL/Llama-based text implementation, producing 768-dimensional phrase embeddings. A trainable \(768\rightarrow512\) projection connects these embeddings to the contextual head. The downstream internal width remains 512. The system-level text-encoder name does not imply that the text model itself has one billion parameters.
+
+The scaled caches use BF16 encoder computation, float32 preprocessing and pooling, and float16 feature storage. The original cache path used FP16 preprocessing and encoder computation. These changes, together with the paired visual/text checkpoints and text projection, make scaling a system comparison rather than an isolated parameter-count ablation. The visual and text encoders remain frozen during contextual-head training.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/scaled-expert-blend.png}
+\caption[Scaled Contextual Semantic Expert Blend.]{Scaled Contextual Semantic Expert Blend. The classification expert uses DCB; the contrastive expert adds all-184 alignment. Both use scene and language attention. Only composition probabilities are blended. ROAD-Waymo imagery is illustrative \cite{road-waymo}.}
+\label{fig:scaled-expert-blend}
+\end{figure}
+
+The contextual studies partition the 600 training videos into 420 expert-training videos, 90 development videos, and 90 reserved gate videos. The global blend uses the same 45-video selection half of the gate partition across studies. Expert training uses three epochs, batch size 256, learning rate \(10^{-4}\), and weight decay 0.01. Development triplet crop AP selects the checkpoint among the three epochs; final detector validation does not select the checkpoint or blend weight. Seeds 0, 1, and 2 are repeated for each reported contextual condition.
+
+The original crop-head study and contextual studies do not use identical training schedules or partitions. Their comparison evaluates complete systems, while comparisons within a contextual study provide narrower controls. Moreover, the shared ROAD-Waymo validation results informed subsequent research choices across the project. This remains a development benchmark, even though checkpoint and blend selection use internal training partitions.
+
+The final detector evaluation uses the locked 36,717-frame validation manifest and YOLO candidate identities. Reported development crop AP is a checkpoint-selection measure and is not substituted for detection AP. Results retain all six output groups and the fixed 47-class tail, 28-class deeper tail, and complementary 39-class common group. Means and sample standard deviations across seeds characterize training variability under these fixed data, rather than uncertainty across independently sampled driving environments.
