@@ -1,0 +1,210 @@
+{
+  "deck": "/Users/brandonbyrd/Documents/Master's Stuff/Master's Thesis/Brandon L. Byrd -- Thesis Defense -- v4 -- related work revised.pptx",
+  "deck_sha256": "8f8246d6ca659f30bf9b413d96c264a133ca4931833753c4b9d30bdfcd6516cb",
+  "figures": [
+    {
+      "figure": "Fig/frame-map.png",
+      "slide": 84,
+      "deck_media": "ppt/media/image49.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/formula-illustrations-20261001/ap-example.png",
+      "sha256": "93f943af0194826192288f1772abcf67f069509de1093fd4cc0387105fb5cd85",
+      "editable_source": "figure-sources/slideshow/frame-map.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/formula-illustrations-20261001/ap-example.drawio",
+      "editable_source_sha256": "ac65ce6e13cc861156f18e9a642ed26459b9233c87c7e342c1941f6ba2a5a759"
+    },
+    {
+      "figure": "Fig/retinanet3d.png",
+      "slide": 19,
+      "deck_media": "ppt/media/image14.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/proposal-figures/model-transitions/retinanet-use.png",
+      "sha256": "2f9ab00a86d75fa396225641bb17a6636a10a086be7c572c44f1bcbc99a7f1d2",
+      "editable_source": "figure-sources/slideshow/retinanet3d.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/proposal-figures/model-transitions/retinanet-use.drawio",
+      "editable_source_sha256": "21daad5e70e3a2fe17edbd2a5eecb076fedf9289fb77808f9dceb99a6de7dc16"
+    },
+    {
+      "figure": "Fig/yolov8x.png",
+      "slide": 21,
+      "deck_media": "ppt/media/image16.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/proposal-figures/horizontal/yolo-horizontal.png",
+      "sha256": "3d3b3e8141b9c3aecf5ac5ce1dcad7d811f61628c90b8f9b1d06a8f58e895253",
+      "editable_source": "figure-sources/slideshow/yolov8x.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/proposal-figures/horizontal/yolo-horizontal.drawio",
+      "editable_source_sha256": "ad79f1dc37321b89c69a03c4e79034d55acccfe98c621a130c9b1830d58bed58"
+    },
+    {
+      "figure": "Fig/score-transfer-limit.png",
+      "slide": 24,
+      "deck_media": "ppt/media/image19.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/proposal-expansion-eight/score-transfer-limit.png",
+      "sha256": "c0f0b1685cfb6a48adbaf1daf681f0ce1e528d5ef69f1e8fa2e869fd4fe1766e",
+      "editable_source": "figure-sources/slideshow/score-transfer-limit.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/proposal-expansion-eight/score-transfer-limit.drawio",
+      "editable_source_sha256": "77c0c2df0a8e9f4615886494fdbae4e5a2aad8403a59239f9f5cca73000b4e7f"
+    },
+    {
+      "figure": "Fig/stage1-transfer.png",
+      "slide": 23,
+      "deck_media": "ppt/media/image18.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/proposal-figures/label-clearance/stage1-slide.png",
+      "sha256": "dc6d041820d01e1400ce149827bf789e6d57e4fce314acf2842e5a80dfb2fa96",
+      "editable_source_note": "Registered slide export; earlier editable ancestor remains in figure-sources. Export is authoritative for current layout."
+    },
+    {
+      "figure": "Fig/stage2-roialign.png",
+      "slide": 30,
+      "deck_media": "ppt/media/image21.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/proposal-figures/label-clearance/stage2-slide.png",
+      "sha256": "f9bfb488d19f3c72c171f3fdc7e22c00e9f1bd2fd7e5465990e1ceffcbb91de6",
+      "editable_source_note": "Registered slide export; earlier editable ancestor remains in figure-sources. Export is authoritative for current layout."
+    },
+    {
+      "figure": "Fig/roi-align.png",
+      "slide": 27,
+      "deck_media": "ppt/media/image20.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/proposal-expansion-eight/roi-align.png",
+      "sha256": "d216d7104f59f2f27ed5e05a3c8477738a09a969b55030131b8456d354cc1c47",
+      "editable_source": "figure-sources/slideshow/roi-align.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/proposal-expansion-eight/roi-align.drawio",
+      "editable_source_sha256": "8f0b04f8412e1bcf9a6a971874ecca2cd2ae527e6f0310bfbc7b82897f3b191c"
+    },
+    {
+      "figure": "Fig/composition-detail.png",
+      "slide": 32,
+      "deck_media": "ppt/media/image22.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/thesis-diagrams-20261013/deck-media/image22.png",
+      "sha256": "b68371bcb7bc306ed1bac93beb3fc2f19671bae7be9c1c2d21aefe35a2914b11",
+      "editable_source_note": "Exact embedded slide image; no corresponding editable source recovered."
+    },
+    {
+      "figure": "Fig/stage3-composition.png",
+      "slide": 35,
+      "deck_media": "ppt/media/image23.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/proposal-figures/label-clearance/stage3-slide.png",
+      "sha256": "0476cd7611a53d14b303a4aac9dc76d8e1aa9811b17ed0cbacb33a9bcab49802",
+      "editable_source_note": "Registered slide export; earlier editable ancestor remains in figure-sources. Export is authoritative for current layout."
+    },
+    {
+      "figure": "Fig/internvideo2-towers.png",
+      "slide": 42,
+      "deck_media": "ppt/media/image27.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/proposal-encoder-labels-20261011/reference-matrix/internvideo-horizontal.png",
+      "sha256": "b9c8f5b30a7cc7dc098b31015a8a928f8d7333c44ded5fbd3c4b4c27b1420d55",
+      "editable_source": "figure-sources/slideshow/internvideo2-towers.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/proposal-encoder-labels-20261011/reference-matrix/internvideo-horizontal.drawio",
+      "editable_source_sha256": "a6031dd50390c78fb2e1b40bfa1b93c6d80e3d41b5ae37fc524684c1daa6f68e"
+    },
+    {
+      "figure": "Fig/stage4-semantic.png",
+      "slide": 45,
+      "deck_media": "ppt/media/image28.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/diagram-crop-arrow-20261011/stage4.png",
+      "sha256": "edad7890fd4b922cac85f798976cd67dbf6978e5b15932c5e70b9dd6fb3a2e6c",
+      "editable_source": "figure-sources/slideshow/stage4-semantic.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/diagram-crop-arrow-20261011/stage4.drawio",
+      "editable_source_sha256": "ed771e10c041f92b1f88f056ee527bfb201a231bae8c34925cebbf907c4166bc"
+    },
+    {
+      "figure": "Fig/stage5-composition.png",
+      "slide": 47,
+      "deck_media": "ppt/media/image29.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/diagram-crop-arrow-20261011/stage5.png",
+      "sha256": "9b24cc07c1675d9e5d21269209e29b579777ae3c9b71d332d6c08fda6c657535",
+      "editable_source": "figure-sources/slideshow/stage5-composition.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/diagram-crop-arrow-20261011/stage5.drawio",
+      "editable_source_sha256": "0abcc2f78efcb04edd0301224092e83ceaf6a7fa97b7fad91c309e1b95a91535"
+    },
+    {
+      "figure": "Fig/semantic-composition.png",
+      "slide": 49,
+      "deck_media": "ppt/media/image30.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/diagram-crop-arrow-20261011/stage6.png",
+      "sha256": "e67d94c94806c61f4d388a7fe02f5cf6bd5327468497f34bec285616a10a8587",
+      "editable_source": "figure-sources/slideshow/semantic-composition.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/diagram-crop-arrow-20261011/stage6.drawio",
+      "editable_source_sha256": "7429b8f3da6a2fb8b82be1eed8624b16191c75350c013cf2cb58b78b1eb94632"
+    },
+    {
+      "figure": "Fig/contextual-mean-pool.png",
+      "slide": 56,
+      "deck_media": "ppt/media/image32.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/diagram-phrases-label-20261011/01-mlp.png",
+      "sha256": "ebcdc791211ecaa5dd70e2a1115183435f9b88dcaf3a192d2b60f7017700ef06",
+      "editable_source": "figure-sources/slideshow/contextual-mean-pool.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/diagram-phrases-label-20261011/01-mlp.drawio",
+      "editable_source_sha256": "6db4bf111f79b1b1e5eda911bbe998fe8bc05316bf6f67a1d380a38cc30bdc69"
+    },
+    {
+      "figure": "Fig/contextual-scene-attention.png",
+      "slide": 60,
+      "deck_media": "ppt/media/image34.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/scene-attention-fire-20261012/02-attention.png",
+      "sha256": "82b495c1883b0c057dc63d08e1872dd3e2b9c32f5272e8d32351066e4d82c2d2",
+      "editable_source": "figure-sources/slideshow/contextual-scene-attention.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/scene-attention-fire-20261012/02-attention.drawio",
+      "editable_source_sha256": "854126bbcd83c948c804cd2f703a30a8a85c92bb95ea1e2dcff08e38d84377d3"
+    },
+    {
+      "figure": "Fig/contextual-attention.png",
+      "slide": 64,
+      "deck_media": "ppt/media/image36.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/scene-attention-fire-20261012/scene-attention-contrastive.png",
+      "sha256": "99199ed1ad57023873de69be6957d3feb71338a516271b9cb07611b3eca42f07",
+      "editable_source": "figure-sources/slideshow/contextual-attention.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/scene-attention-fire-20261012/scene-attention-contrastive.drawio",
+      "editable_source_sha256": "93072a08a01ea119ad0bd9ba3e12862bdf15d804cdb1a3fb2015e80c79a9a720"
+    },
+    {
+      "figure": "Fig/expert-blend-example.png",
+      "slide": 68,
+      "deck_media": "ppt/media/image39.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/expert-blend-seesaw-20261012/expert-blend-seesaw.png",
+      "sha256": "e2bddf6cde171fbfbb8d467dae944260cbe21d3c14ba0ca556a7efedbe16f195",
+      "editable_source": "figure-sources/slideshow/expert-blend-example.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/expert-blend-seesaw-20261012/expert-blend-seesaw.drawio",
+      "editable_source_sha256": "e107767e53112318aa2cb72e751d4ef087cdc79ad07142fd2d5821b52986d783"
+    },
+    {
+      "figure": "Fig/focal-expert-blend.png",
+      "slide": 70,
+      "deck_media": "ppt/media/image41.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/expert-names-20261012/scene-attention-focal-blend.png",
+      "sha256": "e175f9b12d7e496f159f154b284262b7cde491f65cf4320836a301729e4af000",
+      "editable_source": "figure-sources/slideshow/focal-expert-blend.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/expert-names-20261012/scene-attention-focal-blend.drawio",
+      "editable_source_sha256": "66d09e039dbd56e71bf820950519be8707a3845620e4473c531cbbc1fd23b355"
+    },
+    {
+      "figure": "Fig/dcb-expert-blend.png",
+      "slide": 75,
+      "deck_media": "ppt/media/image44.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/expert-names-20261012/06-dcb-blend.png",
+      "sha256": "93e74cc737edbd79e5faf5e748b430550cd83aecdb2890d41d9927533e5196c3",
+      "editable_source": "figure-sources/slideshow/dcb-expert-blend.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/expert-names-20261012/06-dcb-blend.drawio",
+      "editable_source_sha256": "2734c735ad6394a17c4de55f7aba8b863f71da7a1ad5aeef8fc0441173e466fd"
+    },
+    {
+      "figure": "Fig/scaled-expert-blend.png",
+      "slide": 80,
+      "deck_media": "ppt/media/image46.png",
+      "source": "/Users/brandonbyrd/code/wiki/artifacts/encoder-name-short-20261012/scaled-dcb-blend.png",
+      "sha256": "94825a93193cabdbe5358a640e1ae560a336c0da5e60526242129944dd815d72",
+      "editable_source": "figure-sources/slideshow/scaled-expert-blend.drawio",
+      "editable_source_origin": "/Users/brandonbyrd/code/wiki/artifacts/encoder-name-short-20261012/scaled-dcb-blend.drawio",
+      "editable_source_sha256": "9ee7deec5e869bec8b8cfaf3ab0df27b83ca16a49b254041f26a43d7059c2977"
+    }
+  ],
+  "preserved_supplements": [
+    "Fig/out-of-fold.pdf",
+    "Fig/box-crop.pdf"
+  ],
+  "unchanged_intro": [
+    "Fig/road-event-example.png",
+    "Fig/triplet-training-tail.pdf"
+  ],
+  "removed_from_manuscript": [
+    "Fig/stage0-baseline.pdf"
+  ],
+  "note": "Historical diagram files remain for provenance. Active manuscript uses the listed current PNGs. Comp MLP detail is copied byte-for-byte from slide 32."
+}
