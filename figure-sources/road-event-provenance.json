@@ -1,0 +1,56 @@
+{
+  "dataset": "ROAD-Waymo",
+  "annotation_file": "/data/datasets/road_waymo/road_waymo_trainval_v1.1.json",
+  "image_file": "/data/datasets/road_waymo/rgb-images/train_00407/00001.jpg",
+  "video": "train_00407",
+  "frame": "1",
+  "annotation_id": "b_49",
+  "annotation": {
+    "box": [
+      0.28479405572916666,
+      0.589880753125,
+      0.5648957166666667,
+      0.94812225703125
+    ],
+    "agent_ids": [
+      1
+    ],
+    "loc_ids": [
+      0
+    ],
+    "action_ids": [
+      8
+    ],
+    "duplex_ids": [
+      13
+    ],
+    "triplet_ids": [
+      156
+    ],
+    "tube_uid": "6f6186b6-b9b5-481f-84ba-3c998c852f2e"
+  },
+  "decoded_primitive_labels": {
+    "agent_ids": [
+      "Car"
+    ],
+    "action_ids": [
+      "Stop"
+    ],
+    "loc_ids": [
+      "VehLane"
+    ]
+  },
+  "duplex": "Car-Stop",
+  "triplet": "Car-Stop-VehLane",
+  "pixel_box": [
+    547,
+    755,
+    1085,
+    1214
+  ],
+  "image_size": [
+    1920,
+    1280
+  ],
+  "display_scope": "One selected ground-truth box; other annotations omitted for readability."
+}

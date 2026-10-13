@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="drawio" version="31.4.4">
+  <diagram name="out-of-fold">
+    <mxGraphModel page="1" pageWidth="1160" pageHeight="380">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a" value="Stage 2 linear head&lt;br&gt;trained on A" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fillColor=#F3F7FB;strokeColor=#004684;fontColor=#203040;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="20" y="25" width="230" height="90" />
+        </mxCell>
+        <mxCell id="pb" value="Predict on&lt;br&gt;videos B" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fillColor=#FFF5D6;strokeColor=#B18500;fontColor=#203040;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="350" y="25" width="220" height="90" />
+        </mxCell>
+        <mxCell id="b" value="Stage 2 linear head&lt;br&gt;trained on B" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fillColor=#F3F7FB;strokeColor=#004684;fontColor=#203040;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="20" y="175" width="230" height="90" />
+        </mxCell>
+        <mxCell id="pa" value="Predict on&lt;br&gt;videos A" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fillColor=#FFF5D6;strokeColor=#B18500;fontColor=#203040;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="350" y="175" width="220" height="90" />
+        </mxCell>
+        <mxCell id="merge" value="Out-of-fold&lt;br&gt;primitive scores" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fillColor=#F3F7FB;strokeColor=#004684;fontColor=#203040;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="680" y="100" width="200" height="90" />
+        </mxCell>
+        <mxCell id="mlp" value="Stage 3&lt;br&gt;composition MLP" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fillColor=#F3F7FB;strokeColor=#004684;fontColor=#203040;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="980" y="100" width="220" height="90" />
+        </mxCell>
+        <mxCell id="a_pb" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;html=1;fontFamily=Arial;fontSize=23;labelBackgroundColor=#ffffff;strokeColor=#111111;strokeWidth=1.5;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="a" target="pb">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-18" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_pa" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;html=1;fontFamily=Arial;fontSize=23;labelBackgroundColor=#ffffff;strokeColor=#111111;strokeWidth=1.5;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="b" target="pa">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-18" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pb_merge" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;html=1;fontFamily=Arial;fontSize=23;labelBackgroundColor=#ffffff;strokeColor=#111111;strokeWidth=1.5;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.25;" edge="1" parent="1" source="pb" target="merge">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-18" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pa_merge" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;html=1;fontFamily=Arial;fontSize=23;labelBackgroundColor=#ffffff;strokeColor=#111111;strokeWidth=1.5;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.75;" edge="1" parent="1" source="pa" target="merge">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-18" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="merge_mlp" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;html=1;fontFamily=Arial;fontSize=23;labelBackgroundColor=#ffffff;strokeColor=#111111;strokeWidth=1.5;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="merge" target="mlp">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-18" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="badge_a" value="" style="shape=image;imageAspect=0;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M12%200.8%20C13.6%205.6%2019%207.8%2019%2014%20A7%207%200%200%201%205%2014%20C5%2010.4%207%208.4%208.4%205.8%20C9%207.8%2010.3%208.8%2011.1%207.8%20C12%206.6%2011.7%203.9%2012%200.8%20Z%27%20fill%3D%27%23f2762a%27%20stroke%3D%27%23c24e12%27%20stroke-width%3D%271.2%27%20stroke-linejoin%3D%27round%27%2F%3E%3Cpath%20d%3D%27M12%2010.2%20C13.6%2012.6%2015.6%2013.3%2015.6%2016.2%20A3.6%203.6%200%200%201%208.4%2016.2%20C8.4%2013.8%2010.5%2012.5%2012%2010.2%20Z%27%20fill%3D%27%23ffd54f%27%2F%3E%3C%2Fsvg%3E;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="228.0" y="5.0" width="40" height="40" />
+        </mxCell>
+        <mxCell id="badge_b" value="" style="shape=image;imageAspect=0;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M12%200.8%20C13.6%205.6%2019%207.8%2019%2014%20A7%207%200%200%201%205%2014%20C5%2010.4%207%208.4%208.4%205.8%20C9%207.8%2010.3%208.8%2011.1%207.8%20C12%206.6%2011.7%203.9%2012%200.8%20Z%27%20fill%3D%27%23f2762a%27%20stroke%3D%27%23c24e12%27%20stroke-width%3D%271.2%27%20stroke-linejoin%3D%27round%27%2F%3E%3Cpath%20d%3D%27M12%2010.2%20C13.6%2012.6%2015.6%2013.3%2015.6%2016.2%20A3.6%203.6%200%200%201%208.4%2016.2%20C8.4%2013.8%2010.5%2012.5%2012%2010.2%20Z%27%20fill%3D%27%23ffd54f%27%2F%3E%3C%2Fsvg%3E;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="228.0" y="155.0" width="40" height="40" />
+        </mxCell>
+        <mxCell id="badge_mlp" value="" style="shape=image;imageAspect=0;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M12%200.8%20C13.6%205.6%2019%207.8%2019%2014%20A7%207%200%200%201%205%2014%20C5%2010.4%207%208.4%208.4%205.8%20C9%207.8%2010.3%208.8%2011.1%207.8%20C12%206.6%2011.7%203.9%2012%200.8%20Z%27%20fill%3D%27%23f2762a%27%20stroke%3D%27%23c24e12%27%20stroke-width%3D%271.2%27%20stroke-linejoin%3D%27round%27%2F%3E%3Cpath%20d%3D%27M12%2010.2%20C13.6%2012.6%2015.6%2013.3%2015.6%2016.2%20A3.6%203.6%200%200%201%208.4%2016.2%20C8.4%2013.8%2010.5%2012.5%2012%2010.2%20Z%27%20fill%3D%27%23ffd54f%27%2F%3E%3C%2Fsvg%3E;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1178.0" y="80.0" width="40" height="40" />
+        </mxCell>
+        <mxCell id="legend_fire" value="" style="shape=image;imageAspect=0;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M12%200.8%20C13.6%205.6%2019%207.8%2019%2014%20A7%207%200%200%201%205%2014%20C5%2010.4%207%208.4%208.4%205.8%20C9%207.8%2010.3%208.8%2011.1%207.8%20C12%206.6%2011.7%203.9%2012%200.8%20Z%27%20fill%3D%27%23f2762a%27%20stroke%3D%27%23c24e12%27%20stroke-width%3D%271.2%27%20stroke-linejoin%3D%27round%27%2F%3E%3Cpath%20d%3D%27M12%2010.2%20C13.6%2012.6%2015.6%2013.3%2015.6%2016.2%20A3.6%203.6%200%200%201%208.4%2016.2%20C8.4%2013.8%2010.5%2012.5%2012%2010.2%20Z%27%20fill%3D%27%23ffd54f%27%2F%3E%3C%2Fsvg%3E;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="240" y="340" width="32" height="32" />
+        </mxCell>
+        <mxCell id="legend_trained" value="Trained model" style="text;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=23;fontColor=#203040;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="285" y="340" width="240" height="35" />
+        </mxCell>
+        <mxCell id="legend_plain" value="Thin outline: data or fixed operation" style="text;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=23;fontColor=#203040;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="595" y="340" width="550" height="35" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
