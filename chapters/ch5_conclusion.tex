@@ -1,0 +1,23 @@
+\chapter{Conclusion and Future Work}
+
+This thesis investigated long-tail compositional road-event detection using a decoupled detector and event classifier. The completed study extends from a replicated joint detector through direct regional classification, learned composition, semantic crop classification, and contextual expert blending. The results show that improved agent localization alone does not resolve event recognition: early score transfer improves agent detection while reducing triplet mAP. Direct feature access and learned composition provide a stronger basis for subsequent semantic and contextual models.
+
+\section{Principal Findings}
+
+Learned composition improves the controlled Stage 2-to-3 comparison from 6.65\% to 9.73\% triplet mAP while keeping candidate boxes and primitive outputs fixed. Semantic crop classification reaches 5.77\% tail mAP, but its 9.07\% overall triplet result remains below Stage 3. Adding phrase-composition evidence to the crop composition MLP changes triplet mAP only from 11.23\% to 11.28\%, with a deeper-tail regression. These findings motivate evaluating overall, common, and rare-class behavior separately.
+
+The contextual family combines crop features, actor-region evidence, the wider scene, box geometry, and phrase representations. Original-encoder language controls favor the real phrase bank on tail means, while their small sample and geometry differences limit a purely semantic interpretation. Classification-only contextual heads already use language; the additional contrastive objective makes small, mixed changes. Its value in the final model includes complementarity with a separately trained classification expert.
+
+The final Contextual Semantic Expert Blend achieves \(15.75\pm0.27\)\% triplet mAP and \(9.00\pm0.64\)\% tail mAP across three seeds, where the uncertainty term is sample standard deviation. Relative to the original-encoder DCB blend, the mean increases are 2.32 percentage points overall and 2.77 points on the tail. Approximately 65\% of the overall improvement comes arithmetically from the 47 tail classes, and common-class performance also improves. This result supports the final system under the fixed validation protocol; it does not isolate encoder size, language, or loss as the sole cause.
+
+\section{Limitations}
+
+The evaluation population is a shared subset of ROAD-Waymo validation used during development. Checkpoint selection and blend fitting use held-out training videos, but subsequent research decisions were informed by validation results. Three repeated seeds measure optimization sensitivity on this fixed population and do not establish environmental generalization. Published comparisons differ in candidates, filtering, training, and repetition counts, so higher reported mAP does not constitute a matched state-of-the-art test.
+
+The scaling comparison changes both pretrained towers, the text projection, and cache precision. Language-bank controls reported here concern the original-encoder focal scene-attention head. They cannot establish the same effect in the scaled DCB blend. The fixed class vocabulary does not test unseen combinations, and valid composition columns do not guarantee agreement with independently scored primitives. The study also does not establish end-to-end real-time performance or driving safety.
+
+\section{Future Work}
+
+Matched language-bank controls in the scaled CSEB, followed by separate visual- and text-checkpoint comparisons, would narrow the attribution of the final gains. These comparisons should hold cache precision and head interfaces fixed. Additional seeds and an independent evaluation population would strengthen reproducibility and generalization claims.
+
+Per-class analysis should identify persistent rare-composition errors and distinguish recognition failures from missing or inaccurate boxes. Causal temporal windows, cross-domain evaluation, and full-pipeline latency measurements are needed before online use. Structured output constraints could test consistency separately from AP.

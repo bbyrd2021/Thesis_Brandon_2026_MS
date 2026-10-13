@@ -1,0 +1,51 @@
+% !TeX program = xelatex
+% Adapted from Mahdi Hasanzadeh's September 2025 NCAT template (CC BY 4.0).
+% Proposal author: Brandon L. Byrd. Formatting reference: NCAT Word template, 02-2026.
+\documentclass[12pt,letterpaper,oneside]{report}
+\input{preamble}
+\newcommand{\ThesisTitle}{Long-Tail Compositional Road-Event Detection:}
+\newcommand{\ThesisSubtitle}{A Decoupled Hybrid with Learned and Semantic Composition on ROAD-Waymo}
+\newcommand{\AuthorName}{Brandon L. Byrd}
+\newcommand{\DegreeType}{Master of Science}
+\newcommand{\ProgramName}{Computer Science}
+\newcommand{\MajorProfessor}{Dr. Hamidreza Moradi}
+\newcommand{\University}{North Carolina Agricultural and Technical State University}
+\newcommand{\LocationCity}{Greensboro, North Carolina}
+\newcommand{\GradYear}{2026}
+\hypersetup{pdftitle={\ThesisTitle\space\ThesisSubtitle},pdfauthor={\AuthorName}}
+\begin{document}
+\pagenumbering{roman}
+\hypersetup{pageanchor=false}
+\input{frontmatter/titlepage}
+\clearpage
+\hypersetup{pageanchor=true}
+\setcounter{page}{2}
+\input{frontmatter/approval}
+\clearpage
+\input{frontmatter/copyright}
+\clearpage
+\input{frontmatter/abstract}
+\clearpage
+\input{frontmatter/biosketch}
+\clearpage
+\input{frontmatter/dedication}
+\clearpage
+\input{frontmatter/acknowledgments}
+\clearpage
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+\pagenumbering{arabic}
+\input{chapters/ch1_introduction}
+\input{chapters/ch2_literature_review}
+\input{chapters/ch3_methodology}
+\input{chapters/ch4_results_discussion}
+\input{chapters/ch5_conclusion}
+\clearpage
+\printbibliography[heading=bibintoc,title={References}]
+\clearpage
+% No appendix content is present; the official template permits omission.
+\end{document}
