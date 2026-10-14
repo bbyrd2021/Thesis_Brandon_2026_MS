@@ -54,3 +54,5 @@ The October 2026 results update and source hashes are recorded in
 Current slideshow diagram correspondence and formula definitions are recorded in
 `review/diagram-formula-update.md`; source hashes are in
 `figure-sources/slideshow/provenance.json`.
+
+The October 13 advisor formatting pass follows the supplied February 2026 Word template. See `review/template-alignment-20261013.md` for the measured spacing, front-matter positions, and validation.
