@@ -1,0 +1,14 @@
+PROTOTYPE VIDEO — RECORDING PLAN
+
+Purpose: demonstrate the actual ROAD-Waymo event-recognition prototype and explain the changes from the inherited detector. Target length: approximately 3 minutes, subject to measured execution time.
+
+0:00–0:20  Identify the system/version, input clip, model checkpoint and dataset split. State whether the run is offline, cached-feature inference, or end-to-end inference.
+0:20–0:45  Show the selected driving clip and the command/UI used to start inference. Ground-truth annotations must be visually distinct from predictions.
+0:45–1:30  Show actual predicted boxes and selected agent/action/location/triplet labels. Pause on one actor and explain the eight-frame contextual window. Retain real execution timing or clearly label accelerated playback.
+1:30–2:15  Explain what changed: YOLO localization, frozen crop/region/scene/text features, contextual experts and composition-score blending. Identify which outputs come from YOLO and which come from learned heads.
+2:15–2:45  Show a real error or ambiguous example, preferably on the same clip. Explain the difference between an incorrect/missing box and an incorrect event ranking. Do not substitute the historical crop-model diagnostic as evidence of final CSEB behavior.
+2:45–3:00  State scope: research prototype, fixed vocabulary, noncausal contextual window. Do not call it real-time without measured full-pipeline throughput. Show how the output is saved/reproduced.
+
+Needed before recording: runnable prototype location; final checkpoint and selected seed; compatible input video or dataset frames; environment/compute access; output visualization; permission to share the chosen footage. Use existing authorized research assets when available.
+
+Evidence to retain: exact command/configuration, source revision, checkpoint hash, input identity/split, timestamps and output path. The video must agree with these records. A narration over architecture diagrams is an explainer, not proof of a working prototype.

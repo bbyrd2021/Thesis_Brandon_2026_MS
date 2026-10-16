@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-16",
+  "figure_source": "/Users/brandonbyrd/code/wiki/artifacts/defense-committee-refinement-20260928/tail-case.png",
+  "figure_sha256": "45dfa1cc284edd8e2ec4aba7fbee76cb0b1dae9f8e05f82a45f2e794757fd128",
+  "case_source": "/Users/brandonbyrd/code/wiki/artifacts/language-fusion-diagnostics/selected-visual-cases.json",
+  "case_source_sha256": "aed2450047006be9e2605c24b816dd76a0908b10f8c5c90500cb9062c369ba96",
+  "verification": "/Users/brandonbyrd/code/wiki/artifacts/defense-committee-refinement-20260928/tail-evidence.md",
+  "synthetic_example": "q=.90, p_cls=.20, p_con=.80, w=.75 -> blended=.65, emitted=.585; not measured predictions"
+}

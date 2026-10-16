@@ -258,6 +258,24 @@ CSEB (ours, mean) & 35.25 & 24.75 & 29.64 & 24.36 & 15.75 \\
 
 The CSEB mean is 6.52 percentage points above the published FRCB best-result duplex score and 4.04 points above its triplet score. CycleACR's published action and location results remain higher by 0.48 and 3.16 points. FRCB also reports a five-run triplet mean of \(11.53\pm0.35\)\% in Table 5, distinct from the 11.71\% best-result row. These numerical differences provide context, but do not establish a matched state-of-the-art result or a measured tail advantage over FRCB.
 
+\section{Measured Examples of Composition Ranking}
+\label{sec:measured-examples}
+
+The worked calculation in Section~\ref{sec:worked-candidate} explains the operations using synthetic scores. The examples here instead use recorded detector outputs from the original-encoder crop study, seed 0. They were selected after inspecting results to illustrate contrasting behavior; they are not a random sample, a success rate, or evidence that the final contextual system resolves these cases.
+
+Figure~\ref{fig:qualitative-tail-ranking} shows a large vehicle annotated as stopped at a junction in ROAD-Waymo validation video train\_00797, frame 18. The candidate overlaps the ground-truth box at IoU 0.679, above the matching threshold. This triplet has 1,895 training boxes and belongs to the deeper-tail group. Stage 4 ranks a successful match at 288, Stage 5 at 81,918, and Stage 6 at 4,708. With the diagnostic top-615 prediction budget, Stage 4 retains the match while the two composition models do not. The budget equals the evaluation ground-truth count for this class; it is an analysis convention, not a deployment threshold.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/qualitative-tail-ranking.png}
+\caption[A measured deep-tail ranking example.]{A measured deep-tail ranking example on ROAD-Waymo \cite{road-waymo}. This original-encoder seed-0 diagnostic illustrates loss of useful phrase ranking after learned composition. The still illustrates the annotated event; temporal evidence is needed to assess motion.}
+\label{fig:qualitative-tail-ranking}
+\end{figure}
+
+For the same recorded candidate, the confidence-weighted LarVeh-Stop-Jun scores are 0.731, 0.071, and 0.309 for Stages 4, 5, and 6. These scores and the successful-match ranks describe different aspects of the trace: the score is for the same chosen box, whereas the first successful match can involve another candidate for that object. Stage 6 improves this instance relative to Stage 5, but does not recover Stage 4's ranking. It would be incorrect to describe this as a complete localization failure or to infer a rescue by the later CSEB model.
+
+A contrasting Bus-Stop-VehLane case in validation video train\_00635, frame 186, has candidate IoU 0.965. Successful-match ranks are 101, 2,878, and 325 for Stages 4--6. Under its top-583 diagnostic budget, Stage 6 restores an included match relative to Stage 5, while Stage 4 ranks it earlier. These selected examples illustrate heterogeneous effects; aggregate AP remains necessary to assess the full population.
+
 \section{Interpretation and Validity}
 
 The strongest component comparisons hold the surrounding pipeline fixed: Stage 2-to-3 changes composition outputs, Stage 5-to-6 adds phrase-composition inputs, and the contextual studies compare losses and expert predictions within one family. Crop-to-context and encoder-scaling comparisons change several components and support system-level conclusions.

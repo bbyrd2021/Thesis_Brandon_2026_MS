@@ -39,7 +39,7 @@ single runs, repeated-seed means, and external published results.
 The literature review uses BibLaTeX;
 primary verification links are in `review/citation-verification.md`.
 
-The thesis contains 24 figures, including 20 current defense-diagram exports. Available editable diagram sources and chart data are in
+The thesis contains 26 figures, including 20 current defense-diagram exports. Available editable diagram sources and chart data are in
 `figure-sources/`. Figure captions, tables, equations, and cross-references are
 editable LaTeX. The certification page is unsigned.
 
@@ -56,3 +56,7 @@ Current slideshow diagram correspondence and formula definitions are recorded in
 `figure-sources/slideshow/provenance.json`.
 
 The October 13 advisor formatting pass follows the supplied February 2026 Word template. See `review/template-alignment-20261013.md` for the measured spacing, front-matter positions, and validation.
+
+Post-defense clarification and worked/qualitative examples are tracked in
+`review/post-defense-response.md`. The separate `journal-draft/main.tex` is
+a generic first paper draft; the thesis main document is still `main.tex`.

@@ -4,6 +4,49 @@ We developed the ROAD-Waymo pipeline through controlled changes to a replicated 
 
 The completed stages share the benchmark label layout and evaluator. Changes in boxes, representation, classifier, and composition are described explicitly so that improvements are attributed only to the intervention supported by a comparison.
 
+\section{What Was Retained and What Was Modified}
+\label{sec:baseline-modifications}
+
+The starting point is the published ROAD detection framework and its 3D-RetinaNet video detector, evaluated on ROAD-Waymo \cite{road,road-waymo}. This baseline jointly predicts localization and event scores from an I3D feature pyramid. We retain the benchmark labels and evaluation code so that subsequent systems answer the same recognition task. The final model is not the baseline with one extra layer: development first separates localization from recognition, then replaces the event representation and readout.
+
+Three sources of components must be distinguished. The ROAD detector supplies the replicated baseline and the frozen I3D features used in Stages 2 and 3. YOLOv8x supplies the later candidate boxes and agent outputs after ROAD-Waymo fine-tuning \cite{yolov8}. Released InternVideo2 paired encoders supply the frozen visual and phrase representations used by the crop and contextual families \cite{internvideo2,internvideo2-clip-s}. We do not claim to have invented these backbones or rerun their original large-scale pretraining. The implemented contribution is the downstream composition and contextual recognition system, its training and score-assembly procedure, and the controlled comparison of these alternatives.
+
+Table~\ref{tab:modification-map} separates the retained components from each intervention. Stages 4 and 5 are alternative heads on the crop representation: Stage 5 does not consume Stage 4 predictions. Stage 6 introduces an explicit phrase-score branch. The contextual model then replaces the crop composition MLP with a direct 184-output classifier; it is not a seventh layer stacked on the earlier MLP.
+
+\begin{table}[htbp]
+\centering
+\caption{Changes relative to the preceding architectural reference.}
+\label{tab:modification-map}
+\begin{singlespace}
+\begin{tabularx}{\textwidth}{@{}p{0.14\textwidth}XX@{}}
+\toprule
+\textbf{Model} & \textbf{Retained} & \textbf{Changed and purpose}\\
+\midrule
+Stage 1 & Baseline event detections & YOLO boxes replace baseline boxes; overlap transfers event scores to the new locations.\\[5pt]
+Stage 2 & YOLO boxes; frozen I3D backbone & RoIAlign plus a trained linear head supplies event scores at every candidate, including unmatched boxes.\\[5pt]
+Stage 3 & Stage 2 features and primitive outputs & A trained MLP replaces duplex/triplet outputs using primitive scores and visual evidence.\\[5pt]
+Stages 4--6 & YOLO localization and label order & Frozen InternVideo2 crop features replace I3D RoI features; phrase, visual-composition, and phrase-fusion heads test different uses of semantic evidence.\\[5pt]
+Contextual & Frozen paired encoders; YOLO boxes & Actor-region, scene, geometry, and crop evidence are fused before language attention and direct event classification.\\[5pt]
+CSEB & Contextual-head architecture & Two independently trained experts are combined with a fixed selected probability weight; DCB changes training and paired-encoder scaling changes the feature source.\\
+\bottomrule
+\end{tabularx}
+\end{singlespace}
+\end{table}
+
+Figure~\ref{fig:baseline-final-comparison} compares the starting and final information paths. In the baseline, one video representation serves box regression and event classification. In CSEB, YOLO owns localization and agent identity. Frozen video features describe the candidate crop, its region in the full frame, and the wider scene; frozen phrase embeddings provide semantic references. Trainable projections, adapters, attention modules, and classifiers connect those representations. Only the composition probabilities are blended. Detector confidence is applied once at final emission, rather than inside the MLP or before expert mixing.
+
+\begin{figure}[htbp]
+\centering
+\textbf{(a) Replicated joint baseline}\par
+\includegraphics[width=\textwidth]{Fig/retinanet3d.png}\par\medskip
+\textbf{(b) Final decoupled contextual expert blend}\par
+\includegraphics[width=\textwidth]{Fig/scaled-expert-blend.png}
+\caption[Baseline and final-model information paths.]{Baseline and final-model information paths. Existing approved architecture figures are shown together to distinguish joint box/event prediction from frozen feature extraction and separately trained contextual recognition. Backbone architectures are inherited; the thesis evaluates their downstream integration.}
+\label{fig:baseline-final-comparison}
+\end{figure}
+
+During downstream training, the final visual and text encoders are frozen and their outputs are cached. Each expert learns its own adapters, projections, attention, and classifier. The classification expert minimizes the classification objective; the contrastive expert additionally aligns pre-language visual features with the adapted phrase bank. After checkpoint selection, both experts are frozen and one scalar blend weight is selected on reserved training videos. At inference, neither ground-truth labels nor per-example optimization is used. These phases explain why a trained-module badge in a diagram does not imply end-to-end training of the pretrained encoders.
+
 \section{Dataset, Prediction Targets, and Evaluation}
 
 The study uses the ROAD-Waymo training and validation partitions \cite{road-waymo}: 600 training videos and 198 validation videos. The publicly unannotated test partition is outside the reported evaluation. Dataset counts and tail membership refer to the local annotation release and project audit, rather than substituting aggregate counts reported for other releases.
@@ -462,3 +505,36 @@ The contextual studies partition the 600 training videos into 420 expert-trainin
 The original crop-head study and contextual studies do not use identical training schedules or partitions. Their comparison evaluates complete systems, while comparisons within a contextual study provide narrower controls. Moreover, the shared ROAD-Waymo validation results informed subsequent research choices across the project. This remains a development benchmark, even though checkpoint and blend selection use internal training partitions.
 
 The final detector evaluation uses the locked 36,717-frame validation manifest and YOLO candidate identities. Reported development crop AP is a checkpoint-selection measure and is not substituted for detection AP. Results retain all six output groups and the fixed 47-class tail, 28-class deeper tail, and complementary 39-class common group. Means and sample standard deviations across seeds characterize training variability under these fixed data, rather than uncertainty across independently sampled driving environments.
+
+\section{Worked Example: From One Candidate to an Event Score}
+\label{sec:worked-candidate}
+
+Consider the annotated Car-Stop-VehLane instance in Figure~\ref{fig:road-event-example}. Its image and label are real ROAD-Waymo evidence, but the probabilities in this example are deliberately synthetic. They explain the computation and are not predictions measured on that frame. At evaluation, YOLO must first supply a candidate box; the ground-truth annotation does not create a detection.
+
+For a candidate on frame \(t\), the same padded spatial window is sampled across frames \(t-3\) through \(t+4\). A separate entire-frame pass supplies the spatial map used for actor-region RoIAlign and scene tokens. The crop asks what the local actor looks like over the clip; the region feature locates it within the full scene; the scene tokens provide surrounding road evidence. Box geometry supplies location explicitly. A single still image cannot establish that the vehicle is stopped, and the contextual window is not a causal forecast.
+
+In Stage 3, the 49 primitive scores and 256 RoI features form a 305-dimensional vector. For this car, the entries associated with Car, Stop, and VehLane are only three coordinates of that vector. The MLP sees all primitive scores and the visual features, learns a 512-dimensional hidden representation, and emits 135 composition scores. It does not simply multiply the three named primitive probabilities. Stages 5 and 6 use the corresponding 1073- and 1208-dimensional inputs defined in Equation~\ref{eq:crop-composition-inputs}.
+
+In CSEB, each expert instead fuses crop, region, scene, and geometry evidence into a visual RoI. The scene-attention query is the projected crop plus geometry. Language attention uses the resulting visual RoI to query all adapted phrases, including the phrase for Car-Stop-VehLane. Each expert then predicts the full label vector directly. The two experts can disagree about the same candidate despite using the same frozen feature sources because their learned parameters and training objectives differ.
+
+\begin{table}[htbp]
+\centering
+\caption{Synthetic calculation for one composition label.}
+\label{tab:worked-score}
+\begin{singlespace}
+\begin{tabularx}{\textwidth}{@{}Xl@{}}
+\toprule
+\textbf{Quantity} & \textbf{Illustrative value}\\
+\midrule
+YOLO confidence \(q\) & 0.90\\
+Classification-expert composition score \(p_{\mathrm{cls}}\) & 0.20\\
+Contrastive-expert composition score \(p_{\mathrm{con}}\) & 0.80\\
+Fixed contrastive mixing weight \(w\) & 0.75\\
+Mixed composition \((1-w)p_{\mathrm{cls}}+wp_{\mathrm{con}}\) & 0.65\\
+Emitted composition score \(q\,p_{\mathrm{blend}}\) & 0.585\\
+\bottomrule
+\end{tabularx}
+\end{singlespace}
+\end{table}
+
+Table~\ref{tab:worked-score} extends Figure~\ref{fig:expert-blend-example} through detector assembly. The 0.585 score ranks this candidate; it is not a calibrated event probability. AP depends on spatial matching and class-specific ranking across all evaluated frames. A correct label with insufficient box overlap is still a false positive.
