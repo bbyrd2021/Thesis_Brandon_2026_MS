@@ -276,6 +276,58 @@ For the same recorded candidate, the confidence-weighted LarVeh-Stop-Jun scores 
 
 A contrasting Bus-Stop-VehLane case in validation video train\_00635, frame 186, has candidate IoU 0.965. Successful-match ranks are 101, 2,878, and 325 for Stages 4--6. Under its top-583 diagnostic budget, Stage 6 restores an included match relative to Stage 5, while Stage 4 ranks it earlier. These selected examples illustrate heterogeneous effects; aggregate AP remains necessary to assess the full population.
 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/qualitative-bus-recovery.png}
+\caption[A measured bus ranking recovery.]{A measured Bus-Stop-VehLane example on ROAD-Waymo \cite{road-waymo}, original-encoder study, seed 0. ``Phrase head'' denotes Stage 4; ``Flat head'' is the separate no-composition baseline. Green marks ground truth and cyan the selected candidate. The same-candidate scores and first successful-match ranks are different diagnostics.}
+\label{fig:qualitative-bus-recovery}
+\end{figure}
+
+\section{Illogical Outputs and Ordinary Errors}
+\label{sec:illogical-examples}
+
+A detected event should tell a coherent story about one agent at one time. However, restricting outputs to the benchmark's valid composition labels does not guarantee agreement between independently scored primitive and composition labels. For example, Bus-Stop-VehLane is a meaningful event label, but emitting it for a candidate whose selected agent label is Car gives an inconsistent description of that candidate. The present pipeline does not enforce an agent-class mask on composition scores. Neither composition learning nor language attention alone guarantees logical consistency.
+
+The examples in Table~\ref{tab:logical-examples} are deliberately constructed teaching cases, not recorded outputs or measured violation rates. Let $T$ denote Bus-Stop-VehLane and let $B$, $S$, and $V$ denote its Bus, Stop, and VehLane constituents for the same candidate and time. A coherent hard-label interpretation requires
+\begin{equation}
+T\Rightarrow (B\land S\land V).
+\label{eq:event-implication}
+\end{equation}
+For illustration only, define $z_k=\mathbb{1}[s_k\geq\tau]$ with $\tau=0.5$, using scores $s_k$ on a common emitted-score scale. Then an implication violation is
+\begin{equation}
+I_T=z_T\left(1-z_Bz_Sz_V\right).
+\label{eq:illustrative-violation}
+\end{equation}
+This threshold illustrates a logical test; it is not the AP evaluator, an adopted deployment rule, or a claim that these scores are calibrated probabilities.
+
+\begin{table}[htbp]
+\centering
+\caption[Illustrative logical conflicts and control cases.]{Illustrative logical conflicts and control cases. All scores are synthetic; each row concerns one candidate at one time.}
+\label{tab:logical-examples}
+\begin{singlespace}
+\begin{tabularx}{\textwidth}{@{}p{0.19\textwidth}XX@{}}
+\toprule
+Case & Example output & Interpretation \\
+\midrule
+Agent conflict & Selected agent: Car. $s_T=0.80$, $s_B=0.10$. & The event says Bus while the selected agent says Car. The triplet is valid in the vocabulary, but the description disagrees across heads. \\
+\addlinespace
+Missing action & $s_T=0.80$, $s_B=0.90$, $s_S=0.15$, $s_V=0.85$. & The event is selected while Stop is omitted: $I_T=1$. The triplet does not imply that the action head actually selected Stop. \\
+\addlinespace
+Missing location & $s_T=0.80$, $s_B=0.90$, $s_S=0.85$, $s_V=0.10$. & The event asserts VehLane while its location constituent is omitted: $I_T=1$. \\
+\addlinespace
+Coherent but wrong & $s_T=0.80$, $s_B=s_S=s_V=0.90$, but the annotated agent is Car. & $I_T=0$: the outputs agree with one another but disagree with ground truth. Logical consistency is not recognition accuracy. \\
+\bottomrule
+\end{tabularx}
+\end{singlespace}
+\end{table}
+
+The missing-action example can be read step by step: the threshold selects the triplet ($z_T=1$), Bus ($z_B=1$), and VehLane ($z_V=1$), but not Stop ($z_S=0$). Equation~\ref{eq:illustrative-violation} therefore gives $1(1-1\cdot0\cdot1)=1$. Selecting Stop as well would remove this particular conflict, but could introduce a false-positive action. Suppressing the triplet could instead remove a correct detection. These tradeoffs explain why a consistency repair must be evaluated for recognition accuracy as well as agreement; neither repair is implemented or credited with improvements here.
+
+Not every unusual combination is illogical. ROAD-Waymo permits multiple action and location labels. The measured large-vehicle example in Figure~\ref{fig:qualitative-tail-ranking} has both LarVeh-Stop-Jun and LarVeh-Stop-IncomLane annotations: junction and incoming-lane descriptions can apply together. Rejecting all multiple-location predictions would therefore discard valid labels. Similarly, the low ranking of a true triplet in that example is a recognition failure, not by itself evidence of a logical contradiction. A still image also cannot establish a contradictory motion prediction without the temporal clip and the label definitions.
+
+A measured consistency audit remains future work. It would retain full primitive and composition vectors for the same candidate and time, declare its decision rule, decode constituents from the verified composition-label strings, and report conflict counts with their denominator alongside detector AP. Ground-truth review would distinguish valid multi-label cases from genuine conflicts. The current selected-case traces establish ranking behavior, not a final-CSEB violation rate. No claim is made that CSEB eliminates illogical outputs.
+
 \section{Interpretation and Validity}
 
 The strongest component comparisons hold the surrounding pipeline fixed: Stage 2-to-3 changes composition outputs, Stage 5-to-6 adds phrase-composition inputs, and the contextual studies compare losses and expert predictions within one family. Crop-to-context and encoder-scaling comparisons change several components and support system-level conclusions.

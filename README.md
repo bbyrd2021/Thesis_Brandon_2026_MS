@@ -39,7 +39,7 @@ single runs, repeated-seed means, and external published results.
 The literature review uses BibLaTeX;
 primary verification links are in `review/citation-verification.md`.
 
-The thesis contains 26 figures, including 20 current defense-diagram exports. Available editable diagram sources and chart data are in
+The thesis contains 27 figures, including 20 current defense-diagram exports. Available editable diagram sources and chart data are in
 `figure-sources/`. Figure captions, tables, equations, and cross-references are
 editable LaTeX. The certification page is unsigned.
 

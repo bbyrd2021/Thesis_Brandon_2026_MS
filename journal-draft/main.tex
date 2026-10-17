@@ -201,6 +201,9 @@ Figure~\ref{fig:case} illustrates a measured original-crop-study seed-0 case. A 
 \end{figure}
 A second case, Bus-Stop-VehLane, has successful-match ranks 101, 2,878, and 325 under a top-583 budget. Stage 6 restores an included match relative to Stage 5 but still ranks it later than Stage 4. These deliberately selected contrasting examples explain heterogeneous effects; they do not estimate prevalence or replace full-population AP.
 
+\subsection{Logical consistency versus recognition accuracy}
+Valid composition labels do not guarantee agreement with independent primitive outputs. As an explicitly synthetic example for one candidate, let Bus-Stop-VehLane, Bus, Stop, and VehLane scores be 0.80, 0.90, 0.15, and 0.85. An illustrative 0.5 threshold selects the triplet but omits Stop, violating the implication from a triplet to all of its constituents. This is a teaching example, not a measured prediction or the AP decision rule. A selected Car agent paired with a Bus triplet likewise gives a conflicting description. Conversely, a consistently predicted stopped bus can still be wrong against car ground truth. ROAD-Waymo's multi-label locations also mean that junction and incoming-lane labels can legitimately coexist. The recorded ranking examples do not quantify these conflicts. A full-vector audit with a declared decision rule is needed before claiming a violation rate or improvement in logical consistency; CSEB is not a hard constraint system.
+
 \subsection{Published reference results}
 Table~\ref{tab:published} provides external reference values. The benchmark 3D-RetinaNet row comes from ROAD-Waymo; other external best-result rows are reported by FRCB \cite{road-waymo,frcb}. CSEB is a three-seed mean. Candidate generation, filtering, training, and frame selection differ, and comparable published tail results are unavailable. These values therefore contextualize the task rather than establish matched superiority.
 \begin{table}[htbp]
