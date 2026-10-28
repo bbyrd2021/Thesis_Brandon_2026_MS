@@ -1,0 +1,487 @@
+\clearpage
+\chapter*{Review notes - not part of the clean thesis}
+\addcontentsline{toc}{chapter}{Review notes - not part of the clean thesis}
+\section*{Author decisions still open}
+\begin{enumerate}
+\item \textbf{Training-recipe scope (Section 3.4).} The challenge report is now cited and the broad ``follows'' wording is narrowed to ``informed by.'' Verify which settings were actually borrowed. The report's full system adds multi-branch/dual-stream processing and other changes beyond the thesis's standard YOLOv8x detector. The citation does not establish reproduction of that entire pipeline.
+\item \textbf{Contrastive objective (Section 3.12).} Identify the actual inspiration or implementation for Eq. 3.15. The visual-to-label-phrase objective is not an exact reproduction of symmetric CLIP or sample-to-sample SupCon. No invented derivation or unsupported citation was inserted.
+\item \textbf{Figure provenance.} Method credits were added to the 3D-RetinaNet, YOLOv8x, RoIAlign and InternVideo2 captions. Confirm whether these diagrams/components are original drawings, adapted or reproduced, and document upstream assets/terms as applicable. Figure 12's composition-detail asset still traces only to an older deck. The added method references do not settle image authorship or reuse permission.
+\item \textbf{Checkpoint provenance (Section 3.15).} The official scaled checkpoint and text-model configuration are now cited. Recover the actual cached revision/checkpoint hashes and text-model provenance from launch records where available; no historical revision has been invented.
+\item \textbf{Interpretation limits.} Retain the existing qualifications on phrase shuffling, validation reuse, noncausal context and external benchmark protocols. Same-objective ensemble controls and a full independent training/evaluation rerun were not established by this audit.
+\item \textbf{Slide follow-through.} The linked thesis repository does not contain the current defense deck. Slide 7's PIE total should be 909,480 video frames; 740,901 counts pedestrian boxes. Correct the two hidden 1B-encoder statements, DCB historical-residual terminology, and local-only source links in a separate content-only slide pass.
+\item \textbf{Final gates.} The clean copy is free of notes, not a certificate of submission readiness. Author/advisor acceptance, figure permissions as applicable, final format review, committee corrections and required signatures/clearance remain open. No complete retraction-registry clearance is claimed.
+\end{enumerate}
+\section*{Bibliography changes}
+The following field comparison includes changes hidden by ``et al.'' in the formatted bibliography. Red fields are removed; green fields are added. An unchanged field is omitted from this list. Source links and machine-readable before/after records accompany this document.
+\begingroup\singlespacing
+
+\subsection*{road}
+\noindent\textbf{author}\par
+{\color{AuditRed}Removed: Singh, Gurkirt and Akrigg, Stephen and Di Maio, Manuele and Fontana, Valentina and Alitappeh, Reza Javanmard and Saha, Suman and Jeddisaravi, Kossar and Yousefi, Farzad and Culley, Jacob and Nicholson, Tom and Omokeowa, Jordan and Khan, Salman and Grazioso, Stanislao and Bradley, Andrew and Di Gironimo, Giuseppe and Cuzzolin, Fabio\par}
+{\color{AuditGreen}Added: Singh, Gurkirt and Akrigg, Stephen and Di Maio, Manuele and Fontana, Valentina and Alitappeh, Reza Javanmard and Khan, Salman and Saha, Suman and Jeddisaravi, Kossar and Yousefi, Farzad and Culley, Jacob and Nicholson, Tom and Omokeowa, Jordan and Grazioso, Stanislao and Bradley, Andrew and Di Gironimo, Giuseppe and Cuzzolin, Fabio\par}
+\noindent\textbf{doi}\par
+{\color{AuditRed}Removed: 10.1109/TPAMI.2022.3150906\par}
+{\color{AuditGreen}Added: 10.1109/tpami.2022.3150906\par}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2102.11585}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/tpami.2022.3150906}\par}
+\medskip
+
+\subsection*{road-r}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2210.01597}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1007/s10994-023-06322-z}\par}
+\medskip
+
+\subsection*{decoupling}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1910.09217}\par}
+{\color{AuditGreen}Added: \url{https://openreview.net/forum?id=r1gRTCVFvB}\par}
+\medskip
+
+\subsection*{focal-loss}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1708.02002}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/iccv.2017.324}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 2999–3007\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/iccv.2017.324\par}
+\medskip
+
+\subsection*{mask-rcnn}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1703.06870}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/iccv.2017.322}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 2980–2988\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/iccv.2017.322\par}
+\medskip
+
+\subsection*{clip}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2103.00020}\par}
+{\color{AuditGreen}Added: \url{https://proceedings.mlr.press/v139/radford21a.html}\par}
+\medskip
+
+\subsection*{internvideo2}
+\noindent\textbf{author}\par
+{\color{AuditRed}Removed: Wang, Yi and Li, Kunchang and Li, Xinhao and Yu, Jiashuo and He, Yinan and Wang, Chenting and Chen, Guo and Pei, Baoqi and Yan, Ziang and Zheng, Rongkun and Xu, Jilan and Wang, Zun and Shi, Yansong and Jiang, Tianxiang and Li, Songze and Zhang, Hongjie and Huang, Yifei and Qiao, Yu and Wang, Yali and Wang, Limin\par}
+{\color{AuditGreen}Added: Wang, Yi and Li, Kunchang and Li, Xinhao and Yu, Jiashuo and He, Yinan and Chen, Guo and Pei, Baoqi and Zheng, Rongkun and Wang, Zun and Shi, Yansong and Jiang, Tianxiang and Li, Songze and Xu, Jilan and Zhang, Hongjie and Huang, Yifei and Qiao, Yu and Wang, Yali and Wang, Limin\par}
+\noindent\textbf{year}\par
+{\color{AuditRed}Removed: 2024\par}
+{\color{AuditGreen}Added: 2025\par}
+\noindent\textbf{booktitle}\par
+{\color{AuditRed}Removed: European Conference on Computer Vision\par}
+{\color{AuditGreen}Added: Computer Vision – ECCV 2024\par}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2403.15377}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1007/978-3-031-73013-9_23}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 396–416\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1007/978-3-031-73013-9\_23\par}
+\noindent\textbf{series}\par
+{\color{AuditGreen}Added: Lecture Notes in Computer Science\par}
+\noindent\textbf{volume}\par
+{\color{AuditGreen}Added: 15143\par}
+\noindent\textbf{publisher}\par
+{\color{AuditGreen}Added: Springer\par}
+\medskip
+
+\subsection*{waymo}
+\noindent\textbf{author}\par
+{\color{AuditRed}Removed: Sun, Pei and Kretzschmar, Henrik and Dotiwalla, Xerxes and Chouard, Aurelien and Patnaik, Vijaysai and Tsui, Paul and Guo, James and Zhou, Yin and Chai, Yuning and Caine, Benjamin and Vasudevan, Vijay and Han, Wei and Ngiam, Jiquan and Zhao, Hang and Timofeev, Aleksei and Ettinger, Scott and Krivokon, Maxim and Gao, Amy and Joshi, Aditya and Zhao, Sheng and Cheng, Shuyang and Zhang, Yu and Shlens, Jonathon and Chen, Zhifeng and Anguelov, Dragomir\par}
+{\color{AuditGreen}Added: Sun, Pei and Kretzschmar, Henrik and Dotiwalla, Xerxes and Chouard, Aurelien and Patnaik, Vijaysai and Tsui, Paul and Guo, James and Zhou, Yin and Chai, Yuning and Caine, Benjamin and Vasudevan, Vijay and Han, Wei and Ngiam, Jiquan and Zhao, Hang and Timofeev, Aleksei and Ettinger, Scott and Krivokon, Maxim and Gao, Amy and Joshi, Aditya and Zhang, Yu and Shlens, Jonathon and Chen, Zhifeng and Anguelov, Dragomir\par}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1912.04838}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/cvpr42600.2020.00252}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 2443–2451\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/cvpr42600.2020.00252\par}
+\medskip
+
+\subsection*{bdd}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1805.04687}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/cvpr42600.2020.00271}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 2633–2642\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/cvpr42600.2020.00271\par}
+\medskip
+
+\subsection*{ava}
+\noindent\textbf{booktitle}\par
+{\color{AuditRed}Removed: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition\par}
+{\color{AuditGreen}Added: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition\par}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1705.08421}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/cvpr.2018.00633}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 6047–6056\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/cvpr.2018.00633\par}
+\medskip
+
+\subsection*{i3d}
+\noindent\textbf{author}\par
+{\color{AuditRed}Removed: Carreira, Joao and Zisserman, Andrew\par}
+{\color{AuditGreen}Added: Carreira, João and Zisserman, Andrew\par}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1705.07750}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/cvpr.2017.502}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 4724–4733\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/cvpr.2017.502\par}
+\medskip
+
+\subsection*{resnet}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1512.03385}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/cvpr.2016.90}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 770–778\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/cvpr.2016.90\par}
+\medskip
+
+\subsection*{fpn}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1612.03144}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/cvpr.2017.106}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 936–944\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/cvpr.2017.106\par}
+\medskip
+
+\subsection*{slowfast}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1812.03982}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/iccv.2019.00630}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 6201–6210\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/iccv.2019.00630\par}
+\medskip
+
+\subsection*{video-swin}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2106.13230}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/cvpr52688.2022.00320}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 3192–3201\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/cvpr52688.2022.00320\par}
+\medskip
+
+\subsection*{videomae}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2203.12602}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.52202/068431-0732}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 10078–10093\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.52202/068431-0732\par}
+\noindent\textbf{volume}\par
+{\color{AuditGreen}Added: 35\par}
+\medskip
+
+\subsection*{class-balanced}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1901.05555}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/cvpr.2019.00949}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 9260–9269\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/cvpr.2019.00949\par}
+\medskip
+
+\subsection*{ldam}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1906.07413}\par}
+{\color{AuditGreen}Added: \url{https://proceedings.neurips.cc/paper_files/paper/2019/file/621461af90cadfdaf0e8d4cc25129f91-Paper.pdf}\par}
+\noindent\textbf{volume}\par
+{\color{AuditGreen}Added: 32\par}
+\medskip
+
+\subsection*{balanced-softmax}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2007.10740}\par}
+{\color{AuditGreen}Added: \url{https://proceedings.neurips.cc/paper_files/paper/2020/file/2ba61cc3a8f44143e1f2f13b2b729ab3-Paper.pdf}\par}
+\noindent\textbf{volume}\par
+{\color{AuditGreen}Added: 33\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 4175–4186\par}
+\medskip
+
+\subsection*{logit-adjust}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2007.07314}\par}
+{\color{AuditGreen}Added: \url{https://openreview.net/forum?id=37nvvqkCo5}\par}
+\medskip
+
+\subsection*{ride}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2010.01809}\par}
+{\color{AuditGreen}Added: \url{https://openreview.net/forum?id=D9I3drBz4UC}\par}
+\medskip
+
+\subsection*{bbn}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/1912.02413}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/cvpr42600.2020.00974}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 9716–9725\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/cvpr42600.2020.00974\par}
+\medskip
+
+\subsection*{paco}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2107.12028}\par}
+{\color{AuditGreen}Added: \url{https://openaccess.thecvf.com/content/ICCV2021/html/Cui_Parametric_Contrastive_Learning_ICCV_2021_paper.html}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 715–724\par}
+\medskip
+
+\subsection*{vl-ltr}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2111.13579}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1007/978-3-031-19806-9_5}\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1007/978-3-031-19806-9\_5\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 73–91\par}
+\noindent\textbf{volume}\par
+{\color{AuditGreen}Added: 13685\par}
+\noindent\textbf{series}\par
+{\color{AuditGreen}Added: Lecture Notes in Computer Science\par}
+\noindent\textbf{publisher}\par
+{\color{AuditGreen}Added: Springer\par}
+\medskip
+
+\subsection*{coop}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2109.01134}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1007/s11263-022-01653-1}\par}
+\noindent\textbf{volume}\par
+{\color{AuditGreen}Added: 130\par}
+\noindent\textbf{number}\par
+{\color{AuditGreen}Added: 9\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 2337–2348\par}
+\medskip
+
+\subsection*{cocoop}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2203.05557}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/CVPR52688.2022.01631}\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/CVPR52688.2022.01631\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 16795–16804\par}
+\medskip
+
+\subsection*{maple}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2210.03117}\par}
+{\color{AuditGreen}Added: \url{https://openaccess.thecvf.com/content/CVPR2023/html/Khattak_MaPLe_Multi-Modal_Prompt_Learning_CVPR_2023_paper.html}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 19113–19122\par}
+\medskip
+
+\subsection*{tip-adapter}
+\noindent\textbf{author}\par
+{\color{AuditRed}Removed: Zhang, Renrui and Wei, Zhang and Fang, Rongyao and Gao, Peng and Li, Kunchang and Dai, Jifeng and Qiao, Yu and Li, Hongsheng\par}
+{\color{AuditGreen}Added: Zhang, Renrui and Zhang, Wei and Fang, Rongyao and Gao, Peng and Li, Kunchang and Dai, Jifeng and Qiao, Yu and Li, Hongsheng\par}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2207.09519}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1007/978-3-031-19833-5_29}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 493–510\par}
+\noindent\textbf{series}\par
+{\color{AuditGreen}Added: Lecture Notes in Computer Science\par}
+\noindent\textbf{volume}\par
+{\color{AuditGreen}Added: 13695\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1007/978-3-031-19833-5\_29\par}
+\noindent\textbf{publisher}\par
+{\color{AuditGreen}Added: Springer\par}
+\medskip
+
+\subsection*{xclip}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2208.02816}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1007/978-3-031-19772-7_1}\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1007/978-3-031-19772-7\_1\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 1–18\par}
+\noindent\textbf{volume}\par
+{\color{AuditGreen}Added: 13664\par}
+\noindent\textbf{series}\par
+{\color{AuditGreen}Added: Lecture Notes in Computer Science\par}
+\noindent\textbf{publisher}\par
+{\color{AuditGreen}Added: Springer\par}
+\medskip
+
+\subsection*{vifi}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2212.03640}\par}
+{\color{AuditGreen}Added: \url{https://openaccess.thecvf.com/content/CVPR2023/html/Rasheed_Fine-Tuned_CLIP_Models_Are_Efficient_Video_Learners_CVPR_2023_paper.html}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 6545–6554\par}
+\medskip
+
+\subsection*{cge}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2102.01987}\par}
+{\color{AuditGreen}Added: \url{https://openaccess.thecvf.com/content/CVPR2021/html/Naeem_Learning_Graph_Embeddings_for_Compositional_Zero-Shot_Learning_CVPR_2021_paper.html}\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 953–962\par}
+\medskip
+
+\subsection*{efficient-prompt}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2112.04478}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1007/978-3-031-19833-5_7}\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1007/978-3-031-19833-5\_7\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 105–124\par}
+\noindent\textbf{volume}\par
+{\color{AuditGreen}Added: 13695\par}
+\noindent\textbf{series}\par
+{\color{AuditGreen}Added: Lecture Notes in Computer Science\par}
+\noindent\textbf{publisher}\par
+{\color{AuditGreen}Added: Springer\par}
+\medskip
+
+\subsection*{jaad-crossing}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 206–213\par}
+\medskip
+
+\subsection*{mvitv2}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2112.01526}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/CVPR52688.2022.00476}\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/CVPR52688.2022.00476\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 4794–4804\par}
+\medskip
+
+\subsection*{memvit}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2201.08383}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/CVPR52688.2022.01322}\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/CVPR52688.2022.01322\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 13577–13587\par}
+\medskip
+
+\subsection*{cycleacr}
+\noindent\textbf{entry type}\par
+{\color{AuditRed}Removed: online\par}
+{\color{AuditGreen}Added: article\par}
+\noindent\textbf{year}\par
+{\color{AuditRed}Removed: 2023\par}
+{\color{AuditGreen}Added: 2025\par}
+\noindent\textbf{eprint}\par
+{\color{AuditRed}Removed: 2303.16118\par}
+\noindent\textbf{eprinttype}\par
+{\color{AuditRed}Removed: arxiv\par}
+\noindent\textbf{url}\par
+{\color{AuditRed}Removed: \url{https://arxiv.org/abs/2303.16118}\par}
+{\color{AuditGreen}Added: \url{https://doi.org/10.1109/TPAMI.2025.3595393}\par}
+\noindent\textbf{journal}\par
+{\color{AuditGreen}Added: IEEE Transactions on Pattern Analysis and Machine Intelligence\par}
+\noindent\textbf{volume}\par
+{\color{AuditGreen}Added: 47\par}
+\noindent\textbf{number}\par
+{\color{AuditGreen}Added: 11\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: 10588–10603\par}
+\noindent\textbf{doi}\par
+{\color{AuditGreen}Added: 10.1109/TPAMI.2025.3595393\par}
+\medskip
+
+\subsection*{frcb}
+\noindent\textbf{title}\par
+{\color{AuditRed}Removed: FRCB: Feature Representation and Dynamic Class Balancing for Road-Event Detection\par}
+{\color{AuditGreen}Added: A transformer-based framework with sufficient feature representation and dynamic class balancing for road event detection\par}
+\medskip
+
+\subsection*{attention}
+\noindent\AuditAdd{New bibliography entry.}\par
+\noindent\textbf{author}\par
+{\color{AuditGreen}Added: Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, \textbackslash{}L ukasz and Polosukhin, Illia\par}
+\noindent\textbf{booktitle}\par
+{\color{AuditGreen}Added: Advances in Neural Information Processing Systems\par}
+\noindent\textbf{editor}\par
+{\color{AuditGreen}Added: I. Guyon and U. Von Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett\par}
+\noindent\textbf{pages}\par
+{\color{AuditGreen}Added: \par}
+\noindent\textbf{publisher}\par
+{\color{AuditGreen}Added: Curran Associates, Inc.\par}
+\noindent\textbf{title}\par
+{\color{AuditGreen}Added: Attention is All you Need\par}
+\noindent\textbf{url}\par
+{\color{AuditGreen}Added: \url{https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf}\par}
+\noindent\textbf{volume}\par
+{\color{AuditGreen}Added: 30\par}
+\noindent\textbf{year}\par
+{\color{AuditGreen}Added: 2017\par}
+\medskip
+
+\subsection*{road-challenge-2024}
+\noindent\AuditAdd{New bibliography entry.}\par
+\noindent\textbf{author}\par
+{\color{AuditGreen}Added: Zhang, Tengfei and Zhang, Heng and Li, Ruyang and Deng, Qi and Zhao, Yaqian and Li, Rengang\par}
+\noindent\textbf{title}\par
+{\color{AuditGreen}Added: First Place Solution to the ECCV 2024 ROAD++ Challenge @ ROAD++ Spatiotemporal Agent Detection 2024\par}
+\noindent\textbf{year}\par
+{\color{AuditGreen}Added: 2024\par}
+\noindent\textbf{eprint}\par
+{\color{AuditGreen}Added: 2410.23077\par}
+\noindent\textbf{eprinttype}\par
+{\color{AuditGreen}Added: arxiv\par}
+\noindent\textbf{url}\par
+{\color{AuditGreen}Added: \url{https://arxiv.org/abs/2410.23077}\par}
+\medskip
+
+\subsection*{internvideo2-clip-1b}
+\noindent\AuditAdd{New bibliography entry.}\par
+\noindent\textbf{author}\par
+{\color{AuditGreen}Added: OpenGVLab\par}
+\noindent\textbf{title}\par
+{\color{AuditGreen}Added: InternVideo2-CLIP-1B-224p-f8\par}
+\noindent\textbf{organization}\par
+{\color{AuditGreen}Added: OpenGVLab\par}
+\noindent\textbf{url}\par
+{\color{AuditGreen}Added: \url{https://huggingface.co/OpenGVLab/InternVideo2-CLIP-1B-224p-f8}\par}
+\noindent\textbf{urldate}\par
+{\color{AuditGreen}Added: 2026-10-28\par}
+\medskip
+
+\subsection*{internvideo2-1b-config}
+\noindent\AuditAdd{New bibliography entry.}\par
+\noindent\textbf{author}\par
+{\color{AuditGreen}Added: OpenGVLab\par}
+\noindent\textbf{title}\par
+{\color{AuditGreen}Added: InternVideo2: 1B CLIP zero-shot evaluation configuration\par}
+\noindent\textbf{organization}\par
+{\color{AuditGreen}Added: OpenGVLab\par}
+\noindent\textbf{url}\par
+{\color{AuditGreen}Added: \url{https://github.com/OpenGVLab/InternVideo/blob/main/InternVideo2/multi_modality/scripts/evaluation/clip/zero_shot/1B/config_ucf101.py}\par}
+\noindent\textbf{urldate}\par
+{\color{AuditGreen}Added: 2026-10-28\par}
+\medskip
+\endgroup

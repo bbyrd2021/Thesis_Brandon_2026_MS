@@ -1,0 +1,1118 @@
+[
+  {
+    "key": "road",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "author",
+        "old": "Singh, Gurkirt and Akrigg, Stephen and Di Maio, Manuele and Fontana, Valentina and Alitappeh, Reza Javanmard and Saha, Suman and Jeddisaravi, Kossar and Yousefi, Farzad and Culley, Jacob and Nicholson, Tom and Omokeowa, Jordan and Khan, Salman and Grazioso, Stanislao and Bradley, Andrew and Di Gironimo, Giuseppe and Cuzzolin, Fabio",
+        "new": "Singh, Gurkirt and Akrigg, Stephen and Di Maio, Manuele and Fontana, Valentina and Alitappeh, Reza Javanmard and Khan, Salman and Saha, Suman and Jeddisaravi, Kossar and Yousefi, Farzad and Culley, Jacob and Nicholson, Tom and Omokeowa, Jordan and Grazioso, Stanislao and Bradley, Andrew and Di Gironimo, Giuseppe and Cuzzolin, Fabio"
+      },
+      {
+        "field": "doi",
+        "old": "10.1109/TPAMI.2022.3150906",
+        "new": "10.1109/tpami.2022.3150906"
+      },
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2102.11585",
+        "new": "https://doi.org/10.1109/tpami.2022.3150906"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-road.json"
+    ]
+  },
+  {
+    "key": "road-r",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2210.01597",
+        "new": "https://doi.org/10.1007/s10994-023-06322-z"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-road-r.json"
+    ]
+  },
+  {
+    "key": "decoupling",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1910.09217",
+        "new": "https://openreview.net/forum?id=r1gRTCVFvB"
+      }
+    ],
+    "sources": [
+      "Official proceedings URL verified in audit"
+    ]
+  },
+  {
+    "key": "focal-loss",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1708.02002",
+        "new": "https://doi.org/10.1109/iccv.2017.324"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "2999--3007"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/iccv.2017.324"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-focal-loss.json"
+    ]
+  },
+  {
+    "key": "mask-rcnn",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1703.06870",
+        "new": "https://doi.org/10.1109/iccv.2017.322"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "2980--2988"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/iccv.2017.322"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-mask-rcnn.json"
+    ]
+  },
+  {
+    "key": "clip",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2103.00020",
+        "new": "https://proceedings.mlr.press/v139/radford21a.html"
+      }
+    ],
+    "sources": [
+      "Official proceedings URL verified in audit"
+    ]
+  },
+  {
+    "key": "internvideo2",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "author",
+        "old": "Wang, Yi and Li, Kunchang and Li, Xinhao and Yu, Jiashuo and He, Yinan and Wang, Chenting and Chen, Guo and Pei, Baoqi and Yan, Ziang and Zheng, Rongkun and Xu, Jilan and Wang, Zun and Shi, Yansong and Jiang, Tianxiang and Li, Songze and Zhang, Hongjie and Huang, Yifei and Qiao, Yu and Wang, Yali and Wang, Limin",
+        "new": "Wang, Yi and Li, Kunchang and Li, Xinhao and Yu, Jiashuo and He, Yinan and Chen, Guo and Pei, Baoqi and Zheng, Rongkun and Wang, Zun and Shi, Yansong and Jiang, Tianxiang and Li, Songze and Xu, Jilan and Zhang, Hongjie and Huang, Yifei and Qiao, Yu and Wang, Yali and Wang, Limin"
+      },
+      {
+        "field": "year",
+        "old": "2024",
+        "new": "2025"
+      },
+      {
+        "field": "booktitle",
+        "old": "European Conference on Computer Vision",
+        "new": "Computer Vision -- ECCV 2024"
+      },
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2403.15377",
+        "new": "https://doi.org/10.1007/978-3-031-73013-9_23"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "396--416"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1007/978-3-031-73013-9_23"
+      },
+      {
+        "field": "series",
+        "old": null,
+        "new": "Lecture Notes in Computer Science"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "15143"
+      },
+      {
+        "field": "publisher",
+        "old": null,
+        "new": "Springer"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-internvideo2.json",
+      "Springer chapter citation export; first online2024, citation year2025"
+    ]
+  },
+  {
+    "key": "waymo",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "author",
+        "old": "Sun, Pei and Kretzschmar, Henrik and Dotiwalla, Xerxes and Chouard, Aurelien and Patnaik, Vijaysai and Tsui, Paul and Guo, James and Zhou, Yin and Chai, Yuning and Caine, Benjamin and Vasudevan, Vijay and Han, Wei and Ngiam, Jiquan and Zhao, Hang and Timofeev, Aleksei and Ettinger, Scott and Krivokon, Maxim and Gao, Amy and Joshi, Aditya and Zhao, Sheng and Cheng, Shuyang and Zhang, Yu and Shlens, Jonathon and Chen, Zhifeng and Anguelov, Dragomir",
+        "new": "Sun, Pei and Kretzschmar, Henrik and Dotiwalla, Xerxes and Chouard, Aurelien and Patnaik, Vijaysai and Tsui, Paul and Guo, James and Zhou, Yin and Chai, Yuning and Caine, Benjamin and Vasudevan, Vijay and Han, Wei and Ngiam, Jiquan and Zhao, Hang and Timofeev, Aleksei and Ettinger, Scott and Krivokon, Maxim and Gao, Amy and Joshi, Aditya and Zhang, Yu and Shlens, Jonathon and Chen, Zhifeng and Anguelov, Dragomir"
+      },
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1912.04838",
+        "new": "https://doi.org/10.1109/cvpr42600.2020.00252"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "2443--2451"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/cvpr42600.2020.00252"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-waymo.json"
+    ]
+  },
+  {
+    "key": "bdd",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1805.04687",
+        "new": "https://doi.org/10.1109/cvpr42600.2020.00271"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "2633--2642"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/cvpr42600.2020.00271"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-bdd.json"
+    ]
+  },
+  {
+    "key": "ava",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "booktitle",
+        "old": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+        "new": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition"
+      },
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1705.08421",
+        "new": "https://doi.org/10.1109/cvpr.2018.00633"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "6047--6056"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/cvpr.2018.00633"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-ava.json",
+      "Official CVPR2018 venue"
+    ]
+  },
+  {
+    "key": "i3d",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "author",
+        "old": "Carreira, Joao and Zisserman, Andrew",
+        "new": "Carreira, João and Zisserman, Andrew"
+      },
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1705.07750",
+        "new": "https://doi.org/10.1109/cvpr.2017.502"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "4724--4733"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/cvpr.2017.502"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-i3d.json",
+      "Official paper author spelling"
+    ]
+  },
+  {
+    "key": "resnet",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1512.03385",
+        "new": "https://doi.org/10.1109/cvpr.2016.90"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "770--778"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/cvpr.2016.90"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-resnet.json"
+    ]
+  },
+  {
+    "key": "fpn",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1612.03144",
+        "new": "https://doi.org/10.1109/cvpr.2017.106"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "936--944"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/cvpr.2017.106"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-fpn.json"
+    ]
+  },
+  {
+    "key": "slowfast",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1812.03982",
+        "new": "https://doi.org/10.1109/iccv.2019.00630"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "6201--6210"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/iccv.2019.00630"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-slowfast.json"
+    ]
+  },
+  {
+    "key": "video-swin",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2106.13230",
+        "new": "https://doi.org/10.1109/cvpr52688.2022.00320"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "3192--3201"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/cvpr52688.2022.00320"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-video-swin.json"
+    ]
+  },
+  {
+    "key": "videomae",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2203.12602",
+        "new": "https://doi.org/10.52202/068431-0732"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "10078--10093"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.52202/068431-0732"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "35"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-videomae.json",
+      "Official NeurIPS proceedings"
+    ]
+  },
+  {
+    "key": "class-balanced",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1901.05555",
+        "new": "https://doi.org/10.1109/cvpr.2019.00949"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "9260--9269"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/cvpr.2019.00949"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-class-balanced.json"
+    ]
+  },
+  {
+    "key": "ldam",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1906.07413",
+        "new": "https://proceedings.neurips.cc/paper_files/paper/2019/file/621461af90cadfdaf0e8d4cc25129f91-Paper.pdf"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "32"
+      }
+    ],
+    "sources": [
+      "Official NeurIPS proceedings",
+      "evidence/ldam.bib"
+    ]
+  },
+  {
+    "key": "balanced-softmax",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2007.10740",
+        "new": "https://proceedings.neurips.cc/paper_files/paper/2020/file/2ba61cc3a8f44143e1f2f13b2b729ab3-Paper.pdf"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "33"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "4175--4186"
+      }
+    ],
+    "sources": [
+      "Official NeurIPS proceedings",
+      "evidence/balanced-softmax.bib",
+      "evidence/balanced-softmax.bib"
+    ]
+  },
+  {
+    "key": "logit-adjust",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2007.07314",
+        "new": "https://openreview.net/forum?id=37nvvqkCo5"
+      }
+    ],
+    "sources": [
+      "Official proceedings URL verified in audit"
+    ]
+  },
+  {
+    "key": "ride",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2010.01809",
+        "new": "https://openreview.net/forum?id=D9I3drBz4UC"
+      }
+    ],
+    "sources": [
+      "Official proceedings URL verified in audit"
+    ]
+  },
+  {
+    "key": "bbn",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/1912.02413",
+        "new": "https://doi.org/10.1109/cvpr42600.2020.00974"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "9716--9725"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/cvpr42600.2020.00974"
+      }
+    ],
+    "sources": [
+      "reference-a-raw/crossref-bbn.json"
+    ]
+  },
+  {
+    "key": "paco",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2107.12028",
+        "new": "https://openaccess.thecvf.com/content/ICCV2021/html/Cui_Parametric_Contrastive_Learning_ICCV_2021_paper.html"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "715--724"
+      }
+    ],
+    "sources": [
+      "https://openaccess.thecvf.com/content/ICCV2021/html/Cui_Parametric_Contrastive_Learning_ICCV_2021_paper.html"
+    ]
+  },
+  {
+    "key": "vl-ltr",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2111.13579",
+        "new": "https://doi.org/10.1007/978-3-031-19806-9_5"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1007/978-3-031-19806-9_5"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "73--91"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "13685"
+      },
+      {
+        "field": "series",
+        "old": null,
+        "new": "Lecture Notes in Computer Science"
+      },
+      {
+        "field": "publisher",
+        "old": null,
+        "new": "Springer"
+      }
+    ],
+    "sources": [
+      "https://link.springer.com/chapter/10.1007/978-3-031-19806-9_5"
+    ]
+  },
+  {
+    "key": "coop",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2109.01134",
+        "new": "https://doi.org/10.1007/s11263-022-01653-1"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "130"
+      },
+      {
+        "field": "number",
+        "old": null,
+        "new": "9"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "2337--2348"
+      }
+    ],
+    "sources": [
+      "reference-b-doi-coop.json"
+    ]
+  },
+  {
+    "key": "cocoop",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2203.05557",
+        "new": "https://doi.org/10.1109/CVPR52688.2022.01631"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/CVPR52688.2022.01631"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "16795--16804"
+      }
+    ],
+    "sources": [
+      "Publisher-deposited Crossref record verified in audit/revision evidence"
+    ]
+  },
+  {
+    "key": "maple",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2210.03117",
+        "new": "https://openaccess.thecvf.com/content/CVPR2023/html/Khattak_MaPLe_Multi-Modal_Prompt_Learning_CVPR_2023_paper.html"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "19113--19122"
+      }
+    ],
+    "sources": [
+      "https://openaccess.thecvf.com/content/CVPR2023/html/Khattak_MaPLe_Multi-Modal_Prompt_Learning_CVPR_2023_paper.html"
+    ]
+  },
+  {
+    "key": "tip-adapter",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "author",
+        "old": "Zhang, Renrui and Wei, Zhang and Fang, Rongyao and Gao, Peng and Li, Kunchang and Dai, Jifeng and Qiao, Yu and Li, Hongsheng",
+        "new": "Zhang, Renrui and Zhang, Wei and Fang, Rongyao and Gao, Peng and Li, Kunchang and Dai, Jifeng and Qiao, Yu and Li, Hongsheng"
+      },
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2207.09519",
+        "new": "https://doi.org/10.1007/978-3-031-19833-5_29"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "493--510"
+      },
+      {
+        "field": "series",
+        "old": null,
+        "new": "Lecture Notes in Computer Science"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "13695"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1007/978-3-031-19833-5_29"
+      },
+      {
+        "field": "publisher",
+        "old": null,
+        "new": "Springer"
+      }
+    ],
+    "sources": [
+      "reference-b-doi-tip-adapter.json"
+    ]
+  },
+  {
+    "key": "xclip",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2208.02816",
+        "new": "https://doi.org/10.1007/978-3-031-19772-7_1"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1007/978-3-031-19772-7_1"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "1--18"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "13664"
+      },
+      {
+        "field": "series",
+        "old": null,
+        "new": "Lecture Notes in Computer Science"
+      },
+      {
+        "field": "publisher",
+        "old": null,
+        "new": "Springer"
+      }
+    ],
+    "sources": [
+      "https://link.springer.com/chapter/10.1007/978-3-031-19772-7_1"
+    ]
+  },
+  {
+    "key": "vifi",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2212.03640",
+        "new": "https://openaccess.thecvf.com/content/CVPR2023/html/Rasheed_Fine-Tuned_CLIP_Models_Are_Efficient_Video_Learners_CVPR_2023_paper.html"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "6545--6554"
+      }
+    ],
+    "sources": [
+      "https://openaccess.thecvf.com/content/CVPR2023/html/Rasheed_Fine-Tuned_CLIP_Models_Are_Efficient_Video_Learners_CVPR_2023_paper.html"
+    ]
+  },
+  {
+    "key": "cge",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2102.01987",
+        "new": "https://openaccess.thecvf.com/content/CVPR2021/html/Naeem_Learning_Graph_Embeddings_for_Compositional_Zero-Shot_Learning_CVPR_2021_paper.html"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "953--962"
+      }
+    ],
+    "sources": [
+      "https://openaccess.thecvf.com/content/CVPR2021/html/Naeem_Learning_Graph_Embeddings_for_Compositional_Zero-Shot_Learning_CVPR_2021_paper.html"
+    ]
+  },
+  {
+    "key": "efficient-prompt",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2112.04478",
+        "new": "https://doi.org/10.1007/978-3-031-19833-5_7"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1007/978-3-031-19833-5_7"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "105--124"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "13695"
+      },
+      {
+        "field": "series",
+        "old": null,
+        "new": "Lecture Notes in Computer Science"
+      },
+      {
+        "field": "publisher",
+        "old": null,
+        "new": "Springer"
+      }
+    ],
+    "sources": [
+      "https://link.springer.com/chapter/10.1007/978-3-031-19833-5_7"
+    ]
+  },
+  {
+    "key": "jaad-crossing",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "pages",
+        "old": null,
+        "new": "206--213"
+      }
+    ],
+    "sources": [
+      "reference-b-doi-jaad-crossing.json"
+    ]
+  },
+  {
+    "key": "mvitv2",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2112.01526",
+        "new": "https://doi.org/10.1109/CVPR52688.2022.00476"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/CVPR52688.2022.00476"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "4794--4804"
+      }
+    ],
+    "sources": [
+      "Publisher-deposited Crossref record verified in audit/revision evidence"
+    ]
+  },
+  {
+    "key": "memvit",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2201.08383",
+        "new": "https://doi.org/10.1109/CVPR52688.2022.01322"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/CVPR52688.2022.01322"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "13577--13587"
+      }
+    ],
+    "sources": [
+      "Publisher-deposited Crossref record verified in audit/revision evidence"
+    ]
+  },
+  {
+    "key": "cycleacr",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "entry type",
+        "old": "online",
+        "new": "article"
+      },
+      {
+        "field": "year",
+        "old": "2023",
+        "new": "2025"
+      },
+      {
+        "field": "eprint",
+        "old": "2303.16118",
+        "new": null
+      },
+      {
+        "field": "eprinttype",
+        "old": "arxiv",
+        "new": null
+      },
+      {
+        "field": "url",
+        "old": "https://arxiv.org/abs/2303.16118",
+        "new": "https://doi.org/10.1109/TPAMI.2025.3595393"
+      },
+      {
+        "field": "journal",
+        "old": null,
+        "new": "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "47"
+      },
+      {
+        "field": "number",
+        "old": null,
+        "new": "11"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "10588--10603"
+      },
+      {
+        "field": "doi",
+        "old": null,
+        "new": "10.1109/TPAMI.2025.3595393"
+      }
+    ],
+    "sources": [
+      "reference-b-cycleacr-crossref.json"
+    ]
+  },
+  {
+    "key": "frcb",
+    "new_entry": false,
+    "fields": [
+      {
+        "field": "title",
+        "old": "{FRCB}: Feature Representation and Dynamic Class Balancing for Road-Event Detection",
+        "new": "A transformer-based framework with sufficient feature representation and dynamic class balancing for road event detection"
+      }
+    ],
+    "sources": [
+      "reference-b-frcb-crossref.json; reference-a-frcb-independent-check.json"
+    ]
+  },
+  {
+    "key": "attention",
+    "new_entry": true,
+    "fields": [
+      {
+        "field": "author",
+        "old": null,
+        "new": "Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, \\L ukasz and Polosukhin, Illia"
+      },
+      {
+        "field": "booktitle",
+        "old": null,
+        "new": "Advances in Neural Information Processing Systems"
+      },
+      {
+        "field": "editor",
+        "old": null,
+        "new": "I. Guyon and U. Von Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": ""
+      },
+      {
+        "field": "publisher",
+        "old": null,
+        "new": "Curran Associates, Inc."
+      },
+      {
+        "field": "title",
+        "old": null,
+        "new": "Attention is All you Need"
+      },
+      {
+        "field": "url",
+        "old": null,
+        "new": "https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "30"
+      },
+      {
+        "field": "year",
+        "old": null,
+        "new": "2017"
+      }
+    ],
+    "sources": [
+      "Official NeurIPS2017 BibTeX / abstract"
+    ]
+  },
+  {
+    "key": "road-challenge-2024",
+    "new_entry": true,
+    "fields": [
+      {
+        "field": "author",
+        "old": null,
+        "new": "Zhang, Tengfei and Zhang, Heng and Li, Ruyang and Deng, Qi and Zhao, Yaqian and Li, Rengang"
+      },
+      {
+        "field": "title",
+        "old": null,
+        "new": "First Place Solution to the {ECCV 2024 ROAD++} Challenge @ {ROAD++} Spatiotemporal Agent Detection 2024"
+      },
+      {
+        "field": "year",
+        "old": null,
+        "new": "2024"
+      },
+      {
+        "field": "eprint",
+        "old": null,
+        "new": "2410.23077"
+      },
+      {
+        "field": "eprinttype",
+        "old": null,
+        "new": "arxiv"
+      },
+      {
+        "field": "url",
+        "old": null,
+        "new": "https://arxiv.org/abs/2410.23077"
+      }
+    ],
+    "sources": [
+      "https://arxiv.org/html/2410.23077v1"
+    ]
+  },
+  {
+    "key": "internvideo2-clip-1b",
+    "new_entry": true,
+    "fields": [
+      {
+        "field": "author",
+        "old": null,
+        "new": "{OpenGVLab}"
+      },
+      {
+        "field": "title",
+        "old": null,
+        "new": "{InternVideo2-CLIP-1B-224p-f8}"
+      },
+      {
+        "field": "organization",
+        "old": null,
+        "new": "OpenGVLab"
+      },
+      {
+        "field": "url",
+        "old": null,
+        "new": "https://huggingface.co/OpenGVLab/InternVideo2-CLIP-1B-224p-f8"
+      },
+      {
+        "field": "urldate",
+        "old": null,
+        "new": "2026-10-28"
+      }
+    ],
+    "sources": [
+      "Official model release; historical revision not inferred"
+    ]
+  },
+  {
+    "key": "internvideo2-1b-config",
+    "new_entry": true,
+    "fields": [
+      {
+        "field": "author",
+        "old": null,
+        "new": "{OpenGVLab}"
+      },
+      {
+        "field": "title",
+        "old": null,
+        "new": "{InternVideo2}: {1B CLIP} zero-shot evaluation configuration"
+      },
+      {
+        "field": "organization",
+        "old": null,
+        "new": "OpenGVLab"
+      },
+      {
+        "field": "url",
+        "old": null,
+        "new": "https://github.com/OpenGVLab/InternVideo/blob/main/InternVideo2/multi_modality/scripts/evaluation/clip/zero_shot/1B/config_ucf101.py"
+      },
+      {
+        "field": "urldate",
+        "old": null,
+        "new": "2026-10-28"
+      }
+    ],
+    "sources": [
+      "Official config: paired InternVL/Llama text implementation; not a claimed run revision"
+    ]
+  }
+]

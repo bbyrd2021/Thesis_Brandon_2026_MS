@@ -1,0 +1,858 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          23
+        ]
+      ],
+      "date-time": "2026-07-23T13:19:04Z",
+      "timestamp": 1784812744683,
+      "version": "3.55.0"
+    },
+    "reference-count": 103,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "11",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2025-11-01T00:00:00Z",
+          "timestamp": 1761955200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2025-11-01T00:00:00Z",
+          "timestamp": 1761955200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2025-11-01T00:00:00Z",
+          "timestamp": 1761955200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "name": "National Key R&#x0026;D Program of China",
+        "award": [
+          "2022ZD0160900"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2022ZD0160900"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jiangsu Frontier Technology Research and Development Program",
+        "award": [
+          "BF2024076"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "BF2024076"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Collaborative Innovation Center of Novel Software Technology and Industrialization"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Pattern Anal. Mach. Intell."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1109/tpami.2025.3595393",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          8,
+          4
+        ]
+      ],
+      "date-time": "2025-08-04T18:45:09Z",
+      "timestamp": 1754333109000
+    },
+    "page": "10588-10603",
+    "source": "Crossref",
+    "is-referenced-by-count": 4,
+    "title": [
+      "CycleACR: Cycle Modeling of Actor-Context Relations for Video Action Detection"
+    ],
+    "prefix": "10.1109",
+    "volume": "47",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0004-8558-4216",
+        "authenticated-orcid": false,
+        "given": "Lei",
+        "family": "Chen",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, Jiangsu, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhan",
+        "family": "Tong",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, Jiangsu, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-3667-531X",
+        "authenticated-orcid": false,
+        "given": "Yibing",
+        "family": "Song",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "He resides in Shanghai, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1391-1762",
+        "authenticated-orcid": false,
+        "given": "Gangshan",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, Jiangsu, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-3674-7718",
+        "authenticated-orcid": false,
+        "given": "Limin",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, Jiangsu, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "article-title": "UCF101: A dataset of 101 human actions classes from videos in the wild",
+        "author": "Soomro",
+        "year": "2012"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00633"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.01328"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.502"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.622"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2011.6126543"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-01252-6_20"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00033"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00037"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.01021"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WACV45572.2020.9093617"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-58555-6_5"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00807"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00801"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.00053"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WACV56688.2023.00334"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.00069"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-10602-1_48"
+      },
+      {
+        "key": "ref19",
+        "first-page": "10078",
+        "article-title": "VideoMAE: Masked autoencoders are data-efficient learners for self-supervised video pre-training",
+        "volume-title": "Proc. Adv. Neural Inf. Process. Syst.",
+        "volume": "35",
+        "author": "Tong",
+        "year": "2022"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-46484-8_2"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-01246-5_49"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00718"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.00193"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7298878"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7299101"
+      },
+      {
+        "key": "ref26",
+        "first-page": "568",
+        "article-title": "Two-stream convolutional networks for action recognition in videos",
+        "volume-title": "Proc. Adv. Neural Inf. Process. Syst.",
+        "volume": "27",
+        "author": "Simonyan",
+        "year": "2014"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.213"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-15567-3_11"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2012.59"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2015.510"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2017.2712608"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2009.5206848"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.590"
+      },
+      {
+        "issue": "2",
+        "key": "ref34",
+        "first-page": "5",
+        "article-title": "Rethinking Spatiotemporal Feature Learning for Video Understanding",
+        "volume": "1",
+        "author": "Xie",
+        "year": "2017"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00675"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-01225-0_18"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00630"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.48550/ARXIV.1706.03762"
+      },
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.48550/arXiv.1810.04805"
+      },
+      {
+        "key": "ref40",
+        "article-title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+        "author": "Dosovitskiy",
+        "year": "2020"
+      },
+      {
+        "key": "ref41",
+        "first-page": "10347",
+        "article-title": "Training data-efficient image transformers & distillation through attention",
+        "volume-title": "Proc. Int. Conf. Mach. Learn.",
+        "author": "Touvron",
+        "year": "2021"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00986"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-58452-8_13"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00813"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCVW54120.2021.00355"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.48550/arXiv.2102.05095"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00676"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.00320"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.00476"
+      },
+      {
+        "key": "ref50",
+        "first-page": "29441",
+        "article-title": "Hiera: A hierarchical vision transformer without the bells-and-whistles",
+        "volume-title": "Proc. Int. Conf. Mach. Learn.",
+        "author": "Ryali",
+        "year": "2023"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.01426"
+      },
+      {
+        "key": "ref52",
+        "article-title": "Revisiting feature prediction for learning visual representations from video",
+        "author": "Bardes",
+        "year": "2024"
+      },
+      {
+        "key": "ref53",
+        "article-title": "VideoPrism: A foundational visual encoder for video understanding",
+        "author": "Zhao",
+        "year": "2024"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-031-73347-5_14"
+      },
+      {
+        "key": "ref55",
+        "first-page": "28127",
+        "article-title": "Don\u2019t look twice: Faster video transformers with run-length Tokenization",
+        "volume-title": "Proc. Adv. Neural Inf. Proces. Syst.",
+        "volume": "37",
+        "author": "Choudhury",
+        "year": "2024"
+      },
+      {
+        "key": "ref56",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52733.2024.02145"
+      },
+      {
+        "key": "ref57",
+        "article-title": "InternVideo: General video foundation models via generative and discriminative learning",
+        "author": "Wang",
+        "year": "2022"
+      },
+      {
+        "key": "ref58",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-031-73013-9_23"
+      },
+      {
+        "key": "ref59",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v34i07.6811"
+      },
+      {
+        "key": "ref60",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-46493-0_45"
+      },
+      {
+        "key": "ref61",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5244/C.30.58"
+      },
+      {
+        "key": "ref62",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.393"
+      },
+      {
+        "key": "ref63",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2015.362"
+      },
+      {
+        "key": "ref64",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.296"
+      },
+      {
+        "key": "ref65",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2015.169"
+      },
+      {
+        "key": "ref66",
+        "first-page": "91",
+        "article-title": "Faster R-CNN: Towards real-time object detection with region proposal networks",
+        "volume-title": "Proc. Adv. Neural Inf. Process. Syst.",
+        "volume": "28",
+        "author": "Ren",
+        "year": "2015"
+      },
+      {
+        "key": "ref67",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.l007/978-3-319-46448-0_2"
+      },
+      {
+        "key": "ref68",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.472"
+      },
+      {
+        "key": "ref69",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00035"
+      },
+      {
+        "key": "ref70",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-58517-4_5"
+      },
+      {
+        "key": "ref71",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.620"
+      },
+      {
+        "key": "ref72",
+        "article-title": "A better baseline for AVA",
+        "author": "Girdhar",
+        "year": "2018"
+      },
+      {
+        "key": "ref73",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-01267-0_19"
+      },
+      {
+        "key": "ref74",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00675"
+      },
+      {
+        "key": "ref75",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.01322"
+      },
+      {
+        "key": "ref76",
+        "article-title": "You only watch once: A unified CNN architecture for real-time spatiotemporal action localization",
+        "author": "K\u00f6p\u00fckl\u00fc",
+        "year": "2019"
+      },
+      {
+        "key": "ref77",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.01323"
+      },
+      {
+        "key": "ref78",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.01414"
+      },
+      {
+        "key": "ref79",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV51070.2023.00953"
+      },
+      {
+        "key": "ref80",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52733.2024.01781"
+      },
+      {
+        "key": "ref81",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52733.2024.01739"
+      },
+      {
+        "key": "ref82",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCSVT.2024.3387933"
+      },
+      {
+        "key": "ref83",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v38i5.28292"
+      },
+      {
+        "key": "ref84",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v39i4.32465"
+      },
+      {
+        "key": "ref85",
+        "article-title": "Open-vocabulary spatio-temporal action detection",
+        "author": "Wu",
+        "year": "2024"
+      },
+      {
+        "key": "ref86",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WACV61041.2025.00804"
+      },
+      {
+        "key": "ref87",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.00092"
+      },
+      {
+        "key": "ref88",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v35i4.16437"
+      },
+      {
+        "key": "ref89",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00579"
+      },
+      {
+        "key": "ref90",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-58520-4_15"
+      },
+      {
+        "key": "ref91",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-01228-1_25"
+      },
+      {
+        "key": "ref92",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.00315"
+      },
+      {
+        "key": "ref93",
+        "article-title": "The AVA-kinetics localized human actions video dataset",
+        "author": "Li",
+        "year": "2020"
+      },
+      {
+        "key": "ref94",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2024.3377192"
+      },
+      {
+        "key": "ref95",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3581783.3611945"
+      },
+      {
+        "key": "ref96",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-031-72661-3_26"
+      },
+      {
+        "key": "ref97",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.322"
+      },
+      {
+        "key": "ref98",
+        "article-title": "Person-context cross attention for spatio-temporal action detection",
+        "author": "Ning",
+        "year": "2021"
+      },
+      {
+        "key": "ref99",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.01422"
+      },
+      {
+        "key": "ref100",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.01085"
+      },
+      {
+        "key": "ref101",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.01326"
+      },
+      {
+        "key": "ref102",
+        "article-title": "MaskRCNN-benchmark: Fast, modular reference implementation of instance segmentation and object detection algorithms in PyTorch",
+        "volume-title": "GitHub Repository",
+        "author": "Massa",
+        "year": "2018"
+      },
+      {
+        "key": "ref103",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-031-20047-2_1"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/34/11192800/11109060.pdf?arnumber=11109060",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          28
+        ]
+      ],
+      "date-time": "2026-04-28T19:47:43Z",
+      "timestamp": 1777405663000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/11109060/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "references-count": 103,
+    "journal-issue": {
+      "issue": "11"
+    },
+    "URL": "https://doi.org/10.1109/tpami.2025.3595393",
+    "relation": {},
+    "ISSN": [
+      "0162-8828",
+      "2160-9292",
+      "1939-3539"
+    ],
+    "issn-type": [
+      {
+        "value": "0162-8828",
+        "type": "print"
+      },
+      {
+        "value": "2160-9292",
+        "type": "electronic"
+      },
+      {
+        "value": "1939-3539",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    }
+  }
+}

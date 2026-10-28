@@ -1,0 +1,483 @@
+{
+  "baseline_commit": "59950324e087dfa9521d39100ff18c6149865089",
+  "github_prior_commit": "1a1ee8f048a59d189b87a0dcae391ddc85a07a5b",
+  "same_baseline_tree": true,
+  "original_files": [
+    {
+      "path": ".gitignore",
+      "sha256": "9dd86d6450ff604ca69a50dab4068ac41e9b22bdbf5dcc11561d36009163078e"
+    },
+    {
+      "path": "Fig/Example1.png",
+      "sha256": "0dcc52e2175e2e2cb2d6a75f25612159f0828a726c873fb40b99f620dd842cdc"
+    },
+    {
+      "path": "Fig/Example2.png",
+      "sha256": "85c777e9037d55aea3bf7d43371ad8373f8208ac9df128a8a9de763c0f3ebbc9"
+    },
+    {
+      "path": "Fig/Example3.png",
+      "sha256": "df57d0d19bd89b2a3773ba736dcb022a034b1c65beec4d7cea6008b43fc2848d"
+    },
+    {
+      "path": "Fig/box-crop.pdf",
+      "sha256": "153b430f990d6572793fa534fe7aa29b4f2e6a2e3cdf752a76690832b247cf81"
+    },
+    {
+      "path": "Fig/box-crop.png",
+      "sha256": "8efc362b4ca42fbaf2900c5876bf8bf7754f5a962c5cd5fb5837febad8d97555"
+    },
+    {
+      "path": "Fig/composition-detail.pdf",
+      "sha256": "66b14fd91f989fd01634733e759555c7084d841d52e46650edc468afb1c6e9db"
+    },
+    {
+      "path": "Fig/composition-detail.png",
+      "sha256": "b68371bcb7bc306ed1bac93beb3fc2f19671bae7be9c1c2d21aefe35a2914b11"
+    },
+    {
+      "path": "Fig/contextual-attention.png",
+      "sha256": "99199ed1ad57023873de69be6957d3feb71338a516271b9cb07611b3eca42f07"
+    },
+    {
+      "path": "Fig/contextual-mean-pool.png",
+      "sha256": "ebcdc791211ecaa5dd70e2a1115183435f9b88dcaf3a192d2b60f7017700ef06"
+    },
+    {
+      "path": "Fig/contextual-scene-attention.png",
+      "sha256": "82b495c1883b0c057dc63d08e1872dd3e2b9c32f5272e8d32351066e4d82c2d2"
+    },
+    {
+      "path": "Fig/dcb-expert-blend.png",
+      "sha256": "93e74cc737edbd79e5faf5e748b430550cd83aecdb2890d41d9927533e5196c3"
+    },
+    {
+      "path": "Fig/expert-blend-example.png",
+      "sha256": "e2bddf6cde171fbfbb8d467dae944260cbe21d3c14ba0ca556a7efedbe16f195"
+    },
+    {
+      "path": "Fig/focal-expert-blend.png",
+      "sha256": "e175f9b12d7e496f159f154b284262b7cde491f65cf4320836a301729e4af000"
+    },
+    {
+      "path": "Fig/frame-map.pdf",
+      "sha256": "dc2769005678b1883764e3dacf49d345a277b257ca384953fa5dc6d12b1a56d6"
+    },
+    {
+      "path": "Fig/frame-map.png",
+      "sha256": "93f943af0194826192288f1772abcf67f069509de1093fd4cc0387105fb5cd85"
+    },
+    {
+      "path": "Fig/internvideo2-towers.pdf",
+      "sha256": "d302bac765eb22aa5c3f7b6cda597b218cfabaa680c066f0d57937878a484c71"
+    },
+    {
+      "path": "Fig/internvideo2-towers.png",
+      "sha256": "b9c8f5b30a7cc7dc098b31015a8a928f8d7333c44ded5fbd3c4b4c27b1420d55"
+    },
+    {
+      "path": "Fig/out-of-fold.pdf",
+      "sha256": "46bd6b614082f0972a0ab91260659a5afeea26266092df6ffad1c6e7be0b8e95"
+    },
+    {
+      "path": "Fig/out-of-fold.png",
+      "sha256": "8ead311147e7064b8ce992fead4fd9d0aec5fe99fc98335581f6c2e9c0876976"
+    },
+    {
+      "path": "Fig/qualitative-bus-recovery.png",
+      "sha256": "6473037b66a5cfb94991f43fc8cfae8a301ccc89ebae677b25dac4121ebed572"
+    },
+    {
+      "path": "Fig/qualitative-tail-ranking.png",
+      "sha256": "45dfa1cc284edd8e2ec4aba7fbee76cb0b1dae9f8e05f82a45f2e794757fd128"
+    },
+    {
+      "path": "Fig/retinanet3d.pdf",
+      "sha256": "d6fba2a043f1977f57f08a1a2c7a6d6383b0e12aad9f27279accc04aa14b0fdb"
+    },
+    {
+      "path": "Fig/retinanet3d.png",
+      "sha256": "2f9ab00a86d75fa396225641bb17a6636a10a086be7c572c44f1bcbc99a7f1d2"
+    },
+    {
+      "path": "Fig/road-event-example.png",
+      "sha256": "20bdc9111535a46ac962fc75d7a31d472e7e674e6b3623c1d29ec6c42c1f94d2"
+    },
+    {
+      "path": "Fig/roi-align.pdf",
+      "sha256": "417c283deb0772384eecd7eb92a5e6b11421529c2cc7750cafe87c89562e948f"
+    },
+    {
+      "path": "Fig/roi-align.png",
+      "sha256": "d216d7104f59f2f27ed5e05a3c8477738a09a969b55030131b8456d354cc1c47"
+    },
+    {
+      "path": "Fig/scaled-expert-blend.png",
+      "sha256": "94825a93193cabdbe5358a640e1ae560a336c0da5e60526242129944dd815d72"
+    },
+    {
+      "path": "Fig/score-transfer-limit.pdf",
+      "sha256": "18c7412d36114175dae8dd73c1dddee7b8617d9866d75de0ec2110c03739752d"
+    },
+    {
+      "path": "Fig/score-transfer-limit.png",
+      "sha256": "c0f0b1685cfb6a48adbaf1daf681f0ce1e528d5ef69f1e8fa2e869fd4fe1766e"
+    },
+    {
+      "path": "Fig/semantic-composition.png",
+      "sha256": "e67d94c94806c61f4d388a7fe02f5cf6bd5327468497f34bec285616a10a8587"
+    },
+    {
+      "path": "Fig/stage0-baseline.pdf",
+      "sha256": "9f79017d9ba32e217c32d562ef6ee54fbb129c76f1c70f18bd50eb665d0838c0"
+    },
+    {
+      "path": "Fig/stage0-baseline.png",
+      "sha256": "4226a263ab88a263b2d5ae9d74bda21f342270344fa4b155fa33c355ecfafefc"
+    },
+    {
+      "path": "Fig/stage1-transfer.pdf",
+      "sha256": "717fcc474f335799c5f2a29e4ce6b7903e4f098b80b92d22501d794b8e34525f"
+    },
+    {
+      "path": "Fig/stage1-transfer.png",
+      "sha256": "dc6d041820d01e1400ce149827bf789e6d57e4fce314acf2842e5a80dfb2fa96"
+    },
+    {
+      "path": "Fig/stage2-roialign.pdf",
+      "sha256": "3d13f4b86149623330971b5c52757b9e0167191d9bee3cb463f49f1c6c9befc8"
+    },
+    {
+      "path": "Fig/stage2-roialign.png",
+      "sha256": "f9bfb488d19f3c72c171f3fdc7e22c00e9f1bd2fd7e5465990e1ceffcbb91de6"
+    },
+    {
+      "path": "Fig/stage3-composition.pdf",
+      "sha256": "f6dc55993250883a96db68958453544b0a8648761f1841f050dec8cdcfb18ca3"
+    },
+    {
+      "path": "Fig/stage3-composition.png",
+      "sha256": "0476cd7611a53d14b303a4aac9dc76d8e1aa9811b17ed0cbacb33a9bcab49802"
+    },
+    {
+      "path": "Fig/stage4-semantic.pdf",
+      "sha256": "5e9c2920a1338f0af9371b71f4e744618a6f3561d40d41c7c9dcee95ff6f40d5"
+    },
+    {
+      "path": "Fig/stage4-semantic.png",
+      "sha256": "edad7890fd4b922cac85f798976cd67dbf6978e5b15932c5e70b9dd6fb3a2e6c"
+    },
+    {
+      "path": "Fig/stage5-composition.png",
+      "sha256": "9b24cc07c1675d9e5d21269209e29b579777ae3c9b71d332d6c08fda6c657535"
+    },
+    {
+      "path": "Fig/triplet-training-tail.pdf",
+      "sha256": "2983a731e35fb89a8805a704ed7c0a85e02f8a06eb8d9ce759f8dec033439b64"
+    },
+    {
+      "path": "Fig/triplet-training-tail.png",
+      "sha256": "4c95108b9b04bb097452d9c3c94feab096dfed531a7826944d1c660624bc0620"
+    },
+    {
+      "path": "Fig/triplet-training-tail.svg",
+      "sha256": "f525a01cb6c19d9ede12b0633670dee8d075d3a2b7539e7adb1957b9c20f1ade"
+    },
+    {
+      "path": "Fig/yolov8x.pdf",
+      "sha256": "392f4798b8832a26130a8303f8573c3fd5f8a410eb99a40a802f137bf2d18ba1"
+    },
+    {
+      "path": "Fig/yolov8x.png",
+      "sha256": "3d3b3e8141b9c3aecf5ac5ce1dcad7d811f61628c90b8f9b1d06a8f58e895253"
+    },
+    {
+      "path": "README.md",
+      "sha256": "108842aac1302a6c5e93d01387744886a5d535c355314202c386177e0de89522"
+    },
+    {
+      "path": "appendix/appendixA.tex",
+      "sha256": "f1141d613cd337621c8a6ee9e6dd946e77c254c6801c4d0876eeed87153db037"
+    },
+    {
+      "path": "bib/references.bib",
+      "sha256": "df39c7e6489ab96217c04f5d0d335dd7387143f6c3fc872e244af9c600ac8834"
+    },
+    {
+      "path": "chapters/ch1_introduction.tex",
+      "sha256": "80898ef9e74e993e71d9f4ba38a341b166acf0a52f46b5f8c20e83680bc798fb"
+    },
+    {
+      "path": "chapters/ch2_literature_review.tex",
+      "sha256": "01435a56d1a37a30dd4c97e9c13176c5c9e321aa9fa4ffa7363e571e4b6d4ddd"
+    },
+    {
+      "path": "chapters/ch3_methodology.tex",
+      "sha256": "79844702753db984ff28a5ddeb5c339b912fd4e316d4317d3071e74e95475041"
+    },
+    {
+      "path": "chapters/ch4_results_discussion.tex",
+      "sha256": "fc7dab80a737ccfea52ee657110c2dae5285dba2fa0762b19ab65f82a72b56f0"
+    },
+    {
+      "path": "chapters/ch5_conclusion.tex",
+      "sha256": "c337530880700bce9f59fe571749faee90a0457696a4e3ddf2085b3f053ccd1c"
+    },
+    {
+      "path": "figure-sources/box-crop.drawio",
+      "sha256": "97e80f13fd100d07cee3ad9cf4118b0f661836c569644b9f687c8ac15e53af82"
+    },
+    {
+      "path": "figure-sources/composition-detail.drawio",
+      "sha256": "6fa935e1a2fede5376add02fffa9ced1fe248c49e3a2c02f26878a5f8340a96d"
+    },
+    {
+      "path": "figure-sources/contextual-attention.drawio",
+      "sha256": "93072a08a01ea119ad0bd9ba3e12862bdf15d804cdb1a3fb2015e80c79a9a720"
+    },
+    {
+      "path": "figure-sources/frame-map.drawio",
+      "sha256": "73c9c6dfdad1f03a77c440f47df675f0681b160079c7af1230e3dbf842cb51d9"
+    },
+    {
+      "path": "figure-sources/internvideo2-towers.drawio",
+      "sha256": "989f48536b42ed237cc45112f3b24615379d0439de4ecab2515c9bae1b760896"
+    },
+    {
+      "path": "figure-sources/out-of-fold.drawio",
+      "sha256": "be9ab27c22ee8178947927ee662b5bcff292f217d24d2f7b52e6e98b918a2f32"
+    },
+    {
+      "path": "figure-sources/plot-tail.py",
+      "sha256": "7480b26ea0ebd90e61e1fb6e83e4475ac04f94c59ea6e957e5446445d056353f"
+    },
+    {
+      "path": "figure-sources/post-defense-example-provenance.json",
+      "sha256": "4bbbc13cbb895d5f46012b65609f4e170df285505ef03df0a332d6fc932cebab"
+    },
+    {
+      "path": "figure-sources/qualitative-tail-ranking.drawio",
+      "sha256": "c833dc34e5a45aa12d1b9ea8869eeb7db0e45380b437988099321694380329db"
+    },
+    {
+      "path": "figure-sources/results-update-provenance.json",
+      "sha256": "72eeec57f4b23493b15b15054cbf61cd2588c28d1cfb20faf0b7de8efbd0ae35"
+    },
+    {
+      "path": "figure-sources/retinanet3d.drawio",
+      "sha256": "59cd1e7b877f42b154ff556d7b44fd26969f4200e01e59ec31c23f4a9bbcb5ce"
+    },
+    {
+      "path": "figure-sources/road-event-provenance.json",
+      "sha256": "a82a120b0457df748d32eb11b5c89cd4dad743c043d134450a3a205392ef9537"
+    },
+    {
+      "path": "figure-sources/roi-align.drawio",
+      "sha256": "b38304d10a290a8b6fe25cd38a64308ec8d9ff72e1082c0bfbeccfb3b9666250"
+    },
+    {
+      "path": "figure-sources/scaled-expert-blend.drawio",
+      "sha256": "9ee7deec5e869bec8b8cfaf3ab0df27b83ca16a49b254041f26a43d7059c2977"
+    },
+    {
+      "path": "figure-sources/score-transfer-limit.drawio",
+      "sha256": "7e64fcf2ae31ac6af14fb3e10a49ce2de214f0c0c9b2ea0e3df0d520f30f3167"
+    },
+    {
+      "path": "figure-sources/semantic-composition.drawio",
+      "sha256": "7429b8f3da6a2fb8b82be1eed8624b16191c75350c013cf2cb58b78b1eb94632"
+    },
+    {
+      "path": "figure-sources/slideshow/contextual-attention.drawio",
+      "sha256": "93072a08a01ea119ad0bd9ba3e12862bdf15d804cdb1a3fb2015e80c79a9a720"
+    },
+    {
+      "path": "figure-sources/slideshow/contextual-mean-pool.drawio",
+      "sha256": "6db4bf111f79b1b1e5eda911bbe998fe8bc05316bf6f67a1d380a38cc30bdc69"
+    },
+    {
+      "path": "figure-sources/slideshow/contextual-scene-attention.drawio",
+      "sha256": "854126bbcd83c948c804cd2f703a30a8a85c92bb95ea1e2dcff08e38d84377d3"
+    },
+    {
+      "path": "figure-sources/slideshow/dcb-expert-blend.drawio",
+      "sha256": "2734c735ad6394a17c4de55f7aba8b863f71da7a1ad5aeef8fc0441173e466fd"
+    },
+    {
+      "path": "figure-sources/slideshow/expert-blend-example.drawio",
+      "sha256": "e107767e53112318aa2cb72e751d4ef087cdc79ad07142fd2d5821b52986d783"
+    },
+    {
+      "path": "figure-sources/slideshow/focal-expert-blend.drawio",
+      "sha256": "66d09e039dbd56e71bf820950519be8707a3845620e4473c531cbbc1fd23b355"
+    },
+    {
+      "path": "figure-sources/slideshow/frame-map.drawio",
+      "sha256": "ac65ce6e13cc861156f18e9a642ed26459b9233c87c7e342c1941f6ba2a5a759"
+    },
+    {
+      "path": "figure-sources/slideshow/internvideo2-towers.drawio",
+      "sha256": "a6031dd50390c78fb2e1b40bfa1b93c6d80e3d41b5ae37fc524684c1daa6f68e"
+    },
+    {
+      "path": "figure-sources/slideshow/provenance.json",
+      "sha256": "abfd69624760f406470887123ded5a25c58475ad0408ae526e1cfb6a2d6e8b03"
+    },
+    {
+      "path": "figure-sources/slideshow/retinanet3d.drawio",
+      "sha256": "21daad5e70e3a2fe17edbd2a5eecb076fedf9289fb77808f9dceb99a6de7dc16"
+    },
+    {
+      "path": "figure-sources/slideshow/roi-align.drawio",
+      "sha256": "8f0b04f8412e1bcf9a6a971874ecca2cd2ae527e6f0310bfbc7b82897f3b191c"
+    },
+    {
+      "path": "figure-sources/slideshow/scaled-expert-blend.drawio",
+      "sha256": "9ee7deec5e869bec8b8cfaf3ab0df27b83ca16a49b254041f26a43d7059c2977"
+    },
+    {
+      "path": "figure-sources/slideshow/score-transfer-limit.drawio",
+      "sha256": "77c0c2df0a8e9f4615886494fdbae4e5a2aad8403a59239f9f5cca73000b4e7f"
+    },
+    {
+      "path": "figure-sources/slideshow/semantic-composition.drawio",
+      "sha256": "7429b8f3da6a2fb8b82be1eed8624b16191c75350c013cf2cb58b78b1eb94632"
+    },
+    {
+      "path": "figure-sources/slideshow/stage4-semantic.drawio",
+      "sha256": "ed771e10c041f92b1f88f056ee527bfb201a231bae8c34925cebbf907c4166bc"
+    },
+    {
+      "path": "figure-sources/slideshow/stage5-composition.drawio",
+      "sha256": "0abcc2f78efcb04edd0301224092e83ceaf6a7fa97b7fad91c309e1b95a91535"
+    },
+    {
+      "path": "figure-sources/slideshow/yolov8x.drawio",
+      "sha256": "ad79f1dc37321b89c69a03c4e79034d55acccfe98c621a130c9b1830d58bed58"
+    },
+    {
+      "path": "figure-sources/stage0-baseline.drawio",
+      "sha256": "c3106446f81cb2246e5eb476fc9dc028cab762a0947dd4f7ef7713ee846e532a"
+    },
+    {
+      "path": "figure-sources/stage1-transfer.drawio",
+      "sha256": "f33da2ec8aa816460eadf8c0bb432c6625de009d18f7255259dc86c55d3122e9"
+    },
+    {
+      "path": "figure-sources/stage2-roialign.drawio",
+      "sha256": "082f1568e62139453907ee32fcace95951cdbbfa3375f9fec2dbb1e3a14bf0ce"
+    },
+    {
+      "path": "figure-sources/stage3-composition.drawio",
+      "sha256": "1b3d811aad770cbd9c72cad83f5b9fcaa4baa30ce52c42b110e2e0989c9bd361"
+    },
+    {
+      "path": "figure-sources/stage4-semantic.drawio",
+      "sha256": "51094ecad0838d4906ae37a29c894ec563d88fe59809361af3fdfe936e8a50cc"
+    },
+    {
+      "path": "figure-sources/train-counts.json",
+      "sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f"
+    },
+    {
+      "path": "figure-sources/triplet-tail-counts-aggie.pdf",
+      "sha256": "2983a731e35fb89a8805a704ed7c0a85e02f8a06eb8d9ce759f8dec033439b64"
+    },
+    {
+      "path": "figure-sources/triplet-tail-counts-aggie.png",
+      "sha256": "4c95108b9b04bb097452d9c3c94feab096dfed531a7826944d1c660624bc0620"
+    },
+    {
+      "path": "figure-sources/triplet-tail-counts-aggie.svg",
+      "sha256": "f525a01cb6c19d9ede12b0633670dee8d075d3a2b7539e7adb1957b9c20f1ade"
+    },
+    {
+      "path": "figure-sources/yolov8x.drawio",
+      "sha256": "841b38ed35efdcbf16a185700fffd32972a19c34fb26e2f7d6edff0875cb9f70"
+    },
+    {
+      "path": "frontmatter/abstract.tex",
+      "sha256": "8d2917743fd7b18478579d9ef97cb3a9bc4f0bd8b46b1bf514544c3c79c41931"
+    },
+    {
+      "path": "frontmatter/acknowledgments.tex",
+      "sha256": "fd968bfe8be6a3c62759e9ca278bc0e78c25ce01a2685f10809372c8f5c112e6"
+    },
+    {
+      "path": "frontmatter/approval.tex",
+      "sha256": "49db0e7e3fbaf7a9000a402d76770fcaee53359ad04d619370c6cafda40f3a3d"
+    },
+    {
+      "path": "frontmatter/biosketch.tex",
+      "sha256": "b085ceebecdb2276b872ae6d0b425b6437cedf58c468cc37998ff0e8b7d560ec"
+    },
+    {
+      "path": "frontmatter/copyright.tex",
+      "sha256": "91e1e68c37462b8d69d192afa424361dda09c635d08b1c93165aa301af507a6e"
+    },
+    {
+      "path": "frontmatter/dedication.tex",
+      "sha256": "e379b46351d00bc3df5c9c35635cf2027264c86578def55923fc256578547bf9"
+    },
+    {
+      "path": "frontmatter/titlepage.tex",
+      "sha256": "9f582e85cbbd1b53b8b9fdd3601733e859e34b0476d22a952adb6ecc63490c97"
+    },
+    {
+      "path": "journal-draft/README.md",
+      "sha256": "df271936fcc1e648e2a71e36c243d86e7f456db0e518e54e757bd0db24d6e246"
+    },
+    {
+      "path": "journal-draft/main.tex",
+      "sha256": "35cedf103f4869f6ae05be2db51d6258fbf7228cd713cd0af4bac11d8c391660"
+    },
+    {
+      "path": "latexmkrc",
+      "sha256": "9f3b4e9a2bf747490e6eb6bb256e4b1b0cea059429ec838cfa122bd2e9cca378"
+    },
+    {
+      "path": "main.tex",
+      "sha256": "e3a36c640fe5bcc4df6e3ad7b6b91117a66af0ca6d5c918af5c4718e34ef9b5c"
+    },
+    {
+      "path": "preamble.tex",
+      "sha256": "30dcbf51cd9d535a9af2454c62a8f58d11d648b6b5e815d68f170ef37e777023"
+    },
+    {
+      "path": "review/citation-verification.md",
+      "sha256": "cc5f49d4c6d5dd4ae58d058769587c6947f95ad0c9ae8436edb829333caa5338"
+    },
+    {
+      "path": "review/diagram-formula-update.md",
+      "sha256": "07b2e120e2f9e8e3aad05e1a6d2a56c20c655198087a86981381f9a2e8d20863"
+    },
+    {
+      "path": "review/moradi-revisions.md",
+      "sha256": "a7c23cf619edc6e14318df60b6c088d76353aa1bf3d582a2af2caf86cb7a47d1"
+    },
+    {
+      "path": "review/post-defense-response.md",
+      "sha256": "fac1c0bfb51dc911d3018ac29de4ab5ef08e4e03cbddf9f36af4843a243a95e0"
+    },
+    {
+      "path": "review/presentation-revisions.md",
+      "sha256": "bee51d22c3cc317459d75f8da40bda8f1a50c6b03b6ff94e0e2bf3aa4cbfa568"
+    },
+    {
+      "path": "review/prototype-video-plan.txt",
+      "sha256": "da9432df2238e10037aaf4577a3b1ce83f5900bf6b21febcc0d25cc368542c10"
+    },
+    {
+      "path": "review/results-update-metrics.json",
+      "sha256": "057d0c61ab8a0fff1ff72f239e9284f1c739dda12551c88d0e126b637795396c"
+    },
+    {
+      "path": "review/results-update.md",
+      "sha256": "95583a8f4c975e5020fe8f10e838d70f2686deb42515a9c89ef771ecfe224932"
+    },
+    {
+      "path": "review/template-alignment-20261013.md",
+      "sha256": "5af0a20fb2959f13c48dac82938b1c0fa333ddb0161d66885d85be7e9e47d308"
+    }
+  ]
+}

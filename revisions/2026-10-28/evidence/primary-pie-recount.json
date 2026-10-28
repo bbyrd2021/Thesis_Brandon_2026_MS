@@ -1,0 +1,11 @@
+{
+  "checked_utc": "2026-10-28T18:16:56.721028+00:00",
+  "method": "Independent streaming XML recount by primary reviewer; sums meta/task/size and pedestrian track/box elements. No reliance on cached per-clip sums.",
+  "archive_sha256": "41ea9d3c716bda694d9091c2edf63b24b47e18f72ef5a3cf0f94df9dc11da8ad",
+  "totals": {
+    "clips": 53,
+    "metadata_video_frames": 909480,
+    "pedestrian_tracks": 1842,
+    "pedestrian_boxes": 740901
+  }
+}

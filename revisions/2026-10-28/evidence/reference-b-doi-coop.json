@@ -1,0 +1,569 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          28
+        ]
+      ],
+      "date-time": "2026-10-28T14:32:46Z",
+      "timestamp": 1793197966669,
+      "version": "4.5.0"
+    },
+    "reference-count": 56,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "9",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              7,
+              31
+            ]
+          ],
+          "date-time": "2022-07-31T00:00:00Z",
+          "timestamp": 1659225600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springer.com/tdm"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              7,
+              31
+            ]
+          ],
+          "date-time": "2022-07-31T00:00:00Z",
+          "timestamp": 1659225600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Int J Comput Vis"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          9
+        ]
+      ]
+    },
+    "DOI": "10.1007/s11263-022-01653-1",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          31
+        ]
+      ],
+      "date-time": "2022-07-31T01:04:36Z",
+      "timestamp": 1659229476000
+    },
+    "page": "2337-2348",
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 3368,
+    "title": [
+      "Learning to Prompt for Vision-Language Models"
+    ],
+    "prefix": "10.1007",
+    "volume": "130",
+    "author": [
+      {
+        "given": "Kaiyang",
+        "family": "Zhou",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jingkang",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chen Change",
+        "family": "Loy",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ziwei",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          31
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "1653_CR1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bossard, L., Guillaumin, M., & Van\u00a0Gool, L. (2014). Food-101\u2013mining discriminative components with random forests. In ECCV",
+        "DOI": "10.1007/978-3-319-10599-4_29"
+      },
+      {
+        "key": "1653_CR2",
+        "unstructured": "Bommasani, R., Hudson, D. A., Adeli, E., Altman, R., Arora, S., von Arx, S., Bernstein, M. S., Bohg, J., Bosselut, A., Brunskill, E., & et\u00a0al. (2021). On the opportunities and risks of foundation models. arXiv preprint arXiv:2108.07258"
+      },
+      {
+        "key": "1653_CR3",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bossard, L., Guillaumin, M., & Van\u00a0Gool, L. (2014). Food-101\u2013mining discriminative components with random forests. In ECCV",
+        "DOI": "10.1007/978-3-319-10599-4_29"
+      },
+      {
+        "key": "1653_CR4",
+        "unstructured": "Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., & et\u00a0al. (2020). Language models are few-shot learners. arXiv preprint arXiv:2005.14165"
+      },
+      {
+        "key": "1653_CR5",
+        "unstructured": "Chen, T., Kornblith, S., Norouzi, M., & Hinton, G. (2020). A simple framework for contrastive learning of visual representations. In ICML"
+      },
+      {
+        "key": "1653_CR6",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cimpoi, M., Maji, S., Kokkinos, I., Mohamed, S., & Vedaldi, A. (2014). Describing textures in the wild. In CVPR",
+        "DOI": "10.1109/CVPR.2014.461"
+      },
+      {
+        "key": "1653_CR7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Deng, J., Dong, W., Socher, R., Li, LJ., Li, K., & Fei-Fei, L. (2009). Imagenet: A large-scale hierarchical image database. In CVPR",
+        "DOI": "10.1109/CVPR.2009.5206848"
+      },
+      {
+        "key": "1653_CR8",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Desai, K., & Johnson, J. (2021). Virtex: Learning visual representations from textual annotations. In CVPR",
+        "DOI": "10.1109/CVPR46437.2021.01101"
+      },
+      {
+        "key": "1653_CR9",
+        "unstructured": "Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S., & et\u00a0al. (2021). An image is worth 16x16 words: Transformers for image recognition at scale. In ICLR"
+      },
+      {
+        "key": "1653_CR10",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Elhoseiny, M., Saleh, B., & Elgammal, A. (2013). Write a classifier: Zero-shot learning using purely textual descriptions. In ICCV",
+        "DOI": "10.1109/ICCV.2013.321"
+      },
+      {
+        "key": "1653_CR11",
+        "unstructured": "Fei-Fei, L., Fergus, R., & Perona, P. (2004). Learning generative visual models from few training examples: An incremental bayesian approach tested on 101 object categories. In CVPR-W"
+      },
+      {
+        "key": "1653_CR12",
+        "unstructured": "Frome, A., Corrado, G., Shlens, J., Bengio, S., Dean, J., Ranzato, M., & Mikolov, T. (2013). Devise: A deep visual-semantic embedding model. In NeurIPS"
+      },
+      {
+        "key": "1653_CR13",
+        "unstructured": "F\u00fcrst, A., Rumetshofer, E., Tran, V., Ramsauer, H., Tang, F., Lehner, J., Kreil, D., Kopp, M., Klambauer, G., Bitto-Nemling, A., & et\u00a0al. (2021). Cloob: Modern hopfield networks with infoloob outperform clip. arXiv preprint arXiv:2110.11316"
+      },
+      {
+        "key": "1653_CR14",
+        "unstructured": "Gao, P., Geng, S., Zhang, R., Ma, T., Fang, R., Zhang, Y., Li, H., & Qiao, Y. (2021). Clip-adapter: Better vision-language models with feature adapters. arXiv preprint arXiv:2110.04544"
+      },
+      {
+        "key": "1653_CR15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gao, T., Fisch, A., & Chen, D. (2020). Making pre-trained language models better few-shot learners. arXiv preprint arXiv:2012.15723",
+        "DOI": "10.18653/v1/2021.acl-long.295"
+      },
+      {
+        "key": "1653_CR16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gomez, L., Patel, Y., Rusi\u00f1ol, M., Karatzas, D., & Jawahar, C. (2017). Self-supervised learning of visual features through embedding images into text topic spaces. In CVPR",
+        "DOI": "10.1109/CVPR.2017.218"
+      },
+      {
+        "key": "1653_CR17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. In CVPR",
+        "DOI": "10.1109/CVPR.2016.90"
+      },
+      {
+        "key": "1653_CR18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, K., Fan, H., Wu, Y., Xie, S., & Girshick, R. (2020). Momentum contrast for unsupervised visual representation learning. In CVPR",
+        "DOI": "10.1109/CVPR42600.2020.00975"
+      },
+      {
+        "key": "1653_CR19",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Helber, P., Bischke, B., Dengel, A., & Borth, D. (2019). Eurosat: A novel dataset and deep learning benchmark for land use and land cover classification. IEEE Journal Selected Topics in Applied Earth Observations and Remote Sensing",
+        "DOI": "10.1109/IGARSS.2018.8519248"
+      },
+      {
+        "key": "1653_CR20",
+        "unstructured": "H\u00e9naff, O. J., Srinivas, A., Fauw, J. D., Razavi, A., Doersch, C., Eslami, S. M. A., & van\u00a0den Oord, A. (2020). Data-efficient image recognition with contrastive predictive coding. In ICML"
+      },
+      {
+        "key": "1653_CR21",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hendrycks, D., Basart, S., Mu, N., Kadavath, S., Wang. F., Dorundo, E., Desai, R., Zhu, T., Parajuli, S., Guo, M., Song, D., Steinhardt, J., & Gilmer, J. (2021a). The many faces of robustness: A critical analysis of out-of-distribution generalization. ICCV",
+        "DOI": "10.1109/ICCV48922.2021.00823"
+      },
+      {
+        "key": "1653_CR22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hendrycks, D., Zhao, K., Basart, S., Steinhardt, J., & Song, D. (2021b). Natural adversarial examples. In CVPR",
+        "DOI": "10.1109/CVPR46437.2021.01501"
+      },
+      {
+        "key": "1653_CR23",
+        "unstructured": "Jia, C., Yang, Y., Xia, Y., Chen, Y. T., Parekh, Z., Pham, H., Le, Q. V., Sung, Y., Li, Z., & Duerig, T. (2021). Scaling up visual and vision-language representation learning with noisy text supervision. In ICML"
+      },
+      {
+        "key": "1653_CR24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Jia, M., Tang, L., Chen, B. C., Cardie, C., Belongie, S., Hariharan, B., & Lim. S. N. (2022). Visual prompt tuning. arXiv preprint arXiv:2203.12119",
+        "DOI": "10.1007/978-3-031-19827-4_41"
+      },
+      {
+        "key": "1653_CR25",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Jiang, Z., Xu, F. F., Araki, J., & Neubig, G. (2020). How can we know what language models know? ACL",
+        "DOI": "10.1162/tacl_a_00324"
+      },
+      {
+        "key": "1653_CR26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Joulin, A., Van Der\u00a0Maaten, L., Jabri, A., & Vasilache, N. (2016). Learning visual features from large weakly supervised data. In ECCV",
+        "DOI": "10.1007/978-3-319-46478-7_5"
+      },
+      {
+        "key": "1653_CR27",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Krause, J., Stark, M., Deng, J., & Fei-Fei, L. (2013). 3d object representations for fine-grained categorization. In ICCV-W",
+        "DOI": "10.1109/ICCVW.2013.77"
+      },
+      {
+        "key": "1653_CR28",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lei\u00a0Ba, J., Swersky, K., Fidler, S., & et\u00a0al. (2015). Predicting deep zero-shot convolutional neural networks using textual descriptions. In ICCV",
+        "DOI": "10.1109/ICCV.2015.483"
+      },
+      {
+        "key": "1653_CR29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lester, B., Al-Rfou, R., & Constant, N. (2021). The power of scale for parameter-efficient prompt tuning. arXiv preprint arXiv:2104.08691",
+        "DOI": "10.18653/v1/2021.emnlp-main.243"
+      },
+      {
+        "key": "1653_CR30",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, A., Jabri, A., Joulin, A., & van\u00a0der Maaten, L. (2017). Learning visual n-grams from web data. In ICCV",
+        "DOI": "10.1109/ICCV.2017.449"
+      },
+      {
+        "key": "1653_CR31",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, XL., & Liang, P. (2021). Prefix-tuning: Optimizing continuous prompts for generation. arXiv preprint arXiv:2101.00190",
+        "DOI": "10.18653/v1/2021.acl-long.353"
+      },
+      {
+        "key": "1653_CR32",
+        "unstructured": "Li, Y., Liang, F., Zhao, L., Cui, Y., Ouyang, W., Shao, J., Yu, F., & Yan, J. (2021). Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm. arXiv preprint arXiv:2110.05208"
+      },
+      {
+        "key": "1653_CR33",
+        "unstructured": "Liu, P., Yuan, W., Fu, J., Jiang, Z., Hayashi, H., & Neubig, G. (2021a). Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing. arXiv preprint arXiv:2107.13586"
+      },
+      {
+        "key": "1653_CR34",
+        "unstructured": "Liu, X., Zheng, Y., Du, Z., Ding, M., Qian, Y., Yang, Z., & Tang, J. (2021b). Gpt understands, too. arXiv preprint arXiv:2103.10385"
+      },
+      {
+        "key": "1653_CR35",
+        "unstructured": "Maji, S., Rahtu, E., Kannala, J., Blaschko, M., & Vedaldi, A. (2013). Fine-grained visual classification of aircraft. arXiv preprint arXiv:1306.5151"
+      },
+      {
+        "key": "1653_CR36",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nilsback, M. E., & Zisserman, A. (2008). Automated flower classification over a large number of classes. In ICVGIP",
+        "DOI": "10.1109/ICVGIP.2008.47"
+      },
+      {
+        "key": "1653_CR37",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Parkhi, O. M., Vedaldi, A., Zisserman, A., & Jawahar, C. (2012). Cats and dogs. In CVPR",
+        "DOI": "10.1109/CVPR.2012.6248092"
+      },
+      {
+        "key": "1653_CR38",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Petroni, F., Rockt\u00e4schel, T., Lewis, P., Bakhtin, A., Wu, Y., Miller, A. H., & Riedel, S. (2019). Language models as knowledge bases? In EMNLP",
+        "DOI": "10.18653/v1/D19-1250"
+      },
+      {
+        "key": "1653_CR39",
+        "unstructured": "Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., & et\u00a0al. (2021). Learning transferable visual models from natural language supervision. In ICML"
+      },
+      {
+        "key": "1653_CR40",
+        "unstructured": "Recht, B., Roelofs, R., Schmidt, L., & Shankar, V. (2019). Do imagenet classifiers generalize to imagenet? In ICML"
+      },
+      {
+        "key": "1653_CR41",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sennrich, R., Haddow, B., & Birch, A. (2016). Neural machine translation of rare words with subword units. In ACL",
+        "DOI": "10.18653/v1/P16-1162"
+      },
+      {
+        "key": "1653_CR42",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Shin, T., Razeghi, Y., Logan\u00a0IV, R. L., Wallace, E., & Singh, S. (2020). Autoprompt: Eliciting knowledge from language models with automatically generated prompts. In EMNLP",
+        "DOI": "10.18653/v1/2020.emnlp-main.346"
+      },
+      {
+        "key": "1653_CR43",
+        "unstructured": "Singh, A., Hu, R., Goswami, V., Couairon, G., Galuba, W., Rohrbach, M., & Kiela, D. (2021). Flava: A foundational language and vision alignment model. arXiv preprint arXiv:2112.04482"
+      },
+      {
+        "key": "1653_CR44",
+        "unstructured": "Socher, R., Ganjoo, M., Sridhar, H., Bastani, O., Manning, C. D., & Ng, A.Y. (2013). Zero-shot learning through cross-modal transfer. In NeurIPS"
+      },
+      {
+        "key": "1653_CR45",
+        "unstructured": "Soomro, K., Zamir, A. R, & Shah, M. (2012). Ucf101: A dataset of 101 human actions classes from videos in the wild. arXiv preprint arXiv:1212.0402"
+      },
+      {
+        "key": "1653_CR46",
+        "unstructured": "Taori, R., Dave, A., Shankar, V., Carlini, N., Recht, B., & Schmidt, L. (2020). Measuring robustness to natural distribution shifts in image classification. In NeurIPS"
+      },
+      {
+        "key": "1653_CR47",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tian, Y., Wang, Y., Krishnan, D., Tenenbaum, J. B., & Isola, P. (2020). Rethinking few-shot image classification: a good embedding is all you need? In ECCV",
+        "DOI": "10.1007/978-3-030-58568-6_16"
+      },
+      {
+        "key": "1653_CR48",
+        "unstructured": "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, \u0141., & Polosukhin, I. (2017). Attention is all you need. In NeurIPS"
+      },
+      {
+        "key": "1653_CR49",
+        "unstructured": "Wang, D., Shelhamer, E., Liu, S., Olshausen, B., & Darrell, T. (2020). Tent: Fully test-time adaptation by entropy minimization. arXiv preprint arXiv:2006.10726"
+      },
+      {
+        "key": "1653_CR50",
+        "unstructured": "Wang, H., Ge, S., Lipton, Z., & Xing, E. P. (2019). Learning robust global representations by penalizing local predictive power. In NeurIPS"
+      },
+      {
+        "key": "1653_CR51",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xiao, J., Hays, J., Ehinger, K. A., Oliva, A., & Torralba, A. (2010). Sun database: Large-scale scene recognition from abbey to zoo. In CVPR",
+        "DOI": "10.1109/CVPR.2010.5539970"
+      },
+      {
+        "key": "1653_CR52",
+        "unstructured": "Yuan, L., Chen, D., Chen, Y. L., Codella, N., Dai, X., Gao, J., Hu, H., Huang, X., Li, B., Li, C., & et\u00a0al. (2021). Florence: A new foundation model for computer vision. arXiv preprint arXiv:2111.11432"
+      },
+      {
+        "key": "1653_CR53",
+        "unstructured": "Zhang, Y., Jiang, H., Miura, Y., Manning, C. D., & Langlotz, C. P. (2020). Contrastive learning of medical visual representations from paired images and text. arXiv preprint arXiv:2010.00747"
+      },
+      {
+        "key": "1653_CR54",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhong, Z., Friedman, D., & Chen, D. (2021). Factual probing is [mask]: Learning vs. learning to recall. In NAACL",
+        "DOI": "10.18653/v1/2021.naacl-main.398"
+      },
+      {
+        "key": "1653_CR55",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhou, K., Liu, Z., Qiao, Y., Xiang, T., & Loy, C. C. (2021). Domain generalization in vision: A survey. arXiv preprint arXiv:2103.02503",
+        "DOI": "10.1109/TPAMI.2022.3195549"
+      },
+      {
+        "key": "1653_CR56",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhou, K., Yang, J., Loy, C. C., & Liu, Z. (2022). Conditional prompt learning for vision-language models. arXiv preprint arXiv:2203.05557",
+        "DOI": "10.1007/s11263-022-01653-1"
+      }
+    ],
+    "container-title": [
+      "International Journal of Computer Vision"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s11263-022-01653-1.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/article/10.1007/s11263-022-01653-1/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s11263-022-01653-1.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          2,
+          12
+        ]
+      ],
+      "date-time": "2023-02-12T22:10:17Z",
+      "timestamp": 1676239817000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/s11263-022-01653-1"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          31
+        ]
+      ]
+    },
+    "references-count": 56,
+    "journal-issue": {
+      "issue": "9",
+      "published-print": {
+        "date-parts": [
+          [
+            2022,
+            9
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "1653"
+    ],
+    "URL": "https://doi.org/10.1007/s11263-022-01653-1",
+    "relation": {},
+    "ISSN": [
+      "0920-5691",
+      "1573-1405"
+    ],
+    "issn-type": [
+      {
+        "value": "0920-5691",
+        "type": "print"
+      },
+      {
+        "value": "1573-1405",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          31
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2 February 2022",
+        "order": 1,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "16 July 2022",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "31 July 2022",
+        "order": 3,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      }
+    ]
+  }
+}
