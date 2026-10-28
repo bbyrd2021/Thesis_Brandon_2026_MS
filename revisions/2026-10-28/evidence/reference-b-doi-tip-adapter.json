@@ -1,0 +1,880 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          28
+        ]
+      ],
+      "date-time": "2026-10-28T17:09:13Z",
+      "timestamp": 1793207353837,
+      "version": "4.5.0"
+    },
+    "publisher-location": "Cham",
+    "reference-count": 73,
+    "publisher": "Springer Nature Switzerland",
+    "isbn-type": [
+      {
+        "value": "9783031198328",
+        "type": "print"
+      },
+      {
+        "value": "9783031198335",
+        "type": "electronic"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springer.com/tdm"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "DOI": "10.1007/978-3-031-19833-5_29",
+    "type": "book-chapter",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          11,
+          3
+        ]
+      ],
+      "date-time": "2022-11-03T20:40:30Z",
+      "timestamp": 1667508030000
+    },
+    "page": "493-510",
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 437,
+    "title": [
+      "Tip-Adapter: Training-Free Adaption of\u00a0CLIP for Few-Shot Classification"
+    ],
+    "prefix": "10.1007",
+    "author": [
+      {
+        "given": "Renrui",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wei",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Rongyao",
+        "family": "Fang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Peng",
+        "family": "Gao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Kunchang",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jifeng",
+        "family": "Dai",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yu",
+        "family": "Qiao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hongsheng",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          11,
+          4
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "29_CR1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Anderson, P., et al.: Bottom-up and top-down attention for image captioning and visual question answering. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 6077\u20136086 (2018)",
+        "DOI": "10.1109/CVPR.2018.00636"
+      },
+      {
+        "key": "29_CR2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Antol, S., et al.: VQA: visual question answering. In: Proceedings of the IEEE International Conference on Computer Vision, pp. 2425\u20132433 (2015)",
+        "DOI": "10.1109/ICCV.2015.279"
+      },
+      {
+        "key": "29_CR3",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "446",
+        "DOI": "10.1007/978-3-319-10599-4_29",
+        "volume-title": "Computer Vision \u2013 ECCV 2014",
+        "author": "L Bossard",
+        "year": "2014",
+        "unstructured": "Bossard, L., Guillaumin, M., Van Gool, L.: Food-101 \u2013 mining discriminative components with random forests. In: Fleet, D., Pajdla, T., Schiele, B., Tuytelaars, T. (eds.) ECCV 2014. LNCS, vol. 8694, pp. 446\u2013461. Springer, Cham (2014). https://doi.org/10.1007/978-3-319-10599-4_29"
+      },
+      {
+        "key": "29_CR4",
+        "unstructured": "Brown, T.B., et al.: Language models are few-shot learners. arXiv preprint arXiv:2005.14165 (2020)"
+      },
+      {
+        "key": "29_CR5",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "213",
+        "DOI": "10.1007/978-3-030-58452-8_13",
+        "volume-title": "Computer Vision \u2013 ECCV 2020",
+        "author": "N Carion",
+        "year": "2020",
+        "unstructured": "Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., Zagoruyko, S.: End-to-end object detection with transformers. In: Vedaldi, A., Bischof, H., Brox, T., Frahm, J.-M. (eds.) ECCV 2020. LNCS, vol. 12346, pp. 213\u2013229. Springer, Cham (2020). https://doi.org/10.1007/978-3-030-58452-8_13"
+      },
+      {
+        "key": "29_CR6",
+        "unstructured": "Chen, W.Y., Liu, Y.C., Kira, Z., Wang, Y.C.F., Huang, J.B.: A closer look at few-shot classification. arXiv preprint arXiv:1904.04232 (2019)"
+      },
+      {
+        "key": "29_CR7",
+        "unstructured": "Chen, Y., Wang, X., Liu, Z., Xu, H., Darrell, T.: A new meta-baseline for few-shot learning. arXiv preprint arXiv:2003.04390 (2020)"
+      },
+      {
+        "key": "29_CR8",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cimpoi, M., Maji, S., Kokkinos, I., Mohamed, S., Vedaldi, A.: Describing textures in the wild. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 3606\u20133613 (2014)",
+        "DOI": "10.1109/CVPR.2014.461"
+      },
+      {
+        "key": "29_CR9",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cui, Z., Qi, G.J., Gu, L., You, S., Zhang, Z., Harada, T.: Multitask AET with orthogonal tangent regularity for dark object detection. In: Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pp. 2553\u20132562, October 2021",
+        "DOI": "10.1109/ICCV48922.2021.00255"
+      },
+      {
+        "key": "29_CR10",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Deng, J., Dong, W., Socher, R., Li, L.J., Li, K., Fei-Fei, L.: ImageNet: a large-scale hierarchical image database. In: 2009 IEEE Conference on Computer Vision and Pattern Recognition, pp. 248\u2013255. Ieee (2009)",
+        "DOI": "10.1109/CVPR.2009.5206848"
+      },
+      {
+        "key": "29_CR11",
+        "unstructured": "Devlin, J., Chang, M.W., Lee, K., Toutanova, K.: BERT: pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 (2018)"
+      },
+      {
+        "key": "29_CR12",
+        "unstructured": "Dhillon, G.S., Chaudhari, P., Ravichandran, A., Soatto, S.: A baseline for few-shot image classification. arXiv preprint arXiv:1909.02729 (2019)"
+      },
+      {
+        "key": "29_CR13",
+        "unstructured": "Dosovitskiy, A., et al.: An image is worth $$16\\times 16$$ words: transformers for image recognition at scale. In: ICLR (2021)"
+      },
+      {
+        "key": "29_CR14",
+        "unstructured": "Fei-Fei, L., Fergus, R., Perona, P.: Learning generative visual models from few training examples: an incremental Bayesian approach tested on 101 object categories. In: 2004 Conference on Computer Vision and Pattern Recognition Workshop, p. 178. IEEE (2004)"
+      },
+      {
+        "key": "29_CR15",
+        "unstructured": "Finn, C., Abbeel, P., Levine, S.: Model-agnostic meta-learning for fast adaptation of deep networks. In: International Conference on Machine Learning, pp. 1126\u20131135. PMLR (2017)"
+      },
+      {
+        "key": "29_CR16",
+        "unstructured": "Gao, P., et al.: CLIP-Adapter: better vision-language models with feature adapters. arXiv preprint arXiv:2110.04544 (2021)"
+      },
+      {
+        "key": "29_CR17",
+        "unstructured": "Gao, P., Ma, T., Li, H., Dai, J., Qiao, Y.: ConvMAE: masked convolution meets masked autoencoders. arXiv preprint arXiv:2205.03892 (2022)"
+      },
+      {
+        "key": "29_CR18",
+        "unstructured": "Grave, E., Ciss\u00e9, M., Joulin, A.: Unbounded cache model for online language modeling with open vocabulary. arXiv preprint arXiv:1711.02604 (2017)"
+      },
+      {
+        "key": "29_CR19",
+        "unstructured": "Grill, J.B., et al.: Bootstrap your own latent: a new approach to self-supervised learning. arXiv preprint arXiv:2006.07733 (2020)"
+      },
+      {
+        "key": "29_CR20",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, K., Fan, H., Wu, Y., Xie, S., Girshick, R.: Momentum contrast for unsupervised visual representation learning. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 9729\u20139738 (2020)",
+        "DOI": "10.1109/CVPR42600.2020.00975"
+      },
+      {
+        "key": "29_CR21",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, K., Gkioxari, G., Doll\u00e1r, P., Girshick, R.: Mask R-CNN. In: Proceedings of the IEEE International Conference on Computer Vision, pp. 2961\u20132969 (2017)",
+        "DOI": "10.1109/ICCV.2017.322"
+      },
+      {
+        "key": "29_CR22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, K., Zhang, X., Ren, S., Sun, J.: Deep residual learning for image recognition. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 770\u2013778 (2016)",
+        "DOI": "10.1109/CVPR.2016.90"
+      },
+      {
+        "issue": "7",
+        "key": "29_CR23",
+        "doi-asserted-by": "publisher",
+        "first-page": "2217",
+        "DOI": "10.1109/JSTARS.2019.2918242",
+        "volume": "12",
+        "author": "P Helber",
+        "year": "2019",
+        "unstructured": "Helber, P., Bischke, B., Dengel, A., Borth, D.: EuroSAT: a novel dataset and deep learning benchmark for land use and land cover classification. IEEE J. Sel. Top. Appl. Earth Observ. Remote Sens. 12(7), 2217\u20132226 (2019)",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Observ. Remote Sens."
+      },
+      {
+        "key": "29_CR24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hendrycks, D., Zhao, K., Basart, S., Steinhardt, J., Song, D.: Natural adversarial examples. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 15262\u201315271 (2021)",
+        "DOI": "10.1109/CVPR46437.2021.01501"
+      },
+      {
+        "key": "29_CR25",
+        "unstructured": "Houlsby, N., et al.: Parameter-efficient transfer learning for NLP. In: ICML (2019)"
+      },
+      {
+        "key": "29_CR26",
+        "unstructured": "Howard, A.G., et al.: MobileNets: efficient convolutional neural networks for mobile vision applications. arXiv preprint arXiv:1704.04861 (2017)"
+      },
+      {
+        "key": "29_CR27",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Huang, L., Wang, W., Chen, J., Wei, X.Y.: Attention on attention for image captioning. In: Proceedings of the IEEE/CVF International Conference on Computer Vision, pp. 4634\u20134643 (2019)",
+        "DOI": "10.1109/ICCV.2019.00473"
+      },
+      {
+        "key": "29_CR28",
+        "unstructured": "Jia, C., et al.: Scaling up visual and vision-language representation learning with noisy text supervision. In: ICML (2021)"
+      },
+      {
+        "key": "29_CR29",
+        "doi-asserted-by": "publisher",
+        "first-page": "535",
+        "DOI": "10.1109/TBDATA.2019.2921572",
+        "volume": "7",
+        "author": "J Johnson",
+        "year": "2019",
+        "unstructured": "Johnson, J., Douze, M., J\u00e9gou, H.: Billion-scale similarity search with GPUs. IEEE Trans. Big Data 7, 535\u2013547 (2019)",
+        "journal-title": "IEEE Trans. Big Data"
+      },
+      {
+        "key": "29_CR30",
+        "unstructured": "Khandelwal, U., Levy, O., Jurafsky, D., Zettlemoyer, L., Lewis, M.: Generalization through memorization: Nearest neighbor language models. arXiv preprint arXiv:1911.00172 (2019)"
+      },
+      {
+        "key": "29_CR31",
+        "unstructured": "Kim, J.H., Jun, J., Zhang, B.T.: Bilinear attention networks. arXiv preprint arXiv:1805.07932 (2018)"
+      },
+      {
+        "key": "29_CR32",
+        "unstructured": "Kingma, D.P., Ba, J.: Adam: a method for stochastic optimization. arXiv preprint arXiv:1412.6980 (2014)"
+      },
+      {
+        "key": "29_CR33",
+        "unstructured": "Kossen, J., Band, N., Lyle, C., Gomez, A.N., Rainforth, T., Gal, Y.: Self-attention between datapoints: going beyond individual input-output pairs in deep learning. arXiv preprint arXiv:2106.02584 (2021)"
+      },
+      {
+        "key": "29_CR34",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Krause, J., Stark, M., Deng, J., Fei-Fei, L.: 3D object representations for fine-grained categorization. In: Proceedings of the IEEE International Conference on Computer Vision Workshops, pp. 554\u2013561 (2013)",
+        "DOI": "10.1109/ICCVW.2013.77"
+      },
+      {
+        "key": "29_CR35",
+        "unstructured": "Krizhevsky, A., Sutskever, I., Hinton, G.E.: ImageNet classification with deep convolutional neural networks. In: NIPS (2012)"
+      },
+      {
+        "key": "29_CR36",
+        "unstructured": "Li, Y., et al.: Supervision exists everywhere: a data efficient contrastive language-image pre-training paradigm. arXiv preprint arXiv:2110.05208 (2021)"
+      },
+      {
+        "key": "29_CR37",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lin, T.Y., Goyal, P., Girshick, R., He, K., Doll\u00e1r, P.: Focal loss for dense object detection. In: Proceedings of the IEEE International Conference on Computer Vision, pp. 2980\u20132988 (2017)",
+        "DOI": "10.1109/ICCV.2017.324"
+      },
+      {
+        "key": "29_CR38",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Liu, P., Yuan, W., Fu, J., Jiang, Z., Hayashi, H., Neubig, G.: Pre-train, prompt, and predict: a systematic survey of prompting methods in natural language processing. arXiv preprint arXiv:2107.13586 (2021)",
+        "DOI": "10.1145/3560815"
+      },
+      {
+        "key": "29_CR39",
+        "unstructured": "Loshchilov, I., Hutter, F.: Decoupled weight decay regularization. In: 7th International Conference on Learning Representations, ICLR 2019, New Orleans, LA, USA, 6\u20139 May 2019. OpenReview.net (2019). http://openreview.net/forum?id=Bkg6RiCqY7"
+      },
+      {
+        "key": "29_CR40",
+        "unstructured": "Lu, J., Batra, D., Parikh, D., Lee, S.: ViLBERT: pretraining task-agnostic visiolinguistic representations for vision-and-language tasks. arXiv preprint arXiv:1908.02265 (2019)"
+      },
+      {
+        "key": "29_CR41",
+        "unstructured": "Maji, S., Rahtu, E., Kannala, J., Blaschko, M., Vedaldi, A.: Fine-grained visual classification of aircraft. arXiv preprint arXiv:1306.5151 (2013)"
+      },
+      {
+        "key": "29_CR42",
+        "unstructured": "Mao, M., et al.: Dual-stream network for visual recognition. arXiv preprint arXiv:2105.14734 (2021)"
+      },
+      {
+        "key": "29_CR43",
+        "unstructured": "Merity, S., Xiong, C., Bradbury, J., Socher, R.: Pointer sentinel mixture models. arXiv preprint arXiv:1609.07843 (2016)"
+      },
+      {
+        "key": "29_CR44",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nilsback, M.E., Zisserman, A.: Automated flower classification over a large number of classes. In: 2008 Sixth Indian Conference on Computer Vision, Graphics and Image Processing, pp. 722\u2013729. IEEE (2008)",
+        "DOI": "10.1109/ICVGIP.2008.47"
+      },
+      {
+        "key": "29_CR45",
+        "unstructured": "Orhan, A.E.: A simple cache model for image recognition. arXiv preprint arXiv:1805.08709 (2018)"
+      },
+      {
+        "key": "29_CR46",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Parkhi, O.M., Vedaldi, A., Zisserman, A., Jawahar, C.: Cats and dogs. In: 2012 IEEE Conference on Computer Vision and Pattern Recognition, pp. 3498\u20133505. IEEE (2012)",
+        "DOI": "10.1109/CVPR.2012.6248092"
+      },
+      {
+        "key": "29_CR47",
+        "unstructured": "Qi, C.R., Su, H., Mo, K., Guibas, L.J.: PointNet: Deep learning on point sets for 3D classification and segmentation. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 652\u2013660 (2017)"
+      },
+      {
+        "key": "29_CR48",
+        "unstructured": "Radford, A., et al.: Learning transferable visual models from natural language supervision. arXiv preprint arXiv:2103.00020 (2021)"
+      },
+      {
+        "key": "29_CR49",
+        "unstructured": "Radford, A., Narasimhan, K., Salimans, T., Sutskever, I.: Improving language understanding by generative pre-training (2018)"
+      },
+      {
+        "key": "29_CR50",
+        "unstructured": "Recht, B., Roelofs, R., Schmidt, L., Shankar, V.: Do ImageNet classifiers generalize to ImageNet? In: International Conference on Machine Learning, pp. 5389\u20135400. PMLR (2019)"
+      },
+      {
+        "key": "29_CR51",
+        "unstructured": "Ren, S., He, K., Girshick, R., Sun, J.: Faster R-CNN: towards real-time object detection with region proposal networks. In: Advances in Neural Information Processing Systems 28, pp. 91\u201399 (2015)"
+      },
+      {
+        "key": "29_CR52",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rumelhart, D.E., Hinton, G.E., Williams, R.J.: Learning Internal Representations by Error Propagation, pp. 318\u2013362. MIT Press, Cambridge (1986)",
+        "DOI": "10.21236/ADA164453"
+      },
+      {
+        "key": "29_CR53",
+        "unstructured": "Snell, J., Swersky, K., Zemel, R.S.: Prototypical networks for few-shot learning. arXiv preprint arXiv:1703.05175 (2017)"
+      },
+      {
+        "key": "29_CR54",
+        "unstructured": "Soomro, K., Zamir, A.R., Shah, M.: UCF101: a dataset of 101 human actions classes from videos in the wild. arXiv preprint arXiv:1212.0402 (2012)"
+      },
+      {
+        "key": "29_CR55",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sung, F., Yang, Y., Zhang, L., Xiang, T., Torr, P.H., Hospedales, T.M.: Learning to compare: Relation network for few-shot learning. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 1199\u20131208 (2018)",
+        "DOI": "10.1109/CVPR.2018.00131"
+      },
+      {
+        "key": "29_CR56",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tan, H., Bansal, M.: LXMERT: learning cross-modality encoder representations from transformers. arXiv preprint arXiv:1908.07490 (2019)",
+        "DOI": "10.18653/v1/D19-1514"
+      },
+      {
+        "key": "29_CR57",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "266",
+        "DOI": "10.1007/978-3-030-58568-6_16",
+        "volume-title": "Computer Vision \u2013 ECCV 2020",
+        "author": "Y Tian",
+        "year": "2020",
+        "unstructured": "Tian, Y., Wang, Y., Krishnan, D., Tenenbaum, J.B., Isola, P.: Rethinking few-shot image classification: a good embedding is all you need? In: Vedaldi, A., Bischof, H., Brox, T., Frahm, J.-M. (eds.) ECCV 2020. LNCS, vol. 12359, pp. 266\u2013282. Springer, Cham (2020). https://doi.org/10.1007/978-3-030-58568-6_16"
+      },
+      {
+        "key": "29_CR58",
+        "unstructured": "Vaswani, A., et al.: Attention is all you need. In: Advances in Neural Information Processing Systems, pp. 5998\u20136008 (2017)"
+      },
+      {
+        "key": "29_CR59",
+        "unstructured": "Vinyals, O., Blundell, C., Lillicrap, T., Wierstra, D., et al.: Matching networks for one shot learning. In: Advances in Neural Information Processing Systems 29, pp. 3630\u20133638 (2016)"
+      },
+      {
+        "key": "29_CR60",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wortsman, M., et al.: Robust fine-tuning of zero-shot models. arXiv preprint arXiv:2109.01903 (2021)",
+        "DOI": "10.1109/CVPR52688.2022.00780"
+      },
+      {
+        "key": "29_CR61",
+        "unstructured": "Wright, R.E.: Logistic regression (1995)"
+      },
+      {
+        "key": "29_CR62",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xiao, J., Hays, J., Ehinger, K.A., Oliva, A., Torralba, A.: SUN database: large-scale scene recognition from abbey to zoo. In: 2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, pp. 3485\u20133492. IEEE (2010)",
+        "DOI": "10.1109/CVPR.2010.5539970"
+      },
+      {
+        "key": "29_CR63",
+        "unstructured": "Xu, S., Li, Y., Zhao, J., Zhang, B., Guo, G.: POEM: 1-bit point-wise operations based on expectation-maximization for efficient point cloud processing. arXiv preprint arXiv:2111.13386 (2021)"
+      },
+      {
+        "key": "29_CR64",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xu, S., Zhao, J., Lu, J., Zhang, B., Han, S., Doermann, D.: Layer-wise searching for 1-bit detectors. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 5682\u20135691 (2021)",
+        "DOI": "10.1109/CVPR46437.2021.00563"
+      },
+      {
+        "key": "29_CR65",
+        "doi-asserted-by": "crossref",
+        "unstructured": "You, Q., Jin, H., Wang, Z., Fang, C., Luo, J.: Image captioning with semantic attention. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 4651\u20134659 (2016)",
+        "DOI": "10.1109/CVPR.2016.503"
+      },
+      {
+        "key": "29_CR66",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yu, L., et al.: MAttNet: modular attention network for referring expression comprehension. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 1307\u20131315 (2018)",
+        "DOI": "10.1109/CVPR.2018.00142"
+      },
+      {
+        "key": "29_CR67",
+        "unstructured": "Zhang, R., et al.: Point-M2AE: multi-scale masked autoencoders for hierarchical point cloud pre-training. arXiv preprint arXiv:2205.14401 (2022)"
+      },
+      {
+        "key": "29_CR68",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang, R., et al.: PointCLIP: point cloud understanding by clip. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 8552\u20138562 (2022)",
+        "DOI": "10.1109/CVPR52688.2022.00836"
+      },
+      {
+        "key": "29_CR69",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang, R., et al.: MonoDETR: depth-aware transformer for monocular 3D object detection. arXiv preprint arXiv:2203.13310 (2022)",
+        "DOI": "10.1109/ICCV51070.2023.00840"
+      },
+      {
+        "issue": "2",
+        "key": "29_CR70",
+        "doi-asserted-by": "publisher",
+        "first-page": "201",
+        "DOI": "10.1007/s11263-021-01543-y",
+        "volume": "130",
+        "author": "J Zhao",
+        "year": "2022",
+        "unstructured": "Zhao, J., Xu, S., Zhang, B., Gu, J., Doermann, D., Guo, G.: Towards compact 1-bit CNNs via Bayesian learning. Int. J. Comput. Vis. 130(2), 201\u2013225 (2022)",
+        "journal-title": "Int. J. Comput. Vis."
+      },
+      {
+        "key": "29_CR71",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhao, Z., Wu, Z., Zhang, Y., Li, B., Jia, J.: Tracking objects as pixel-wise distributions (2022)",
+        "DOI": "10.1007/978-3-031-20047-2_5"
+      },
+      {
+        "key": "29_CR72",
+        "unstructured": "Zheng, M., et al.: End-to-end object detection with adaptive clustering transformer. arXiv preprint arXiv:2011.09315 (2020)"
+      },
+      {
+        "key": "29_CR73",
+        "unstructured": "Zhou, K., Yang, J., Loy, C.C., Liu, Z.: Learning to prompt for vision-language models. arXiv preprint arXiv:2109.01134 (2021)"
+      }
+    ],
+    "container-title": [
+      "Lecture Notes in Computer Science",
+      "Computer Vision \u2013 ECCV 2022"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/978-3-031-19833-5_29",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          10,
+          7
+        ]
+      ],
+      "date-time": "2024-10-07T02:27:38Z",
+      "timestamp": 1728268058000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/978-3-031-19833-5_29"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "ISBN": [
+      "9783031198328",
+      "9783031198335"
+    ],
+    "references-count": 73,
+    "URL": "https://doi.org/10.1007/978-3-031-19833-5_29",
+    "relation": {},
+    "ISSN": [
+      "0302-9743",
+      "1611-3349"
+    ],
+    "issn-type": [
+      {
+        "value": "0302-9743",
+        "type": "print"
+      },
+      {
+        "value": "1611-3349",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "4 November 2022",
+        "order": 1,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ChapterHistory",
+          "label": "Chapter History"
+        }
+      },
+      {
+        "value": "ECCV",
+        "order": 1,
+        "name": "conference_acronym",
+        "label": "Conference Acronym",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "European Conference on Computer Vision",
+        "order": 2,
+        "name": "conference_name",
+        "label": "Conference Name",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Tel Aviv",
+        "order": 3,
+        "name": "conference_city",
+        "label": "Conference City",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Israel",
+        "order": 4,
+        "name": "conference_country",
+        "label": "Conference Country",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "2022",
+        "order": 5,
+        "name": "conference_year",
+        "label": "Conference Year",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "23 October 2022",
+        "order": 7,
+        "name": "conference_start_date",
+        "label": "Conference Start Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "27 October 2022",
+        "order": 8,
+        "name": "conference_end_date",
+        "label": "Conference End Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "17",
+        "order": 9,
+        "name": "conference_number",
+        "label": "Conference Number",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "eccv2022",
+        "order": 10,
+        "name": "conference_id",
+        "label": "Conference ID",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "https://eccv2022.ecva.net/",
+        "order": 11,
+        "name": "conference_url",
+        "label": "Conference URL",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Double-blind",
+        "order": 1,
+        "name": "type",
+        "label": "Type",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "CMT",
+        "order": 2,
+        "name": "conference_management_system",
+        "label": "Conference Management System",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "5804",
+        "order": 3,
+        "name": "number_of_submissions_sent_for_review",
+        "label": "Number of Submissions Sent for Review",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "1645",
+        "order": 4,
+        "name": "number_of_full_papers_accepted",
+        "label": "Number of Full Papers Accepted",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "0",
+        "order": 5,
+        "name": "number_of_short_papers_accepted",
+        "label": "Number of Short Papers Accepted",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "28% - The value is computed by the equation \"Number of Full Papers Accepted / Number of Submissions Sent for Review * 100\" and then rounded to a whole number.",
+        "order": 6,
+        "name": "acceptance_rate_of_full_papers",
+        "label": "Acceptance Rate of Full Papers",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "3.21",
+        "order": 7,
+        "name": "average_number_of_reviews_per_paper",
+        "label": "Average Number of Reviews per Paper",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "3.91",
+        "order": 8,
+        "name": "average_number_of_papers_per_reviewer",
+        "label": "Average Number of Papers per Reviewer",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "Yes",
+        "order": 9,
+        "name": "external_reviewers_involved",
+        "label": "External Reviewers Involved",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "From the workshops, 367 reviewed full papers have been selected for publication",
+        "order": 10,
+        "name": "additional_info_on_review_process",
+        "label": "Additional Info on Review Process",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "DOI": "10.1016/j.patcog.2026.114489",
+  "title": [
+    "A transformer-based framework with sufficient feature representation and dynamic class balancing for road event detection"
+  ],
+  "volume": "180",
+  "page": "114489",
+  "article-number": "114489",
+  "publisher": "Elsevier BV",
+  "container-title": [
+    "Pattern Recognition"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        12
+      ]
+    ]
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2026,
+        12
+      ]
+    ]
+  },
+  "created": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        22
+      ]
+    ],
+    "date-time": "2026-07-22T23:33:50Z",
+    "timestamp": 1784763230000
+  },
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        31
+      ]
+    ],
+    "date-time": "2026-08-31T13:19:42Z",
+    "timestamp": 1788182382000
+  },
+  "update-to": null,
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "relation": {},
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "A transformer-based framework with sufficient feature representation and dynamic class balancing for road event detection",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Pattern Recognition",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.patcog.2026.114489",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "© 2026 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ],
+  "metadata_file_sha256": "0dbe48b34f8fd77fa295c374df74c1fb087d0bc831b6df47b0c3dbc0c0b38101",
+  "page7_path": "/Users/brandonbyrd/code/wiki/artifacts/frcb-2026/page-07.png",
+  "page7_sha256": "d8a0b264320a9214538e8efb97e3dd0898ba30807babf9f368873f21e248fcea",
+  "visual_read": "Header explicitly reads Pattern Recognition 180 (2026) 114489.",
+  "conclusion": "Volume 180 valid and independently corroborated. Correct title to publisher full title; do not remove volume based on stale preproof webpage. No update-to field in this returned deposit; relation empty; update-policy is a general policy URL, not a correction/retraction notice. Absence is not comprehensive clearance.",
+  "independent_fresh_fetch_file": "/Users/brandonbyrd/code/wiki/artifacts/submission-source-audit-20261028/reference-a-raw/crossref-frcb.json",
+  "independent_fresh_fetch_sha256": "1b2fab80422a88bc3e1a66cae047de691580130f246b8536e57eb45942cb3402",
+  "fresh_fetch_same_title_volume_article": {
+    "title": [
+      "A transformer-based framework with sufficient feature representation and dynamic class balancing for road event detection"
+    ],
+    "volume": "180",
+    "article-number": "114489",
+    "page": "114489"
+  }
+}

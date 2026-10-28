@@ -1,0 +1,2045 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 3991166,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              28
+            ]
+          ],
+          "date-time": "2026-10-28T12:05:44Z",
+          "timestamp": 1793189144887,
+          "version": "4.5.0"
+        },
+        "reference-count": 62,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2022,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2022-06-01T00:00:00Z",
+              "timestamp": 1654041600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2022,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2022-06-01T00:00:00Z",
+              "timestamp": 1654041600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2022,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1109/cvpr52688.2022.01631",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2022,
+              9,
+              27
+            ]
+          ],
+          "date-time": "2022-09-27T15:56:41Z",
+          "timestamp": 1664294201000
+        },
+        "page": "16795-16804",
+        "source": "Crossref",
+        "is-referenced-by-count": 1870,
+        "title": [
+          "Conditional Prompt Learning for Vision-Language Models"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Kaiyang",
+            "family": "Zhou",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Nanyang Technological University,S-Lab,Singapore"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jingkang",
+            "family": "Yang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Nanyang Technological University,S-Lab,Singapore"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Chen Change",
+            "family": "Loy",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Nanyang Technological University,S-Lab,Singapore"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ziwei",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Nanyang Technological University,S-Lab,Singapore"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref39",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/D19-1250"
+          },
+          {
+            "key": "ref38",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2012.6248092"
+          },
+          {
+            "key": "ref33",
+            "article-title": "Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm",
+            "author": "li",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref32",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2021.acl-long.353"
+          },
+          {
+            "key": "ref31",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2017.449"
+          },
+          {
+            "key": "ref30",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2021.emnlp-main.243"
+          },
+          {
+            "key": "ref37",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.neunet.2019.01.012"
+          },
+          {
+            "key": "ref36",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICVGIP.2008.47"
+          },
+          {
+            "key": "ref35",
+            "article-title": "Fine-grained visual classification of aircraft",
+            "author": "maji",
+            "year": "2013",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref34",
+            "article-title": "Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing",
+            "author": "liu",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref60",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2021.naacl-main.398"
+          },
+          {
+            "key": "ref62",
+            "article-title": "Learning to prompt for vision-language models",
+            "author": "zhou",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref61",
+            "article-title": "Domain generalization in vision: A survey",
+            "author": "zhou",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref28",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCVW.2013.77"
+          },
+          {
+            "key": "ref27",
+            "article-title": "Prompting visual-language models for efficient video understanding",
+            "author": "ju",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref29",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2015.483"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-319-10599-4_29"
+          },
+          {
+            "key": "ref1",
+            "article-title": "On the opportunities and risks of foundation models",
+            "author": "bommasani",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref20",
+            "article-title": "Data-efficient image recognition with contrastive predictive coding",
+            "author": "h\u00e9naff",
+            "year": "0",
+            "journal-title": "ICML"
+          },
+          {
+            "key": "ref22",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.01501"
+          },
+          {
+            "key": "ref21",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.00823"
+          },
+          {
+            "key": "ref24",
+            "article-title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+            "author": "jia",
+            "year": "0",
+            "journal-title": "ICML"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.00454"
+          },
+          {
+            "key": "ref26",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-319-46478-7_5"
+          },
+          {
+            "key": "ref25",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1162/tacl_a_00324"
+          },
+          {
+            "key": "ref50",
+            "article-title": "Learning robust global representations by penalizing local predictive power",
+            "author": "wang",
+            "year": "0",
+            "journal-title": "NeurIPS"
+          },
+          {
+            "key": "ref51",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/3293318"
+          },
+          {
+            "key": "ref59",
+            "article-title": "Contrastive learning of medical visual representations from paired images and text",
+            "author": "zhang",
+            "year": "2020",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref58",
+            "article-title": "Pointclip: Point cloud understanding by clip",
+            "author": "zhang",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref57",
+            "article-title": "Exploring hierarchical graph representation for large-scale zero-shot image classification",
+            "author": "yi",
+            "year": "2022",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref56",
+            "article-title": "Cpt: Colorful prompt tuning for pre-trained vision-language models",
+            "author": "yao",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref55",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2010.5539970"
+          },
+          {
+            "key": "ref54",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2017.328"
+          },
+          {
+            "key": "ref53",
+            "article-title": "Robust fine-tuning of zero-shot models",
+            "author": "wortsman",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref52",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2018.00717"
+          },
+          {
+            "key": "ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2013.321"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.cviu.2005.09.012"
+          },
+          {
+            "key": "ref40",
+            "article-title": "Learning transferable visual models from natural language supervision",
+            "author": "radford",
+            "year": "0",
+            "journal-title": "ICML"
+          },
+          {
+            "key": "ref12",
+            "article-title": "Devise: A deep visual-semantic embedding model",
+            "author": "frome",
+            "year": "0",
+            "journal-title": "NeurIPS"
+          },
+          {
+            "key": "ref13",
+            "article-title": "Cloob: Modern hopfield networks with infoloob outperform clip",
+            "author": "f\u00fcrst",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref14",
+            "article-title": "Clip-adapter: Better vision-language models with feature adapters",
+            "author": "gao",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref15",
+            "article-title": "Making pre-trained language models better few-shot learners",
+            "author": "gao",
+            "year": "2020",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2017.218"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.00975"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2016.90"
+          },
+          {
+            "key": "ref19",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/JSTARS.2019.2918242"
+          },
+          {
+            "key": "ref4",
+            "article-title": "A simple framework for contrastive learning of visual representations",
+            "author": "chen",
+            "year": "0",
+            "journal-title": "ICML"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-319-46475-6_4"
+          },
+          {
+            "key": "ref6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2009.5206848"
+          },
+          {
+            "key": "ref5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2014.461"
+          },
+          {
+            "key": "ref8",
+            "article-title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+            "author": "devlin",
+            "year": "0",
+            "journal-title": "NAACL"
+          },
+          {
+            "key": "ref7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.01101"
+          },
+          {
+            "key": "ref49",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2015.7298935"
+          },
+          {
+            "key": "ref9",
+            "article-title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+            "author": "dosovitskiy",
+            "year": "0",
+            "journal-title": "ICLRE"
+          },
+          {
+            "key": "ref46",
+            "article-title": "Ucf101: A dataset of 101 human actions classes from videos in the wild",
+            "author": "soomro",
+            "year": "2012",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref45",
+            "article-title": "Zero-shot learning through cross-modal transfer",
+            "author": "socher",
+            "year": "0",
+            "journal-title": "NeurIPS"
+          },
+          {
+            "key": "ref48",
+            "article-title": "Attention is all you need",
+            "author": "vaswani",
+            "year": "0",
+            "journal-title": "NeurIPS"
+          },
+          {
+            "key": "ref47",
+            "article-title": "Measuring robustness to natural distribution shifts in image classification",
+            "author": "taori",
+            "year": "0",
+            "journal-title": "NeurIPS"
+          },
+          {
+            "key": "ref42",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.01755"
+          },
+          {
+            "key": "ref41",
+            "article-title": "Language models are unsupervised multitask learners",
+            "author": "radford",
+            "year": "2019",
+            "journal-title": "OpenAIRE blog"
+          },
+          {
+            "key": "ref44",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2020.emnlp-main.346"
+          },
+          {
+            "key": "ref43",
+            "article-title": "Do imagenet classifiers generalize to imagenet?",
+            "author": "recht",
+            "year": "0",
+            "journal-title": "ICML"
+          }
+        ],
+        "event": {
+          "name": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+          "location": "New Orleans, LA, USA",
+          "start": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                18
+              ]
+            ]
+          },
+          "end": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                24
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/9878378/9878366/09879913.pdf?arnumber=9879913",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              10,
+              14
+            ]
+          ],
+          "date-time": "2022-10-14T16:53:19Z",
+          "timestamp": 1665766399000
+        },
+        "score": 46.137264,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/9879913/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2022,
+              6
+            ]
+          ]
+        },
+        "references-count": 62,
+        "URL": "https://doi.org/10.1109/cvpr52688.2022.01631",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              23
+            ]
+          ],
+          "date-time": "2026-08-23T15:59:53Z",
+          "timestamp": 1787500793228,
+          "version": "build-2736575974"
+        },
+        "reference-count": 62,
+        "publisher": "Elsevier BV",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2026-07-01T00:00:00Z",
+              "timestamp": 1782864000000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2026-07-01T00:00:00Z",
+              "timestamp": 1782864000000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/legal/tdmrep-license"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2026-07-01T00:00:00Z",
+              "timestamp": 1782864000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-017"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2026-07-01T00:00:00Z",
+              "timestamp": 1782864000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2026-07-01T00:00:00Z",
+              "timestamp": 1782864000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-012"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2026-07-01T00:00:00Z",
+              "timestamp": 1782864000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2026-07-01T00:00:00Z",
+              "timestamp": 1782864000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-004"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/501100001809",
+            "name": "National Natural Science Foundation of China",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "62306237"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "62306237"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100001809",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "elsevier.com",
+            "sciencedirect.com"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Expert Systems with Applications"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              7
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.eswa.2026.132077",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              20
+            ]
+          ],
+          "date-time": "2026-03-20T16:23:41Z",
+          "timestamp": 1774023821000
+        },
+        "page": "132077",
+        "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 1,
+        "special_numbering": "C",
+        "title": [
+          "Multi-modal mutual-guidance conditional prompt learning for vision-language models"
+        ],
+        "prefix": "10.1016",
+        "volume": "320",
+        "author": [
+          {
+            "given": "Shijun",
+            "family": "Yang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8521-569X",
+            "authenticated-orcid": false,
+            "given": "Xiang",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Wanqing",
+            "family": "Zhao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Qiyao",
+            "family": "Hu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xianlin",
+            "family": "Peng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0001",
+            "unstructured": "Achiam, J., Adler, S., Agarwal, S., Ahmad, L., Akkaya, I., Aleman, F. L., Almeida, D., Altenschmidt, J., Altman, S., Anadkat, S. et al. (2023). Gpt-4 technical report. arXiv preprint arXiv: 2303.08774."
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0002",
+            "series-title": "Computer vision\u2013ECCV 2014: 13th European conference, Zurich, Switzerland, september 6-12, 2014, proceedings, part VI 13",
+            "first-page": "446",
+            "article-title": "Food-101\u2013mining discriminative components with random forests",
+            "author": "Bossard",
+            "year": "2014"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0003",
+            "unstructured": "Chen, J., Zhu, D., Shen, X., Li, X., Liu, Z., Zhang, P., Krishnamoorthi, R., Chandra, V., Xiong, Y., & Elhoseiny, M. (2023). MiniGPT-v2: large language model as a unified interface for vision-language multi-task learning. arXiv preprint arXiv: 2310.09478."
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0004",
+            "series-title": "Proceedings of the IEEE conference on computer vision and pattern recognition",
+            "first-page": "3606",
+            "article-title": "Describing textures in the wild",
+            "author": "Cimpoi",
+            "year": "2014"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0005",
+            "series-title": "2009 IEEE conference on computer vision and pattern recognition",
+            "first-page": "248",
+            "article-title": "ImageNet: A large-scale hierarchical image database",
+            "author": "Deng",
+            "year": "2009"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0006",
+            "series-title": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition",
+            "first-page": "10995",
+            "article-title": "MaskCLIP: Masked self-distillation advances contrastive language-image pretraining",
+            "author": "Dong",
+            "year": "2023"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0007",
+            "series-title": "2004 conference on computer vision and pattern recognition workshop",
+            "first-page": "178",
+            "article-title": "Learning generative visual models from few training examples: An incremental Bayesian approach tested on 101 object categories",
+            "author": "Fei-Fei",
+            "year": "2004"
+          },
+          {
+            "issue": "2",
+            "key": "10.1016/j.eswa.2026.132077_bib0008",
+            "doi-asserted-by": "crossref",
+            "first-page": "581",
+            "DOI": "10.1007/s11263-023-01891-x",
+            "article-title": "Clip-adapter: Better vision-language models with feature adapters",
+            "volume": "132",
+            "author": "Gao",
+            "year": "2024",
+            "journal-title": "International Journal of Computer Vision"
+          },
+          {
+            "issue": "7",
+            "key": "10.1016/j.eswa.2026.132077_bib0009",
+            "doi-asserted-by": "crossref",
+            "first-page": "2217",
+            "DOI": "10.1109/JSTARS.2019.2918242",
+            "article-title": "EuroSAT: A novel dataset and deep learning benchmark for land use and land cover classification",
+            "volume": "12",
+            "author": "Helber",
+            "year": "2019",
+            "journal-title": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0010",
+            "series-title": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition",
+            "first-page": "15262",
+            "article-title": "Natural adversarial examples",
+            "author": "Hendrycks",
+            "year": "2021"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0011",
+            "series-title": "International conference on machine learning",
+            "first-page": "4904",
+            "article-title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+            "author": "Jia",
+            "year": "2021"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0012",
+            "series-title": "European conference on computer vision",
+            "first-page": "709",
+            "article-title": "Visual prompt tuning",
+            "author": "Jia",
+            "year": "2022"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0013",
+            "series-title": "Proceedings of the IEEE/CVF international conference on computer vision",
+            "first-page": "15670",
+            "article-title": "Knowledge-aware prompt tuning for generalizable vision-language models",
+            "author": "Kan",
+            "year": "2023"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0014",
+            "series-title": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition",
+            "first-page": "19113",
+            "article-title": "MaPLe: Multi-modal prompt learning",
+            "author": "Khattak",
+            "year": "2023"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0015",
+            "series-title": "Proceedings of the IEEE/CVF international conference on computer vision",
+            "first-page": "15190",
+            "article-title": "Self-regulating prompts: Foundational model adaptation without forgetting",
+            "author": "Khattak",
+            "year": "2023"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0016",
+            "series-title": "Proceedings of the IEEE international conference on computer vision workshops",
+            "first-page": "554",
+            "article-title": "3D object representations for fine-grained categorization",
+            "author": "Krause",
+            "year": "2013"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0017",
+            "unstructured": "Li, J., Li, D., Savarese, S., & Hoi, S. (2023). BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models. arXiv preprint arXiv: 2301.12597."
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0018",
+            "first-page": "13448",
+            "article-title": "GraphAdapter: Tuning vision-language models with dual knowledge graph",
+            "volume": "36",
+            "author": "Li",
+            "year": "2023",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0019",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Li, Z., Li, X., Fu, X., Zhang, X., Wang, W., & Yang, J. (2024b). PromptKD: Unsupervised prompt distillation for vision-language models. arXiv preprint arXiv: 2403.02781.",
+            "DOI": "10.1109/CVPR52733.2024.02513"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0020",
+            "first-page": "34892",
+            "article-title": "Visual instruction tuning",
+            "volume": "36",
+            "author": "Liu",
+            "year": "2023",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0021",
+            "unstructured": "Liu, M., Roy, S., Li, W., Zhong, Z., Sebe, N., & Ricci, E. (2024b). Democratizing fine-grained visual recognition with large language models. arXiv preprint arXiv: 2401.13837."
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0022",
+            "unstructured": "Loshchilov, I., & Hutter, F. (2017). Decoupled weight decay regularization. arXiv preprint arXiv: 1711.05101."
+          },
+          {
+            "issue": "9",
+            "key": "10.1016/j.eswa.2026.132077_bib0023",
+            "doi-asserted-by": "crossref",
+            "first-page": "4616",
+            "DOI": "10.1109/TCSVT.2023.3245584",
+            "article-title": "Understanding and mitigating overfitting in prompt tuning for vision-language models",
+            "volume": "33",
+            "author": "Ma",
+            "year": "2023",
+            "journal-title": "IEEE Transactions on Circuits and Systems for Video Technology"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0024",
+            "unstructured": "Maji, S., Rahtu, E., Kannala, J., Blaschko, M., & Vedaldi, A. (2013). Fine-grained visual classification of aircraft. arXiv preprint arXiv: 1306.5151."
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0025",
+            "series-title": "Proceedings of the IEEE/CVF international conference on computer vision",
+            "first-page": "262",
+            "article-title": "Enhancing clip with GPT-4: Harnessing visual descriptions as prompts",
+            "author": "Maniparambil",
+            "year": "2023"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0026",
+            "series-title": "2008 sixth indian conference on computer vision, graphics & image processing",
+            "first-page": "722",
+            "article-title": "Automated flower classification over a large number of classes",
+            "author": "Nilsback",
+            "year": "2008"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0027",
+            "series-title": "2012 IEEE conference on computer vision and pattern recognition",
+            "first-page": "3498",
+            "article-title": "Cats and dogs",
+            "author": "Parkhi",
+            "year": "2012"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0028",
+            "first-page": "606",
+            "article-title": "Efficiently scaling transformer inference",
+            "volume": "5",
+            "author": "Pope",
+            "year": "2023",
+            "journal-title": "Proceedings of Machine Learning and Systems"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0029",
+            "series-title": "Proceedings of the IEEE/CVF international conference on computer vision",
+            "first-page": "15691",
+            "article-title": "What does a platypus look like? Generating customized prompts for zero-shot image classification",
+            "author": "Pratt",
+            "year": "2023"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0030",
+            "series-title": "International conference on machine learning",
+            "first-page": "8748",
+            "article-title": "Learning transferable visual models from natural language supervision",
+            "author": "Radford",
+            "year": "2021"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0031",
+            "series-title": "International conference on machine learning",
+            "first-page": "8821",
+            "article-title": "Zero-shot text-to-image generation",
+            "author": "Ramesh",
+            "year": "2021"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0032",
+            "series-title": "International conference on machine learning",
+            "first-page": "5389",
+            "article-title": "Do imagenet classifiers generalize to imagenet?",
+            "author": "Recht",
+            "year": "2019"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.eswa.2026.132077_bib0033",
+            "doi-asserted-by": "crossref",
+            "first-page": "2499",
+            "DOI": "10.1109/TCSVT.2024.3489024",
+            "article-title": "Modality-consistent prompt tuning with optimal transport",
+            "volume": "35",
+            "author": "Ren",
+            "year": "2025",
+            "journal-title": "IEEE Transactions on Circuits and Systems for Video Technology"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0034",
+            "series-title": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition",
+            "first-page": "10684",
+            "article-title": "High-resolution image synthesis with latent diffusion models",
+            "author": "Rombach",
+            "year": "2022"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0035",
+            "unstructured": "Roy, S., & Etemad, A. (2024). Consistency-guided prompt learning for vision-language models. arXiv preprint arXiv: 2306.01195."
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0036",
+            "series-title": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition (CVPR)",
+            "first-page": "17542",
+            "article-title": "Improved zero-shot classification by adapting VLMs with text descriptions",
+            "author": "Saha",
+            "year": "2024"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0037",
+            "series-title": "International conference on machine learning",
+            "first-page": "31716",
+            "article-title": "CLIPood: Generalizing clip to out-of-distributions",
+            "author": "Shu",
+            "year": "2023"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0038",
+            "unstructured": "Soomro, K., Zamir, A. R., & Shah, M. (2012). UCF101: A dataset of 101 human actions classes from videos in the wild. arXiv preprint arXiv: 1212.0402."
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0039",
+            "series-title": "Proceedings of the AAAI conference on artificial intelligence",
+            "first-page": "5061",
+            "article-title": "Compound text-guided prompt tuning via image-adaptive cues",
+            "volume": "vol. 38",
+            "author": "Tan",
+            "year": "2024"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0040",
+            "unstructured": "Touvron, H., Lavril, T., Izacard, G., Martinet, X., Lachaux, M.-A., Lacroix, T., Rozi\u00e8re, B., Goyal, N., Hambro, E., Azhar, F. et al. (2023a). LLaMA: Open and efficient foundation language models. arXiv preprint arXiv: 2302.13971."
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0041",
+            "unstructured": "Touvron, H., Martin, L., Stone, K., Albert, P., Almahairi, A., Babaei, Y., Bashlykov, N., Batra, S., Bhargava, P., Bhosale, S. et al. (2023b). LLaMA 2: Open foundation and fine-tuned chat models. arXiv preprint arXiv: 2307.09288."
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0042",
+            "article-title": "Learning robust global representations by penalizing local predictive power",
+            "volume": "32",
+            "author": "Wang",
+            "year": "2019",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0043",
+            "series-title": "ACM multimedia 2024",
+            "article-title": "Bilateral adaptive cross-modal fusion prompt learning for CLIP",
+            "author": "Wang",
+            "year": "2024"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.eswa.2026.132077_bib0044",
+            "doi-asserted-by": "crossref",
+            "first-page": "148",
+            "DOI": "10.1109/TCSVT.2024.3454366",
+            "article-title": "Pedestrian attribute recognition via CLIP-based prompt vision-language fusion",
+            "volume": "35",
+            "author": "Wang",
+            "year": "2025",
+            "journal-title": "IEEE Transactions on Circuits and Systems for Video Technology"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0045",
+            "series-title": "Proceedings of the 2020 conference on empirical methods in natural language processing: system demonstrations",
+            "first-page": "38",
+            "article-title": "Transformers: State-of-the-art natural language processing",
+            "author": "Wolf",
+            "year": "2020"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0046",
+            "series-title": "2010 IEEE computer society conference on computer vision and pattern recognition",
+            "first-page": "3485",
+            "article-title": "Sun database: Large-scale scene recognition from abbey to zoo",
+            "author": "Xiao",
+            "year": "2010"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0047",
+            "series-title": "CVPR",
+            "first-page": "6757",
+            "article-title": "Visual-language prompt tuning with knowledge-guided context optimization",
+            "author": "Yao",
+            "year": "2023"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0048",
+            "series-title": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition",
+            "first-page": "23438",
+            "article-title": "TCP: Textual-based class-aware prompt tuning for visual-language model",
+            "author": "Yao",
+            "year": "2024"
+          },
+          {
+            "issue": "12",
+            "key": "10.1016/j.eswa.2026.132077_bib0049",
+            "doi-asserted-by": "crossref",
+            "first-page": "12221",
+            "DOI": "10.1109/TCSVT.2024.3432753",
+            "article-title": "Hierarchy-aware interactive prompt learning for few-shot classification",
+            "volume": "34",
+            "author": "Yin",
+            "year": "2024",
+            "journal-title": "IEEE Transactions on Circuits and Systems for Video Technology"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0050",
+            "article-title": "Convolutions die hard: Open-vocabulary segmentation with single frozen convolutional clip",
+            "volume": "36",
+            "author": "Yu",
+            "year": "2024",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0051",
+            "series-title": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition",
+            "first-page": "10899",
+            "article-title": "Task residual for tuning vision-language models",
+            "author": "Yu",
+            "year": "2023"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0052",
+            "unstructured": "Zang, Y., Goh, H., Susskind, J., & Huang, C. (2024). Overcoming the pitfalls of vision-language model finetuning for OOD generalization. arXiv preprint arXiv: 2401.15914."
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0053",
+            "unstructured": "Zang, Y., Li, W., Zhou, K., Huang, C., & Loy, C. C. (2022). Unified vision and language prompt learning. arXiv preprint arXiv: 2210.07225."
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0054",
+            "series-title": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition",
+            "first-page": "12924",
+            "article-title": "DePT: Decoupled prompt tuning",
+            "author": "Zhang",
+            "year": "2024"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0055",
+            "series-title": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition",
+            "first-page": "15211",
+            "article-title": "Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners",
+            "author": "Zhang",
+            "year": "2023"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0056",
+            "unstructured": "Zhang, Y., Unell, A., Wang, X., Ghosh, D., Su, Y., Schmidt, L., & Yeung-Levy, S. (2024b). Why are visually-grounded language models bad at image classification?arXiv preprint arXiv: 2405.18415."
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.eswa.2026.132077_bib0057",
+            "doi-asserted-by": "crossref",
+            "first-page": "3185",
+            "DOI": "10.1109/TCSVT.2024.3504816",
+            "article-title": "Language-driven visual consensus for zero-shot semantic segmentation",
+            "volume": "35",
+            "author": "Zhang",
+            "year": "2025",
+            "journal-title": "IEEE Transactions on Circuits and Systems for Video Technology"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0058",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Zheng, Z., Wei, J., Hu, X., Zhu, H., & Nevatia, R. (2024). Large language models are good prompt learners for low-shot image classification, In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition(pp. 28453\u201328462).",
+            "DOI": "10.1109/CVPR52733.2024.02688"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0059",
+            "series-title": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition",
+            "first-page": "16816",
+            "article-title": "Conditional prompt learning for vision-language models",
+            "author": "Zhou",
+            "year": "2022"
+          },
+          {
+            "issue": "9",
+            "key": "10.1016/j.eswa.2026.132077_bib0060",
+            "doi-asserted-by": "crossref",
+            "first-page": "2337",
+            "DOI": "10.1007/s11263-022-01653-1",
+            "article-title": "Learning to prompt for vision-language models",
+            "volume": "130",
+            "author": "Zhou",
+            "year": "2022",
+            "journal-title": "International Journal of Computer Vision"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0061",
+            "series-title": "CVPR",
+            "first-page": "15659",
+            "article-title": "Prompt-aligned gradient for prompt tuning",
+            "author": "Zhu",
+            "year": "2023"
+          },
+          {
+            "key": "10.1016/j.eswa.2026.132077_bib0062",
+            "unstructured": "Zhu, D., Chen, J., Shen, X., Li, X., & Elhoseiny, M. (2023b). MiniGPT-4: Enhancing vision-language understanding with advanced large language models. arXiv preprint arXiv: 2304.10592."
+          }
+        ],
+        "container-title": [
+          "Expert Systems with Applications"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0957417426009905?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0957417426009905?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              11
+            ]
+          ],
+          "date-time": "2026-06-11T15:51:20Z",
+          "timestamp": 1781193080000
+        },
+        "score": 39.526924,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0957417426009905"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              7
+            ]
+          ]
+        },
+        "references-count": 62,
+        "alternative-id": [
+          "S0957417426009905"
+        ],
+        "URL": "https://doi.org/10.1016/j.eswa.2026.132077",
+        "ISSN": [
+          "0957-4174"
+        ],
+        "issn-type": [
+          {
+            "value": "0957-4174",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              7
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "Elsevier",
+            "name": "publisher",
+            "label": "This article is maintained by"
+          },
+          {
+            "value": "Multi-modal mutual-guidance conditional prompt learning for vision-language models",
+            "name": "articletitle",
+            "label": "Article Title"
+          },
+          {
+            "value": "Expert Systems with Applications",
+            "name": "journaltitle",
+            "label": "Journal Title"
+          },
+          {
+            "value": "https://doi.org/10.1016/j.eswa.2026.132077",
+            "name": "articlelink",
+            "label": "CrossRef DOI link to publisher maintained version"
+          },
+          {
+            "value": "article",
+            "name": "content_type",
+            "label": "Content Type"
+          },
+          {
+            "value": "\u00a9 2026 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+            "name": "copyright",
+            "label": "Copyright"
+          }
+        ],
+        "article-number": "132077"
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              24
+            ]
+          ],
+          "date-time": "2026-10-24T17:09:59Z",
+          "timestamp": 1792861799472,
+          "version": "4.5.0"
+        },
+        "reference-count": 67,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  6,
+                  16
+                ]
+              ],
+              "date-time": "2024-06-16T00:00:00Z",
+              "timestamp": 1718496000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  6,
+                  16
+                ]
+              ],
+              "date-time": "2024-06-16T00:00:00Z",
+              "timestamp": 1718496000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              16
+            ]
+          ]
+        },
+        "DOI": "10.1109/cvpr52733.2024.02550",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              16
+            ]
+          ],
+          "date-time": "2024-09-16T13:34:53Z",
+          "timestamp": 1726493693000
+        },
+        "page": "26994-27004",
+        "source": "Crossref",
+        "is-referenced-by-count": 14,
+        "title": [
+          "Active Prompt Learning in Vision Language Models"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Jihwan",
+            "family": "Bang",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "KAIST Michigan"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sumyeong",
+            "family": "Ahn",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "State University"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jae-Gil",
+            "family": "Lee",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "KAIST Michigan"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.00676"
+          },
+          {
+            "key": "ref2",
+            "article-title": "Deep batch active learning by diverse, uncertain gradient lower bounds",
+            "author": "Ash",
+            "year": "2019",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2018.00976"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-319-10599-4_29"
+          },
+          {
+            "key": "ref5",
+            "first-page": "1877",
+            "article-title": "Language models are few-shot learners",
+            "volume": "33",
+            "author": "Brown",
+            "year": "2020",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2014.461"
+          },
+          {
+            "key": "ref7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2017.121"
+          },
+          {
+            "key": "ref8",
+            "article-title": "Mod-ulating early visual processing by language",
+            "volume": "30",
+            "author": "De Vries",
+            "year": "2017",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2009.5206848"
+          },
+          {
+            "key": "ref10",
+            "article-title": "An image is worth 1616 words: Transform-ers for image recognition at scale",
+            "author": "Dosovitskiy",
+            "year": "2020",
+            "journal-title": "arXiv Preprint"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/cvpr.2004.383"
+          },
+          {
+            "key": "ref12",
+            "first-page": "1183",
+            "article-title": "Deep bayesian active learning with image data",
+            "volume-title": "Proceedings of International Conference on Machine Learning",
+            "author": "Gal",
+            "year": "2017"
+          },
+          {
+            "key": "ref13",
+            "first-page": "6616",
+            "article-title": "Large-scale adversarial training for vision-and-language representation learning",
+            "volume": "33",
+            "author": "Gan",
+            "year": "2020",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref14",
+            "article-title": "Making pre-trained language models better few-shot learners",
+            "author": "Gao",
+            "year": "2020",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref15",
+            "article-title": "Deep active learning with a neural architecture search",
+            "volume": "32",
+            "author": "Geifman",
+            "year": "2019",
+            "journal-title": "Advances in Neural Infor-mation Processing Systems"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2016.90"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/JSTARS.2019.2918242"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPRW.2008.4563068"
+          },
+          {
+            "key": "ref19",
+            "article-title": "Bayesian active learning for classification and pref-erence learning",
+            "author": "Houlsby",
+            "year": "2011",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref20",
+            "first-page": "4904",
+            "article-title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+            "volume-title": "Proceedings of In-ternational Conference on Machine Learning",
+            "author": "Jia",
+            "year": "2021"
+          },
+          {
+            "key": "ref21",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1162/tacl_a_00324"
+          },
+          {
+            "key": "ref22",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-031-19833-5_7"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.01832"
+          },
+          {
+            "key": "ref24",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV51070.2023.01394"
+          },
+          {
+            "key": "ref25",
+            "article-title": "Batchbald: Efficient and diverse batch acquisition for deep bayesian active learning",
+            "volume": "32",
+            "author": "Kirsch",
+            "year": "2019",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref26",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/11871842_68"
+          },
+          {
+            "key": "ref27",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCVW.2013.77"
+          },
+          {
+            "key": "ref28",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2021.emnlp-main.243"
+          },
+          {
+            "key": "ref29",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/B978-1-55860-335-6.50026-X"
+          },
+          {
+            "key": "ref30",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1609/aaai.v34i07.6795"
+          },
+          {
+            "key": "ref31",
+            "first-page": "9694",
+            "article-title": "Align before fuse: Vision and language representation learning with momentum distillation",
+            "volume": "34",
+            "author": "Li",
+            "year": "2021",
+            "journal-title": "Advances in Neural Infor-mation Processing Systems"
+          },
+          {
+            "key": "ref32",
+            "first-page": "12888",
+            "article-title": "Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation",
+            "volume-title": "Proceedings of International Conference on Machine Learning",
+            "author": "Li",
+            "year": "2022"
+          },
+          {
+            "key": "ref33",
+            "article-title": "Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+            "author": "Li",
+            "year": "2023",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref34",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2021.acl-long.353"
+          },
+          {
+            "key": "ref35",
+            "article-title": "Vilbert: Pretraining task-agnostic visiolinguistic representations for vision-and-language tasks",
+            "volume": "32",
+            "author": "Lu",
+            "year": "2019",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref36",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.00514"
+          },
+          {
+            "key": "ref37",
+            "article-title": "Fine-grained visual classi-fication of aircraft",
+            "author": "Maji",
+            "year": "2013",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref38",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1015330.1015385"
+          },
+          {
+            "key": "ref39",
+            "article-title": "Visual classification via description from large language models",
+            "volume-title": "Proceedings of International Conference on Learning Representations",
+            "author": "Menon",
+            "year": "2023"
+          },
+          {
+            "key": "ref40",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.00032"
+          },
+          {
+            "key": "ref41",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICVGIP.2008.47"
+          },
+          {
+            "key": "ref42",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2012.6248092"
+          },
+          {
+            "key": "ref43",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.01192"
+          },
+          {
+            "key": "ref44",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV51070.2023.01438"
+          },
+          {
+            "key": "ref45",
+            "article-title": "Imagebert: Cross-modal pre-training with large-scale weak-supervised image-text data",
+            "author": "Qi",
+            "year": "2020",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref46",
+            "first-page": "8748",
+            "article-title": "Learning transferable visual models from natural language super-vision",
+            "volume-title": "Proceedings of International Conference on Machine Learning",
+            "author": "Radford",
+            "year": "2021"
+          },
+          {
+            "key": "ref47",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPRW53098.2021.00294"
+          },
+          {
+            "key": "ref48",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/3472291"
+          },
+          {
+            "key": "ref49",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/11871842_40"
+          },
+          {
+            "key": "ref50",
+            "article-title": "Active learning for convo-lutional neural networks: A core-set approach",
+            "volume-title": "Proceedings of International Conference on Learning Representations",
+            "author": "Sener",
+            "year": "2018"
+          },
+          {
+            "key": "ref51",
+            "author": "Settles",
+            "year": "2009",
+            "journal-title": "Active learning literature survey. Techni-cal report, Department of Computer Sciences, University of Wisconsin-Madison"
+          },
+          {
+            "key": "ref52",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2020.emnlp-main.346"
+          },
+          {
+            "key": "ref53",
+            "article-title": "Ucfl01: A dataset of 101 human actions classes from videos in the wild",
+            "author": "Soomro",
+            "year": "2012",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref54",
+            "article-title": "Llama: Open and efficient foundation language models",
+            "author": "Touvron",
+            "year": "2023",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref55",
+            "article-title": "Llama 2: Open foundation and fine-tuned chat models",
+            "author": "Touvron",
+            "year": "2023",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref56",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.48550/ARXIV.1706.03762"
+          },
+          {
+            "key": "ref57",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2010.5539970"
+          },
+          {
+            "key": "ref58",
+            "article-title": "Tableformer: Robust trans-former modeling for table-text encoding",
+            "author": "Yang",
+            "year": "2022",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref59",
+            "article-title": "Filip: Fine-grained interactive language-image pre-training",
+            "author": "Yao",
+            "year": "2021",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref60",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1609/aaai.v35i4.16431"
+          },
+          {
+            "key": "ref61",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.01049"
+          },
+          {
+            "key": "ref62",
+            "article-title": "Florence: A new foundation model for computer vision",
+            "author": "Yuan",
+            "year": "2021",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref63",
+            "article-title": "Graph transformer networks",
+            "volume": "32",
+            "author": "Yun",
+            "year": "2019",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref64",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.01759"
+          },
+          {
+            "key": "ref65",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2021.naacl-main.398"
+          },
+          {
+            "key": "ref66",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.01631"
+          },
+          {
+            "key": "ref67",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/s11263-022-01653-1"
+          }
+        ],
+        "event": {
+          "name": "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+          "location": "Seattle, WA, USA",
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                16
+              ]
+            ]
+          },
+          "end": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                22
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/10654794/10654797/10655710.pdf?arnumber=10655710",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              19
+            ]
+          ],
+          "date-time": "2024-09-19T02:12:51Z",
+          "timestamp": 1726711971000
+        },
+        "score": 36.65202,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/10655710/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              16
+            ]
+          ]
+        },
+        "references-count": 67,
+        "URL": "https://doi.org/10.1109/cvpr52733.2024.02550",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              16
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 3,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

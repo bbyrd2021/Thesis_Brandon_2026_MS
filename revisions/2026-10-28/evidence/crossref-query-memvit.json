@@ -1,0 +1,1643 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 3417340,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              13
+            ]
+          ],
+          "date-time": "2026-10-13T17:21:40Z",
+          "timestamp": 1791912100332,
+          "version": "4.3.4"
+        },
+        "reference-count": 85,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2022,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2022-06-01T00:00:00Z",
+              "timestamp": 1654041600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2022,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2022-06-01T00:00:00Z",
+              "timestamp": 1654041600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2022,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1109/cvpr52688.2022.01322",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2022,
+              9,
+              27
+            ]
+          ],
+          "date-time": "2022-09-27T19:56:41Z",
+          "timestamp": 1664308601000
+        },
+        "page": "13577-13587",
+        "source": "Crossref",
+        "is-referenced-by-count": 171,
+        "title": [
+          "MeMViT: Memory-Augmented Multiscale Vision Transformer for Efficient Long-Term Video Recognition"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Chao-Yuan",
+            "family": "Wu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Facebook AI Research"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yanghao",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Facebook AI Research"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Karttikeya",
+            "family": "Mangalam",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Facebook AI Research"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Haoqi",
+            "family": "Fan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Facebook AI Research"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Bo",
+            "family": "Xiong",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Facebook AI Research"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jitendra",
+            "family": "Malik",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Facebook AI Research"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Christoph",
+            "family": "Feichtenhofer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Facebook AI Research"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref73",
+            "article-title": "Temporal segment net-works: Towards good practices for deep action recognition",
+            "author": "limin",
+            "year": "0",
+            "journal-title": "Proc ECCV"
+          },
+          {
+            "key": "ref72",
+            "article-title": "Action recognition with trajectory-pooled deep-convolutional descriptors",
+            "author": "limin",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref71",
+            "article-title": "Evaluation of local spatio-temporal features for action recognition",
+            "author": "heng",
+            "year": "2009",
+            "journal-title": "BMVC"
+          },
+          {
+            "key": "ref70",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2013.441"
+          },
+          {
+            "key": "ref76",
+            "article-title": "In-teractive prototype learning for egocentric action recognition",
+            "author": "xiaohan",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref77",
+            "article-title": "Long-term feature banks for detailed video understanding",
+            "author": "chao-yuan",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref74",
+            "article-title": "Pyra-mid vision transformer: A versatile backbone for dense pre-diction without convolutions",
+            "author": "wenhai",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref39",
+            "article-title": "Video prediction recalling long-term motion context via memory alignment learning",
+            "author": "sangmin",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref75",
+            "article-title": "Non-local neural networks",
+            "author": "xiaolong",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref38",
+            "article-title": "Learning realistic human actions from movies",
+            "author": "ivan",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref78",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.00192"
+          },
+          {
+            "key": "ref79",
+            "article-title": "Compressed video action recognition",
+            "author": "chao-yuan",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref33",
+            "article-title": "STM: Spatiotemporal and motion encoding for action recognition",
+            "author": "boyuan",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref32",
+            "article-title": "Timeception for complex action recognition",
+            "author": "noureldien",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref31",
+            "article-title": "AVA: A video dataset of spatio-temporally localized atomic visual actions",
+            "author": "chunhui",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref30",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.01204"
+          },
+          {
+            "key": "ref37",
+            "article-title": "Scsampler: Sampling salient clips from video for efficient action recog-nition",
+            "author": "bruno",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref36",
+            "article-title": "Mo ViNets: Mobile video networks for efficient video recog-nition",
+            "author": "dan",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref35",
+            "article-title": "A spatio-temporal descriptor based on 3d-gradients",
+            "author": "alexander",
+            "year": "0",
+            "journal-title": "Proc BMVC"
+          },
+          {
+            "key": "ref34",
+            "author": "will",
+            "year": "2017",
+            "journal-title": "The kinetics human action video dataset"
+          },
+          {
+            "key": "ref60",
+            "article-title": "Not all mem-ories are created equal: Learning to forget by expiring",
+            "author": "sainbayar",
+            "year": "2021",
+            "journal-title": "ICML"
+          },
+          {
+            "key": "ref62",
+            "article-title": "Asynchronous interaction aggregation for action detection",
+            "author": "jiajun",
+            "year": "0",
+            "journal-title": "Proc ECCV"
+          },
+          {
+            "key": "ref61",
+            "article-title": "Lattice long short-term memory for human action recognition",
+            "author": "lin",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref63",
+            "article-title": "Convolutional learning of spatio-temporal features",
+            "author": "graham",
+            "year": "0",
+            "journal-title": "Proc ECCV"
+          },
+          {
+            "key": "ref28",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.01325"
+          },
+          {
+            "key": "ref64",
+            "article-title": "Training data-efficient image transformers and distillation through at-tention",
+            "author": "hugo",
+            "year": "0",
+            "journal-title": "Proc ICML"
+          },
+          {
+            "key": "ref27",
+            "article-title": "Video action transformer network",
+            "author": "rohit",
+            "year": "0",
+            "journal-title": "Proc CVP R"
+          },
+          {
+            "key": "ref65",
+            "article-title": "Going deeper with im-age transformers",
+            "author": "hugo",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref66",
+            "article-title": "Learning spatiotemporal features with 3D convolutional networks",
+            "author": "du",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref29",
+            "article-title": "Action Vlad: Learning spatio-temporal aggregation for action classification",
+            "author": "rohit",
+            "year": "0",
+            "journal-title": "Proc CVP R"
+          },
+          {
+            "key": "ref67",
+            "article-title": "Video classification with channel-separated convolutional networks",
+            "author": "du",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref68",
+            "article-title": "Attention is all you need",
+            "author": "ashish",
+            "year": "2017",
+            "journal-title": "NeurIPS"
+          },
+          {
+            "key": "ref69",
+            "article-title": "Dense trajectories and motion boundary de-scriptors for action recognition",
+            "author": "heng",
+            "year": "2013",
+            "journal-title": "IJCV"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.00676"
+          },
+          {
+            "key": "ref1",
+            "author": "sami",
+            "year": "2016",
+            "journal-title": "Youtube-8m A large-scale video classification benchmark"
+          },
+          {
+            "key": "ref20",
+            "article-title": "Recognizing action at a distance",
+            "author": "alexei",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref22",
+            "article-title": "Multiscale vision transformers",
+            "author": "haoqi",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref21",
+            "author": "haoqi",
+            "year": "2020",
+            "journal-title": "Pyslowfast"
+          },
+          {
+            "key": "ref24",
+            "article-title": "SlowFast networks for video recognition",
+            "author": "christoph",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.00028"
+          },
+          {
+            "key": "ref26",
+            "article-title": "Rolling-unrolling lstms for action anticipation from first-person video",
+            "author": "furnari",
+            "year": "2020",
+            "journal-title": "PAMI"
+          },
+          {
+            "key": "ref25",
+            "article-title": "Leveraging uncertainty to rethink loss functions and evaluation measures for egocentric action anticipation",
+            "author": "antonino",
+            "year": "2018",
+            "journal-title": "ECCV Workshops"
+          },
+          {
+            "key": "ref50",
+            "article-title": "Actor-context-actor relation net-work for spatio-temporal action localization",
+            "author": "junting",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref51",
+            "article-title": "Keeping your eye on the ball: Trajectory attention in video transformers",
+            "author": "mandela",
+            "year": "2021",
+            "journal-title": "NeurIPS"
+          },
+          {
+            "key": "ref59",
+            "article-title": "Adaptive attention span in transform-ers",
+            "author": "sainbayar",
+            "year": "2019",
+            "journal-title": "ACL"
+          },
+          {
+            "key": "ref58",
+            "article-title": "Tech-nical report: Temporal aggregate representations",
+            "author": "fadime",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref57",
+            "article-title": "Faster R-CNN: Towards real-time object detection with re-gion proposal networks",
+            "author": "shaoqing",
+            "year": "2015",
+            "journal-title": "NIPS"
+          },
+          {
+            "key": "ref56",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2020.acl-main.672"
+          },
+          {
+            "key": "ref55",
+            "article-title": "Compressive transformers for long-range sequence modelling",
+            "author": "jack",
+            "year": "2019",
+            "journal-title": "ICLRE"
+          },
+          {
+            "key": "ref54",
+            "article-title": "Designing network design spaces",
+            "author": "ilija",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref53",
+            "article-title": "Learning spatio-temporal representation with pseudo-3d residual networks",
+            "author": "zhaofan",
+            "year": "2017",
+            "journal-title": "InProc ICCV"
+          },
+          {
+            "key": "ref52",
+            "article-title": "Action recognition with stacked fisher vectors",
+            "author": "xiaojiang",
+            "year": "0",
+            "journal-title": "Proc ECCV"
+          },
+          {
+            "key": "ref10",
+            "article-title": "Sparse temporal causal convolution for efficient action modeling",
+            "author": "changmao",
+            "year": "2019",
+            "journal-title": "inACM MM"
+          },
+          {
+            "key": "ref11",
+            "article-title": "Transformer-xl: At-tentive language models beyond a fixed-length context",
+            "author": "zihang",
+            "year": "2019",
+            "journal-title": "ACL"
+          },
+          {
+            "key": "ref40",
+            "article-title": "A memory network approach for story-based temporal sum-marization of 360 videos",
+            "author": "sangho",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref12",
+            "article-title": "Histograms of oriented gra-dients for human detection",
+            "author": "dalal",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref13",
+            "article-title": "Scaling egocentric vision: The epic-kitchens dataset",
+            "author": "dima",
+            "year": "2018",
+            "journal-title": "ECCV"
+          },
+          {
+            "key": "ref14",
+            "article-title": "The epic-kitchens dataset: Collection, chal-lenges and baselines",
+            "author": "dima",
+            "year": "2021",
+            "journal-title": "PAMI"
+          },
+          {
+            "key": "ref15",
+            "article-title": "ImageNet: A large-scale hierarchical image database",
+            "author": "jia",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref82",
+            "article-title": "Beyond short snippets: Deep networks for video classification",
+            "author": "ng",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref16",
+            "article-title": "Behavior recognition via sparse spatio-temporal features",
+            "author": "piotr",
+            "year": "2005",
+            "journal-title": "International Workshop on Visual Surveillance and Performance Evaluation of Tracking and Surveillance"
+          },
+          {
+            "key": "ref81",
+            "article-title": "Tokens-to-token ViT: Training vision transformers from scratch on imagenet",
+            "author": "li",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref17",
+            "article-title": "Long-term recurrent convolutional net-works for visual recognition and description",
+            "author": "jeff",
+            "year": "0",
+            "journal-title": "Proc CVP R"
+          },
+          {
+            "key": "ref84",
+            "article-title": "Flow-guided feature aggregation for video object de-tection",
+            "author": "xizhou",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref18",
+            "article-title": "Cswin transformer: A general vision trans-former backbone with cross-shaped windows",
+            "author": "xiaoyi",
+            "year": "2021",
+            "journal-title": "ar Xiv p rep rint"
+          },
+          {
+            "key": "ref83",
+            "article-title": "Temporal relational reasoning in videos",
+            "author": "bolei",
+            "year": "2018",
+            "journal-title": "ECCV"
+          },
+          {
+            "key": "ref19",
+            "article-title": "An image is worth 16x16 words: Trans-formers for image recognition at scale",
+            "author": "alexey",
+            "year": "0",
+            "journal-title": "Proc ICLR"
+          },
+          {
+            "key": "ref80",
+            "author": "saining",
+            "year": "2017",
+            "journal-title": "Rethinking spatiotemporal feature learning for video understanding"
+          },
+          {
+            "key": "ref4",
+            "author": "joao",
+            "year": "2018",
+            "journal-title": "A short note about kinetics-600"
+          },
+          {
+            "key": "ref3",
+            "article-title": "Is space-time attention all you need for video understanding?",
+            "author": "bertasius",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref6",
+            "article-title": "Massively parallel video networks",
+            "author": "carreira",
+            "year": "0",
+            "journal-title": "Proc ECCV"
+          },
+          {
+            "key": "ref5",
+            "article-title": "A short note on the kinetics-700 human action dataset",
+            "author": "carreira",
+            "year": "2019",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref85",
+            "article-title": "ECO: efficient convolutional network for online video understanding",
+            "author": "mohammadreza",
+            "year": "0",
+            "journal-title": "Proc ECCV"
+          },
+          {
+            "key": "ref8",
+            "article-title": "Mem-ory enhanced global-local aggregation for video object de-tection",
+            "author": "yihong",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref7",
+            "article-title": "Watch only once: An end-to-end video action detection framework",
+            "author": "shoufa",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref49",
+            "article-title": "Beyond short snippets: Deep networks for video classification",
+            "author": "ng",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref9",
+            "article-title": "Visformer: The vision-friendly transformer",
+            "author": "zhengsu",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref46",
+            "article-title": "Mobile video object detection with temporally-aware feature maps",
+            "author": "liu",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref45",
+            "article-title": "TSM: Temporal shift module for efficient video understanding",
+            "author": "ji",
+            "year": "0",
+            "journal-title": "Proc ICCV"
+          },
+          {
+            "key": "ref48",
+            "article-title": "Video transformer network",
+            "author": "daniel",
+            "year": "2021",
+            "journal-title": "ar Xiv preprint"
+          },
+          {
+            "key": "ref47",
+            "article-title": "Swin transformer: Hierarchical vision transformer using shifted windows",
+            "author": "ze",
+            "year": "0",
+            "journal-title": "Proc CVPR"
+          },
+          {
+            "key": "ref42",
+            "article-title": "Ego-exo: Transferring visual representations from third-person to first-person videos",
+            "author": "yanghao",
+            "year": "0",
+            "journal-title": "Proc CVPR 2021"
+          },
+          {
+            "key": "ref41",
+            "article-title": "Re-current tubelet proposal and recognition networks for action detection",
+            "author": "dong",
+            "year": "0",
+            "journal-title": "Proc ECCV"
+          },
+          {
+            "key": "ref44",
+            "article-title": "VideoLSTM convolves, attends and flows for action recognition",
+            "author": "zhenyang",
+            "year": "2018",
+            "journal-title": "Computer Vision and Image Understanding"
+          },
+          {
+            "key": "ref43",
+            "article-title": "Improved multiscale vision transformers for classification and detection",
+            "author": "yanghao",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          }
+        ],
+        "event": {
+          "name": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+          "location": "New Orleans, LA, USA",
+          "start": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                18
+              ]
+            ]
+          },
+          "end": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                24
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/9878378/9878366/09878640.pdf?arnumber=9878640",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              11,
+              3
+            ]
+          ],
+          "date-time": "2022-11-03T22:57:10Z",
+          "timestamp": 1667516230000
+        },
+        "score": 77.443436,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/9878640/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2022,
+              6
+            ]
+          ]
+        },
+        "references-count": 85,
+        "URL": "https://doi.org/10.1109/cvpr52688.2022.01322",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              13
+            ]
+          ],
+          "date-time": "2025-11-13T18:49:07Z",
+          "timestamp": 1763059747516,
+          "version": "3.45.0"
+        },
+        "reference-count": 24,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  9,
+                  30
+                ]
+              ],
+              "date-time": "2025-09-30T00:00:00Z",
+              "timestamp": 1759190400000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  9,
+                  30
+                ]
+              ],
+              "date-time": "2025-09-30T00:00:00Z",
+              "timestamp": 1759190400000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/501100004234",
+            "name": "Pontif\u00edcia Universidade Cat\u00f3lica",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "88887.878869/2023-00,23-STIC-10"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "88887.878869/2023-00,23-STIC-10"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100004234",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100003593",
+            "name": "Conselho Nacional de Desenvolvimento Cient\u00edfico e Tecnol\u00f3gico",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "407242/2021-0,306573/2022-9,442950/2023-3"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "407242/2021-0,306573/2022-9,442950/2023-3"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100003593",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100004901",
+            "name": "Funda\u00e7\u00e3o de Apoio \u00e0 Pesquisa do Estado de Minas Gerais",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "APQ-01079-23,APQ-05058-23,PCE-00301-25"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "APQ-01079-23,APQ-05058-23,PCE-00301-25"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100004901",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              30
+            ]
+          ]
+        },
+        "DOI": "10.1109/sibgrapi67909.2025.11223357",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              11
+            ]
+          ],
+          "date-time": "2025-11-11T18:26:15Z",
+          "timestamp": 1762885575000
+        },
+        "page": "1-6",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Memory-Augmented Long Short-Term Memory for Dynamic Video Summarization"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Leonardo Vilela",
+            "family": "Cardoso",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Laboratory of Image and Multimedia Data Science (IMScience), Pontifical Catholic University of Minas Gerais (PUC Minas),Belo Horizonte,Brazil"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Barbara H. P.",
+            "family": "Soraggi",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Laboratory of Image and Multimedia Data Science (IMScience), Pontifical Catholic University of Minas Gerais (PUC Minas),Belo Horizonte,Brazil"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Silvio Jamil F.",
+            "family": "Guimar\u00e3es",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Laboratory of Image and Multimedia Data Science (IMScience), Pontifical Catholic University of Minas Gerais (PUC Minas),Belo Horizonte,Brazil"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Zenilton K. G.",
+            "family": "Patroc\u00ednio",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Laboratory of Image and Multimedia Data Science (IMScience), Pontifical Catholic University of Minas Gerais (PUC Minas),Belo Horizonte,Brazil"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/s11042-016-3263-z"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TMM.2023.3321394"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.engappai.2024.109806"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/LGRS.2025.3532983"
+          },
+          {
+            "key": "ref5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/3347712"
+          },
+          {
+            "key": "ref6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.patrec.2025.08.001"
+          },
+          {
+            "key": "ref7",
+            "article-title": "xLSTM: Extended long short-term memory",
+            "volume-title": "The Thirty-eighth Annual Conference on Neural Information Processing Systems",
+            "author": "Beck",
+            "year": "2024"
+          },
+          {
+            "key": "ref8",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/SIBGRAPI62404.2024.10716326"
+          },
+          {
+            "key": "ref9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.procs.2023.01.211"
+          },
+          {
+            "key": "ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TCSVT.2023.3312325"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.neucom.2022.11.028"
+          },
+          {
+            "key": "ref12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.23919/EUSIPCO58844.2023.10289808"
+          },
+          {
+            "key": "ref13",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICME51207.2021.9428142"
+          },
+          {
+            "key": "ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.4324/9781410605337-29"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TCSVT.2019.2890899"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-030-01258-8_22"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TCSVT.2019.2904996"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.patcog.2021.108312"
+          },
+          {
+            "key": "ref19",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.neucom.2021.10.039"
+          },
+          {
+            "key": "ref20",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TPAMI.2022.3186506"
+          },
+          {
+            "key": "ref21",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.patcog.2022.108840"
+          },
+          {
+            "key": "ref22",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.neucom.2024.128945"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2019.00778"
+          },
+          {
+            "key": "ref24",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/WACV56688.2023.00554"
+          }
+        ],
+        "event": {
+          "name": "2025 38th SIBGRAPI Conference on Graphics, Patterns and Images (SIBGRAPI)",
+          "start": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                30
+              ]
+            ]
+          },
+          "location": "Salvador, Brazil",
+          "end": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                3
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2025 38th SIBGRAPI Conference on Graphics, Patterns and Images (SIBGRAPI)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/11223285/11223275/11223357.pdf?arnumber=11223357",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              13
+            ]
+          ],
+          "date-time": "2025-11-13T18:42:28Z",
+          "timestamp": 1763059348000
+        },
+        "score": 34.512493,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/11223357/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              30
+            ]
+          ]
+        },
+        "references-count": 24,
+        "URL": "https://doi.org/10.1109/sibgrapi67909.2025.11223357",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              30
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T07:10:29Z",
+          "timestamp": 1727766629207
+        },
+        "reference-count": 16,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  7,
+                  15
+                ]
+              ],
+              "date-time": "2024-07-15T00:00:00Z",
+              "timestamp": 1721001600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  7,
+                  15
+                ]
+              ],
+              "date-time": "2024-07-15T00:00:00Z",
+              "timestamp": 1721001600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/501100018537",
+            "name": "National Science and Technology Major Project",
+            "doi-asserted-by": "publisher",
+            "id": [
+              {
+                "id": "10.13039/501100018537",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100003399",
+            "name": "Science and Technology Commission of Shanghai Municipality",
+            "doi-asserted-by": "publisher",
+            "id": [
+              {
+                "id": "10.13039/501100003399",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100012226",
+            "name": "Fundamental Research Funds for the Central Universities",
+            "doi-asserted-by": "publisher",
+            "id": [
+              {
+                "id": "10.13039/501100012226",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              15
+            ]
+          ]
+        },
+        "DOI": "10.1109/icme57554.2024.10687697",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              30
+            ]
+          ],
+          "date-time": "2024-09-30T17:24:16Z",
+          "timestamp": 1727717056000
+        },
+        "page": "1-6",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Memory-Augmented Transformer for Efficient End-to-End Video Grounding"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Yuanwu",
+            "family": "Xu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Fudan University,School of Computer Science, Shanghai Key Laboratory of Intelligent Information Processing, Shanghai Collaborative Innovation Center of Intelligent Visual Computing"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Mohan",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Fudan University,School of Computer Science, Shanghai Key Laboratory of Intelligent Information Processing, Shanghai Collaborative Innovation Center of Intelligent Visual Computing"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yuejie",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Fudan University,School of Computer Science, Shanghai Key Laboratory of Intelligent Information Processing, Shanghai Collaborative Innovation Center of Intelligent Visual Computing"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Rui",
+            "family": "Feng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Fudan University,School of Computer Science, Shanghai Key Laboratory of Intelligent Information Processing, Shanghai Collaborative Innovation Center of Intelligent Visual Computing"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Tao",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Shanghai University of Finance and Economics,School of Information Management and Engineering, Shanghai Key Laboratory of Financial Information Technology"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Shang",
+            "family": "Gao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Deakin University,School of Information Technology"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2017.563"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1609/aaai.v34i07.6984"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.01082"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2020.acl-main.585"
+          },
+          {
+            "key": "ref5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2019.00972"
+          },
+          {
+            "key": "ref6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2021.emnlp-main.773"
+          },
+          {
+            "key": "ref7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1609/aaai.v36i3.20163"
+          },
+          {
+            "key": "ref8",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.00725"
+          },
+          {
+            "key": "ref9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.01576"
+          },
+          {
+            "article-title": "Compressive transformers for long-range sequence modelling",
+            "year": "2019",
+            "author": "Rae",
+            "key": "ref10"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2017.83"
+          },
+          {
+            "key": "ref12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1162/tacl_a_00207"
+          },
+          {
+            "key": "ref13",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/3331184.3331235"
+          },
+          {
+            "key": "ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/2021.emnlp-main.327"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-031-19809-0_3"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.00636"
+          }
+        ],
+        "event": {
+          "name": "2024 IEEE International Conference on Multimedia and Expo (ICME)",
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                15
+              ]
+            ]
+          },
+          "location": "Niagara Falls, ON, Canada",
+          "end": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                19
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2024 IEEE International Conference on Multimedia and Expo (ICME)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/10685847/10687354/10687697.pdf?arnumber=10687697",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2024-10-01T06:32:03Z",
+          "timestamp": 1727764323000
+        },
+        "score": 34.497456,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/10687697/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              15
+            ]
+          ]
+        },
+        "references-count": 16,
+        "URL": "https://doi.org/10.1109/icme57554.2024.10687697",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              15
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 3,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

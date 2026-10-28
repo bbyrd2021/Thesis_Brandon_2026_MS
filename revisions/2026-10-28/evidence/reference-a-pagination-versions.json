@@ -1,0 +1,98 @@
+[
+  {
+    "key": "road",
+    "cvf_or_first_pass_metadata": "45(1):1036–1054; DOI 10.1109/TPAMI.2022.3150906",
+    "crossref_publisher_pages": "1036-1054",
+    "DOI": "10.1109/tpami.2022.3150906"
+  },
+  {
+    "key": "road-r",
+    "cvf_or_first_pass_metadata": "112:3261–3291; DOI 10.1007/s10994-023-06322-z",
+    "crossref_publisher_pages": "3261-3291",
+    "DOI": "10.1007/s10994-023-06322-z"
+  },
+  {
+    "key": "focal-loss",
+    "cvf_or_first_pass_metadata": "2980–2988",
+    "crossref_publisher_pages": "2999-3007",
+    "DOI": "10.1109/iccv.2017.324"
+  },
+  {
+    "key": "mask-rcnn",
+    "cvf_or_first_pass_metadata": "2961–2969",
+    "crossref_publisher_pages": "2980-2988",
+    "DOI": "10.1109/iccv.2017.322"
+  },
+  {
+    "key": "internvideo2",
+    "cvf_or_first_pass_metadata": "LNCS 15143:396–416; DOI 10.1007/978-3-031-73013-9_23",
+    "crossref_publisher_pages": "396-416",
+    "DOI": "10.1007/978-3-031-73013-9_23"
+  },
+  {
+    "key": "waymo",
+    "cvf_or_first_pass_metadata": "2446–2454",
+    "crossref_publisher_pages": "2443-2451",
+    "DOI": "10.1109/cvpr42600.2020.00252"
+  },
+  {
+    "key": "bdd",
+    "cvf_or_first_pass_metadata": "2636–2645",
+    "crossref_publisher_pages": "2633-2642",
+    "DOI": "10.1109/cvpr42600.2020.00271"
+  },
+  {
+    "key": "ava",
+    "cvf_or_first_pass_metadata": "6047–6056",
+    "crossref_publisher_pages": "6047-6056",
+    "DOI": "10.1109/cvpr.2018.00633"
+  },
+  {
+    "key": "i3d",
+    "cvf_or_first_pass_metadata": "6299–6308",
+    "crossref_publisher_pages": "4724-4733",
+    "DOI": "10.1109/cvpr.2017.502"
+  },
+  {
+    "key": "resnet",
+    "cvf_or_first_pass_metadata": "770–778",
+    "crossref_publisher_pages": "770-778",
+    "DOI": "10.1109/cvpr.2016.90"
+  },
+  {
+    "key": "fpn",
+    "cvf_or_first_pass_metadata": "2117–2125",
+    "crossref_publisher_pages": "936-944",
+    "DOI": "10.1109/cvpr.2017.106"
+  },
+  {
+    "key": "slowfast",
+    "cvf_or_first_pass_metadata": "6202–6211",
+    "crossref_publisher_pages": "6201-6210",
+    "DOI": "10.1109/iccv.2019.00630"
+  },
+  {
+    "key": "video-swin",
+    "cvf_or_first_pass_metadata": "3202–3211",
+    "crossref_publisher_pages": "3192-3201",
+    "DOI": "10.1109/cvpr52688.2022.00320"
+  },
+  {
+    "key": "videomae",
+    "cvf_or_first_pass_metadata": "35; DOI 10.52202/068431-0732",
+    "crossref_publisher_pages": "10078-10093",
+    "DOI": "10.52202/068431-0732"
+  },
+  {
+    "key": "class-balanced",
+    "cvf_or_first_pass_metadata": "9268–9277",
+    "crossref_publisher_pages": "9260-9269",
+    "DOI": "10.1109/cvpr.2019.00949"
+  },
+  {
+    "key": "bbn",
+    "cvf_or_first_pass_metadata": "9719–9728",
+    "crossref_publisher_pages": "9716-9725",
+    "DOI": "10.1109/cvpr42600.2020.00974"
+  }
+]

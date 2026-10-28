@@ -1,0 +1,50 @@
+[
+  {
+    "id": "T01",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "The project training configuration follows the ECCV 2024 Track-1 recipe with documented implementation choices;",
+    "new": "The project training configuration was informed by the ECCV 2024 Track-1 report \\cite{road-challenge-2024}, with local implementation choices;"
+  },
+  {
+    "id": "T02",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "with scene tokens as keys and values:",
+    "new": "with scene tokens as keys and values \\cite{attention}:"
+  },
+  {
+    "id": "T03",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "The final CSEB uses the released InternVideo2-CLIP-1B system.",
+    "new": "The final CSEB uses the released InternVideo2-CLIP-1B system \\cite{internvideo2-clip-1b}."
+  },
+  {
+    "id": "T04",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "the publisher's paired InternVL/Llama-based text implementation,",
+    "new": "the publisher's paired InternVL/Llama-based text implementation \\cite{internvideo2-1b-config},"
+  },
+  {
+    "id": "T05",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "Replicated 3D-RetinaNet with a ResNet50-I3D backbone and feature pyramid.",
+    "new": "Replicated 3D-RetinaNet with a ResNet50-I3D backbone and feature pyramid \\cite{road}."
+  },
+  {
+    "id": "T06",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "\\caption{YOLOv8x agent-detector architecture.}",
+    "new": "\\caption[YOLOv8x agent-detector architecture.]{YOLOv8x agent-detector architecture \\cite{yolov8}.}"
+  },
+  {
+    "id": "T07",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "RoIAlign extraction at a proposed box, followed by the trained RoI Linear Scoring Head.",
+    "new": "RoIAlign extraction at a proposed box \\cite{mask-rcnn}, followed by the trained RoI Linear Scoring Head."
+  },
+  {
+    "id": "T08",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "Frozen InternVideo2\\_CLIP\\_S towers and the crop-feature tap.",
+    "new": "Frozen InternVideo2\\_CLIP\\_S towers and the crop-feature tap \\cite{internvideo2,internvideo2-clip-s}."
+  }
+]
