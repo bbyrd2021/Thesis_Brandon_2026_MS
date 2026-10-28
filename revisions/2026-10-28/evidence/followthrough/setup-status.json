@@ -1,0 +1,130 @@
+{
+  "time": "2026-09-30T22:50:07.599348+00:00",
+  "ready": true,
+  "checks": {
+    "assets.json": {
+      "passed": true,
+      "files": [
+        {
+          "kind": "base",
+          "repo": "OpenGVLab/InternVideo2-Stage2_1B-224p-f4",
+          "revision": "4362e1f88a992e7edbfd7696f7f78b7f79426dfd",
+          "filename": "InternVideo2-stage2_1b-224p-f4.pt",
+          "bytes": 2820610931,
+          "sha256": "df8cdbe9c3c9f65fbba777afc9ee6fbf58e6d68c4aec2827cac8e2a98d0a8446",
+          "path": "/work/bbyrd1/contextual-roi-1b-20260930/assets/InternVideo2-stage2_1b-224p-f4.pt"
+        },
+        {
+          "kind": "clip",
+          "repo": "OpenGVLab/InternVideo2-CLIP-1B-224p-f8",
+          "revision": "b8f9edd6cacdbede471fd2fa58439e0b97a6dc1b",
+          "filename": "1B_clip.pth",
+          "bytes": 14226595,
+          "sha256": "e60e0a6e05daec48285254b17b0b91c7d814b3ac74e538b2c62201553eeec6b1",
+          "path": "/work/bbyrd1/contextual-roi-1b-20260930/assets/1B_clip.pth"
+        },
+        {
+          "kind": "text",
+          "repo": "OpenGVLab/InternVL",
+          "revision": "851fb933056db175ce98036baec2dd6826cd2c26",
+          "filename": "internvl_c_13b_224px.pth",
+          "bytes": 25398035057,
+          "sha256": "ce5ae86c0dce4fd0eec09577cf9f6aa1471898c619b8062505e098b58248ad74",
+          "path": "/work/bbyrd1/contextual-roi-1b-20260930/assets/internvl_c_13b_224px.pth"
+        }
+      ],
+      "time": 1790790723.3318188
+    },
+    "benchmark.json": {
+      "passed": true,
+      "scope": "visual compatibility only; full extraction waits for text+manifest validation",
+      "time": 1790791910.8646846,
+      "gpu": "NVIDIA H200",
+      "model": {
+        "attention_max_abs_error": 1.3649463653564453e-05,
+        "visual_parameters": 1020708608,
+        "weights_strict": true,
+        "implementation_repo": "OpenGVLab/InternVideo2_CLIP_S",
+        "implementation_revision": "1f9fca1389fd883defc652634d95a21121c85a8c",
+        "visual_width": 1408,
+        "layers": 40
+      },
+      "measurements": [
+        {
+          "batch_size": 1,
+          "crops": 8,
+          "encoder_seconds": 0.2238616719841957,
+          "crops_per_second": 35.7363541918189,
+          "input_scene_and_encoder_seconds": 3.6419563833624125,
+          "scene_seconds": 0.8034452423453331,
+          "sample_frames": 8,
+          "peak_allocated_gib": 4.821702480316162
+        },
+        {
+          "batch_size": 4,
+          "crops": 32,
+          "encoder_seconds": 0.6550371777266264,
+          "crops_per_second": 48.85218898728661,
+          "input_scene_and_encoder_seconds": 2.4682536255568266,
+          "scene_seconds": 0.2243499979376793,
+          "sample_frames": 8,
+          "peak_allocated_gib": 4.8671441078186035
+        },
+        {
+          "batch_size": 8,
+          "crops": 64,
+          "encoder_seconds": 1.2125976830720901,
+          "crops_per_second": 52.779253080755836,
+          "input_scene_and_encoder_seconds": 3.1933186929672956,
+          "scene_seconds": 0.2253197692334652,
+          "sample_frames": 8,
+          "peak_allocated_gib": 4.928099155426025
+        },
+        {
+          "batch_size": 16,
+          "crops": 128,
+          "encoder_seconds": 2.3356192223727703,
+          "crops_per_second": 54.80345373676279,
+          "input_scene_and_encoder_seconds": 4.339340319857001,
+          "scene_seconds": 0.22817488387227058,
+          "sample_frames": 8,
+          "peak_allocated_gib": 5.654141902923584
+        },
+        {
+          "batch_size": 32,
+          "crops": 241,
+          "encoder_seconds": 4.361753029748797,
+          "crops_per_second": 55.25301372092581,
+          "input_scene_and_encoder_seconds": 6.941108543425798,
+          "scene_seconds": 0.2305402234196663,
+          "sample_frames": 8,
+          "peak_allocated_gib": 7.164205551147461
+        },
+        {
+          "batch_size": 64,
+          "crops": 438,
+          "encoder_seconds": 7.9628087896853685,
+          "crops_per_second": 55.00571614470558,
+          "input_scene_and_encoder_seconds": 10.372767642140388,
+          "scene_seconds": 0.2375997956842184,
+          "sample_frames": 8,
+          "peak_allocated_gib": 10.184332847595215
+        }
+      ],
+      "note": "Eight sampled real dev/val frames. Encoder-only and input-plus-scene timings both reported. Cache writes, full-frame candidate density and queue time still require allowance in full-study ETA."
+    },
+    "text-benchmark.json": {
+      "passed": true,
+      "time": 1790808557.419502,
+      "phrases": 184,
+      "width": 768,
+      "weights_strict": true,
+      "frozen_lora_modules": 64,
+      "rotary_semantics": "transformers4.28.1 init-before-load cache; all32 checkpoint buffers preserved",
+      "seconds_encoding": 4.983450220897794,
+      "phrase_bank_sha256": "b1d615a1bbc0b2f9a20edda3bb89264d95831879ab072eb6e8a9f0adcd054d97",
+      "source_phrase_order_sha256": "aa0dec2639e1de6b70f526436a2b911f45077935259457fa9699c2a87df52940",
+      "peak_allocated_gib": 12.594788551330566
+    }
+  }
+}

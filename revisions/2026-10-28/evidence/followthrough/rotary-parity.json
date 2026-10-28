@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "cases": 128,
+  "all32_pinned_rotary_buffers": true,
+  "reference_source": "https://github.com/huggingface/transformers/blob/v4.28.1/src/transformers/models/llama/modeling_llama.py",
+  "reference_sha256": "61affbfa550d004bb1256e88c8e69d6d1e17e7ef6ac30c553e478d093ec089fe",
+  "adapter_sha256": "4a9526ae0fb1497a9d87696de373bc3c41ded8b31445fb97d049e8ef5ec2768f",
+  "max_absolute_difference": 0,
+  "cache_lengths": [
+    1,
+    80,
+    2048,
+    2050
+  ],
+  "checkpoint_buffers_preserved": true
+}

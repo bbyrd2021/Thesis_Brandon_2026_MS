@@ -7,6 +7,8 @@ The completed stages share the benchmark label layout and evaluator. Changes in 
 \section{What Was Retained and What Was Modified}
 \label{sec:baseline-modifications}
 
+The architecture diagrams in this thesis are the author\textquotesingle s own draw.io drawings of the cited methods and their local integration. Embedded ROAD-Waymo imagery retains the dataset attribution in the relevant captions.
+
 The starting point is the published ROAD detection framework and its 3D-RetinaNet video detector, evaluated on ROAD-Waymo \cite{road,road-waymo}. This baseline jointly predicts localization and event scores from an I3D feature pyramid. We retain the benchmark labels and evaluation code so that subsequent systems answer the same recognition task. The final model is not the baseline with one extra layer: development first separates localization from recognition, then replaces the event representation and readout.
 
 Three sources of components must be distinguished. The ROAD detector supplies the replicated baseline and the frozen I3D features used in Stages 2 and 3. YOLOv8x supplies the later candidate boxes and agent outputs after ROAD-Waymo fine-tuning \cite{yolov8}. Released InternVideo2 paired encoders supply the frozen visual and phrase representations used by the crop and contextual families \cite{internvideo2,internvideo2-clip-s}. We do not claim to have invented these backbones or rerun their original large-scale pretraining. The implemented contribution is the downstream composition and contextual recognition system, its training and score-assembly procedure, and the controlled comparison of these alternatives.
@@ -119,6 +121,8 @@ YOLOv8x \cite{yolov8}, fine-tuned on ROAD-Waymo agent classes with a 1280-pixel 
 
 Figure~\ref{fig:4} details the YOLOv8x detector used for agent localization. The 1280 \(\times\) 1920 annotation identifies source-frame dimensions; the implementation applies Ultralytics resizing and letterboxing with imgsz = 1280. The reported comparison uses the selected epoch-1 checkpoint from the configured 50-epoch training recipe.
 
+The recorded local configuration uses SGD, batch size 32, and learning-rate endpoints 0.005 and 0.0005, informed by the challenge report \cite{road-challenge-2024}. It uses a single 50-epoch decay schedule and \texttt{close\_mosaic=5}, rather than the report\textquotesingle s separate 30-epoch pretraining and 20-epoch fine-tuning stages. The 1280-pixel input and standard single YOLOv8x detector are local choices; the challenge\textquotesingle s multi-branch detector and low-light enhancement system are not reproduced.
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth,height=0.68\textheight,keepaspectratio]{Fig/yolov8x.png}
@@ -169,7 +173,7 @@ Stage 2 replaces overlap-based score transfer with feature extraction at each YO
 
 Stage 2 reads the frozen I3D/FPN P3 feature map at every YOLO box using RoIAlign \cite{mask-rcnn}. Boxes are mapped into feature-map coordinates and pooled to one 256-dimensional vector at the corresponding frame. Temporal interpolation aligns the feature map with the clip length when needed. Unlike score transfer, this procedure can obtain a feature at a location that the baseline detection head did not select.
 
-Figure~\ref{fig:roi-align} expands this operation. The implementation rescales box coordinates to the P3 grid, selects the feature slice for the target frame, and applies aligned RoIAlign with a single spatial output bin. Bilinear sampling and averaging produce one 256-dimensional vector for each box. The illustrated sample locations explain the pooling operation; they are not additional detections. Because the map was produced from a video clip, the regional feature can incorporate temporal context even though the readout is associated with one target frame \cite{mask-rcnn}.
+Figure~\ref{fig:roi-align} expands this operation. The implementation rescales box coordinates to the P3 grid, selects the feature slice for the target frame, and applies aligned RoIAlign with a single spatial output bin. Bilinear sampling and averaging produce one 256-dimensional vector for each box. The illustrated sample locations explain the pooling operation; they are not additional detections. Because the map was produced from a video clip, the regional feature can incorporate temporal context even though the readout is associated with one target frame \cite{road}.
 
 \begin{figure}[htbp]
 \centering
@@ -411,7 +415,7 @@ The joint feature and phrase-similarity branch can be written as
 \end{align}
 The learned scalar \(\beta\) gates the language residual. Equation~\ref{eq:attention} also describes each language-attention head, now with projected visual RoI queries and adapted phrase keys and values. The diagrams summarize this readout as a classifier; its explicit inputs remain \([j,c,u]\).
 
-The corrected contrastive objective aligns the pre-language visual representation with adapted phrases across all 184 labels. For row \(i\), let \(Y_i\) be its positive-label set and let \(I_+\) contain rows with at least one positive label. With temperature \(\theta=0.07\), the auxiliary loss is
+The corrected contrastive objective aligns the pre-language visual representation with adapted phrases across all 184 labels. Supervised contrastive learning provides the multiple-positive averaging precedent \cite{supcon}; here, the local objective compares each visual representation with class phrases rather than other visual samples in a batch. It is also one-directional, unlike CLIP\textquotesingle s symmetric image--text pretraining loss \cite{clip}. For row \(i\), let \(Y_i\) be its positive-label set and let \(I_+\) contain rows with at least one positive label. With temperature \(\theta=0.07\), the auxiliary loss is
 \begin{equation}\label{eq:contrastive}
  \mathcal{L}_{\mathrm{con}}=-\frac{1}{|I_+|}\sum_{i\in I_+}
  \frac{1}{|Y_i|}\sum_{k\in Y_i}
@@ -489,7 +493,7 @@ This internal crop metric selects the blend and is distinct from the detector me
 
 \section{Encoder Scaling and Training Partitions}
 
-The final CSEB uses the released InternVideo2-CLIP-1B system \cite{internvideo2-clip-1b}. The visual checkpoint has 40 blocks of width 1408, compared with 24 blocks of width 1024 in the original InternVideo2\_CLIP\_S release. The original release name does not imply a conventional small visual transformer. The scaled system also changes the pretrained text checkpoint to the publisher's paired InternVL/Llama-based text implementation \cite{internvideo2-1b-config}, producing 768-dimensional phrase embeddings. A trainable \(768\rightarrow512\) projection connects these embeddings to the contextual head. The downstream internal width remains 512. The system-level text-encoder name does not imply that the text model itself has one billion parameters.
+The final CSEB uses the released InternVideo2-CLIP-1B system \cite{internvideo2-clip-1b}. The visual checkpoint has 40 blocks of width 1408, compared with 24 blocks of width 1024 in the original InternVideo2\_CLIP\_S release. The original release name does not imply a conventional small visual transformer. The scaled system also changes the pretrained text checkpoint to the publisher's paired InternVL/Llama-based text implementation \cite{internvideo2-1b-config}, producing 768-dimensional phrase embeddings. A trainable \(768\rightarrow512\) projection connects these embeddings to the contextual head. The downstream internal width remains 512. The system-level text-encoder name does not imply that the text model itself has one billion parameters. Archived asset records identify the base, CLIP and text releases by revisions \texttt{4362e1f}, \texttt{b8f9edd} and \texttt{851fb93}, respectively; their full revisions and SHA-256 hashes are preserved in the accompanying source evidence.
 
 The scaled caches use BF16 encoder computation, float32 preprocessing and pooling, and float16 feature storage. The original cache path used FP16 preprocessing and encoder computation. These changes, together with the paired visual/text checkpoints and text projection, make scaling a system comparison rather than an isolated parameter-count ablation. The visual and text encoders remain frozen during contextual-head training.
 

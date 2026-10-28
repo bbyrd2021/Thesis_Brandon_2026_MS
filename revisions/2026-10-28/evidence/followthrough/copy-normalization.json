@@ -1,0 +1,14 @@
+[
+  {
+    "file": "citation-context-ledger.csv",
+    "copied_bytes_sha256": "4edac9e3b6e0dd72a6cd285c3eb150b157238ea29f5caad782ac31e4a95af851",
+    "normalized_sha256": "10b978611f95785e15e6b5436aa1bee3e25970cd663ac6d3ec56c387fed15653",
+    "normalization": "LF line endings and trailing whitespace only; original wiki evidence remains unchanged"
+  },
+  {
+    "file": "contrastive-research-history.md",
+    "copied_bytes_sha256": "f64b26b1bf468d9833f077c947bff38da505acfa81ba26618998de46218002f1",
+    "normalized_sha256": "23407de3b1ae3a05b5727cc2e1c89a45b22f2068042e18fe41c723409aaf76c1",
+    "normalization": "LF line endings and trailing whitespace only; original wiki evidence remains unchanged"
+  }
+]
