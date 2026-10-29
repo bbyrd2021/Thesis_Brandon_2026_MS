@@ -46,5 +46,40 @@
     "file": "chapters/ch3_methodology.tex",
     "old": "Frozen InternVideo2\\_CLIP\\_S towers and the crop-feature tap.",
     "new": "Frozen InternVideo2\\_CLIP\\_S towers and the crop-feature tap \\cite{internvideo2,internvideo2-clip-s}."
+  },
+  {
+    "id": "T09",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "",
+    "anchor": "\\label{sec:baseline-modifications}",
+    "new": "\n\nThe architecture diagrams in this thesis are the author\\textquotesingle s own draw.io drawings of the cited methods and their local integration. Embedded ROAD-Waymo imagery retains the dataset attribution in the relevant captions."
+  },
+  {
+    "id": "T10",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "",
+    "anchor": "The reported comparison uses the selected epoch-1 checkpoint from the configured 50-epoch training recipe.",
+    "new": "\n\nThe recorded local configuration uses SGD, batch size 32, and learning-rate endpoints 0.005 and 0.0005, informed by the challenge report \\cite{road-challenge-2024}. It uses a single 50-epoch decay schedule and \\texttt{close\\_mosaic=5}, rather than the report\\textquotesingle s separate 30-epoch pretraining and 20-epoch fine-tuning stages. The 1280-pixel input and standard single YOLOv8x detector are local choices; the challenge\\textquotesingle s multi-branch detector and low-light enhancement system are not reproduced."
+  },
+  {
+    "id": "T11",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "",
+    "anchor": "The corrected contrastive objective aligns the pre-language visual representation with adapted phrases across all 184 labels.",
+    "new": " Supervised contrastive learning provides the multiple-positive averaging precedent \\cite{supcon}; here, the local objective compares each visual representation with class phrases rather than other visual samples in a batch. It is also one-directional, unlike CLIP\\textquotesingle s symmetric image--text pretraining loss \\cite{clip}."
+  },
+  {
+    "id": "T12",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "",
+    "anchor": "The system-level text-encoder name does not imply that the text model itself has one billion parameters.",
+    "new": " Archived asset records identify the base, CLIP and text releases by revisions \\texttt{4362e1f}, \\texttt{b8f9edd} and \\texttt{851fb93}, respectively; their full revisions and SHA-256 hashes are preserved in the accompanying source evidence."
+  },
+  {
+    "id": "T13",
+    "file": "chapters/ch3_methodology.tex",
+    "old": "Because the map was produced from a video clip, the regional feature can incorporate temporal context even though the readout is associated with one target frame \\cite{mask-rcnn}.",
+    "new": "Because the map was produced from a video clip, the regional feature can incorporate temporal context even though the readout is associated with one target frame \\cite{road}.",
+    "reason": "RoIAlign attribution stays with Mask R-CNN; temporal video-map context is supported by ROAD, not the image-only Mask R-CNN paper."
   }
 ]

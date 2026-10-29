@@ -1,15 +1,20 @@
 \clearpage
 \chapter*{Review notes - not part of the clean thesis}
 \addcontentsline{toc}{chapter}{Review notes - not part of the clean thesis}
-\section*{Author decisions still open}
+\section*{Follow-through completed}
 \begin{enumerate}
-\item \textbf{Training-recipe scope (Section 3.4).} The challenge report is now cited and the broad ``follows'' wording is narrowed to ``informed by.'' Verify which settings were actually borrowed. The report's full system adds multi-branch/dual-stream processing and other changes beyond the thesis's standard YOLOv8x detector. The citation does not establish reproduction of that entire pipeline.
-\item \textbf{Contrastive objective (Section 3.12).} Identify the actual inspiration or implementation for Eq. 3.15. The visual-to-label-phrase objective is not an exact reproduction of symmetric CLIP or sample-to-sample SupCon. No invented derivation or unsupported citation was inserted.
-\item \textbf{Figure provenance.} Method credits were added to the 3D-RetinaNet, YOLOv8x, RoIAlign and InternVideo2 captions. Confirm whether these diagrams/components are original drawings, adapted or reproduced, and document upstream assets/terms as applicable. Figure 12's composition-detail asset still traces only to an older deck. The added method references do not settle image authorship or reuse permission.
-\item \textbf{Checkpoint provenance (Section 3.15).} The official scaled checkpoint and text-model configuration are now cited. Recover the actual cached revision/checkpoint hashes and text-model provenance from launch records where available; no historical revision has been invented.
-\item \textbf{Interpretation limits.} Retain the existing qualifications on phrase shuffling, validation reuse, noncausal context and external benchmark protocols. Same-objective ensemble controls and a full independent training/evaluation rerun were not established by this audit.
-\item \textbf{Slide follow-through.} The linked thesis repository does not contain the current defense deck. Slide 7's PIE total should be 909,480 video frames; 740,901 counts pedestrian boxes. Correct the two hidden 1B-encoder statements, DCB historical-residual terminology, and local-only source links in a separate content-only slide pass.
-\item \textbf{Final gates.} The clean copy is free of notes, not a certificate of submission readiness. Author/advisor acceptance, figure permissions as applicable, final format review, committee corrections and required signatures/clearance remain open. No complete retraction-registry clearance is claimed.
+\item \textbf{Diagram authorship.} Brandon confirmed on October 28: ``they are mine. draw.io diagrams.'' This supports the architecture-drawing declaration, including the composition detail. Dataset imagery and any embedded third-party assets keep their separate attribution; authorship of a diagram does not transfer ownership of its embedded sources.
+\item \textbf{Training-recipe scope.} The archived detector code walkthrough records SGD, batch 32, learning-rate endpoints, the single 50-epoch schedule and close\_mosaic=5. The revised paragraph distinguishes these settings from the challenge's two-phase, multi-branch system. The selected detector is still epoch 1.
+\item \textbf{Contrastive credit.} September 14 research notes identify Khosla et al. as the multiple-positive precedent. The revised paragraph cites this foundation and distinguishes the local class-phrase objective from SupCon's visual-sample objective and symmetric CLIP pretraining. Historical notes support methodological credit, not a claim of copied upstream code.
+\item \textbf{Checkpoint records recovered.} The September 30 asset and setup reports record base, CLIP and InternVL checkpoint revisions and SHA-256 values, strict loading and the phrase-bank hash. These records are included under evidence/followthrough. This review did not redownload and rehash the large checkpoint binaries.
+\item \textbf{Slide corrections.} A separate content-only copy corrects PIE units, encoder naming, DCB residual terminology and the research-wiki locator. Portable evidence accompanies that copy. The original downloaded deck remains unchanged.
+\end{enumerate}
+\section*{Final review still required}
+\begin{enumerate}
+\item Author/advisor acceptance of these targeted corrections and compliance with the advisor's AI-assistance instruction. The clean copy is free of notes, not a submission certificate.
+\item Claude's independent review of the revised manuscript, bibliography, citation contexts and source evidence, followed by reconciliation of any findings.
+\item Final native PowerPoint and full-size document/template inspection. PowerPoint compatibility previews for existing equation objects can differ from native rendering. Third-party slide photo reuse terms remain an author decision.
+\item Required committee corrections, signatures/clearance and final advisor submission approval. No submission or email has been sent. No separate approved-proposal manuscript or exhaustive retraction-registry clearance is claimed.
 \end{enumerate}
 \section*{Bibliography changes}
 The following field comparison includes changes hidden by ``et al.'' in the formatted bibliography. Red fields are removed; green fields are added. An unchanged field is omitted from this list. Source links and machine-readable before/after records accompany this document.
@@ -485,3 +490,6 @@ The following field comparison includes changes hidden by ``et al.'' in the form
 {\color{AuditGreen}Added: 2026-10-28\par}
 \medskip
 \endgroup
+
+\section*{Additional bibliography entry: supervised contrastive learning}
+{\color{AuditGreen}Added: Khosla et al., Supervised Contrastive Learning, Advances in Neural Information Processing Systems 33, pp. 18661--18673, 2020.}

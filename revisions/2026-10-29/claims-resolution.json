@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-29",
+  "findings": [
+    "Q2",
+    "Q3",
+    "Q4"
+  ],
+  "language_control_recomputation": {
+    "bypass": {
+      "orientation": "real minus control",
+      "per_seed": [
+        0.3650177225688509,
+        0.2352174008066985,
+        0.693946334860347
+      ],
+      "mean": 0.4313938194119655,
+      "sample_sd": 0.23645802673750374,
+      "paired_t_ci95_unadjusted": [
+        -0.1560004820454562,
+        1.0187881208693872
+      ],
+      "n": 3,
+      "df": 2
+    },
+    "randbank": {
+      "orientation": "real minus control",
+      "per_seed": [
+        0.5243620623938465,
+        0.6241075959591624,
+        0.45473846320578026
+      ],
+      "mean": 0.534402707186263,
+      "sample_sd": 0.08512982258464896,
+      "paired_t_ci95_unadjusted": [
+        0.32292850451174226,
+        0.7458769098607838
+      ],
+      "n": 3,
+      "df": 2
+    }
+  },
+  "source_sha256": "15b3ffcf036431f9c5c43260638243b3b84eb241d09ef898c47a8a9cc23f2c06",
+  "external_table_verification": "Compared table-03.csv and table-05.csv against archived original publisher page-07.png; best-result versus five-run reporting confirmed in original Section4.2.3.",
+  "cycleacr_five_run": {
+    "Model": "CycleACR",
+    "Backbone": "SlowFast",
+    "Pretrain": "K700",
+    "FLOPs (G)": "124.8",
+    "Agent": "33.15 \u00b1 0.49",
+    "Action": "23.85 \u00b1 0.83",
+    "Location": "31.81 \u00b1 0.53",
+    "Duplex": "16.30 \u00b1 0.53",
+    "Event": "9.30 \u00b1 0.41"
+  },
+  "changes": [
+    {
+      "id": "Q2",
+      "old": "This provides evidence that the explicit phrase branch can help rare classes in this configuration, while overall changes are modest.",
+      "new": "For tail mAP, the paired three-seed 95\\% interval for real phrases minus random prototypes is \\(0.32\\) to \\(0.75\\) points, whereas the interval for real phrases minus bypass is \\(-0.16\\) to \\(1.02\\) points and includes zero. These secondary intervals are unadjusted for multiple comparisons.",
+      "reason": "Replace a general branch-benefit statement with the directly reproduced intervals; retain existing content/geometry, equivalence and scaled-model caveats."
+    },
+    {
+      "id": "Q4a",
+      "old": "CycleACR's published action and location results remain higher by 0.48 and 3.16 points.",
+      "new": "CycleACR's published best-result action and location scores remain higher by 0.48 and 3.16 points.",
+      "reason": "Identify the reporting statistic used by FRCB Table 3."
+    },
+    {
+      "id": "Q3/Q4b",
+      "old": "FRCB also reports a five-run triplet mean of \\(11.53\\pm0.35\\)\\% in Table 5, distinct from the 11.71\\% best-result row.",
+      "new": "FRCB also reports a five-run triplet mean of \\(11.53\\pm0.35\\)\\% in FRCB's Table 5, distinct from the 11.71\\% best-result row. That table also reports five-run means for MeMViT and CycleACR; CycleACR's action and location means are \\(23.85\\pm0.83\\)\\% and \\(31.81\\pm0.53\\)\\%, respectively.",
+      "reason": "Disambiguate the external table number and apply mean-versus-best disclosure to the competing methods."
+    }
+  ],
+  "limits": [
+    "Three seeds, one split, prior validation exposure; secondary intervals unadjusted.",
+    "No matched-protocol superiority claim; no new experiment or causal attribution.",
+    "PDF render and final author review pending."
+  ]
+}

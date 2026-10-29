@@ -1,0 +1,23 @@
+{
+  "files": [
+    {
+      "kind": "base",
+      "repo": "OpenGVLab/InternVideo2-Stage2_1B-224p-f4",
+      "revision": "4362e1f88a992e7edbfd7696f7f78b7f79426dfd",
+      "filename": "InternVideo2-stage2_1b-224p-f4.pt",
+      "bytes": 2820610931,
+      "sha256": "df8cdbe9c3c9f65fbba777afc9ee6fbf58e6d68c4aec2827cac8e2a98d0a8446",
+      "path": "/work/bbyrd1/contextual-roi-1b-20260930/assets/InternVideo2-stage2_1b-224p-f4.pt"
+    },
+    {
+      "kind": "clip",
+      "repo": "OpenGVLab/InternVideo2-CLIP-1B-224p-f8",
+      "revision": "b8f9edd6cacdbede471fd2fa58439e0b97a6dc1b",
+      "filename": "1B_clip.pth",
+      "bytes": 14226595,
+      "sha256": "e60e0a6e05daec48285254b17b0b91c7d814b3ac74e538b2c62201553eeec6b1",
+      "path": "/work/bbyrd1/contextual-roi-1b-20260930/assets/1B_clip.pth"
+    }
+  ],
+  "time": 1790787791.5397294
+}

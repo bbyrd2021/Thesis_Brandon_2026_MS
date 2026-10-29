@@ -1114,5 +1114,50 @@
     "sources": [
       "Official config: paired InternVL/Llama text implementation; not a claimed run revision"
     ]
+  },
+  {
+    "key": "supcon",
+    "new_entry": true,
+    "fields": [
+      {
+        "field": "author",
+        "old": null,
+        "new": "Khosla, Prannay and Teterwak, Piotr and Wang, Chen and Sarna, Aaron and Tian, Yonglong and Isola, Phillip and Maschinot, Aaron and Liu, Ce and Krishnan, Dilip"
+      },
+      {
+        "field": "title",
+        "old": null,
+        "new": "Supervised Contrastive Learning"
+      },
+      {
+        "field": "booktitle",
+        "old": null,
+        "new": "Advances in Neural Information Processing Systems"
+      },
+      {
+        "field": "volume",
+        "old": null,
+        "new": "33"
+      },
+      {
+        "field": "year",
+        "old": null,
+        "new": "2020"
+      },
+      {
+        "field": "pages",
+        "old": null,
+        "new": "18661--18673"
+      },
+      {
+        "field": "url",
+        "old": null,
+        "new": "https://papers.nips.cc/paper_files/paper/2020/hash/d89a66c7c80a29b1bdbab0f2a1a94af8-Abstract.html"
+      }
+    ],
+    "sources": [
+      "Official NeurIPS2020 proceedings",
+      "wiki directions/class-conditioned-language-fusion.md:324; September14 methodological precedent, not proof of verbatim code derivation"
+    ]
   }
 ]

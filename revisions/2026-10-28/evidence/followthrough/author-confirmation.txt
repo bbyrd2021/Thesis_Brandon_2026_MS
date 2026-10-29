@@ -1,0 +1,4 @@
+2026-10-28, direct user reply in this review conversation:
+Question included architecture diagrams, especially Figure 12 composition detail.
+Brandon: "they are mine. draw.io diagrams"
+Scope: author-created diagram layout; embedded dataset/media attribution remains separate.

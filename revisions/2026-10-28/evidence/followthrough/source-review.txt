@@ -1,0 +1,3 @@
+Primary comparisons: Zhang et al. https://arxiv.org/html/2410.23077v1 section4.1; SupCon https://papers.nips.cc/paper_files/paper/2020/hash/d89a66c7c80a29b1bdbab0f2a1a94af8-Abstract.html and Eq2; CLIP https://proceedings.mlr.press/v139/radford21a.html .
+Archive setup-status.json contains exact revisions and hashes. Official InternVL revision page was also checked. HF base/CLIP binary pages were unavailable to browser; archive identities have not been independently rehashed from current binaries.
+Training-setting comparison relies on the archived code excerpt; this review did not reexecute the detector training.

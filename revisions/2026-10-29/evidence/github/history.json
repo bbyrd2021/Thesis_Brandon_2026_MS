@@ -1,0 +1,40 @@
+{
+  "commits": [
+    {
+      "sha": "855120ce73510154cd10b93a9823890407adeefd",
+      "date": "2026-08-27T14:37:24Z",
+      "message": "Exp11 final cells + exp12 phrase-head experiments (C1-C4)\n\nJunk-negative retrain, derive modes (gating fix), comp MLP, same-rows\nbaseline; exp12: phrases, CLIP_S caching at YOLO rows, phrase/flat heads,\nI3D-feature phrase cell, phrase+compMLP combination. Results: mechanism\nvalidated (+1.4 duplex on aligned features, 41/49 rare triplets), encoder\nis the bottleneck, combination ties the record — features are the lever.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01XN3X4vdAUpKJHy3BatGrF2"
+    },
+    {
+      "sha": "7260ede3ea5c98f50f5fe5b3ffa634a9ea4a06eb",
+      "date": "2026-08-24T23:42:04Z",
+      "message": "Exp11: YOLO box source + I3D hybrids on the full-candidate protocol\n\nDataset conversion (verified 3.3M boxes), YOLOv8x ECCV-recipe training\n(best=ep1 35.24 agent f-mAP vs 31.6 reference / 17.76 baseline; ep50\n29.92 — over-training on 600-scene redundancy), YOLO26x launch (batch-16\ndeviation, assigner OOM at 24/32), full-candidate dumps (YOLO val/train,\nI3D top-300), score-transfer hybrid (action 12.86 / loc 13.36), RoIAlign\nhead cells (conf-gated λ=0: action 14.92 / loc 18.76; λ=10 duplex 11.19,\naction collapse), same-rows I3D baseline + λ sweep in flight.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01XN3X4vdAUpKJHy3BatGrF2"
+    }
+  ],
+  "historical_snapshot_checks": [
+    {
+      "path": "experiments/exp11_yolo/eval_head.py",
+      "sha": "985ba89c5f92953459d9ccbb4991920cc03bafe8",
+      "equals_current": true,
+      "error": false
+    },
+    {
+      "path": "experiments/exp11_yolo/results_roialign_junkneg_derived_gated.json",
+      "sha": "a619e3e2918eb381151d55a56c9801688b688a4b",
+      "equals_current": true,
+      "error": false
+    },
+    {
+      "path": "experiments/exp11_yolo/results_roialign_junkneg_derived_product_gated_FIXED.json",
+      "sha": "96c040bfed9d24522d994dd5490d95fd34be1afc",
+      "equals_current": true,
+      "error": false
+    },
+    {
+      "path": "experiments/exp9_joint_heterogeneous/constraints_verified.json",
+      "sha": "9ed8e2c8e24fdda14d2b0cace8dad3b325ba5c78",
+      "equals_current": true,
+      "error": false
+    }
+  ]
+}

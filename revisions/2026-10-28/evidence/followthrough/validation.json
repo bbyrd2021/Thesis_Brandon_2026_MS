@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-28",
+  "baseline_commit": "59950324e087dfa9521d39100ff18c6149865089",
+  "all_original_tracked_files_unchanged": true,
+  "original_tracked_file_count": 119,
+  "accepted_redline_equals_clean_chapter": true,
+  "new_bibliography_entry_count": 51,
+  "changed_or_added_bibliography_entries": 42,
+  "body_changes": 13,
+  "compiler": "XeLaTeX/Biber with latexmk; isolated TeX Live2026",
+  "visual_review": "All clean/review page overviews and selected full-size changed pages inspected; no clipping detected. Final author/advisor template acceptance remains pending.",
+  "citation_contexts_screened": 94,
+  "outputs": {
+    "clean": {
+      "pages": 84,
+      "sha256": "3832a764921993d6e8115ba677eb291331a34422e85431372c3ec10a99f56fea",
+      "review_red_characters": 0,
+      "review_green_characters": 0,
+      "text_boundary_signals": [],
+      "build_warnings": [],
+      "path": "output/pdf/thesis-clean-20261028.pdf"
+    },
+    "review": {
+      "pages": 97,
+      "sha256": "7a2216df08a46c9f08225d10310264eb234255ad127eba18d212625ca7f3acb3",
+      "review_red_characters": 3103,
+      "review_green_characters": 19650,
+      "text_boundary_signals": [],
+      "build_warnings": [],
+      "path": "output/pdf/thesis-review-20261028.pdf"
+    }
+  },
+  "format_checks": {
+    "arabic_sequence": "1\u201371 checked in rendered PDF headers",
+    "front_matter": "13 pages, abstract roman iv",
+    "contents_entries": 87,
+    "figure_entries": 27,
+    "table_entries": 15,
+    "template_basis": "Provided February2026 template; live official template download403. IEEE bibliography style accepted by supplied template."
+  },
+  "limits": [
+    "Claude independent review pending",
+    "No current checkpoint binary rehash or experiment rerun",
+    "Native PowerPoint equation compatibility previews require review",
+    "Final author/advisor approval and signatures pending"
+  ]
+}

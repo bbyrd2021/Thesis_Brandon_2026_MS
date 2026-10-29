@@ -16,3 +16,5 @@ Body changes are recorded in `body-changes.json`. Bibliography changes and prima
 The clean and review chapter files are paired snapshots, not live-linked editor modes. After future edits, update both from the same reviewed change set. Review notes are excluded from the clean document. The clean copy still needs author/advisor acceptance; unresolved provenance questions are not silently resolved by creating a clean PDF.
 
 Formatting, results and figures are inherited unchanged. This pass does not edit the defense deck or separate IEEE Access journal. Source review uses the provided February2026 university template; it does not substitute for final Graduate College approval.
+
+Follow-through: four attribution/provenance additions, SupCon reference, archived checkpoint hashes and direct author diagram confirmation are included. Defense slide corrections are delivered separately in the Claude review packet. Claude review and final human acceptance remain pending.

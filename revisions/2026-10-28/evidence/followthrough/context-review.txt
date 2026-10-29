@@ -1,0 +1,7 @@
+Post-correction citation-context review, October28,2026
+94 individual key occurrences; 51 distinct bibliography entries; all active chapters screened.
+Every cited key resolves and every bibliography entry is used. Inspected each current citation paragraph and its primary-source summary. Detailed checks use previously inspected primary papers, original XML recounts, stored raw result JSONs and current code/protocol evidence.
+Additional mismatch found and fixed: the temporal-context sentence in RoIAlign section now cites ROAD; Mask R-CNN remains credited for RoIAlign.
+Method summaries (long-tail classification, prompt learning, video representations and composition) match primary abstracts. These references motivate local experiments; the manuscript retains caveats against extrapolating their original benchmark results to ROAD-Waymo.
+Coverage is not a claim of reading every page of all51 sources or independently rerunning their experiments. All-source primary summaries plus targeted full-text equation/result/implementation checks are the recorded method. Complete ledger includes precise source lines and scope limitations for Claude to challenge independently.
+No new substantive mismatch remains identified in this pass. External independent Claude review and final author/advisor acceptance remain pending.

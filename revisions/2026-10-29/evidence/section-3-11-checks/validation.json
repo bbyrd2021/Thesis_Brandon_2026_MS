@@ -1,0 +1,28 @@
+{
+  "clean": {
+    "pages": 84,
+    "changed_physical_pages": [
+      50,
+      51,
+      52
+    ],
+    "intro_physical_page": 50,
+    "navigation_entries_checked": 87,
+    "sha256": "cc09a9711ede718df3213159922af8791b13c3e18ef649257004ce700211fb71",
+    "warnings": []
+  },
+  "review": {
+    "pages": 100,
+    "changed_physical_pages": [
+      51,
+      52,
+      53
+    ],
+    "intro_physical_page": 51,
+    "navigation_entries_checked": 89,
+    "sha256": "3c62cc39eb594ba77c632ad36aa0481c94fa17c720cc6707f29ca76b0601b9c6",
+    "warnings": []
+  },
+  "original_119_files_preserved": true,
+  "accepted_redline_equals_clean": true
+}

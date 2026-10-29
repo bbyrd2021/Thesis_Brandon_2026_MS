@@ -1,0 +1,335 @@
+\chapter{Results and Discussion}
+
+Table~\ref{tab:3} reports the completed Stages 0--3 under the shared-frame protocol. The values are validation f-mAP percentages at IoU 0.5 on the same 36,717 frames. Stage 0 uses its own baseline candidates; Stages 1--3 reuse the fixed YOLO candidates. The results are project measurements.
+
+\begin{table}[htbp]
+\centering
+\caption{Completed-stage validation f-mAP (\%).}
+\label{tab:3}
+\begin{singlespace}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Output} & \textbf{Stage 0} & \textbf{Stage 1} & \textbf{Stage 2} & \textbf{Stage 3} \\
+\midrule
+Agentness & 35.36 & 65.36 & 65.36 & 65.36 \\
+Agent & 16.67 & 35.25 & 35.25 & 35.25 \\
+Action & 13.23 & 12.86 & 15.92 & 15.92 \\
+Location & 12.77 & \AuditDel{13.36}\,\AuditAdd{13.37} & 19.60 & 19.60 \\
+Duplex & 11.32 & 10.04 & 11.13 & 15.52 \\
+Triplet & 7.54 & 6.81 & 6.65 & 9.73 \\
+\bottomrule
+\end{tabular}
+\end{singlespace}
+\end{table}
+
+The detector substitution raises agent f-mAP from 16.67\% to 35.25\%. However, improved agent detection does not automatically improve compositions. Stage 1 reaches 6.81\% triplet f-mAP, below the Stage 0 value of 7.54\%, while retaining the baseline-detection matching dependency. This comparison does not isolate that dependency’s contribution from changes in candidates and score construction.
+
+Stage 2 removes that matching dependency and improves action and location f-mAP to 15.92\% and 19.60\%. Its free composition columns reach 11.13\% duplex and 6.65\% triplet f-mAP. This separates two observations: the region features support improved primitive classification, but the independently learned composition scores still leave a substantial gap.
+
+\section{Effect of Learned Composition}
+
+Stage 3 increases duplex f-mAP from 11.13\% to 15.52\% and triplet f-mAP from 6.65\% to 9.73\%, while boxes, agentness, agent, action, and location outputs remain unchanged. The changes are 4.39 and 3.08 percentage points for duplex and triplet, respectively. Relative to Stage 0, Stage 3 is higher on all six output groups in this comparison.
+
+The auxiliary composition comparison provides additional context. An MLP using primitive scores alone reaches 13.37\% duplex and 8.93\% triplet f-mAP; adding the 256-dimensional visual feature raises those values to 15.52\% and 9.73\%. Fixed minimum composition gives 10.36\% and 5.52\%, while corrected single-gate product composition gives 10.58\% and 6.05\%. These measurements support learning composition from both primitive evidence and visual features in this setting. They do not establish a universal advantage over every possible structured model.
+
+\section{Rare-Composition Performance and Limitations}
+
+Table~\ref{tab:4} separates the overall triplet result from the training-count-defined tail. The \(z < 0\) group contains 47 classes and the \(z < -0.5\) group contains 28 of those same classes. These memberships remain fixed across stages.
+
+\begin{table}[htbp]
+\centering
+\caption{Overall and tail triplet AP (\%).}
+\label{tab:4}
+\begin{singlespace}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Triplet group} & \textbf{Stage 0} & \textbf{Stage 1} & \textbf{Stage 2} & \textbf{Stage 3} \\
+\midrule
+All 86 & 7.54 & 6.81 & 6.65 & 9.73 \\
+\(z < 0\) (47) & 4.14 & 3.43 & 2.60 & 4.53 \\
+\(z < -0.5\) (28) & 2.88 & 2.19 & 1.47 & 3.31 \\
+\bottomrule
+\end{tabular}
+\end{singlespace}
+\end{table}
+
+Stage 3 recovers the tail losses seen in Stages 1 and 2 and exceeds the Stage 0 primary-tail result by 0.39 percentage points.
+
+The controlled Stage 2-to-3 comparison is particularly informative for the rare-event question: primary-tail AP rises from 2.60\% to 4.53\%, a gain of 1.93 percentage points, while deeper-tail AP rises from 1.47\% to 3.31\%, a gain of 1.84 points. Candidate boxes and primitive outputs are fixed in this comparison, so these gains accompany the learned-composition replacement rather than a new detector. Nevertheless, primary-tail AP remains 4.53\%, compared with 9.73\% over all triplets. The deeper-tail value is 3.31\%. This is the central empirical motivation for Stage 4: gains in overall composition recognition leave rare-event performance low.
+
+
+\section{Semantic Crop Classification and Composition}
+
+Tables~\ref{tab:crop-all} and~\ref{tab:crop-tail} summarize the original-encoder crop models as means across seeds 0, 1, and 2. These rows use the shared detector evaluation and must not be confused with later single-seed ROAD-adapted checkpoints. Agentness and agent outputs remain YOLO-derived. Stage 4 uses phrase classification; Stage 5 uses flat primitive scores and crop features; Stage 6 adds phrase-composition evidence to the composition MLP.
+
+\begin{table}[htbp]
+\centering
+\caption{Original-encoder crop-model detector f-mAP (\%), three-seed means.}
+\label{tab:crop-all}
+\begin{singlespace}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Output} & \textbf{Stage 4} & \textbf{Stage 5} & \textbf{Stage 6} \\
+\midrule
+Agentness & 65.36 & 65.36 & 65.36 \\
+Agent & 35.25 & 35.25 & 35.25 \\
+Action & 18.24 & 18.82 & 18.82 \\
+Location & 19.64 & 22.50 & 22.50 \\
+Duplex & 15.34 & 17.69 & 18.12 \\
+Triplet & 9.07 & 11.23 & 11.28 \\
+\bottomrule
+\end{tabular}
+\end{singlespace}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Crop-model triplet groups (\%), three-seed means.}
+\label{tab:crop-tail}
+\begin{singlespace}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Group} & \textbf{Stage 4} & \textbf{Stage 5} & \textbf{Stage 6} \\
+\midrule
+All 86 & 9.07 & 11.23 & 11.28 \\
+Common 39 & 13.03 & 17.33 & 17.43 \\
+Tail 47 & 5.77 & 6.16 & 6.17 \\
+Deeper tail 28 & 4.66 & 4.77 & 4.57 \\
+\bottomrule
+\end{tabular}
+\end{singlespace}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Matched crop-head controls (\%), three-seed means.}
+\label{tab:crop-controls}
+\begin{singlespace}
+\begin{tabularx}{\textwidth}{@{}Xrrr@{}}
+\toprule
+\textbf{Classifier} & \textbf{Triplet} & \textbf{Tail 47} & \textbf{Deep 28} \\
+\midrule
+Flat linear & 8.42 & 3.54 & 2.78 \\
+Real phrases & 9.07 & 5.77 & 4.66 \\
+Shuffled phrases & 4.65 & 0.71 & 0.22 \\
+\bottomrule
+\end{tabularx}
+\end{singlespace}
+\end{table}
+
+The same-feature crop controls in Table~\ref{tab:crop-controls} distinguish phrase classification from changing the encoder. Real phrases exceed the flat linear head by 0.65 points in triplet mAP and 2.23 points in tail mAP. Permuting the same phrase bank across class labels reduces both substantially. The real-versus-shuffled comparison supports the usefulness of the phrase-to-label assignment in this supervised classifier. The comparison against a flat linear head also changes classifier constraints and normalization, so it does not isolate language independently of head design.
+
+The phrase classifier reaches 9.07\% triplet and 5.77\% tail mAP. Relative to the Stage 3 I3D composition model, overall triplet mAP is lower by 0.67 percentage points, while tail mAP is higher by 1.25 points. This transition changes both visual representation and head design, so the difference does not isolate language.
+
+Stage 5 raises overall triplet mAP to 11.23\% and tail mAP to 6.16\%. Stage 6 reaches 11.28\% and 6.17\%, respectively. The additional phrase-composition inputs therefore change the overall mean by only 0.05 points and the primary-tail mean by less than 0.01 points, while deeper-tail mAP decreases by 0.21 points. These small, mixed changes do not support a large standalone benefit from adding phrase scores to the crop composition MLP.
+
+\section{Contextual Fusion, Contrastive Learning, and Loss Choice}
+
+Table~\ref{tab:context-original} follows the contextual branch using the original encoders. Each row is a three-seed mean. All listed heads already contain language attention and phrase-similarity inputs. The ``contrastive'' designation identifies the additional all-184 alignment objective. These models use the contextual training partition and direct 184-output readout described in Chapter 3.
+
+\begin{table}[htbp]
+\centering
+\caption{Original-encoder contextual triplet mAP (\%), three-seed means.}
+\label{tab:context-original}
+\begin{singlespace}
+\begin{tabularx}{\textwidth}{@{}Xrrrr@{}}
+\toprule
+\textbf{Condition} & \textbf{All 86} & \textbf{Tail 47} & \textbf{Deep 28} & \textbf{Common} \\
+\midrule
+Mean pool, focal & 11.74 & 5.47 & 3.58 & 19.29 \\
+Attention, focal & 12.02 & 6.19 & 4.48 & 19.06 \\
+Attention, focal + contrastive & 12.12 & 5.79 & 3.85 & 19.75 \\
+Attention blend, focal & 12.58 & 6.49 & 4.74 & 19.93 \\
+Attention, DCB & 12.90 & 5.84 & 4.08 & 21.40 \\
+Attention, DCB + contrastive & 12.88 & 5.81 & 4.20 & 21.40 \\
+Attention blend, DCB & 13.43 & 6.23 & 4.54 & 22.10 \\
+\bottomrule
+\end{tabularx}
+\end{singlespace}
+\end{table}
+
+Mean-pool contextual fusion reaches 11.74\% triplet mAP, but its 5.47\% tail and 3.58\% deeper-tail means are below the crop Stage 6 means. Context does not improve every group automatically. Replacing mean pooling with actor-guided scene attention increases triplet mAP to 12.02\%, tail to 6.19\%, and deeper tail to 4.48\%. This is the appropriate within-family attention comparison, with increases of 0.28, 0.72, and 0.89 points.
+
+Adding the corrected all-184 contrastive objective to the attention head increases triplet mAP by 0.10 points, but decreases tail mAP by 0.40 and deeper-tail mAP by 0.63 points. The global probability blend of the classification and contrastive experts reaches 12.58\% triplet, 6.49\% tail, and 4.74\% deeper-tail mAP. Both experts use language, so this result supports complementarity between their predictions rather than an isolated language effect.
+
+Replacing focal loss with DCB increases the standalone classification expert's triplet mAP from 12.02\% to 12.90\%, while tail decreases from 6.19\% to 5.84\%. The DCB blend reaches 13.43\% triplet mAP, 0.84 points above the focal blend, but tail and deeper-tail mAP fall by 0.25 and 0.20 points. Thus, the original-encoder DCB study improves overall composition recognition without meeting the corresponding tail-improvement expectation. These losses are retained in the interpretation of the final system.
+
+\section{Original-Encoder Language Controls}
+
+The focal scene-attention study compares real phrases with two controls. The bypass condition disables explicit downstream language paths. The random-bank condition retains active language modules and replaces the phrase bank with seeded random unit vectors. Both controls retain the visual cache, data partition, head-training schedule, and detector evaluation. The contrastive coefficient is zero in these runs.
+
+\begin{table}[htbp]
+\centering
+\caption{Original-encoder language controls: mean $\pm$ sample SD (\%), three seeds.}
+\label{tab:language-controls}
+\begin{singlespace}
+\begin{tabularx}{\textwidth}{@{}Xrrr@{}}
+\toprule
+\textbf{Condition} & \textbf{Triplet} & \textbf{Tail 47} & \textbf{Deep 28} \\
+\midrule
+Real phrases & $12.02\pm0.42$ & $6.19\pm0.59$ & $4.48\pm1.15$ \\
+Language bypass & $11.88\pm0.28$ & $5.76\pm0.62$ & $4.27\pm0.89$ \\
+Random prototypes & $11.88\pm0.42$ & $5.65\pm0.63$ & $4.02\pm0.72$ \\
+\bottomrule
+\end{tabularx}
+\end{singlespace}
+\end{table}
+
+Real phrases exceed bypass by 0.43 points and random prototypes by 0.53 points on the tail mean. The corresponding overall gains are 0.14 and 0.15 points. \AuditDel{This provides evidence that the explicit phrase branch can help rare classes in this configuration, while overall changes are modest.}\AuditAdd{For tail mAP, the paired three-seed 95\% interval for real phrases minus random prototypes is \(0.32\) to \(0.75\) points, whereas the interval for real phrases minus bypass is \(-0.16\) to \(1.02\) points and includes zero. These secondary intervals are unadjusted for multiple comparisons.} Bypass changes the active computation, and random prototypes differ from real phrases in both geometry and content. The comparisons therefore do not isolate linguistic meaning alone. With three seeds, a small or statistically unresolved difference must not be interpreted as equivalence. These original-encoder focal controls also do not establish the same effect for the scaled DCB blend.
+
+\section{Scaled Contextual Semantic Expert Blend}
+
+Tables~\ref{tab:scaled-all} and~\ref{tab:scaled-tail} report the final paired-encoder system. The classification and contrastive experts use the same frozen scaled caches and matched training procedure. The blend combines their composition probabilities while preserving primitive outputs from the classification expert. The reported values are detector f-mAP, not the development crop AP used to select checkpoints and weights.
+
+\begin{table}[htbp]
+\centering
+\caption{Scaled contextual detector f-mAP (\%), three-seed means.}
+\label{tab:scaled-all}
+\begin{singlespace}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Output} & \textbf{Classification} & \textbf{Contrastive} & \textbf{CSEB} \\
+\midrule
+Agentness & 65.36 & 65.36 & 65.36 \\
+Agent & 35.25 & 35.25 & 35.25 \\
+Action & 24.75 & 24.85 & 24.75 \\
+Location & 29.64 & 29.88 & 29.64 \\
+Duplex & 23.37 & 23.53 & 24.36 \\
+Triplet & 15.03 & 15.08 & 15.75 \\
+\bottomrule
+\end{tabular}
+\end{singlespace}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Scaled contextual triplet groups: mean $\pm$ sample SD (\%).}
+\label{tab:scaled-tail}
+\begin{singlespace}
+\begin{tabularx}{\textwidth}{@{}Xrrr@{}}
+\toprule
+\textbf{Condition} & \textbf{Triplet} & \textbf{Tail 47} & \textbf{Deep 28} \\
+\midrule
+Classification & $15.03\pm0.21$ & $8.40\pm0.58$ & $6.05\pm0.54$ \\
+Contrastive & $15.08\pm0.30$ & $8.53\pm0.63$ & $5.99\pm0.53$ \\
+CSEB & $15.75\pm0.27$ & $9.00\pm0.64$ & $6.35\pm0.57$ \\
+\bottomrule
+\end{tabularx}
+\end{singlespace}
+\end{table}
+
+CSEB reaches 15.75\% triplet, 9.00\% tail, and 6.35\% deeper-tail mAP. Its triplet scores for seeds 0, 1, and 2 are 16.06\%, 15.54\%, and 15.65\%. The blend exceeds both standalone experts on triplet, tail, and deeper-tail mAP within each matched seed. Compared with the classification expert, its mean gains are 0.72 points overall, 0.60 on the tail, and 0.30 on the deeper tail. In contrast, the standalone contrastive expert differs from classification by only 0.06 points overall, 0.14 on the tail, and $-0.06$ on the deeper tail. The strongest evidence here concerns expert complementarity, rather than a large isolated contrastive benefit.
+
+Relative to the original-encoder DCB blend, the scaled CSEB improves triplet mAP from 13.43\% to 15.75\%, tail mAP from 6.23\% to 9.00\%, and deeper-tail mAP from 4.54\% to 6.35\%. Common-class mAP also rises from 22.10\% to 23.88\%. These are system-level changes: both encoder checkpoints, the text input projection, and cache precision differ. They do not identify the causal contribution of visual parameter count alone.
+
+The contribution of each disjoint frequency group to the overall change can be computed because the 86 triplets comprise 47 tail and 39 common classes:
+\begin{equation}
+ \Delta\mathrm{mAP}_{86}=\frac{47}{86}\Delta\mathrm{mAP}_{47}
+ +\frac{39}{86}\Delta\mathrm{mAP}_{39}.
+\end{equation}
+Using the unrounded means, the 2.32023-point overall improvement contains 1.51155 points from tail classes and 0.80868 points from common classes. Relative to the original-encoder DCB blend, approximately 65\% of the triplet mAP improvement comes from tail classes, while common-class performance also improves. This is an arithmetic decomposition across class groups, not a causal decomposition of architectural components. The deeper-tail group is nested within the tail and must not be added again.
+
+\section{Comparison with Published ROAD-Waymo Results}
+
+Table~\ref{tab:published} separates published reference results from the local matched-frame study. The 3D-RetinaNet benchmark row is from ROAD-Waymo's validation comparison \cite{road-waymo}. The other external rows are the best-result evaluations reported in FRCB Table 3 \cite{frcb}; they are not new replications of the original papers. The CSEB row is a three-seed mean. Candidate generation, filtering, training, and frame selection differ, and published tail results do not supply this study's fixed tail membership.
+
+\begin{table}[htbp]
+\centering
+\caption{Published references and CSEB detector f-mAP (\%); protocols differ.}
+\label{tab:published}
+\begin{singlespace}
+\begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
+\toprule
+\textbf{Model} & \textbf{Agent} & \textbf{Action} & \textbf{Loc.} & \textbf{Duplex} & \textbf{Triplet} \\
+\midrule
+3D-RetinaNet (benchmark) & \AuditDel{15.57}\,\AuditAdd{15.7} & \AuditDel{12.30}\,\AuditAdd{12.3} & \AuditDel{12.40}\,\AuditAdd{12.4} & \AuditDel{10.50}\,\AuditAdd{10.5} & \AuditDel{6.20}\,\AuditAdd{6.2} \\
+SlowFast & 17.45 & 15.35 & 14.42 & 9.66 & 5.51 \\
+MViT & 20.75 & 13.10 & 15.41 & 10.17 & 6.63 \\
+MViTv2 & 25.72 & 15.31 & 19.26 & 10.92 & 7.06 \\
+MeMViT & 29.27 & 18.84 & 26.11 & 12.09 & 7.28 \\
+STMixer & 24.70 & 17.12 & 20.98 & 15.16 & 9.33 \\
+CycleACR (SlowFast) & 33.86 & 25.23 & 32.80 & 17.17 & 10.06 \\
+FRCB & 33.64 & 23.87 & 32.33 & 17.84 & 11.71 \\
+CSEB (ours, mean) & 35.25 & 24.75 & 29.64 & 24.36 & 15.75 \\
+\bottomrule
+\end{tabularx}
+\end{singlespace}
+\end{table}
+
+The CSEB mean is 6.52 percentage points above the published FRCB best-result duplex score and 4.04 points above its triplet score. \AuditDel{CycleACR's published action and location results remain higher by 0.48 and 3.16 points.}\AuditAdd{CycleACR's published best-result action and location scores remain higher by 0.48 and 3.16 points.} \AuditDel{FRCB also reports a five-run triplet mean of \(11.53\pm0.35\)\% in Table 5, distinct from the 11.71\% best-result row.}\AuditAdd{FRCB also reports a five-run triplet mean of \(11.53\pm0.35\)\% in FRCB's Table 5, distinct from the 11.71\% best-result row. That table also reports five-run means for MeMViT and CycleACR; CycleACR's action and location means are \(23.85\pm0.83\)\% and \(31.81\pm0.53\)\%, respectively.} These numerical differences provide context, but do not establish a matched state-of-the-art result or a measured tail advantage over FRCB.
+
+\section{Measured Examples of Composition Ranking}
+\label{sec:measured-examples}
+
+The worked calculation in Section~\ref{sec:worked-candidate} explains the operations using synthetic scores. The examples here instead use recorded detector outputs from the original-encoder crop study, seed 0. They were selected after inspecting results to illustrate contrasting behavior; they are not a random sample, a success rate, or evidence that the final contextual system resolves these cases.
+
+Figure~\ref{fig:qualitative-tail-ranking} shows a large vehicle annotated as stopped at a junction in ROAD-Waymo validation video train\_00797, frame 18. The candidate overlaps the ground-truth box at IoU 0.679, above the matching threshold. This triplet has 1,895 training boxes and belongs to the deeper-tail group. Stage 4 ranks a successful match at 288, Stage 5 at 81,918, and Stage 6 at 4,708. With the diagnostic top-615 prediction budget, Stage 4 retains the match while the two composition models do not. The budget equals the evaluation ground-truth count for this class; it is an analysis convention, not a deployment threshold.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/qualitative-tail-ranking.png}
+\caption[A measured deep-tail ranking example.]{A measured deep-tail ranking example on ROAD-Waymo \cite{road-waymo}. This original-encoder seed-0 diagnostic illustrates loss of useful phrase ranking after learned composition. The still illustrates the annotated event; temporal evidence is needed to assess motion.}
+\label{fig:qualitative-tail-ranking}
+\end{figure}
+
+For the same recorded candidate, the confidence-weighted LarVeh-Stop-Jun scores are 0.731, 0.071, and 0.309 for Stages 4, 5, and 6. These scores and the successful-match ranks describe different aspects of the trace: the score is for the same chosen box, whereas the first successful match can involve another candidate for that object. Stage 6 improves this instance relative to Stage 5, but does not recover Stage 4's ranking. It would be incorrect to describe this as a complete localization failure or to infer a rescue by the later CSEB model.
+
+A contrasting Bus-Stop-VehLane case in validation video train\_00635, frame 186, has candidate IoU 0.965. Successful-match ranks are 101, 2,878, and 325 for Stages 4--6. Under its top-583 diagnostic budget, Stage 6 restores an included match relative to Stage 5, while Stage 4 ranks it earlier. These selected examples illustrate heterogeneous effects; aggregate AP remains necessary to assess the full population.
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Fig/qualitative-bus-recovery.png}
+\caption[A measured bus ranking recovery relative to Stage 5.]{A measured Bus-Stop-VehLane example on ROAD-Waymo \cite{road-waymo}, original-encoder study, seed 0. ``Phrase head'' denotes Stage 4; ``Flat head'' is the separate no-composition baseline. Green marks ground truth and cyan the selected candidate. The same-candidate scores and first successful-match ranks are different diagnostics.}
+\label{fig:qualitative-bus-recovery}
+\end{figure}
+
+\section{Illogical Outputs and Ordinary Errors}
+\label{sec:illogical-examples}
+
+A detected event should tell a coherent story about one agent at one time. However, restricting outputs to the benchmark's valid composition labels does not guarantee agreement between independently scored primitive and composition labels. For example, Bus-Stop-VehLane is a meaningful event label, but emitting it for a candidate whose selected agent label is Car gives an inconsistent description of that candidate. The present pipeline does not enforce an agent-class mask on composition scores. Neither composition learning nor language attention alone guarantees logical consistency.
+
+The examples in Table~\ref{tab:logical-examples} are deliberately constructed teaching cases, not recorded outputs or measured violation rates. Let $T$ denote Bus-Stop-VehLane and let $B$, $S$, and $V$ denote its Bus, Stop, and VehLane constituents for the same candidate and time. A coherent hard-label interpretation requires
+\begin{equation}
+T\Rightarrow (B\land S\land V).
+\label{eq:event-implication}
+\end{equation}
+For illustration only, define $z_k=\mathbb{1}[s_k\geq\tau]$ with $\tau=0.5$, using scores $s_k$ on a common emitted-score scale. Then an implication violation is
+\begin{equation}
+I_T=z_T\left(1-z_Bz_Sz_V\right).
+\label{eq:illustrative-violation}
+\end{equation}
+This threshold illustrates a logical test; it is not the AP evaluator, an adopted deployment rule, or a claim that these scores are calibrated probabilities.
+
+\begin{table}[htbp]
+\centering
+\caption[Illustrative logical conflicts and control cases.]{Illustrative logical conflicts and control cases. All scores are synthetic; each row concerns one candidate at one time.}
+\label{tab:logical-examples}
+\begin{singlespace}
+\begin{tabularx}{\textwidth}{@{}p{0.19\textwidth}XX@{}}
+\toprule
+Case & Example output & Interpretation \\
+\midrule
+Agent conflict & Selected agent: Car. $s_T=0.80$, $s_B=0.10$. & The event says Bus while the selected agent says Car. The triplet is valid in the vocabulary, but the description disagrees across heads. \\
+\addlinespace
+Missing action & $s_T=0.80$, $s_B=0.90$, $s_S=0.15$, $s_V=0.85$. & The event is selected while Stop is omitted: $I_T=1$. The triplet does not imply that the action head actually selected Stop. \\
+\addlinespace
+Missing location & $s_T=0.80$, $s_B=0.90$, $s_S=0.85$, $s_V=0.10$. & The event asserts VehLane while its location constituent is omitted: $I_T=1$. \\
+\addlinespace
+Coherent but wrong & $s_T=0.80$, $s_B=s_S=s_V=0.90$, but the annotated agent is Car. & $I_T=0$: the outputs agree with one another but disagree with ground truth. Logical consistency is not recognition accuracy. \\
+\bottomrule
+\end{tabularx}
+\end{singlespace}
+\end{table}
+
+The missing-action example can be read step by step: the threshold selects the triplet ($z_T=1$), Bus ($z_B=1$), and VehLane ($z_V=1$), but not Stop ($z_S=0$). Equation~\ref{eq:illustrative-violation} therefore gives $1(1-1\cdot0\cdot1)=1$. Selecting Stop as well would remove this particular conflict, but could introduce a false-positive action. Suppressing the triplet could instead remove a correct detection. These tradeoffs explain why a consistency repair must be evaluated for recognition accuracy as well as agreement; neither repair is implemented or credited with improvements here.
+
+Not every unusual combination is illogical. ROAD-Waymo permits multiple action and location labels. The measured large-vehicle example in Figure~\ref{fig:qualitative-tail-ranking} has both LarVeh-Stop-Jun and LarVeh-Stop-IncomLane annotations: junction and incoming-lane descriptions can apply together. Rejecting all multiple-location predictions would therefore discard valid labels. Similarly, the low ranking of a true triplet in that example is a recognition failure, not by itself evidence of a logical contradiction. A still image also cannot establish a contradictory motion prediction without the temporal clip and the label definitions.
+
+A measured consistency audit remains future work. It would retain full primitive and composition vectors for the same candidate and time, declare its decision rule, decode constituents from the verified composition-label strings, and report conflict counts with their denominator alongside detector AP. Ground-truth review would distinguish valid multi-label cases from genuine conflicts. The current selected-case traces establish ranking behavior, not a final-CSEB violation rate. No claim is made that CSEB eliminates illogical outputs.
+
+\section{Interpretation and Validity}
+
+The strongest component comparisons hold the surrounding pipeline fixed: Stage 2-to-3 changes composition outputs, Stage 5-to-6 adds phrase-composition inputs, and the contextual studies compare losses and expert predictions within one family. Crop-to-context and encoder-scaling comparisons change several components and support system-level conclusions.
+
+All results use a validation population that informed subsequent research choices. Internal training partitions select contextual checkpoints and blend weights, but this does not make the final validation set independent of development. Stages 0--3 are historical single runs; later three-seed means measure optimization variability on fixed data. Independent test-set performance, tube-level detection, unseen-class generalization, and deployment safety remain untested.

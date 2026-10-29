@@ -1,0 +1,354 @@
+{
+  "date": "2026-10-29",
+  "E6": "Six missing image-source captions corrected; embedded JPEG hashes match archived ROAD-Waymo frame provenance.",
+  "image_source": {
+    "dataset": "ROAD-Waymo v1.1",
+    "video": "train_00552",
+    "frame": 58,
+    "tube": "810866e9-c236-474f-9fad-7005f4e38c04",
+    "box": [
+      0.0373361796875,
+      0.33923291015625,
+      0.3278017890625,
+      0.76802330859375
+    ],
+    "class": "Bus-MovAway-OutgoLane",
+    "phrase": "a bus moving away from the ego vehicle in the outgoing traffic lane",
+    "training_boxes": 1894,
+    "log_count_z": -0.7319504308238322,
+    "deep_tail_criterion": "z < -0.5",
+    "image_display": "2x padded annotated box crop, clipped to frame",
+    "annotation_source": "/data/datasets/road_waymo/road_waymo_trainval_v1.1.json",
+    "count_verified_directly": true
+  },
+  "figures": [
+    {
+      "figure": 3,
+      "asset": "scaled-expert-blend",
+      "drawio_sha256": "9ee7deec5e869bec8b8cfaf3ab0df27b83ca16a49b254041f26a43d7059c2977",
+      "png_sha256": "94825a93193cabdbe5358a640e1ae560a336c0da5e60526242129944dd815d72",
+      "embedded_photo_matches": [
+        {
+          "cell": "source-photo",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "entire-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        },
+        {
+          "cell": "clips-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "clips-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "clips-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        }
+      ]
+    },
+    {
+      "figure": 16,
+      "asset": "stage4-semantic",
+      "drawio_sha256": "ed771e10c041f92b1f88f056ee527bfb201a231bae8c34925cebbf907c4166bc",
+      "png_sha256": "edad7890fd4b922cac85f798976cd67dbf6978e5b15932c5e70b9dd6fb3a2e6c",
+      "embedded_photo_matches": [
+        {
+          "cell": "source-photo",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "entire-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        },
+        {
+          "cell": "clips-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "clips-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "clips-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        }
+      ]
+    },
+    {
+      "figure": 19,
+      "asset": "contextual-mean-pool",
+      "drawio_sha256": "6db4bf111f79b1b1e5eda911bbe998fe8bc05316bf6f67a1d380a38cc30bdc69",
+      "png_sha256": "ebcdc791211ecaa5dd70e2a1115183435f9b88dcaf3a192d2b60f7017700ef06",
+      "embedded_photo_matches": [
+        {
+          "cell": "source-photo",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "entire-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        },
+        {
+          "cell": "clips-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "clips-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "clips-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        }
+      ]
+    },
+    {
+      "figure": 20,
+      "asset": "contextual-scene-attention",
+      "drawio_sha256": "854126bbcd83c948c804cd2f703a30a8a85c92bb95ea1e2dcff08e38d84377d3",
+      "png_sha256": "82b495c1883b0c057dc63d08e1872dd3e2b9c32f5272e8d32351066e4d82c2d2",
+      "embedded_photo_matches": [
+        {
+          "cell": "source-photo",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "entire-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        },
+        {
+          "cell": "clips-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "clips-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "clips-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        }
+      ]
+    },
+    {
+      "figure": 23,
+      "asset": "focal-expert-blend",
+      "drawio_sha256": "66d09e039dbd56e71bf820950519be8707a3845620e4473c531cbbc1fd23b355",
+      "png_sha256": "e175f9b12d7e496f159f154b284262b7cde491f65cf4320836a301729e4af000",
+      "embedded_photo_matches": [
+        {
+          "cell": "source-photo",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "entire-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        },
+        {
+          "cell": "clips-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "clips-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "clips-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        }
+      ]
+    },
+    {
+      "figure": 24,
+      "asset": "dcb-expert-blend",
+      "drawio_sha256": "2734c735ad6394a17c4de55f7aba8b863f71da7a1ad5aeef8fc0441173e466fd",
+      "png_sha256": "93e74cc737edbd79e5faf5e748b430550cd83aecdb2890d41d9927533e5196c3",
+      "embedded_photo_matches": [
+        {
+          "cell": "source-photo",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "entire-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "entire-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        },
+        {
+          "cell": "clips-55",
+          "frame": 55,
+          "sha256": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53"
+        },
+        {
+          "cell": "clips-58",
+          "frame": 58,
+          "sha256": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50"
+        },
+        {
+          "cell": "clips-62",
+          "frame": 62,
+          "sha256": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+        }
+      ]
+    }
+  ],
+  "split_evidence": {
+    "train_unique": 600,
+    "validation_unique": 198,
+    "overlap": 0,
+    "training_manifest": "artifacts/contextual-roi-20260917/preparation.json",
+    "validation_manifest": "artifacts/post-proposal-experiments/shared-frames.json",
+    "scope": "Counts corroborated from archived study manifests; no fresh 1GB annotation recount in this pass. Publisher repository documents video-level db split_ids fields.",
+    "primary_release_documentation": "https://github.com/salmank255/Road-waymo-dataset"
+  },
+  "changes": [
+    {
+      "id": "E6",
+      "figure": 3,
+      "old": "\\caption[Baseline and final-model information paths.]{Baseline and final-model information paths. Existing approved architecture figures are shown together to distinguish joint box/event prediction from frozen feature extraction and separately trained contextual recognition. Backbone architectures are inherited; the thesis evaluates their downstream integration.}",
+      "new": "\\caption[Baseline and final-model information paths.]{Baseline and final-model information paths. Existing approved architecture figures are shown together to distinguish joint box/event prediction from frozen feature extraction and separately trained contextual recognition. Backbone architectures are inherited; the thesis evaluates their downstream integration. ROAD-Waymo imagery is illustrative \\cite{road-waymo}.}"
+    },
+    {
+      "id": "E6",
+      "figure": 16,
+      "old": "\\caption{Stage 4 semantic crop classifier.}",
+      "new": "\\caption[Stage 4 semantic crop classifier.]{Stage 4 semantic crop classifier. ROAD-Waymo imagery is illustrative \\cite{road-waymo}.}"
+    },
+    {
+      "id": "E6",
+      "figure": 19,
+      "old": "\\caption[Context fusion with mean-pooled scene tokens.]{Context fusion with mean-pooled scene tokens and language cross-attention. Crop, actor-region, scene, and box-position evidence feed the visual fusion MLP. The crop-only skip preserves the projected crop representation.}",
+      "new": "\\caption[Context fusion with mean-pooled scene tokens.]{Context fusion with mean-pooled scene tokens and language cross-attention. Crop, actor-region, scene, and box-position evidence feed the visual fusion MLP. The crop-only skip preserves the projected crop representation. ROAD-Waymo imagery is illustrative \\cite{road-waymo}.}"
+    },
+    {
+      "id": "E6",
+      "figure": 20,
+      "old": "\\caption[Context fusion with scene attention.]{Context fusion with scene attention. The query is crop plus position; projected scene tokens supply keys and values. Language cross-attention is a separate operation after visual fusion.}",
+      "new": "\\caption[Context fusion with scene attention.]{Context fusion with scene attention. The query is crop plus position; projected scene tokens supply keys and values. Language cross-attention is a separate operation after visual fusion. ROAD-Waymo imagery is illustrative \\cite{road-waymo}.}"
+    },
+    {
+      "id": "E6",
+      "figure": 23,
+      "old": "\\caption[Contextual expert blend with focal training.]{Contextual expert blend with focal training. Both experts use scene and language attention; the contrastive expert additionally uses all-184 alignment. Only composition probabilities are blended.}",
+      "new": "\\caption[Contextual expert blend with focal training.]{Contextual expert blend with focal training. Both experts use scene and language attention; the contrastive expert additionally uses all-184 alignment. Only composition probabilities are blended. ROAD-Waymo imagery is illustrative \\cite{road-waymo}.}"
+    },
+    {
+      "id": "E6",
+      "figure": 24,
+      "old": "\\caption[Contextual expert blend with DCB training.]{Contextual expert blend with DCB training and the original encoders. DCB replaces focal classification in both experts. The contrastive auxiliary and inference topology are retained.}",
+      "new": "\\caption[Contextual expert blend with DCB training.]{Contextual expert blend with DCB training and the original encoders. DCB replaces focal classification in both experts. The contrastive auxiliary and inference topology are retained. ROAD-Waymo imagery is illustrative \\cite{road-waymo}.}"
+    },
+    {
+      "id": "Q1",
+      "old": "600 training videos and 198 validation videos.",
+      "new": "600 training videos and 198 validation videos, according to the video-level split assignments in the annotation release used for this study."
+    },
+    {
+      "id": "optional-5",
+      "old": "\\caption[Semantic crop classification with phrase fusion and composition.]",
+      "new": "\\caption[Stage 6 semantic crop classification with phrase fusion and composition.]",
+      "note": "Short caption only; full caption already identifies Stage 6. Documented in review addendum."
+    },
+    {
+      "id": "optional-6",
+      "old": "\\caption[A measured bus ranking recovery.]",
+      "new": "\\caption[A measured bus ranking recovery relative to Stage 5.]",
+      "note": "Short caption only; exact scope already stated in main text. Documented in review addendum."
+    }
+  ],
+  "optional-7": "Keep repeated baseline/final overview: its comparison purpose is explicit; duplication is deliberate, not an error.",
+  "limits": [
+    "Caption/source attribution resolved; no blanket legal clearance inferred from citation.",
+    "Final PDF layout remains pending combined build.",
+    "No image, draw.io geometry or slide file changed."
+  ]
+}

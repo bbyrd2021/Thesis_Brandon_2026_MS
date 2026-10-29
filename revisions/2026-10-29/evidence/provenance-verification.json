@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-29",
+  "Q6": {
+    "status": "Verified from archived training-count rows; evidence supplied",
+    "source": "/Users/brandonbyrd/code/wiki/artifacts/post-proposal-experiments/train-counts.json",
+    "source_sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f",
+    "annotation_source_recorded": "/data/datasets/ROAD_plusplus/road_waymo_trainval_v1.1.json",
+    "training_videos_recorded": 600,
+    "classes": 86,
+    "minimum": 61,
+    "maximum": 225813,
+    "max_min_ratio": 3701.8524590163934,
+    "mean_log10": 3.8085004672697598,
+    "population_sd_log10": 0.7256235808273424,
+    "geometric_mean": 6434.287572751862,
+    "tail47": 47,
+    "deep28": 28,
+    "common39": 39,
+    "duplicate_record_checks": {
+      "artifacts/proposal-tail/train-counts.json": {
+        "row_equality": true,
+        "sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f"
+      },
+      "artifacts/contextual-roi-20260917/data/train-counts.json": {
+        "row_equality": true,
+        "sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f"
+      },
+      "artifacts/adapted-road-comparison/train-counts.json": {
+        "row_equality": true,
+        "sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f"
+      }
+    },
+    "scope": "Independently recomputed the stated statistics and memberships from the archived 86-row table. Did not re-count the original annotation JSON on the inaccessible workstation."
+  },
+  "qualitative_examples": [
+    {
+      "class": "LarVeh-Stop-Jun",
+      "frame": "train_00797_00018",
+      "iou_recomputed": 0.6794846106083353,
+      "iou_recorded": 0.6794846653938293,
+      "stage4_first_match_rank": 288,
+      "stage5_first_match_rank": 81918,
+      "stage6_first_match_rank": 4708,
+      "scope": "Matches archived per-candidate example record; box IoU recalculated. Ranking scan not rerun from detector outputs."
+    },
+    {
+      "class": "Bus-Stop-VehLane",
+      "frame": "train_00635_00186",
+      "iou_recomputed": 0.9646716229483667,
+      "iou_recorded": 0.9646716713905334,
+      "stage4_first_match_rank": 101,
+      "stage5_first_match_rank": 2878,
+      "stage6_first_match_rank": 325,
+      "scope": "Matches archived per-candidate example record; box IoU recalculated. Ranking scan not rerun from detector outputs."
+    }
+  ],
+  "Q5": {
+    "status": "Verified against archived source, label strings, result files and historical Git snapshot",
+    "repository": "https://github.com/xdilab/Intelligent_AutoDrive",
+    "snapshot_commit": "744d1dbbec951c833d1c0da643c682290012ef07",
+    "historical_commit": "855120ce73510154cd10b93a9823890407adeefd",
+    "historical_date": "2026-08-27",
+    "historical_check": "Evaluator, constraints and both result blobs are identical at the August 27 and current snapshots.",
+    "mapping_checks": {
+      "duplex": 49,
+      "triplet": 86,
+      "derived_from_strings": true,
+      "result_label_order_matches": true
+    },
+    "extracted_code_tests": [
+      {
+        "mode": "min",
+        "gate": false,
+        "composition_outputs_checked": 135,
+        "candidates": 5,
+        "passed": true
+      },
+      {
+        "mode": "min",
+        "gate": true,
+        "composition_outputs_checked": 135,
+        "candidates": 5,
+        "passed": true
+      },
+      {
+        "mode": "product",
+        "gate": false,
+        "composition_outputs_checked": 135,
+        "candidates": 5,
+        "passed": true
+      },
+      {
+        "mode": "product",
+        "gate": true,
+        "composition_outputs_checked": 135,
+        "candidates": 5,
+        "passed": true
+      }
+    ],
+    "metrics": {
+      "min": {
+        "file": "results_roialign_junkneg_derived_gated.json",
+        "summary": {
+          "agentness": 65.36402893066406,
+          "agent": 35.245689392089844,
+          "action": 15.92370891571045,
+          "loc": 19.59772491455078,
+          "duplex": 10.359757423400879,
+          "triplet": 5.521481990814209
+        },
+        "n_frames": 36717,
+        "class_order_matches_verified_labels": true
+      },
+      "product": {
+        "file": "results_roialign_junkneg_derived_product_gated_FIXED.json",
+        "summary": {
+          "agentness": 65.36402893066406,
+          "agent": 35.245689392089844,
+          "action": 15.92370891571045,
+          "loc": 19.59772491455078,
+          "duplex": 10.583537101745605,
+          "triplet": 6.045394420623779
+        },
+        "n_frames": 36717,
+        "class_order_matches_verified_labels": true
+      }
+    },
+    "scope": "Verified saved implementation and result consistency; no detector inference was rerun. Result JSON omits derive_mode and source hash; mode attribution relies on distinct result filenames, historical commit and documented correction. No cryptographic runtime attestation is claimed."
+  },
+  "match_rate": {
+    "status": "Verified from original saved result and source calculation",
+    "match_rate": 0.40608646897582856,
+    "percent": 40.60864689758286,
+    "n_candidates": 6163968,
+    "implied_matched_count": 2503104,
+    "scope": "Code saves n_matched/n_yolo. The stored ratio and denominator imply this integer numerator exactly; numerator is reconstructed, not independently logged or recounted. Prediction matching was not rerun."
+  },
+  "thesis_changes": "None: training-count figures and checked example values already agree.",
+  "submission_status": "Item 05 evidence review complete within the stated archived-record scope. Final build/layout and human review remain."
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "asset": "Fig/road-event-example.png",
+    "sha256": "20bdc9111535a46ac962fc75d7a31d472e7e674e6b3623c1d29ec6c42c1f94d2",
+    "author_confirmation": "Own draw.io diagrams confirmed for diagrams; dataset/data attribution retained",
+    "candidate_sources": []
+  },
+  {
+    "asset": "Fig/triplet-training-tail.pdf",
+    "sha256": "2983a731e35fb89a8805a704ed7c0a85e02f8a06eb8d9ce759f8dec033439b64",
+    "author_confirmation": "Own draw.io diagrams confirmed for diagrams; dataset/data attribution retained",
+    "candidate_sources": []
+  },
+  {
+    "asset": "Fig/out-of-fold.pdf",
+    "sha256": "46bd6b614082f0972a0ab91260659a5afeea26266092df6ffad1c6e7be0b8e95",
+    "author_confirmation": "Own draw.io diagrams confirmed for diagrams; dataset/data attribution retained",
+    "candidate_sources": [
+      "figure-sources/out-of-fold.drawio"
+    ]
+  },
+  {
+    "asset": "Fig/box-crop.pdf",
+    "sha256": "153b430f990d6572793fa534fe7aa29b4f2e6a2e3cdf752a76690832b247cf81",
+    "author_confirmation": "Own draw.io diagrams confirmed for diagrams; dataset/data attribution retained",
+    "candidate_sources": [
+      "figure-sources/box-crop.drawio"
+    ]
+  },
+  {
+    "asset": "Fig/composition-detail.png",
+    "sha256": "b68371bcb7bc306ed1bac93beb3fc2f19671bae7be9c1c2d21aefe35a2914b11",
+    "author_confirmation": "Own draw.io diagrams confirmed for diagrams; dataset/data attribution retained",
+    "candidate_sources": [
+      "figure-sources/composition-detail.drawio"
+    ]
+  }
+]
