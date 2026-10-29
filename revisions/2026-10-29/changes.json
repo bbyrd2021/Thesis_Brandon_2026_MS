@@ -1,0 +1,16 @@
+[
+  {
+    "id": "E1",
+    "old": "3D-RetinaNet (benchmark) & 15.57 & 12.30 & 12.40 & 10.50 & 6.20",
+    "new": "3D-RetinaNet (benchmark) & 15.7 & 12.3 & 12.4 & 10.5 & 6.2",
+    "evidence": "https://arxiv.org/html/2411.01683v3#S4.T3",
+    "basis": "Table III, I3D-08 validation values; retain source one-decimal precision."
+  },
+  {
+    "id": "E5",
+    "old": "Location & 12.77 & 13.36 & 19.60 & 19.60",
+    "new": "Location & 12.77 & 13.37 & 19.60 & 19.60",
+    "evidence": "/Users/brandonbyrd/code/wiki/artifacts/post-proposal-experiments/cluster-results/metrics/stage1.json",
+    "basis": "summary.loc=13.36713695526123; rounds to 13.37."
+  }
+]

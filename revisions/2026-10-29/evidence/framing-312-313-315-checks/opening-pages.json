@@ -1,0 +1,30 @@
+{
+  "clean": {
+    "3.12": {
+      "physical_page": 53,
+      "printed_page": 40
+    },
+    "3.13": {
+      "physical_page": 56,
+      "printed_page": 43
+    },
+    "3.15": {
+      "physical_page": 60,
+      "printed_page": 47
+    }
+  },
+  "review": {
+    "3.12": {
+      "physical_page": 54,
+      "printed_page": 40
+    },
+    "3.13": {
+      "physical_page": 57,
+      "printed_page": 43
+    },
+    "3.15": {
+      "physical_page": 61,
+      "printed_page": 47
+    }
+  }
+}

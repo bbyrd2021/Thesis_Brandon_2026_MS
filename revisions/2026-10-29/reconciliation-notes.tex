@@ -1,0 +1,19 @@
+\chapter*{October 29 Review Reconciliation}
+\addcontentsline{toc}{chapter}{October 29 Review Reconciliation}
+This addendum records independently checked dispositions after the external review. It does not replace the historical October 28 audit notes.
+\begin{itemize}
+\item E1: Table 14's published I3D-08 validation agent score is corrected from 15.57 to 15.7. The benchmark row retains the source's one-decimal precision.
+\item E5: Table 5's Stage 1 location score is corrected from 13.36 to 13.37; the archived value is 13.36713695526123.
+\item E2--E4: No page-range change. The cited CVF records explicitly give PaCo 715--724, MViT 6824--6835 and PIE 6262--6271. The proposed replacements use alternate IEEE pagination. No IEEE DOI has been added to these CVF-version entries.
+\item Metadata: ROAD-R gains issue 9; FRCB gains its DOI URL; CSP points to its final ICLR record. The original bibliography is preserved.
+\item Additional verification: Springer explicitly confirms InternVideo2 volume 15143 and citation year 2025. Official NeurIPS BibTeX exports confirm Balanced Meta-Softmax pages 4175--4186 and SupCon pages 18661--18673.
+\item E6: Figures 3, 16, 19, 20, 23 and 24 now credit illustrative ROAD-Waymo imagery. Extracted JPEG hashes match the archived source frame records; the image assets remain unchanged.
+\item Q1: The 600/198 split counts are explicitly attributed to video-level annotation-release assignments, corroborated by archived study manifests.
+\item List of Figures: Figure 18 changes \AuditDel{Semantic crop classification with phrase fusion and composition.} to \AuditAdd{Stage 6 semantic crop classification with phrase fusion and composition.} Figure 27 changes \AuditDel{A measured bus ranking recovery.} to \AuditAdd{A measured bus ranking recovery relative to Stage 5.} These are short-caption clarifications; their full-caption/body scope is unchanged.
+\item Q2: The broad phrase-branch statement is replaced with independently recomputed paired three-seed tail intervals. The real-minus-bypass interval includes zero; the real-minus-random interval does not. Secondary intervals remain unadjusted and all existing interpretation caveats remain.
+\item Q3--Q4: The reference explicitly says ``FRCB's Table 5''; CycleACR's Table 3 scores are identified as best results and its five-run action/location means are also stated. No matched-protocol superiority claim is added.
+\item Q6: The archived 86-row training-count table reproduces the range 61--225,813, geometric mean 6,434.2876, and 47/28/39 tail/deeper-tail/common memberships. The table and recomputation are included in the evidence folder. No training-count correction is needed.
+\item Recorded ranking examples: Both selected cases match the archived trace extracts; their box IoUs were recomputed. Full prediction ranking was not rerun.
+\item Q5 resolved from the supplied Intelligent\_AutoDrive repository: all 49 duplex and 86 triplet mappings independently reproduce the label strings; archived result class order agrees. The evaluator applies candidate confidence once, and the saved min/product results match the thesis. The same code, constraints, and results are present in the August 27 Git snapshot. Detector inference was not rerun; result files do not record runtime code hashes. The original score-transfer result records 40.6086\% for 6,163,968 candidates, verifying the reported 40.6\% rounding.
+\end{itemize}
+Final visual checks, slide reconciliation, and author/advisor acceptance are tracked separately. This addendum is not submission approval.

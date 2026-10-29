@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-29",
+  "disposition": "E2-E4 rejected as errors in the current CVF-version bibliography: current pages match directly retrieved primary CVF records. Preserve existing page ranges.",
+  "page_findings": [
+    {
+      "id": "E2",
+      "paper": "PaCo",
+      "current_cvf_pages": "715\u2013724",
+      "claude_proposed_ieee_pages": "695\u2013704",
+      "primary_source": "https://openaccess.thecvf.com/content/ICCV2021/html/Cui_Parametric_Contrastive_Learning_ICCV_2021_paper.html"
+    },
+    {
+      "id": "E3",
+      "paper": "MViT",
+      "current_cvf_pages": "6824\u20136835",
+      "claude_proposed_ieee_pages": "6804\u20136815",
+      "primary_source": "https://openaccess.thecvf.com/content/ICCV2021/html/Fan_Multiscale_Vision_Transformers_ICCV_2021_paper.html"
+    },
+    {
+      "id": "E4",
+      "paper": "PIE",
+      "current_cvf_pages": "6262\u20136271",
+      "claude_proposed_ieee_pages": "6261\u20136270",
+      "primary_source": "https://openaccess.thecvf.com/content_ICCV_2019/html/Rasouli_PIE_A_Large-Scale_Dataset_and_Models_for_Pedestrian_Intention_Estimation_ICCV_2019_paper.html"
+    }
+  ],
+  "source_edits": [
+    {
+      "key": "road-r",
+      "old": "  volume = {112},",
+      "new": "  volume = {112},\n  number = {9},",
+      "reason": "Publisher issue contents lists ROAD-R in volume 112, issue 9."
+    },
+    {
+      "key": "frcb",
+      "old": "  doi = {10.1016/j.patcog.2026.114489}",
+      "new": "  doi = {10.1016/j.patcog.2026.114489},\n  url = {https://doi.org/10.1016/j.patcog.2026.114489}",
+      "reason": "Expose the already-verified DOI as a consistent online link."
+    },
+    {
+      "key": "csp",
+      "old": "  url = {https://arxiv.org/abs/2204.03574}",
+      "new": "  url = {https://openreview.net/forum?id=S8-A2FXnIh}",
+      "reason": "Link to the final ICLR 2023 record; final OpenReview PDF confirms title and authors."
+    }
+  ],
+  "additional_verified": {
+    "internvideo2": "Publisher citation explicitly confirms LNCS15143 / 2025 / pp396\u2013416.",
+    "balanced-softmax": "Official NeurIPS BibTeX:4175\u20134186.",
+    "supcon": "Official NeurIPS BibTeX:18661\u201318673."
+  },
+  "limits": [
+    "No exhaustive correction/retraction registry sweep.",
+    "This is reconciliation of bibliography review findings, not a new claim of reading every paper in full.",
+    "Combined clean/redline PDF build pending."
+  ],
+  "original_files_preserved": true
+}

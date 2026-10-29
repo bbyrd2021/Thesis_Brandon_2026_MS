@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-29",
+  "original_files_preserved": 119,
+  "bibliography_entries": 51,
+  "citation_key_occurrences": 100,
+  "all_bibliography_entries_cited": true,
+  "accepted_redline_equals_clean": [
+    "chapter3",
+    "chapter4"
+  ],
+  "outputs": {
+    "clean": {
+      "pages": 84,
+      "sha256": "df0629b645fc454921972ac888a692b0abebe1fae6808351b0574183e2039447",
+      "path": "/Users/brandonbyrd/Documents/Master's Stuff/overleaf-thesis/output/pdf/thesis-clean-20261029.pdf",
+      "red_characters": 0,
+      "green_characters": 0,
+      "critical_build_warnings": [],
+      "text_boundary_signals": 0,
+      "arabic_headers_checked": 71,
+      "contents_destinations_checked": 87,
+      "figures": 27,
+      "tables": 15
+    },
+    "review": {
+      "pages": 100,
+      "sha256": "62a5bf9660ca270db08e683262b000e795e05c0bbd2c24dd45c233ac5a728dc5",
+      "path": "/Users/brandonbyrd/Documents/Master's Stuff/overleaf-thesis/output/pdf/thesis-review-20261029.pdf",
+      "red_characters": 3523,
+      "green_characters": 21007,
+      "critical_build_warnings": [],
+      "text_boundary_signals": 0,
+      "arabic_headers_checked": 86,
+      "contents_destinations_checked": 89,
+      "figures": 27,
+      "tables": 15
+    }
+  },
+  "glyph_review": {
+    "finding": "E8 not reproduced as a rendering defect; retained existing math font.",
+    "evidence": "At enlarged resolution the \u00b1 is a single intact glyph, readable in table cells and captions. PyMuPDF 360-dpi and independent Poppler 300-dpi renders agree. The lower horizontal stroke is separated from the plus; no clipping or substitution was observed.",
+    "clean_occurrences": 28,
+    "font": "TeXGyreTermesMath-Regular",
+    "font_change": false
+  },
+  "navigation_fix": "Moved section anchors into heading lines; eight clean and seven redline TOC destinations previously landed early. Rechecked every contents, figure and table destination.",
+  "visual_scope": "All 84 clean and 100 review page overviews inspected. Full-page inspections covered changed comparisons, table corrections, image-credit captions, and contrastive/DCB equations; enlarged uncertainty glyph inspected in two renderers.",
+  "limits": [
+    "Final author/advisor acceptance and institutional submission checks remain; this is not submission approval.",
+    "Original data/checkpoints and detector inference were not rerun; evidence scope is recorded in provenance-verification.json.",
+    "Slide 57 fallback and native slide checks remain in the separate slideshow step.",
+    "Original October 28 review notes remain as historical context; the October 29 addendum and current checklist supersede their pending review status."
+  ]
+}

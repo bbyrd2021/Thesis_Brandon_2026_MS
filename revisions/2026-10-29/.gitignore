@@ -1,0 +1,5 @@
+# Local comparison snapshots and rendered visual-QA images.
+# Validation JSON and source evidence remain versioned.
+evidence/*-before/
+evidence/*-checks/*.png
+evidence/*-checks/*.jpg

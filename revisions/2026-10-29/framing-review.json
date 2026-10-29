@@ -1,0 +1,65 @@
+{
+  "request": "Add framing to 3.11 and assess whether similar gaps occur elsewhere.",
+  "addition": "The crop-based models in Stages 4--6 classify each candidate using a local video window. Padding supplies nearby context, but the window may omit road structure or other agents elsewhere in the image. This motivates a separate full-frame feature path that relates the candidate to the wider scene. We compare uniform averaging of scene features with attention that weights them according to the candidate.",
+  "changed_sections": [
+    "3.11"
+  ],
+  "review_scope": "Read full methods sections 3.7\u20133.16 and screened section openings across Chapters 1\u20135. Not an exhaustive paragraph-by-paragraph editorial clearance.",
+  "findings": [
+    {
+      "section": "3.6",
+      "gap": "Starts with concatenation dimensions before explaining the purpose of learning compositions from primitive evidence.",
+      "status": "pending"
+    },
+    {
+      "section": "3.10",
+      "gap": "Starts with Stage 5 layer details before setting up the Stage 4/5/6 comparison.",
+      "status": "pending"
+    },
+    {
+      "section": "3.12",
+      "gap": "Starts with notation and adapter equation before introducing the role of language fusion and auxiliary alignment.",
+      "status": "resolved with approved introductory paragraph"
+    },
+    {
+      "section": "3.13",
+      "gap": "Identifies loss replacement but moves into the equation before explaining historical class difficulty in plain language.",
+      "status": "resolved with approved introductory paragraph"
+    },
+    {
+      "section": "3.15",
+      "gap": "Starts with checkpoint sizes before explaining the scope and purpose of the paired-encoder scaling comparison.",
+      "status": "resolved with approved introductory paragraph"
+    }
+  ],
+  "status": "Sections 3.11, 3.12, 3.13 and 3.15 completed; flagged Sections 3.6 and 3.10 remain unchanged.",
+  "validation": {
+    "clean": {
+      "pages": 84,
+      "changed_physical_pages": [
+        50,
+        51,
+        52
+      ],
+      "intro_physical_page": 50,
+      "navigation_entries_checked": 87,
+      "sha256": "cc09a9711ede718df3213159922af8791b13c3e18ef649257004ce700211fb71",
+      "warnings": []
+    },
+    "review": {
+      "pages": 100,
+      "changed_physical_pages": [
+        51,
+        52,
+        53
+      ],
+      "intro_physical_page": 51,
+      "navigation_entries_checked": 89,
+      "sha256": "3c62cc39eb594ba77c632ad36aa0481c94fa17c720cc6707f29ca76b0601b9c6",
+      "warnings": []
+    },
+    "original_119_files_preserved": true,
+    "accepted_redline_equals_clean": true
+  },
+  "visual_check": "Inspected all three changed pages in each PDF; no clipping or overlap."
+}

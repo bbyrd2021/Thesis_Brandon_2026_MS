@@ -1,0 +1,58 @@
+[
+  {
+    "path": "experiments/exp11_yolo/eval_head.py",
+    "git_blob_sha": "985ba89c5f92953459d9ccbb4991920cc03bafe8",
+    "commit": "744d1dbbec951c833d1c0da643c682290012ef07",
+    "url": "https://github.com/xdilab/Intelligent_AutoDrive/blob/744d1dbbec951c833d1c0da643c682290012ef07/experiments/exp11_yolo/eval_head.py",
+    "saved_sha256": "c6dd12e5e0c1506fa11b6765e177ef268212ed95b7da10e4162caaccefd7b367"
+  },
+  {
+    "path": "experiments/exp11_yolo/eval_hybrid_score_transfer.py",
+    "git_blob_sha": "c5ca76960742d6ce2039e0ccb45f17986c8e7982",
+    "commit": "744d1dbbec951c833d1c0da643c682290012ef07",
+    "url": "https://github.com/xdilab/Intelligent_AutoDrive/blob/744d1dbbec951c833d1c0da643c682290012ef07/experiments/exp11_yolo/eval_hybrid_score_transfer.py",
+    "saved_sha256": "79380bd7c2a35a23aa6757ab68334e66978c634a6cd77e83d6009f93beba1a35"
+  },
+  {
+    "path": "experiments/exp11_yolo/chain_final_results.sh",
+    "git_blob_sha": "2198bbb6fac7dd2759dbdd00a6f92bc7d4d0401a",
+    "commit": "744d1dbbec951c833d1c0da643c682290012ef07",
+    "url": "https://github.com/xdilab/Intelligent_AutoDrive/blob/744d1dbbec951c833d1c0da643c682290012ef07/experiments/exp11_yolo/chain_final_results.sh",
+    "saved_sha256": "e86f9df0515acf9462202bd358762fd60c2e72bc643c6704f40a5e912048aabe"
+  },
+  {
+    "path": "experiments/exp11_yolo/chain_roialign2.sh",
+    "git_blob_sha": "c152baabff33125e0dec21374cdaa203392ba6aa",
+    "commit": "744d1dbbec951c833d1c0da643c682290012ef07",
+    "url": "https://github.com/xdilab/Intelligent_AutoDrive/blob/744d1dbbec951c833d1c0da643c682290012ef07/experiments/exp11_yolo/chain_roialign2.sh",
+    "saved_sha256": "e17af028e528c3330d5d45f811819981dfe7e29cbbfdab8f16e3e1342a2417ad"
+  },
+  {
+    "path": "experiments/exp11_yolo/results_hybrid_score_transfer.json",
+    "git_blob_sha": "34f7fec05a0e4dd3e80b0a281608cd8bc196b636",
+    "commit": "744d1dbbec951c833d1c0da643c682290012ef07",
+    "url": "https://github.com/xdilab/Intelligent_AutoDrive/blob/744d1dbbec951c833d1c0da643c682290012ef07/experiments/exp11_yolo/results_hybrid_score_transfer.json",
+    "saved_sha256": "8bcbd5a05064075fb40695724ca964d05edfbcdd8644f14b149c7ca089975a17"
+  },
+  {
+    "path": "experiments/exp11_yolo/results_roialign_junkneg_derived_gated.json",
+    "git_blob_sha": "a619e3e2918eb381151d55a56c9801688b688a4b",
+    "commit": "744d1dbbec951c833d1c0da643c682290012ef07",
+    "url": "https://github.com/xdilab/Intelligent_AutoDrive/blob/744d1dbbec951c833d1c0da643c682290012ef07/experiments/exp11_yolo/results_roialign_junkneg_derived_gated.json",
+    "saved_sha256": "061a2c7c229810730c5e6f9e9ffb20b71ce62813af7cb0dc4817ad54163d3ec7"
+  },
+  {
+    "path": "experiments/exp11_yolo/results_roialign_junkneg_derived_product_gated_FIXED.json",
+    "git_blob_sha": "96c040bfed9d24522d994dd5490d95fd34be1afc",
+    "commit": "744d1dbbec951c833d1c0da643c682290012ef07",
+    "url": "https://github.com/xdilab/Intelligent_AutoDrive/blob/744d1dbbec951c833d1c0da643c682290012ef07/experiments/exp11_yolo/results_roialign_junkneg_derived_product_gated_FIXED.json",
+    "saved_sha256": "bdba4868e7a655ab355f6216dda5066a23f852024f44470e0cd227977a4240db"
+  },
+  {
+    "path": "experiments/exp9_joint_heterogeneous/constraints_verified.json",
+    "git_blob_sha": "9ed8e2c8e24fdda14d2b0cace8dad3b325ba5c78",
+    "commit": "744d1dbbec951c833d1c0da643c682290012ef07",
+    "url": "https://github.com/xdilab/Intelligent_AutoDrive/blob/744d1dbbec951c833d1c0da643c682290012ef07/experiments/exp9_joint_heterogeneous/constraints_verified.json",
+    "saved_sha256": "8b084709293bee3c303d9e405914e6550e38b3d6293f457ebc9a30b0d2179acf"
+  }
+]

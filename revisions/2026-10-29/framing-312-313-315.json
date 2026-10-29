@@ -1,0 +1,164 @@
+{
+  "approved_sections": [
+    "3.12",
+    "3.13",
+    "3.15"
+  ],
+  "additions": {
+    "Language Fusion and Contrastive Supervision": "The preceding section constructs a visual representation of each candidate and its surrounding scene. Language fusion connects this representation to the fixed descriptions of the benchmark\\textquotesingle s event classes, using both attention to phrase embeddings and visual--phrase similarity scores. We also test an auxiliary contrastive objective that encourages the visual representation to align with the descriptions of its positive labels during training. Comparing classification-only and contrastive variants therefore tests the additional alignment objective while retaining language fusion in both models.",
+    "Dynamic Class Balancing": "Changes to the representation and classifier do not directly determine how strongly each training error contributes to learning. The preceding models use focal loss with fixed class-dependent weights. We next examine whether weighting errors using current predictions and accumulated class difficulty improves road-event recognition. This motivates an FRCB-inspired dynamic class-balancing objective, evaluated through its effects on both common and rare compositions.",
+    "Encoder Scaling and Training Partitions": "Having defined the contextual experts and their blending procedure, we next examine their performance with a larger pretrained video--text encoder system. The study retains the contextual inputs, expert objectives, blend-selection procedure, and detector-evaluation population. Replacing the paired encoders also requires new cached features and an adjusted text-input projection. This section describes those changes and the training partitions used to separate expert fitting, checkpoint selection, blend selection, and detector evaluation."
+  },
+  "sources": [
+    "wiki/findings/contextual-head-phrase-score-reliance.md",
+    "wiki/directions/contextual-head-dcb-loss.md",
+    "wiki/directions/contextual-roi-1b-scaling.md"
+  ],
+  "status": "Complete: approved introductions applied, compiled and visually checked.",
+  "validation": {
+    "clean": {
+      "pages": 86,
+      "changed_physical_pages": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      "intro_physical_page": 53,
+      "navigation_entries_checked": 87,
+      "sha256": "05fc494cfb7ee6bf123143f5863d1e6b919b47430559da7f4da698edc0c9a264",
+      "warnings": []
+    },
+    "review": {
+      "pages": 102,
+      "changed_physical_pages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "intro_physical_page": 54,
+      "navigation_entries_checked": 89,
+      "sha256": "7608d79b497aa223300ae1f6e2fb944732cafcf091a8c03a283e646413ba6505",
+      "warnings": []
+    },
+    "original_119_files_preserved": true,
+    "accepted_redline_equals_clean": true
+  },
+  "opening_pages": {
+    "clean": {
+      "3.12": {
+        "physical_page": 53,
+        "printed_page": 40
+      },
+      "3.13": {
+        "physical_page": 56,
+        "printed_page": 43
+      },
+      "3.15": {
+        "physical_page": 60,
+        "printed_page": 47
+      }
+    },
+    "review": {
+      "3.12": {
+        "physical_page": 54,
+        "printed_page": 40
+      },
+      "3.13": {
+        "physical_page": 57,
+        "printed_page": 43
+      },
+      "3.15": {
+        "physical_page": 61,
+        "printed_page": 47
+      }
+    }
+  },
+  "layout": "Kept introductory paragraphs intact; flushed preceding floats before Sections 3.13 and 3.15 to keep headings with introductions."
+}
