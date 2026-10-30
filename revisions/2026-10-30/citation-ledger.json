@@ -1,0 +1,1076 @@
+{
+  "date": "2026-10-30",
+  "scope": "thesis only",
+  "policy": "No DOIs across published papers; URLs only for software/model resources; arXiv IDs for unconfirmed/unpublished preprints. Dataset-description papers remain papers.",
+  "entry_counts": {
+    "article": 7,
+    "misc": 3,
+    "inproceedings": 38,
+    "online": 3
+  },
+  "published_papers": 45,
+  "published_with_verified_doi": 29,
+  "published_without_verified_doi": [
+    "decoupling",
+    "clip",
+    "ldam",
+    "balanced-softmax",
+    "logit-adjust",
+    "ride",
+    "paco",
+    "maple",
+    "vifi",
+    "csp",
+    "cge",
+    "pie",
+    "mvit",
+    "stmixer",
+    "attention",
+    "supcon"
+  ],
+  "entries": [
+    {
+      "key": "road",
+      "title": "{ROAD: The ROad event Awareness Dataset for Autonomous Driving}",
+      "kind": "published paper",
+      "year": "2023",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "doi_known": "10.1109/tpami.2022.3150906",
+      "verification_url": "https://doi.org/10.1109/tpami.2022.3150906",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/tpami.2022.3150906",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/tpami.2022.3150906",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "road-waymo",
+      "title": "{ROAD-Waymo: A Large-Scale Action Awareness Dataset for Autonomous Driving}",
+      "kind": "preprint",
+      "year": "2024",
+      "venue": "",
+      "doi_known": null,
+      "verification_url": "https://arxiv.org/abs/2411.01683",
+      "changes": {
+        "url": {
+          "before": "https://arxiv.org/abs/2411.01683",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "road-r",
+      "title": "{ROAD-R: The Autonomous Driving Dataset with Logical Requirements}",
+      "kind": "published paper",
+      "year": "2023",
+      "venue": "Machine Learning",
+      "doi_known": "10.1007/s10994-023-06322-z",
+      "verification_url": "https://doi.org/10.1007/s10994-023-06322-z",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1007/s10994-023-06322-z",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1007/s10994-023-06322-z",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "decoupling",
+      "title": "{Decoupling Representation and Classifier for Long-Tailed Recognition}",
+      "kind": "published paper",
+      "year": "2020",
+      "venue": "International Conference on Learning Representations",
+      "doi_known": null,
+      "verification_url": "https://openreview.net/forum?id=r1gRTCVFvB",
+      "changes": {
+        "url": {
+          "before": "https://openreview.net/forum?id=r1gRTCVFvB",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "focal-loss",
+      "title": "{Focal Loss for Dense Object Detection}",
+      "kind": "published paper",
+      "year": "2017",
+      "venue": "Proceedings of the IEEE International Conference on Computer Vision",
+      "doi_known": "10.1109/iccv.2017.324",
+      "verification_url": "https://doi.org/10.1109/iccv.2017.324",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/iccv.2017.324",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/iccv.2017.324",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "mask-rcnn",
+      "title": "{Mask R-CNN}",
+      "kind": "published paper",
+      "year": "2017",
+      "venue": "Proceedings of the IEEE International Conference on Computer Vision",
+      "doi_known": "10.1109/iccv.2017.322",
+      "verification_url": "https://doi.org/10.1109/iccv.2017.322",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/iccv.2017.322",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/iccv.2017.322",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "clip",
+      "title": "{Learning Transferable Visual Models From Natural Language Supervision}",
+      "kind": "published paper",
+      "year": "2021",
+      "venue": "Proceedings of the 38th International Conference on Machine Learning",
+      "doi_known": null,
+      "verification_url": "https://proceedings.mlr.press/v139/radford21a.html",
+      "changes": {
+        "url": {
+          "before": "https://proceedings.mlr.press/v139/radford21a.html",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "internvideo2",
+      "title": "{InternVideo2: Scaling Foundation Models for Multimodal Video Understanding}",
+      "kind": "published paper",
+      "year": "2025",
+      "venue": "Proceedings of the European Conference on Computer Vision (ECCV)",
+      "doi_known": "10.1007/978-3-031-73013-9_23",
+      "verification_url": "https://doi.org/10.1007/978-3-031-73013-9_23",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1007/978-3-031-73013-9_23",
+          "after": null
+        },
+        "booktitle": {
+          "before": "Computer Vision -- ECCV 2024",
+          "after": "Proceedings of the European Conference on Computer Vision (ECCV)"
+        },
+        "note": {
+          "before": null,
+          "after": "ECCV 2024 proceedings"
+        },
+        "doi": {
+          "before": "10.1007/978-3-031-73013-9_23",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "waymo",
+      "title": "{Scalability in Perception for Autonomous Driving: Waymo Open Dataset}",
+      "kind": "published paper",
+      "year": "2020",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/cvpr42600.2020.00252",
+      "verification_url": "https://doi.org/10.1109/cvpr42600.2020.00252",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/cvpr42600.2020.00252",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/cvpr42600.2020.00252",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "bdd",
+      "title": "{BDD100K: A Diverse Driving Dataset for Heterogeneous Multitask Learning}",
+      "kind": "published paper",
+      "year": "2020",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/cvpr42600.2020.00271",
+      "verification_url": "https://doi.org/10.1109/cvpr42600.2020.00271",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/cvpr42600.2020.00271",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/cvpr42600.2020.00271",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "ava",
+      "title": "{AVA: A Video Dataset of Spatio-temporally Localized Atomic Visual Actions}",
+      "kind": "published paper",
+      "year": "2018",
+      "venue": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/cvpr.2018.00633",
+      "verification_url": "https://doi.org/10.1109/cvpr.2018.00633",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/cvpr.2018.00633",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/cvpr.2018.00633",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "i3d",
+      "title": "{Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset}",
+      "kind": "published paper",
+      "year": "2017",
+      "venue": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/cvpr.2017.502",
+      "verification_url": "https://doi.org/10.1109/cvpr.2017.502",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/cvpr.2017.502",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/cvpr.2017.502",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "resnet",
+      "title": "{Deep Residual Learning for Image Recognition}",
+      "kind": "published paper",
+      "year": "2016",
+      "venue": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/cvpr.2016.90",
+      "verification_url": "https://doi.org/10.1109/cvpr.2016.90",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/cvpr.2016.90",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/cvpr.2016.90",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "fpn",
+      "title": "{Feature Pyramid Networks for Object Detection}",
+      "kind": "published paper",
+      "year": "2017",
+      "venue": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/cvpr.2017.106",
+      "verification_url": "https://doi.org/10.1109/cvpr.2017.106",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/cvpr.2017.106",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/cvpr.2017.106",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "slowfast",
+      "title": "{SlowFast Networks for Video Recognition}",
+      "kind": "published paper",
+      "year": "2019",
+      "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision",
+      "doi_known": "10.1109/iccv.2019.00630",
+      "verification_url": "https://doi.org/10.1109/iccv.2019.00630",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/iccv.2019.00630",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/iccv.2019.00630",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "video-swin",
+      "title": "{Video Swin Transformer}",
+      "kind": "published paper",
+      "year": "2022",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/cvpr52688.2022.00320",
+      "verification_url": "https://doi.org/10.1109/cvpr52688.2022.00320",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/cvpr52688.2022.00320",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/cvpr52688.2022.00320",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "videomae",
+      "title": "{VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training}",
+      "kind": "published paper",
+      "year": "2022",
+      "venue": "Advances in Neural Information Processing Systems",
+      "doi_known": "10.52202/068431-0732",
+      "verification_url": "https://doi.org/10.52202/068431-0732",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.52202/068431-0732",
+          "after": null
+        },
+        "doi": {
+          "before": "10.52202/068431-0732",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "class-balanced",
+      "title": "{Class-Balanced Loss Based on Effective Number of Samples}",
+      "kind": "published paper",
+      "year": "2019",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/cvpr.2019.00949",
+      "verification_url": "https://doi.org/10.1109/cvpr.2019.00949",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/cvpr.2019.00949",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/cvpr.2019.00949",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "ldam",
+      "title": "{Learning Imbalanced Datasets with Label-Distribution-Aware Margin Loss}",
+      "kind": "published paper",
+      "year": "2019",
+      "venue": "Advances in Neural Information Processing Systems",
+      "doi_known": null,
+      "verification_url": "https://proceedings.neurips.cc/paper_files/paper/2019/file/621461af90cadfdaf0e8d4cc25129f91-Paper.pdf",
+      "changes": {
+        "url": {
+          "before": "https://proceedings.neurips.cc/paper_files/paper/2019/file/621461af90cadfdaf0e8d4cc25129f91-Paper.pdf",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "balanced-softmax",
+      "title": "{Balanced Meta-Softmax for Long-Tailed Visual Recognition}",
+      "kind": "published paper",
+      "year": "2020",
+      "venue": "Advances in Neural Information Processing Systems",
+      "doi_known": null,
+      "verification_url": "https://proceedings.neurips.cc/paper_files/paper/2020/file/2ba61cc3a8f44143e1f2f13b2b729ab3-Paper.pdf",
+      "changes": {
+        "url": {
+          "before": "https://proceedings.neurips.cc/paper_files/paper/2020/file/2ba61cc3a8f44143e1f2f13b2b729ab3-Paper.pdf",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "logit-adjust",
+      "title": "{Long-tail learning via logit adjustment}",
+      "kind": "published paper",
+      "year": "2021",
+      "venue": "International Conference on Learning Representations",
+      "doi_known": null,
+      "verification_url": "https://openreview.net/forum?id=37nvvqkCo5",
+      "changes": {
+        "url": {
+          "before": "https://openreview.net/forum?id=37nvvqkCo5",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "ride",
+      "title": "{Long-tailed Recognition by Routing Diverse Distribution-Aware Experts}",
+      "kind": "published paper",
+      "year": "2021",
+      "venue": "International Conference on Learning Representations",
+      "doi_known": null,
+      "verification_url": "https://openreview.net/forum?id=D9I3drBz4UC",
+      "changes": {
+        "url": {
+          "before": "https://openreview.net/forum?id=D9I3drBz4UC",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "bbn",
+      "title": "{BBN: Bilateral-Branch Network with Cumulative Learning for Long-Tailed Visual Recognition}",
+      "kind": "published paper",
+      "year": "2020",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/cvpr42600.2020.00974",
+      "verification_url": "https://doi.org/10.1109/cvpr42600.2020.00974",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/cvpr42600.2020.00974",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/cvpr42600.2020.00974",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "paco",
+      "title": "{Parametric Contrastive Learning}",
+      "kind": "published paper",
+      "year": "2021",
+      "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision",
+      "doi_known": null,
+      "verification_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Cui_Parametric_Contrastive_Learning_ICCV_2021_paper.html",
+      "changes": {
+        "url": {
+          "before": "https://openaccess.thecvf.com/content/ICCV2021/html/Cui_Parametric_Contrastive_Learning_ICCV_2021_paper.html",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "vl-ltr",
+      "title": "{VL-LTR: Learning Class-wise Visual-Linguistic Representation for Long-Tailed Visual Recognition}",
+      "kind": "published paper",
+      "year": "2022",
+      "venue": "Proceedings of the European Conference on Computer Vision (ECCV)",
+      "doi_known": "10.1007/978-3-031-19806-9_5",
+      "verification_url": "https://doi.org/10.1007/978-3-031-19806-9_5",
+      "changes": {
+        "booktitle": {
+          "before": "European Conference on Computer Vision",
+          "after": "Proceedings of the European Conference on Computer Vision (ECCV)"
+        },
+        "url": {
+          "before": "https://doi.org/10.1007/978-3-031-19806-9_5",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1007/978-3-031-19806-9_5",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "coop",
+      "title": "{Learning to Prompt for Vision-Language Models}",
+      "kind": "published paper",
+      "year": "2022",
+      "venue": "International Journal of Computer Vision",
+      "doi_known": "10.1007/s11263-022-01653-1",
+      "verification_url": "https://doi.org/10.1007/s11263-022-01653-1",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1007/s11263-022-01653-1",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1007/s11263-022-01653-1",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "cocoop",
+      "title": "{Conditional Prompt Learning for Vision-Language Models}",
+      "kind": "published paper",
+      "year": "2022",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/CVPR52688.2022.01631",
+      "verification_url": "https://doi.org/10.1109/CVPR52688.2022.01631",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/CVPR52688.2022.01631",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/CVPR52688.2022.01631",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "maple",
+      "title": "{MaPLe: Multi-modal Prompt Learning}",
+      "kind": "published paper",
+      "year": "2023",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": null,
+      "verification_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Khattak_MaPLe_Multi-Modal_Prompt_Learning_CVPR_2023_paper.html",
+      "changes": {
+        "url": {
+          "before": "https://openaccess.thecvf.com/content/CVPR2023/html/Khattak_MaPLe_Multi-Modal_Prompt_Learning_CVPR_2023_paper.html",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "tip-adapter",
+      "title": "{Tip-Adapter: Training-free Adaption of CLIP for Few-shot Classification}",
+      "kind": "published paper",
+      "year": "2022",
+      "venue": "Proceedings of the European Conference on Computer Vision (ECCV)",
+      "doi_known": "10.1007/978-3-031-19833-5_29",
+      "verification_url": "https://doi.org/10.1007/978-3-031-19833-5_29",
+      "changes": {
+        "booktitle": {
+          "before": "European Conference on Computer Vision",
+          "after": "Proceedings of the European Conference on Computer Vision (ECCV)"
+        },
+        "url": {
+          "before": "https://doi.org/10.1007/978-3-031-19833-5_29",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1007/978-3-031-19833-5_29",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "xclip",
+      "title": "{Expanding Language-Image Pretrained Models for General Video Recognition}",
+      "kind": "published paper",
+      "year": "2022",
+      "venue": "Proceedings of the European Conference on Computer Vision (ECCV)",
+      "doi_known": "10.1007/978-3-031-19772-7_1",
+      "verification_url": "https://doi.org/10.1007/978-3-031-19772-7_1",
+      "changes": {
+        "booktitle": {
+          "before": "European Conference on Computer Vision",
+          "after": "Proceedings of the European Conference on Computer Vision (ECCV)"
+        },
+        "url": {
+          "before": "https://doi.org/10.1007/978-3-031-19772-7_1",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1007/978-3-031-19772-7_1",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "vifi",
+      "title": "{Fine-tuned CLIP Models are Efficient Video Learners}",
+      "kind": "published paper",
+      "year": "2023",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": null,
+      "verification_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Rasheed_Fine-Tuned_CLIP_Models_Are_Efficient_Video_Learners_CVPR_2023_paper.html",
+      "changes": {
+        "url": {
+          "before": "https://openaccess.thecvf.com/content/CVPR2023/html/Rasheed_Fine-Tuned_CLIP_Models_Are_Efficient_Video_Learners_CVPR_2023_paper.html",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "csp",
+      "title": "{Learning to Compose Soft Prompts for Compositional Zero-Shot Learning}",
+      "kind": "published paper",
+      "year": "2023",
+      "venue": "International Conference on Learning Representations",
+      "doi_known": null,
+      "verification_url": "https://openreview.net/forum?id=S8-A2FXnIh",
+      "changes": {
+        "url": {
+          "before": "https://openreview.net/forum?id=S8-A2FXnIh",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "cge",
+      "title": "{Learning Graph Embeddings for Compositional Zero-shot Learning}",
+      "kind": "published paper",
+      "year": "2021",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": null,
+      "verification_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Naeem_Learning_Graph_Embeddings_for_Compositional_Zero-Shot_Learning_CVPR_2021_paper.html",
+      "changes": {
+        "url": {
+          "before": "https://openaccess.thecvf.com/content/CVPR2021/html/Naeem_Learning_Graph_Embeddings_for_Compositional_Zero-Shot_Learning_CVPR_2021_paper.html",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "efficient-prompt",
+      "title": "{Prompting Visual-Language Models for Efficient Video Understanding}",
+      "kind": "published paper",
+      "year": "2022",
+      "venue": "Proceedings of the European Conference on Computer Vision (ECCV)",
+      "doi_known": "10.1007/978-3-031-19833-5_7",
+      "verification_url": "https://doi.org/10.1007/978-3-031-19833-5_7",
+      "changes": {
+        "booktitle": {
+          "before": "European Conference on Computer Vision",
+          "after": "Proceedings of the European Conference on Computer Vision (ECCV)"
+        },
+        "url": {
+          "before": "https://doi.org/10.1007/978-3-031-19833-5_7",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1007/978-3-031-19833-5_7",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "internvideo2-clip-s",
+      "title": "{InternVideo2\\_CLIP\\_S}",
+      "kind": "software/model resource",
+      "year": null,
+      "venue": "",
+      "doi_known": null,
+      "verification_url": "https://huggingface.co/OpenGVLab/InternVideo2_CLIP_S",
+      "changes": {},
+      "status": "retained",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "yolov8",
+      "title": "{Ultralytics YOLOv8}",
+      "kind": "software/model resource",
+      "year": "2023",
+      "venue": "",
+      "doi_known": null,
+      "verification_url": "https://docs.ultralytics.com/models/yolov8/",
+      "changes": {
+        "author": {
+          "before": "{Ultralytics}",
+          "after": "Jocher, Glenn and Chaurasia, Ayush and Qiu, Jing"
+        },
+        "organization": {
+          "before": "Ultralytics",
+          "after": null
+        },
+        "title": {
+          "before": "{YOLOv8}",
+          "after": "{Ultralytics YOLOv8}"
+        },
+        "note": {
+          "before": null,
+          "after": "Software repository"
+        },
+        "year": {
+          "before": null,
+          "after": "2023"
+        },
+        "url": {
+          "before": "https://docs.ultralytics.com/models/yolov8/",
+          "after": "https://github.com/ultralytics/ultralytics"
+        },
+        "urldate": {
+          "before": "2026-09-07",
+          "after": "2026-10-30"
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "jaad-crossing",
+      "title": "Are They Going to Cross? A Benchmark Dataset and Baseline for Pedestrian Crosswalk Behavior",
+      "kind": "published paper",
+      "year": "2017",
+      "venue": "Proceedings of the IEEE International Conference on Computer Vision Workshops",
+      "doi_known": "10.1109/ICCVW.2017.33",
+      "verification_url": "https://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w3/Rasouli_Are_They_Going_ICCV_2017_paper.pdf",
+      "changes": {
+        "url": {
+          "before": "https://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w3/Rasouli_Are_They_Going_ICCV_2017_paper.pdf",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/ICCVW.2017.33",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "pie",
+      "title": "{PIE}: A Large-Scale Dataset and Models for Pedestrian Intention Estimation and Trajectory Prediction",
+      "kind": "published paper",
+      "year": "2019",
+      "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision",
+      "doi_known": null,
+      "verification_url": "https://openaccess.thecvf.com/content_ICCV_2019/html/Rasouli_PIE_A_Large-Scale_Dataset_and_Models_for_Pedestrian_Intention_Estimation_ICCV_2019_paper.html",
+      "changes": {
+        "url": {
+          "before": "https://openaccess.thecvf.com/content_ICCV_2019/html/Rasouli_PIE_A_Large-Scale_Dataset_and_Models_for_Pedestrian_Intention_Estimation_ICCV_2019_paper.html",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "voc",
+      "title": "The {PASCAL Visual Object Classes (VOC)} Challenge",
+      "kind": "published paper",
+      "year": "2010",
+      "venue": "International Journal of Computer Vision",
+      "doi_known": "10.1007/s11263-009-0275-4",
+      "verification_url": "https://www.robots.ox.ac.uk/~vgg/publications/2010/Everingham10/",
+      "changes": {
+        "url": {
+          "before": "https://www.robots.ox.ac.uk/~vgg/publications/2010/Everingham10/",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1007/s11263-009-0275-4",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "stacking",
+      "title": "Stacked Generalization",
+      "kind": "published paper",
+      "year": "1992",
+      "venue": "Neural Networks",
+      "doi_known": "10.1016/S0893-6080(05)80023-1",
+      "verification_url": "https://www.sciencedirect.com/science/article/pii/S0893608005800231",
+      "changes": {
+        "url": {
+          "before": "https://www.sciencedirect.com/science/article/pii/S0893608005800231",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1016/S0893-6080(05)80023-1",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "mvit",
+      "title": "Multiscale Vision Transformers",
+      "kind": "published paper",
+      "year": "2021",
+      "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision",
+      "doi_known": null,
+      "verification_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Fan_Multiscale_Vision_Transformers_ICCV_2021_paper.html",
+      "changes": {
+        "url": {
+          "before": "https://openaccess.thecvf.com/content/ICCV2021/html/Fan_Multiscale_Vision_Transformers_ICCV_2021_paper.html",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "mvitv2",
+      "title": "{MViTv2}: Improved Multiscale Vision Transformers for Classification and Detection",
+      "kind": "published paper",
+      "year": "2022",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/CVPR52688.2022.00476",
+      "verification_url": "https://doi.org/10.1109/CVPR52688.2022.00476",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/CVPR52688.2022.00476",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/CVPR52688.2022.00476",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "memvit",
+      "title": "{MeMViT}: Memory-Augmented Multiscale Vision Transformer for Efficient Long-Term Video Recognition",
+      "kind": "published paper",
+      "year": "2022",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": "10.1109/CVPR52688.2022.01322",
+      "verification_url": "https://doi.org/10.1109/CVPR52688.2022.01322",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/CVPR52688.2022.01322",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/CVPR52688.2022.01322",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "stmixer",
+      "title": "{STMixer}: A One-Stage Sparse Action Detector",
+      "kind": "published paper",
+      "year": "2023",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "doi_known": null,
+      "verification_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Wu_STMixer_A_One-Stage_Sparse_Action_Detector_CVPR_2023_paper.html",
+      "changes": {
+        "url": {
+          "before": "https://openaccess.thecvf.com/content/CVPR2023/html/Wu_STMixer_A_One-Stage_Sparse_Action_Detector_CVPR_2023_paper.html",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "cycleacr",
+      "title": "{CycleACR}: Cycle Modeling of Actor-Context Relations for Video Action Detection",
+      "kind": "published paper",
+      "year": "2025",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "doi_known": "10.1109/TPAMI.2025.3595393",
+      "verification_url": "https://doi.org/10.1109/TPAMI.2025.3595393",
+      "changes": {
+        "url": {
+          "before": "https://doi.org/10.1109/TPAMI.2025.3595393",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1109/TPAMI.2025.3595393",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "frcb",
+      "title": "A transformer-based framework with sufficient feature representation and dynamic class balancing for road event detection",
+      "kind": "published paper",
+      "year": "2026",
+      "venue": "Pattern Recognition",
+      "doi_known": "10.1016/j.patcog.2026.114489",
+      "verification_url": "https://doi.org/10.1016/j.patcog.2026.114489",
+      "changes": {
+        "pages": {
+          "before": "114489",
+          "after": null
+        },
+        "url": {
+          "before": "https://doi.org/10.1016/j.patcog.2026.114489",
+          "after": null
+        },
+        "doi": {
+          "before": "10.1016/j.patcog.2026.114489",
+          "after": null
+        },
+        "eid": {
+          "before": null,
+          "after": "114489"
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "attention",
+      "title": "Attention is All you Need",
+      "kind": "published paper",
+      "year": "2017",
+      "venue": "Advances in Neural Information Processing Systems",
+      "doi_known": null,
+      "verification_url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf",
+      "changes": {
+        "url": {
+          "before": "https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "road-challenge-2024",
+      "title": "First Place Solution to the {ECCV 2024 ROAD++} Challenge @ {ROAD++} Spatiotemporal Agent Detection 2024",
+      "kind": "preprint",
+      "year": "2024",
+      "venue": "",
+      "doi_known": null,
+      "verification_url": "https://arxiv.org/abs/2410.23077",
+      "changes": {
+        "url": {
+          "before": "https://arxiv.org/abs/2410.23077",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "internvideo2-clip-1b",
+      "title": "{InternVideo2-CLIP-1B-224p-f8}",
+      "kind": "software/model resource",
+      "year": null,
+      "venue": "",
+      "doi_known": null,
+      "verification_url": "https://huggingface.co/OpenGVLab/InternVideo2-CLIP-1B-224p-f8",
+      "changes": {},
+      "status": "retained",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "internvideo2-1b-config",
+      "title": "{InternVideo2}: {1B CLIP} zero-shot evaluation configuration",
+      "kind": "software/model resource",
+      "year": null,
+      "venue": "",
+      "doi_known": null,
+      "verification_url": "https://github.com/OpenGVLab/InternVideo/blob/main/InternVideo2/multi_modality/scripts/evaluation/clip/zero_shot/1B/config_ucf101.py",
+      "changes": {},
+      "status": "retained",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    },
+    {
+      "key": "supcon",
+      "title": "Supervised Contrastive Learning",
+      "kind": "published paper",
+      "year": "2020",
+      "venue": "Advances in Neural Information Processing Systems",
+      "doi_known": null,
+      "verification_url": "https://papers.nips.cc/paper_files/paper/2020/hash/d89a66c7c80a29b1bdbab0f2a1a94af8-Abstract.html",
+      "changes": {
+        "url": {
+          "before": "https://papers.nips.cc/paper_files/paper/2020/hash/d89a66c7c80a29b1bdbab0f2a1a94af8-Abstract.html",
+          "after": null
+        }
+      },
+      "status": "formatting corrected",
+      "verification_basis": "October 28–29 primary-record audit; targeted October 30 rechecks recorded separately"
+    }
+  ],
+  "body_change": {
+    "before": "YOLOv8x \\cite{yolov8}, fine-tuned on ROAD-Waymo agent classes with a 1280-pixel input setting, supplies candidate boxes, confidence, and hard agent identity.",
+    "after": "We use the Ultralytics implementation of YOLOv8x \\cite{yolov8}, fine-tuned on ROAD-Waymo agent classes with a 1280-pixel input setting, to supply candidate boxes, confidence, and hard agent identity."
+  },
+  "current_primary_rechecks": {
+    "yolov8": "https://docs.ultralytics.com/models/yolov8/#citations-and-acknowledgments",
+    "internvideo2": "https://link.springer.com/chapter/10.1007/978-3-031-73013-9_23",
+    "road-r": "https://link.springer.com/article/10.1007/s10994-023-06322-z",
+    "coop": "https://link.springer.com/article/10.1007/s11263-022-01653-1",
+    "clip": "https://proceedings.mlr.press/v139/radford21a.html",
+    "vl-ltr": "https://link.springer.com/chapter/10.1007/978-3-031-19806-9_5",
+    "road-waymo": "https://arxiv.org/abs/2411.01683",
+    "road-challenge-2024": "https://arxiv.org/abs/2410.23077"
+  },
+  "limitations": [
+    "Some publisher/venue sites returned 403 or browser challenges; previously archived primary evidence retained.",
+    "No new exhaustive retraction registry audit or full-text claim audit.",
+    "YOLOv8 has no official research paper according to Ultralytics; an advisor-supplied alternative would need identity verification."
+  ]
+}

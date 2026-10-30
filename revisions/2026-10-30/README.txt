@@ -1,0 +1,1 @@
+October 30 thesis-only citation consistency pass. Compile main-clean.tex or main-review.tex with XeLaTeX and Biber. Older revisions and original main.tex remain unchanged. See citation-ledger.json for exact field changes, primary links, DOI coverage and limitations. No journal edits.
